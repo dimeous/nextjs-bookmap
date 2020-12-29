@@ -30,6 +30,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+          <title>Bookmap®️ | Online Trading Platform 2020</title>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
