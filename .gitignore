@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.idea
+.DS_Store
 # misc
 .DS_Store
 .env.local
@@ -16,3 +17,6 @@ yarn-error.log*
 
 # Next.js
 /.next
+
+# test
+/coverage

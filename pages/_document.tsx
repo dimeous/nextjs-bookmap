@@ -1,26 +1,29 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
-import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../src/theme';
-import { cache } from './_app.js';
+import React from 'react'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheets } from '@material-ui/core/styles'
+import createEmotionServer from '@emotion/server/create-instance'
+import theme from '../src/theme'
+import { cache } from './_app'
 
-const { extractCritical } = createEmotionServer(cache);
+const { extractCritical } = createEmotionServer(cache)
 
-let prefixer;
-let cleanCSS;
+let prefixer: any
+let cleanCSS: any
 if (process.env.NODE_ENV === 'production') {
   /* eslint-disable global-require */
-  const postcss = require('postcss');
-  const autoprefixer = require('autoprefixer');
-  const CleanCSS = require('clean-css');
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const postcss = require('postcss')
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const autoprefixer = require('autoprefixer')
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const CleanCSS = require('clean-css')
   /* eslint-enable global-require */
 
-  prefixer = postcss([autoprefixer]);
-  cleanCSS = new CleanCSS();
+  prefixer = postcss([autoprefixer])
+  cleanCSS = new CleanCSS()
 }
 
-const GOOGLE_ID = process.env.NODE_ENV === 'production' ? 'UA-106598593-2' : 'UA-106598593-3';
+const GOOGLE_ID = process.env.NODE_ENV === 'production' ? 'UA-106598593-2' : 'UA-106598593-3'
 
 export default class MyDocument extends Document {
   render() {
@@ -37,18 +40,18 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <script
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{
-                __html: `
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
                 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
                 window.ga('create','${GOOGLE_ID}','auto');
               `,
-              }}
+            }}
           />
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
@@ -78,24 +81,24 @@ MyDocument.getInitialProps = async (ctx) => {
   // 4. page.render
 
   // Render app and page and get the context of the page with collected side effects.
-  const sheets = new ServerStyleSheets();
-  const originalRenderPage = ctx.renderPage;
+  const sheets = new ServerStyleSheets()
+  const originalRenderPage = ctx.renderPage
 
   ctx.renderPage = () =>
     originalRenderPage({
       enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-    });
+    })
 
-  const initialProps = await Document.getInitialProps(ctx);
-    let css = sheets.toString();
-    // It might be undefined, e.g. after an error.
-    if (css && process.env.NODE_ENV === 'production') {
-        const result1 = await prefixer.process(css, { from: undefined });
-        css = result1.css;
-        css = cleanCSS.minify(css).styles;
-    }
+  const initialProps = await Document.getInitialProps(ctx)
+  let css = sheets.toString()
+  // It might be undefined, e.g. after an error.
+  if (css && process.env.NODE_ENV === 'production') {
+    const result1 = await prefixer.process(css, { from: undefined })
+    css = result1.css
+    css = cleanCSS.minify(css).styles
+  }
 
-  const styles = extractCritical(initialProps.html);
+  const styles = extractCritical(initialProps.html)
 
   return {
     ...initialProps,
@@ -110,5 +113,5 @@ MyDocument.getInitialProps = async (ctx) => {
         dangerouslySetInnerHTML={{ __html: styles.css }}
       />,
     ],
-  };
-};
+  }
+}
