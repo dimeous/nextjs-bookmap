@@ -1,0 +1,46 @@
+{
+  "name": "nextjs",
+  "version": "5.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@material-ui/core": "next",
+    "clean-css": "^4.2.3",
+    "clsx": "latest",
+    "cssnano": "^4.1.10",
+    "next": "latest",
+    "postcss": "^8.2.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@material-ui/styles": "^4.11.2"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "stylis": "^3.5.4",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.2.1"
+  }
+}
