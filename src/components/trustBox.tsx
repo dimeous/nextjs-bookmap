@@ -6,7 +6,11 @@ const TrustBox = () => {
     // If window.Trustpilot is available it means that we need to load the TrustBox from our ref.
     // If it's not, it means the script you pasted into <head /> isn't loaded  just yet.
     // When it is, it will automatically load the TrustBox.
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     if (window.Trustpilot) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       window.Trustpilot.loadFromElement(ref.current, true)
     }
   }, [])
