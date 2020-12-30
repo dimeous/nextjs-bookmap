@@ -1,5 +1,5 @@
 export default {
-    title: "Doctor Who",
+    title: "Bookmap®️ | Online Trading Platform 2020",
     description:
         "Best online trading platform ➤ See the volume with amazing clarity ➤ Different packages that best fits your trading needs ➤ Bookmap®️ - market data visualization and trading platform",
     canonical: "https://doctor-who-example.com/",
