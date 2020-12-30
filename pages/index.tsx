@@ -6,6 +6,7 @@ import ProTip from '../src/ProTip'
 import Link from '../src/Link'
 import Copyright from '../src/Copyright'
 import TrustPreloadPilot from '../src/components/trustPreloadPilot'
+import ReactPlayer from 'react-player'
 
 export default function Index() {
   return (
@@ -19,6 +20,9 @@ export default function Index() {
         </Link>
         <Typography>
           <TrustPreloadPilot></TrustPreloadPilot>
+        </Typography>
+        <Typography>
+          <ReactPlayer url="https://youtu.be/387ouy6QGPI" controls width="896px" height="504px" />
         </Typography>
         <ProTip />
         <Copyright />
