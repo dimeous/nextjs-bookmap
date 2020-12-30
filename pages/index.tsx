@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box'
 import ProTip from '../src/ProTip'
 import Link from '../src/Link'
 import Copyright from '../src/Copyright'
+import TrustPreloadPilot from '../src/components/trustPreloadPilot'
 
 export default function Index() {
   return (
@@ -16,6 +17,9 @@ export default function Index() {
         <Link href="/about" color="secondary">
           Go to the about page
         </Link>
+        <Typography>
+          <TrustPreloadPilot></TrustPreloadPilot>
+        </Typography>
         <ProTip />
         <Copyright />
       </Box>
