@@ -23,7 +23,9 @@ export default function MyApp(props: AppProps) {
   return (
     <CacheProvider value={cache}>
       <Head>
-        <title>My page</title>
+        {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+        <title>Bookmap®️ | Online Trading Platform 2020</title>
+        <link rel="shortcut icon" href="/static/icons/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
