@@ -6,6 +6,11 @@ import { CacheProvider } from '@emotion/react'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import createCache from '@emotion/cache'
 import theme from '../src/theme'
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import TagManager from 'react-gtm-module'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
@@ -18,6 +23,8 @@ export default function MyApp(props: AppProps) {
     if (jssStyles) {
       jssStyles.parentElement!.removeChild(jssStyles)
     }
+    TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
+    TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
   }, [])
 
   return (
@@ -31,6 +38,7 @@ export default function MyApp(props: AppProps) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
