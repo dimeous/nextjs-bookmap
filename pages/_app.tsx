@@ -11,6 +11,7 @@ import SEO from '../next-seo.config'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import TagManager from 'react-gtm-module'
+import MainHeader from '../src/components/Layout/Header/MainHeader'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
@@ -39,6 +40,7 @@ export default function MyApp(props: AppProps) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <DefaultSeo {...SEO} />
+        <MainHeader />
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
