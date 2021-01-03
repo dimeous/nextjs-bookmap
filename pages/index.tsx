@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper'
 
 export default function Index() {
   return (
-    <main>
+    <main style={{ paddingTop: 80 }}>
       <Paper>
         <Container fixed>
           <Grid container>
