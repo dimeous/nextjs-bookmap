@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  link: {
+    color: theme.palette.primary.light,
+  },
 }))
 
 export default function TabsWrappedLabel() {
@@ -92,9 +95,11 @@ export default function TabsWrappedLabel() {
                   by the market, allowing you to rapidly react to changes in sentiment. Read
                   liquidity like a map, and locate better trading opportunities.
                 </Typography>
-                <Box>
-                  <Link href="https://bookmap.com/features/">Details about features</Link>
-                </Box>
+                <Typography>
+                  <Link href="https://bookmap.com/features/" className={classes.link}>
+                    Details about features
+                  </Link>
+                </Typography>
               </Container>
             </Grid>
           </Grid>
@@ -121,7 +126,9 @@ export default function TabsWrappedLabel() {
                   the bar to load.
                 </Typography>
                 <Typography>
-                  <Link href="https://bookmap.com/features/">Details about features</Link>
+                  <Link href="https://bookmap.com/features/" className={classes.link}>
+                    Details about features
+                  </Link>
                 </Typography>
               </Container>
             </Grid>
@@ -150,7 +157,9 @@ export default function TabsWrappedLabel() {
                   Tracker, Advanced Volume Delta, and more.
                 </Typography>
                 <Typography>
-                  <Link href="https://bookmap.com/features/">Details about features</Link>
+                  <Link href="https://bookmap.com/features/" className={classes.link}>
+                    Details about features
+                  </Link>
                 </Typography>
               </Container>
             </Grid>
