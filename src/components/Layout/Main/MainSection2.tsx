@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
+import Link from '@material-ui/core/Link'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
@@ -72,7 +73,7 @@ export default function TabsWrappedLabel() {
         </AppBar>
         <TabPanel value={value} index="one">
           <Grid container>
-            <Grid md={8}>
+            <Grid item md={8}>
               <Image
                 src="/static/main/section2/1_features_block.png"
                 alt="Heatmap shows the historical limit"
@@ -81,7 +82,7 @@ export default function TabsWrappedLabel() {
                 layout="responsive"
               />
             </Grid>
-            <Grid md={4}>
+            <Grid item md={4}>
               <Container>
                 <Typography>
                   The heatmap shows the historical limit order book (historical liquidity).
@@ -91,15 +92,69 @@ export default function TabsWrappedLabel() {
                   by the market, allowing you to rapidly react to changes in sentiment. Read
                   liquidity like a map, and locate better trading opportunities.
                 </Typography>
+                <Box>
+                  <Link href="https://bookmap.com/features/">Details about features</Link>
+                </Box>
               </Container>
             </Grid>
           </Grid>
         </TabPanel>
         <TabPanel value={value} index="two">
-          Item Two
+          <Grid container>
+            <Grid item md={8}>
+              <Image
+                src="/static/main/section2/2_features_block.png"
+                alt="Heatmap shows the historical limit"
+                width={618}
+                height={334}
+                layout="responsive"
+              />
+            </Grid>
+            <Grid item md={4}>
+              <Container>
+                <Typography>
+                  Watch the traded volume and identify the side in control by using Volume Delta,
+                  Advance Volume Profiles, and Cumulative Volume Delta tools.
+                </Typography>
+                <Typography>
+                  See volume dots & volume delta right on the chart, without the need to wait for
+                  the bar to load.
+                </Typography>
+                <Typography>
+                  <Link href="https://bookmap.com/features/">Details about features</Link>
+                </Typography>
+              </Container>
+            </Grid>
+          </Grid>
         </TabPanel>
         <TabPanel value={value} index="three">
-          Item Three
+          <Grid container>
+            <Grid item md={8}>
+              <Image
+                src="/static/main/section2/3_features_block.png"
+                alt="Heatmap shows the historical limit"
+                width={618}
+                height={334}
+                layout="responsive"
+              />
+            </Grid>
+            <Grid item md={4}>
+              <Container>
+                <Typography>
+                  Based on traders’ requests and Bookmap’s expertise in HFT trading, Bookmap
+                  developers have created a unique set of indicators that add transparency and cover
+                  most of traders’ needs.
+                </Typography>
+                <Typography>
+                  Confirm your trades with Imbalance Indicator, Strength Level Indicator, Large Lot
+                  Tracker, Advanced Volume Delta, and more.
+                </Typography>
+                <Typography>
+                  <Link href="https://bookmap.com/features/">Details about features</Link>
+                </Typography>
+              </Container>
+            </Grid>
+          </Grid>
         </TabPanel>
       </div>
     </Container>
