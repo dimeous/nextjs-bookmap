@@ -78,7 +78,7 @@ export default function TabsWrappedLabelSection2() {
           <Grid container>
             <Grid item md={8}>
               <Image
-                src="/static/main/section2/1_features_block.png"
+                src="/static/main/s2/1_features_block.png"
                 alt="Heatmap shows the historical limit"
                 width={618}
                 height={334}
@@ -108,7 +108,7 @@ export default function TabsWrappedLabelSection2() {
           <Grid container>
             <Grid item md={8}>
               <Image
-                src="/static/main/section2/2_features_block.png"
+                src="/static/main/s2/2_features_block.png"
                 alt="Heatmap shows the historical limit"
                 width={618}
                 height={334}
@@ -138,7 +138,7 @@ export default function TabsWrappedLabelSection2() {
           <Grid container>
             <Grid item md={8}>
               <Image
-                src="/static/main/section2/3_features_block.png"
+                src="/static/main/s2/3_features_block.png"
                 alt="Heatmap shows the historical limit"
                 width={618}
                 height={334}

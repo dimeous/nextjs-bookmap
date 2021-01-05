@@ -72,7 +72,7 @@ export default function MainSection3() {
               className={classes.media}
               component="img"
               alt="Get Software"
-              image="/static/main/section3/cloud.svg"
+              image="/static/main/s3/cloud.svg"
               title="Get Software"
             />
             <CardContent>
@@ -92,7 +92,7 @@ export default function MainSection3() {
               className={classes.media}
               component="img"
               alt="Connect Data"
-              image="/static/main/section3/planet.svg"
+              image="/static/main/s3/planet.svg"
               title="Connect Data"
             />
             <CardContent>
@@ -110,7 +110,7 @@ export default function MainSection3() {
               className={classes.media}
               component="img"
               alt="Educate yourself"
-              image="/static/main/section3/note.svg"
+              image="/static/main/s3/note.svg"
               title="Educate yourself"
             />
             <CardContent>
