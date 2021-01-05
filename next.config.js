@@ -1,6 +1,7 @@
 const withImages = require('next-images')
-module.exports = withImages({
-    webpack(config, options) {
-        return config
+const withFonts = require('next-fonts')
+module.exports = withImages(withFonts({
+    webpack(config) {
+        return config;
     }
-})
+}))
