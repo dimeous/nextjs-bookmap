@@ -1,10 +1,62 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Box, Card, CardMedia, CardContent, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
+
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
+  },
+  cTreeSteps: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    '@media (max-width: 991px)': {
+      paddingLeft: 0,
+      flexDirection: 'column',
+    },
+  },
+  oneStep: {
+    display: 'flex',
+    alignItems: 'center',
+    width: 'calc(33.33333% - 90px)',
+    '@media (max-width: 991px)': {
+      paddingLeft: 0,
+      flexDirection: 'column',
+      width: '100%',
+    },
+  },
+  stepSeparator: {
+    alignSelf: 'center',
+    backgroundColor: '#0184f7',
+    height: '3px',
+    marginRight: '65px',
+    transform: 'translateY(13px)',
+    width: '70px',
+    '@media (max-width: 991px)': {
+      display: 'none',
+    },
+  },
+  media: {
+    width: 50,
+    marginLeft: '33%',
+  },
+  card: {
+    border: 'none',
+    boxShadow: 'none',
+  },
+  button: {
+    fontFamily: 'MullerRegular',
+    fontSize: '14px',
+    letterSpacing: '0.77px',
+    borderRadius: '4px',
+    height: '43px',
+    width: '230px',
+    transition: '.2s ease',
+    marginTop: '35px',
+    '&:hover': {
+      backgroundColor: '#0e67d0',
+    },
   },
 }))
 
@@ -12,72 +64,72 @@ export default function MainSection3() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
-      {/*<section className="l-three-steps u-mainpage-margin">
-      <div className="c-small-container">
-        <h2 className="u-title is-2">
-          Start with Bookmap in 3 simple steps
-        </h2>
-        <div className="c-three-steps">
-          <div className="one-step">
-            <img className="cloud-image lazy"
-                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                 data-src="https://bookmap.com/wp-content/themes/bookmap/assets/images/three-steps-main/cloudd.svg">
-              <div className="the-step-header">
-                <span>01</span>
-                <p>Get Software</p>
-              </div>
-              <div className="the-step-content">
-                <p>Register to Bookmap</p>
-                <p>Download and install the app</p>
-              </div>
-              <div className="c-blue-button is-inversed">
-                <a id="main_middle_start_for_free" href="https://bookmap.com/members/signup/thAhOgYUg"><span
-                    className="is-desktop-text">START FOR FREE</span><span className="is-mobile-text">SUBSCRIBE FREE BOOKMAP®️</span></a>
-              </div>
-          </div>
-
-          <div className="step-separator"></div>
-
-          <div className="one-step">
-            <img className="planet-image lazy"
-                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                 data-src="https://bookmap.com/wp-content/themes/bookmap/assets/images/three-steps-main/planett.svg">
-              <div className="the-step-header">
-                <span>02</span>
-                <p>Connect Data</p>
-              </div>
-              <div className="the-step-content">
-                <p>Connect to market data provider</p>
-                <p>(directly or via your broker)</p>
-              </div>
-
-          </div>
-
-          <div className="step-separator"></div>
-          <div className="one-step">
-            <img className="note-image lazy"
-                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-                 data-src="https://bookmap.com/wp-content/themes/bookmap/assets/images/three-steps-main/notee.svg"
-                 alt="download">
-              <div className="the-step-header">
-                <span>03</span>
-                <p>Educate yourself</p>
-              </div>
-              <div className="the-step-content">
-                <p>Get free education including live</p>
-                <p>basic or advance webinars</p>
-              </div>
-          </div>
-        </div>
-        <div className="c-blue-button">
-          <a id="main_middle_start_for_free" href="https://bookmap.com/members/signup/thAhOgYUg"><span
-              className="is-desktop-text">START FOR FREE</span><span
-              className="is-mobile-text">SUBSCRIBE FREE BOOKMAP®️</span></a>
-        </div>
-      </div>
-    </section>
-
-*/}
+      <Typography variant="h2">Start with Bookmap in 3 simple steps</Typography>
+      <Box className={classes.cTreeSteps}>
+        <Box className={classes.oneStep}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              component="img"
+              alt="Get Software"
+              image="/static/main/section3/cloud.svg"
+              title="Get Software"
+            />
+            <CardContent>
+              <Typography gutterBottom>01 Get Software</Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Register to Bookmap
+                <br />
+                Download and install the app
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box className={classes.stepSeparator}></Box>
+        <Box className={classes.oneStep}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              component="img"
+              alt="Connect Data"
+              image="/static/main/section3/planet.svg"
+              title="Connect Data"
+            />
+            <CardContent>
+              <Typography gutterBottom>02 Connect Data</Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Connect to market data provider (directly or via your broker)
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box className={classes.stepSeparator}></Box>
+        <Box className={classes.oneStep}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              component="img"
+              alt="Educate yourself"
+              image="/static/main/section3/note.svg"
+              title="Educate yourself"
+            />
+            <CardContent>
+              <Typography gutterBottom>03 Educate yourself</Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Get free education including live basic or advance webinars
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+      </Box>
+      <Button
+        className={classes.button}
+        variant="contained"
+        color="secondary"
+        href="https://bookmap.com/members/signup/thAhOgYUg"
+      >
+        START FOR FREE
+      </Button>
     </Container>
   )
 }

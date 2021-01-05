@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function TabsWrappedLabel() {
+export default function TabsWrappedLabelSection2() {
   const classes = useStyles()
   const [value, setValue] = React.useState('one')
 
@@ -64,7 +64,7 @@ export default function TabsWrappedLabel() {
   return (
     <Container fixed>
       <div className={classes.root}>
-        <Typography component="h1" variant="h1">
+        <Typography component="h1" variant="h2">
           Bookmap features
         </Typography>
         <AppBar position="static">

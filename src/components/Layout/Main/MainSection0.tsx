@@ -28,7 +28,7 @@ export default function MainSection0() {
           <Grid item md={6}>
             <Typography
               component="h1"
-              variant="h1"
+              variant="h2"
               color="primary"
               gutterBottom
               className={classes.headTradePlatform}

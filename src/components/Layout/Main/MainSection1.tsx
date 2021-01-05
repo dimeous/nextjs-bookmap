@@ -27,7 +27,7 @@ export default function MainSection1() {
     <Container fixed className={classes.root}>
       <Grid container>
         <Grid item md={6}>
-          <Typography component="h1" variant="h1" color="inherit" gutterBottom>
+          <Typography component="h1" variant="h2" color="inherit" gutterBottom>
             So, what is Bookmap?
           </Typography>
           <Typography color="inherit" paragraph>

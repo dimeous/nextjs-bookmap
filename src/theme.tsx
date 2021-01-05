@@ -10,8 +10,9 @@ const theme = createMuiTheme({
       light: '#0185f9',
     },
     secondary: {
-      main: '#1e262d',
+      main: '#0085f9',
       light: '#0085f9',
+      dark: '#1e262d',
     },
 
     error: {
@@ -22,8 +23,15 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    h2: {
+      fontSize: 32,
+      lineHeight: 38 + 'px',
+    },
+
+    fontSize: 16,
+    fontWeightLight: 400,
     fontFamily: [
-      'MullerRegular',
+      'MullerLight',
       'Arial',
       '-apple-system',
       'BlinkMacSystemFont',
