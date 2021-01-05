@@ -7,6 +7,7 @@ import Link from '../src/Link'
 import Copyright from '../src/Copyright'
 import TrustPreloadPilot from '../src/components/trustPreloadPilot'
 import Paper from '@material-ui/core/Paper'
+import MainSection3 from '../src/components/Layout/Main/MainSection3'
 import MainSection2 from '../src/components/Layout/Main/MainSection2'
 import MainSection1 from '../src/components/Layout/Main/MainSection1'
 import MainSection0 from '../src/components/Layout/Main/MainSection0'
@@ -20,6 +21,7 @@ export default function Index() {
       <Paper>
         <MainSection1 />
         <MainSection2 />
+        <MainSection3 />
         <Container maxWidth="sm">
           <Box sx={{ my: 4 }}>
             <Typography variant="h4" component="h1" gutterBottom>
