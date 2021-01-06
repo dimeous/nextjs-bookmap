@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './MainSection5Pricing.module.css'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
@@ -83,6 +84,7 @@ export default function TabsWrappedLabelSection5() {
         {/* 3-d Panel*/}
         <TabPanel value={value} index="three"></TabPanel>
       </div>
+      <Box className={styles.cPrices}>ssdfsdf</Box>
       {/*}
         <div className="c-prices">
             <div className="c-prices__column naming">
