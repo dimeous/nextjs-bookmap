@@ -32,7 +32,7 @@ const theme = createMuiTheme({
     fontWeightLight: 400,
     fontFamily: [
       'MullerLight',
-      'Arial',
+      'serix',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
