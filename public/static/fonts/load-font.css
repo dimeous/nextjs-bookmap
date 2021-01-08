@@ -12,3 +12,10 @@
     font-display: swap;
     src: url('./MullerLight.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'MullerMedium';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./MullerMedium.woff2') format('woff2');
+}

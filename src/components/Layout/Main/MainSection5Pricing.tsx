@@ -1,12 +1,13 @@
 import React from 'react'
-import './MainSection5Pricing.module.css'
-import { makeStyles, Theme } from '@material-ui/core/styles'
+import { styles } from './MainSection5PricingStyles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
+import ClearIcon from '@material-ui/icons/Clear'
+import CheckIcon from '@material-ui/icons/Check'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -41,12 +42,7 @@ function a11yProps(index: any) {
   }
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-}))
+const useStyles = styles
 
 export default function TabsWrappedLabelSection5() {
   const classes = useStyles()
@@ -81,11 +77,10 @@ export default function TabsWrappedLabelSection5() {
         {/* 3-d Panel*/}
         <TabPanel value={value} index="three"></TabPanel>
       </div>
-
-      <div className="c-prices">
-        <div className="c-prices__column naming">
-          <ul className="naming-list">
-            <li className="small-to-medium add-ons roww custom-row">
+      <Box className={classes.cPrices}>
+        <Box className={classes.naming}>
+          <ul className={classes.namingList}>
+            <li>
               <h4>KEY FEATURES</h4>
               <p>
                 Heatmap, Volume dots, CVD
@@ -93,599 +88,548 @@ export default function TabsWrappedLabelSection5() {
                 &amp; Volume Profile columns
               </p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>Record / Replay, VWAP, POC</p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>LLT, Strength Level, Imbalance</p>
             </li>
-            <li className="small-to-medium trading roww custom-row">
+            <li>
               <h4>ONE CLICK TRADING</h4>
               <p>Crypto</p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>Futures, Stocks</p>
             </li>
-            <li className="medium-row custom_sp roww custom-row">
+            <li>
               <h4>MARKETS VISUALIZATION</h4>
               <p>
                 Crypto currencies <br />
                 &gt; 15 exchanges (Free data)
               </p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>Futures &amp; Stocks </p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>
                 Maximum # of Trading Symbols
                 <br />
                 Viewable at the Same Time
               </p>
             </li>
-            <li className="medium-row custom_sp roww custom-row">
+            <li>
               <h4>EDUCATION</h4>
               <p>Bookmap Basics Webinars with Q&amp;As</p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>LIVE Trading Sessions with Pro Traders</p>
             </li>
-            <li className="small-row roww custom-row">
+            <li>
               <p>Order Flow Analysis Webinars</p>
             </li>
-            <li className="small-row add-ons roww custom-row">
+            <li>
               <p>Advanced Trading Educational Course</p>
             </li>
-            <li className="medium-row roww custom-row">
+            <li>
               <h4>MARKETPLACE</h4>
               <p>Addons, Market Data and Educational courses (Sold separately)</p>
             </li>
           </ul>
-        </div>
-        <div className="c-prices__column digital">
-          <div className="price-name">
+        </Box>
+        <Box className={classes.digital}>
+          <Box className={classes.priceName}>
             <p>digital</p>
-          </div>
-          <ul className="price-tags">
-            <li className="small-to-medium trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+          </Box>
+          <ul className={classes.priceTags}>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>Key Features</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
+                <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Record / Replay, VWAP, POC</p>
+                <p>Record / Replay, VWAP, POC</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i className=""></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">LLT, Strength Level, Imbalance</p>
+                <p>LLT, Strength Level, Imbalance</p>
               </div>
             </li>
-            <li className="small-to-medium trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>ONE CLICK TRADING</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Crypto</p>
+                <p>Crypto</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Futures, Stocks</p>
+                <p>Futures, Stocks</p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>MARKETS VISUALIZATION</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Crypto currencies &gt; 15 exchanges (Free data) </p>
+                <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
                 <span>Delayed</span>
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                   <span>Delayed</span>
                 </p>
-                <p className="tag-text">Futures &amp; Stocks </p>
+                <p>Futures &amp; Stocks </p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">1</p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">1</p>
-                <p className="tag-text">Maximum # of Trading Symbols Viewable at the Same Time</p>
+            <li>
+              <p>1</p>
+              <div>
+                <p>1</p>
+                <p>Maximum # of Trading Symbols Viewable at the Same Time</p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>EDUCATION</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Bookmap Basics Webinars with Q&amp;As</p>
+                <p>Bookmap Basics Webinars with Q&amp;As</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">LIVE Trading Sessions with Pro Traders</p>
+                <p>LIVE Trading Sessions with Pro Traders</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Order Flow Analysis Webinars with Q&amp;As</p>
+                <p>Order Flow Analysis Webinars with Q&amp;As</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Advanced Trading Educational Course </p>
+                <p>Advanced Trading Educational Course </p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
+            <li>
+              <p>
                 Compatible with <b>SOME</b> addons
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>MARKETPLACE</h4>
-                <p className="tag-status status-yes">
+                <p>
                   Compatible with <b>SOME</b> addons (Sold separately)
                 </p>
-                <p className="tag-text">
-                  Addons, Market Data and Educational courses (Sold separately)
-                </p>
+                <p>Addons, Market Data and Educational courses (Sold separately)</p>
               </div>
             </li>
           </ul>
-          <div className="the-price">
-            <div className="the-price-content free-price">
-              <span className="price-number">Free</span>
+          <div>
+            <div>
+              <span>Free</span>
             </div>
-            <div className="price-link">
+            <div>
               <a href="https://bookmap.com/members/signup/thAhOgYUg">
-                <span className="link-info">Select digital</span>
+                <span>Select digital</span>
                 <span className="link-circle"></span>
               </a>
             </div>
           </div>
-        </div>
-        <div className="c-prices__column global">
-          <div className="price-name">
-            <p>global</p>
-          </div>
-          <ul className="price-tags">
-            <li className="small-to-medium trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+        </Box>
+        <Box className={classes.digital}>
+          <Box className={classes.priceName}>
+            <p>digital</p>
+          </Box>
+          <ul className={classes.priceTags}>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>Key Features</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
+                <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Record / Replay, VWAP, POC</p>
+                <p>Record / Replay, VWAP, POC</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">LLT, Strength Level, Imbalance</p>
+                <p>LLT, Strength Level, Imbalance</p>
               </div>
             </li>
-            <li className="small-to-medium trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>ONE CLICK TRADING</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Crypto</p>
+                <p>Crypto</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-no">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Futures, Stocks</p>
+                <p>Futures, Stocks</p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>MARKETS VISUALIZATION</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Crypto currencies &gt; 15 exchanges (Free data) </p>
+                <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
-                <span>
-                  Data required<sup>*</sup>
-                </span>
+            <li>
+              <p>
+                <ClearIcon />
+                <span>Delayed</span>
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
-                  <span>
-                    Data required<sup>*</sup>/span&gt;
-                  </span>
+              <div>
+                <p>
+                  <ClearIcon />
+                  <span>Delayed</span>
                 </p>
-                <p className="tag-text">Futures &amp; Stocks </p>
+                <p>Futures &amp; Stocks </p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">20</p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">20</p>
-                <p className="tag-text">Maximum # of Trading Symbols Viewable at the Same Time</p>
+            <li>
+              <p>1</p>
+              <div>
+                <p>1</p>
+                <p>Maximum # of Trading Symbols Viewable at the Same Time</p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>EDUCATION</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Bookmap Basics Webinars with Q&amp;As</p>
+                <p>Bookmap Basics Webinars with Q&amp;As</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                FREE <span> Until The End of 2020</span>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  FREE <span> Until The End of 2020</span>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">LIVE Trading Sessions with Pro Traders</p>
+                <p>LIVE Trading Sessions with Pro Traders</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Order Flow Analysis Webinars with Q&amp;As</p>
+                <p>Order Flow Analysis Webinars with Q&amp;As</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Advanced Trading Educational Course </p>
+                <p>Advanced Trading Educational Course </p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                Compatible with <b>ALL</b> addons
+            <li>
+              <p>
+                Compatible with <b>SOME</b> addons
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>MARKETPLACE</h4>
-                <p className="tag-status status-yes">
-                  Compatible with <b>ALL</b> addons
-                  <br />
-                  (Sold separately)
+                <p>
+                  Compatible with <b>SOME</b> addons (Sold separately)
                 </p>
-                <p className="tag-text">
-                  Addons, Market Data and Educational courses (Sold separately)
-                </p>
+                <p>Addons, Market Data and Educational courses (Sold separately)</p>
               </div>
             </li>
           </ul>
-          <div className="the-price">
-            <div className="the-price-content price-global-discount">
-              <div id="discount_first_month">
-                <span className="price-currency">$</span>
-                <span className="price-number">39</span>
-                <span>&nbsp;from 2-nd month</span>
-              </div>
-              <span>$</span>
-              <span>24</span>
-              <p className="price-period">
-                <span className="period-space">&nbsp;</span>first month
-              </p>
+          <div>
+            <div>
+              <span>Free</span>
             </div>
-            <div className="the-price-content">
-              <span className="price-currency">$</span>
-              <span className="price-number">39</span>
-              <p className="price-period">
-                <span className="period-space">&nbsp;</span>per month
-              </p>
-              <p className="price-save">Save $120 a year</p>
-            </div>
-            <div className="price-link">
-              <a href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104">
-                <span className="link-info">Select global</span>
+            <div>
+              <a href="https://bookmap.com/members/signup/thAhOgYUg">
+                <span>Select digital</span>
                 <span className="link-circle"></span>
               </a>
             </div>
           </div>
-        </div>
-        <div className="c-prices__column global-plus">
-          <div className="price-name">
-            <p>global plus</p>
-          </div>
-          <ul className="price-tags">
-            <li className="small-to-medium trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+        </Box>
+        <Box className={classes.digital}>
+          <Box className={classes.priceName}>
+            <p>digital</p>
+          </Box>
+          <ul className={classes.priceTags}>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>Key Features</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
+                <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Record / Replay, VWAP, POC</p>
+                <p>Record / Replay, VWAP, POC</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">LLT, Strength Level, Imbalance</p>
+                <p>LLT, Strength Level, Imbalance</p>
               </div>
             </li>
-            <li className="small-to-medium trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>ONE CLICK TRADING</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Crypto</p>
+                <p>Crypto</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Futures, Stocks</p>
+                <p>Futures, Stocks</p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>MARKETS VISUALIZATION</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Crypto currencies &gt; 15 exchanges (Free data) </p>
+                <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
-                <span>
-                  Data required<sup>*</sup>
-                </span>
+            <li>
+              <p>
+                <ClearIcon />
+                <span>Delayed</span>
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
-                  <span>
-                    Data required<sup>*</sup>/span&gt;
-                  </span>
+              <div>
+                <p>
+                  <ClearIcon />
+                  <span>Delayed</span>
                 </p>
-                <p className="tag-text">Futures &amp; Stocks </p>
+                <p>Futures &amp; Stocks </p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">20</p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">20</p>
-                <p className="tag-text">Maximum # of Trading Symbols Viewable at the Same Time</p>
+            <li>
+              <p>1</p>
+              <div>
+                <p>1</p>
+                <p>Maximum # of Trading Symbols Viewable at the Same Time</p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <CheckIcon />
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>EDUCATION</h4>
-                <p className="tag-status status-yes">
-                  <i></i>
+                <p>
+                  <CheckIcon />
                 </p>
-                <p className="tag-text">Bookmap Basics Webinars with Q&amp;As</p>
+                <p>Bookmap Basics Webinars with Q&amp;As</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                FREE <span> Until The End of 2020</span>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  FREE
-                  <span> Until The End of 2020</span>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">LIVE Trading Sessions with Pro Traders</p>
+                <p>LIVE Trading Sessions with Pro Traders</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Order Flow Analysis Webinars with Q&amp;As</p>
+                <p>Order Flow Analysis Webinars with Q&amp;As</p>
               </div>
             </li>
-            <li className="small-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                <i></i>
+            <li>
+              <p>
+                <ClearIcon />
               </p>
-              <div className="tag-mobile-content with-header">
-                <p className="tag-status status-yes">
-                  <i></i>
+              <div>
+                <p>
+                  <ClearIcon />
                 </p>
-                <p className="tag-text">Advanced Trading Educational Course </p>
+                <p>Advanced Trading Educational Course </p>
               </div>
             </li>
-            <li className="medium-row trading roww custom-row">
-              <p className="tag-desktop-content">
-                Compatible with <b>ALL</b> addons
+            <li>
+              <p>
+                Compatible with <b>SOME</b> addons
               </p>
-              <div className="tag-mobile-content with-header">
+              <div>
                 <h4>MARKETPLACE</h4>
-                <p className="tag-status status-yes">
-                  Compatible with <b>ALL</b> addons (Sold separately)
+                <p>
+                  Compatible with <b>SOME</b> addons (Sold separately)
                 </p>
-                <p className="tag-text">
-                  Addons, Market Data and Educational courses (Sold separately)
-                </p>
+                <p>Addons, Market Data and Educational courses (Sold separately)</p>
               </div>
             </li>
           </ul>
-          <div className="the-price">
-            <div className="the-price-content price-global-p-discount">
-              <div id="discount_first_month">
-                <span className="price-currency">$</span>
-                <span className="price-number">79</span>
-                <span>&nbsp;from 2-nd month</span>
-              </div>
-              <span>$</span>
-              <span>44</span>
-              <p className="price-period">
-                <span className="period-space">&nbsp;</span>first month
-              </p>
+          <div>
+            <div>
+              <span>Free</span>
             </div>
-            <div className="the-price-content">
-              <span className="price-currency">$</span>
-              <span className="price-number">79</span>
-              <p className="price-period">
-                <span className="period-space">&nbsp;</span>per month
-              </p>
-              <p className="price-save">Save $240 a year</p>
-            </div>
-            <div className="price-link">
-              <a href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105">
-                <span className="link-info">Select global plus</span>
+            <div>
+              <a href="https://bookmap.com/members/signup/thAhOgYUg">
+                <span>Select digital</span>
                 <span className="link-circle"></span>
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </Container>
   )
 }
