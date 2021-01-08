@@ -1,13 +1,295 @@
-.cPrices {
-    margin-top: -400px;
-    padding: 0 35px 0 115px;
-    width: 100%;
+
+.pricing {
+    padding: 80px 0 90px
 }
-@media (max-width: 1150px) {
-    .cPrices {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 700px;
-        padding: 0
+
+.pricing__text {
+    margin-bottom: 40px;
+    max-width: 575px
+}
+
+@media screen and (max-width: 1199px) {
+    .pricing__text {
+        max-width: 620px
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pricing__text {
+        max-width: 360px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .reviews .container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    .pricing__text {
+        margin-bottom: 0
+    }
+}
+
+.pricing__tabs {
+    margin-bottom: 70px;
+    max-width: 450px;
+    width: 100%
+}
+
+@media screen and (max-width: 1199px) {
+    .pricing__tabs {
+        max-width: 250px
+    }
+
+    .pricing__cards {
+        -ms-flex-pack: center !important;
+        -ms-flex-wrap: wrap;
+        -webkit-box-pack: center !important;
+        flex-wrap: wrap;
+        justify-content: center !important
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pricing__tabs {
+        margin-bottom: 50px;
+        max-width: 100%
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pricing__cards {
+        -ms-flex-pack: justify !important;
+        -webkit-box-pack: justify !important;
+        justify-content: space-between !important
+    }
+}
+
+.pricing__card {
+    -o-transition: .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    border: 1px solid hsla(0, 0%, 97.3%, .2);
+    border-radius: 5px;
+    height: 500px;
+    max-width: 260px;
+    padding: 30px 15px 0 30px;
+    transition: .3s ease-out;
+    width: 100%
+}
+
+.pricing__card-image-wrap {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    height: 50px;
+    margin-bottom: 20px
+}
+
+.pricing__card-title {
+    -o-transition: .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    color: #fff;
+    font-family: MullerRegular;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    transition: .3s ease-out
+}
+
+.pricing__card-priv li, .pricing__card-subtitle {
+    -o-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all .3s ease-out
+}
+
+.pricing__card-subtitle {
+    color: #fff;
+    font-family: MullerMedium;
+    opacity: .8
+}
+
+.pricing__card-info {
+    height: 300px
+}
+
+.pricing__card-priv li {
+    font-family: MullerLight;
+    padding-left: 10px
+}
+
+.pricing__card-priv li, .pricing__card-priv li a {
+    color: hsla(0, 0%, 100%, .8);
+    position: relative
+}
+
+.pricing__card-priv li:before {
+    -o-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    background: #fff;
+    border-radius: 100%;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    transition: all .3s ease-out;
+    width: 4px
+}
+
+.pricing__card-price {
+    margin-top: 20px;
+    max-width: 200px;
+    padding-bottom: 30px;
+    padding-top: 25px;
+    position: relative;
+    width: 100%
+}
+
+.pricing__card-price h3 {
+    color: #1a77e2;
+    font-size: 22px;
+    line-height: 28px
+}
+
+.pricing__card-price .pricing__button, .pricing__card-price h3 {
+    -o-transition: .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out
+}
+
+.pricing__card-price .pricing__button {
+    height: 30px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+    visibility: hidden;
+    width: 200px
+}
+
+.pricing__card-price .pricing__button a {
+    height: 30px;
+    padding: 0 10px 0 57px
+}
+
+.pricing__card-price .pricing__button a:after {
+    height: 20px;
+    width: 20px
+}
+
+.pricing__card--premium {
+    background: #2892fa
+}
+
+.pricing__card--premium .pricing__card-image {
+    height: 100%;
+    position: relative;
+    width: 50px
+}
+
+.pricing__card--premium .pricing__card-subtitle, .pricing__card--premium:hover .pricing__card-image:after {
+    opacity: 1
+}
+
+.pricing__card--premium .pricing__card-price h3 {
+    color: #fff
+}
+
+.pricing__card--premium:hover .pricing__card-image:before, .pricing__card:hover .pricing__card-price h3 {
+    opacity: 0
+}
+
+.pricing__card:active, .pricing__card:hover {
+    background: #fff
+}
+
+.pricing__card:active .pricing__card-priv li a, .pricing__card:active .pricing__card-title, .pricing__card:focus .pricing__card-priv li a, .pricing__card:focus .pricing__card-title, .pricing__card:hover .pricing__card-priv li, .pricing__card:hover .pricing__card-priv li a, .pricing__card:hover .pricing__card-subtitle, .pricing__card:hover .pricing__card-title {
+    color: #1a1833
+}
+
+.pricing__card:hover .pricing__card-priv li:before {
+    background: #1a1833
+}
+
+.pricing__card:hover .pricing__card-price .pricing__button {
+    opacity: 1;
+    visibility: visible
+}
+
+@media screen and (max-width: 1199px) {
+    .pricing__card {
+        margin: 0 15px 80px;
+        max-width: 375px;
+        padding: 30px 20px 0
+    }
+
+    .pricing__card:nth-child(3), .pricing__card:nth-child(4) {
+        margin-bottom: 0
+    }
+
+    .pricing__card-price {
+        max-width: 100%
+    }
+
+    .pricing__card-price .pricing__button {
+        left: 50%;
+        margin-left: -127px;
+        padding-left: 35px;
+        width: 254px
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pricing__card {
+        margin: 0 0 40px;
+        max-width: 345px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pricing__card {
+        margin: 0 auto 20px !important
+    }
+
+    .pricing__plan {
+        padding-top: 50px
+    }
+
+    .gridlist-item-b {
+        height: auto;
+        max-width: 45%
+    }
+}
+
+.pricing__plan {
+    -ms-flex-align: center;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    position: relative
+}
+
+.pricing__plan-paragraph {
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+@media screen and (max-width: 767px) {
+    .pricing .container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
     }
 }
