@@ -80,7 +80,7 @@ export default function TabsWrappedLabelSection5() {
       <Box className={classes.cPrices}>
         <Box className={classes.naming}>
           <ul className={classes.namingList}>
-            <li>
+            <li className={classes.roww}>
               <h4>KEY FEATURES</h4>
               <p>
                 Heatmap, Volume dots, CVD
@@ -94,14 +94,14 @@ export default function TabsWrappedLabelSection5() {
             <li>
               <p>LLT, Strength Level, Imbalance</p>
             </li>
-            <li>
+            <li className={classes.roww}>
               <h4>ONE CLICK TRADING</h4>
               <p>Crypto</p>
             </li>
             <li>
               <p>Futures, Stocks</p>
             </li>
-            <li>
+            <li className={classes.rowvw}>
               <h4>MARKETS VISUALIZATION</h4>
               <p>
                 Crypto currencies <br />
@@ -118,7 +118,7 @@ export default function TabsWrappedLabelSection5() {
                 Viewable at the Same Time
               </p>
             </li>
-            <li>
+            <li className={classes.rowvw}>
               <h4>EDUCATION</h4>
               <p>Bookmap Basics Webinars with Q&amp;As</p>
             </li>
@@ -144,149 +144,67 @@ export default function TabsWrappedLabelSection5() {
           <ul className={classes.priceTags}>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>Key Features</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Record / Replay, VWAP, POC</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>LLT, Strength Level, Imbalance</p>
-              </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>ONE CLICK TRADING</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Crypto</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Futures, Stocks</p>
-              </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>MARKETS VISUALIZATION</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
                 <span>Delayed</span>
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                  <span>Delayed</span>
-                </p>
-                <p>Futures &amp; Stocks </p>
-              </div>
             </li>
             <li>
               <p>1</p>
-              <div>
-                <p>1</p>
-                <p>Maximum # of Trading Symbols Viewable at the Same Time</p>
-              </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>EDUCATION</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Bookmap Basics Webinars with Q&amp;As</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>LIVE Trading Sessions with Pro Traders</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Order Flow Analysis Webinars with Q&amp;As</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Advanced Trading Educational Course </p>
-              </div>
             </li>
             <li>
               <p>
                 Compatible with <b>SOME</b> addons
               </p>
-              <div>
-                <h4>MARKETPLACE</h4>
-                <p>
-                  Compatible with <b>SOME</b> addons (Sold separately)
-                </p>
-                <p>Addons, Market Data and Educational courses (Sold separately)</p>
-              </div>
             </li>
           </ul>
           <div>
@@ -308,149 +226,67 @@ export default function TabsWrappedLabelSection5() {
           <ul className={classes.priceTags}>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>Key Features</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Record / Replay, VWAP, POC</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>LLT, Strength Level, Imbalance</p>
-              </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>ONE CLICK TRADING</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Crypto</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Futures, Stocks</p>
-              </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>MARKETS VISUALIZATION</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
                 <span>Delayed</span>
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                  <span>Delayed</span>
-                </p>
-                <p>Futures &amp; Stocks </p>
-              </div>
             </li>
             <li>
               <p>1</p>
-              <div>
-                <p>1</p>
-                <p>Maximum # of Trading Symbols Viewable at the Same Time</p>
-              </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+                <CheckIcon className={classes.chIcon} />
               </p>
-              <div>
-                <h4>EDUCATION</h4>
-                <p>
-                  <CheckIcon />
-                </p>
-                <p>Bookmap Basics Webinars with Q&amp;As</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>LIVE Trading Sessions with Pro Traders</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Order Flow Analysis Webinars with Q&amp;As</p>
-              </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+                <ClearIcon className={classes.clsIcon} />
               </p>
-              <div>
-                <p>
-                  <ClearIcon />
-                </p>
-                <p>Advanced Trading Educational Course </p>
-              </div>
             </li>
             <li>
               <p>
                 Compatible with <b>SOME</b> addons
               </p>
-              <div>
-                <h4>MARKETPLACE</h4>
-                <p>
-                  Compatible with <b>SOME</b> addons (Sold separately)
-                </p>
-                <p>Addons, Market Data and Educational courses (Sold separately)</p>
-              </div>
             </li>
           </ul>
           <div>
@@ -465,6 +301,90 @@ export default function TabsWrappedLabelSection5() {
             </div>
           </div>
         </Box>
+        <Box className={classes.digital} style={{ marginRight: 0 }}>
+          <Box className={classes.priceName}>
+            <p>digital</p>
+          </Box>
+          <ul className={classes.priceTags}>
+            <li>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+                <span>Delayed</span>
+              </p>
+            </li>
+            <li>
+              <p>1</p>
+            </li>
+            <li>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                Compatible with <b>SOME</b> addons
+              </p>
+            </li>
+          </ul>
+          <div>
+            <div>
+              <span>Free</span>
+            </div>
+            <div>
+              <a href="https://bookmap.com/members/signup/thAhOgYUg">
+                <span>Select digital</span>
+                <span className="link-circle"></span>
+              </a>
+            </div>
+          </div>
+        </Box>
+
+        {/*
         <Box className={classes.digital}>
           <Box className={classes.priceName}>
             <p>digital</p>
@@ -472,81 +392,81 @@ export default function TabsWrappedLabelSection5() {
           <ul className={classes.priceTags}>
             <li>
               <p>
-                <CheckIcon />
+           <CheckIcon  className={classes.chIcon}/>
               </p>
               <div>
                 <h4>Key Features</h4>
                 <p>
-                  <CheckIcon />
+             <CheckIcon  className={classes.chIcon}/>
                 </p>
                 <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                 </p>
                 <p>Record / Replay, VWAP, POC</p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                 </p>
                 <p>LLT, Strength Level, Imbalance</p>
               </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+           <CheckIcon  className={classes.chIcon}/>
               </p>
               <div>
                 <h4>ONE CLICK TRADING</h4>
                 <p>
-                  <CheckIcon />
+             <CheckIcon  className={classes.chIcon}/>
                 </p>
                 <p>Crypto</p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                 </p>
                 <p>Futures, Stocks</p>
               </div>
             </li>
             <li>
               <p>
-                <CheckIcon />
+           <CheckIcon  className={classes.chIcon}/>
               </p>
               <div>
                 <h4>MARKETS VISUALIZATION</h4>
                 <p>
-                  <CheckIcon />
+             <CheckIcon  className={classes.chIcon}/>
                 </p>
                 <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
                 <span>Delayed</span>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                   <span>Delayed</span>
                 </p>
                 <p>Futures &amp; Stocks </p>
@@ -561,45 +481,45 @@ export default function TabsWrappedLabelSection5() {
             </li>
             <li>
               <p>
-                <CheckIcon />
+           <CheckIcon  className={classes.chIcon}/>
               </p>
               <div>
                 <h4>EDUCATION</h4>
                 <p>
-                  <CheckIcon />
+             <CheckIcon  className={classes.chIcon}/>
                 </p>
                 <p>Bookmap Basics Webinars with Q&amp;As</p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                 </p>
                 <p>LIVE Trading Sessions with Pro Traders</p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                 </p>
                 <p>Order Flow Analysis Webinars with Q&amp;As</p>
               </div>
             </li>
             <li>
               <p>
-                <ClearIcon />
+             <ClearIcon  className={classes.clsIcon}/>
               </p>
               <div>
                 <p>
-                  <ClearIcon />
+               <ClearIcon  className={classes.clsIcon}/>
                 </p>
                 <p>Advanced Trading Educational Course </p>
               </div>
@@ -629,6 +549,7 @@ export default function TabsWrappedLabelSection5() {
             </div>
           </div>
         </Box>
+        */}
       </Box>
     </Container>
   )

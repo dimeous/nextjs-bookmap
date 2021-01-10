@@ -1,7 +1,9 @@
 import React from 'react'
-import { Typography, makeStyles, CardMedia } from '@material-ui/core'
+import styles from './MainSection0.module.css'
+import { Typography, makeStyles } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
   },
   secondTitle: {
     color: theme.palette.secondary.light,
+  },
+  bImage: {
+    height: '100%',
+    display: 'grid',
+  },
+  backImage: {
+    height: '100%',
   },
 }))
 
@@ -43,11 +52,40 @@ export default function MainSection0() {
             </Typography>
           </Grid>
           <Grid item md={6}>
+            <div className={styles.outer}>
+              <Image
+                src="/static/main/bg-cr.png"
+                alt="Bookmap chart"
+                layout="responsive"
+                height={1200}
+                width={1875}
+                className={classes.backImage}
+              />
+              <div className={styles.inner}>
+                <div className={styles.slideranimated}>
+                  <div className={classes.bImage}>
+                    <Image
+                      src="/static/main/overlay-sec1.png"
+                      alt="Bookmap chart"
+                      height={1200}
+                      width={1875}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*
             <CardMedia
               className={classes.media}
               image="/static/main/bg-cr.png"
               title="Bokmap Chart"
             />
+            <div
+              className={styles.slideranimated}
+              style={{ backgroundImage: `url('/static/main/overlay-sec1.png')`, zIndex: 1 }}
+            >
+              </div>
+                */}
           </Grid>
         </Grid>
       </Container>

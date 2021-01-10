@@ -107,7 +107,7 @@ export default function TabsWrappedLabelSection4() {
         <TabPanel value={value} index="one">
           <Grid container>
             {/* First line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/dxfeed.png"
@@ -118,7 +118,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/rithmic.svg"
@@ -129,7 +129,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/trading-tech.svg"
@@ -139,7 +139,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/cqg.svg"
@@ -151,7 +151,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 2 line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/gain-capital.svg"
@@ -162,7 +162,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/ninja-traders.svg"
@@ -173,7 +173,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/transact.svg"
@@ -184,7 +184,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/iqfeed.svg"
@@ -196,7 +196,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 3 line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/stage.svg"
@@ -207,7 +207,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/cedro.png"
@@ -218,7 +218,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/eurex.png"
@@ -229,7 +229,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/edge-clear.png"
@@ -246,7 +246,7 @@ export default function TabsWrappedLabelSection4() {
         <TabPanel value={value} index="two">
           <Grid container>
             {/* First line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/dxfeed.png"
@@ -257,7 +257,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/2/ts.jpg"
@@ -268,7 +268,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/2/ib.jpg"
@@ -279,7 +279,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/cedro.png"
@@ -296,7 +296,7 @@ export default function TabsWrappedLabelSection4() {
         <TabPanel value={value} index="three">
           <Grid container>
             {/* First line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/binance.png"
@@ -307,7 +307,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/binance-futures.png"
@@ -318,7 +318,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bitmex.png"
@@ -329,7 +329,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bitflyer.png"
@@ -341,7 +341,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 2 line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bitstamp.png"
@@ -352,7 +352,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/btse.png"
@@ -363,7 +363,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bittrex.png"
@@ -374,7 +374,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bybit.png"
@@ -386,7 +386,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 3 line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bitfinex.svg"
@@ -397,7 +397,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/coinbase.png"
@@ -408,7 +408,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/coinflex.png"
@@ -419,7 +419,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/deribit.png"
@@ -431,7 +431,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 4 line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/ftx.png"
@@ -442,7 +442,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/hitbtc.jpg"
@@ -453,7 +453,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/huobi.png"
@@ -464,7 +464,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/krakenf.jpg"
@@ -476,7 +476,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 5 line*/}
-            <Grid md={3} xs={6} alignItems="center">
+            <Grid md={3} xs={6} item alignItems="center">
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/kraken.png"
@@ -487,7 +487,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/liquid.png"
@@ -498,7 +498,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/okex.png"
@@ -509,7 +509,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/okcoin.svg"
@@ -520,7 +520,7 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
-            <Grid md={3} xs={6}>
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/poloniex.png"

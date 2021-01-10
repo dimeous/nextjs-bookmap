@@ -22,10 +22,14 @@ export const styles = makeStyles(() => ({
     width: '252px',
     alignItems: 'flex-start',
     display: 'flex',
-    marginRight: '10px',
+    marginRight: '40px',
     transform: 'translateY(-5px)',
+    ' & p': {
+      margin: 0,
+    },
   },
   namingList: {
+    padding: '77px 0px',
     minWidth: '250px',
     listStyle: 'none',
     width: '252px',
@@ -49,6 +53,7 @@ export const styles = makeStyles(() => ({
       justifyContent: 'flex-start',
       lineHeight: 1,
       textTransform: 'uppercase',
+      margin: 0,
     },
   },
 
@@ -60,6 +65,17 @@ export const styles = makeStyles(() => ({
     width: '100%',
     alignItems: 'center',
     marginRight: '30px',
+    '& li': {
+      lineHeight: '0px',
+    },
+  },
+  digitalM0: {
+    borderRadius: '5px',
+    display: 'flex',
+    flexDirection: 'column',
+    overflow: 'hidden',
+    width: '100%',
+    alignItems: 'center',
   },
   priceName: {
     backgroundColor: '#0e67d0',
@@ -90,5 +106,26 @@ export const styles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     padding: '30px 25px 0',
+  },
+  roww: {
+    minHeight: '50px!important',
+  },
+  rowvw: {
+    minHeight: '83px!important',
+    '& h4': {
+      paddingBottom: '10px',
+    },
+  },
+  checkIcon: {
+    color: '#0084f6',
+    fontSize: '16px',
+  },
+  chIcon: {
+    color: '#0084f6',
+    fontSize: '16px',
+  },
+  clsIcon: {
+    color: '#c6c6c6',
+    fontSize: '16px',
   },
 }))
