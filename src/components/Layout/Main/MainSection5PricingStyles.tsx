@@ -2,7 +2,6 @@ import { makeStyles, Theme } from '@material-ui/core/styles'
 
 export const styles = makeStyles(() => ({
   root: {
-    flexGrow: 1,
     color: '#1a1833',
   },
   cPrices: {
@@ -58,24 +57,16 @@ export const styles = makeStyles(() => ({
   },
 
   digital: {
+    font: '12px/14px MullerRegular,sans-serif',
     borderRadius: '5px',
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
-    width: '100%',
     alignItems: 'center',
     marginRight: '30px',
     '& li': {
-      lineHeight: '0px',
+      height: '40px',
     },
-  },
-  digitalM0: {
-    borderRadius: '5px',
-    display: 'flex',
-    flexDirection: 'column',
-    overflow: 'hidden',
-    width: '100%',
-    alignItems: 'center',
   },
   priceName: {
     backgroundColor: '#0e67d0',
@@ -91,13 +82,6 @@ export const styles = makeStyles(() => ({
       lineHeight: 1,
       textTransform: 'uppercase',
     },
-  },
-  global: {
-    display: 'flex',
-    flexDirection: 'column',
-    overflow: 'hidden',
-    width: '100%',
-    marginRight: '30px',
   },
   priceTags: {
     border: '1px solid #bdc4d0',
@@ -127,5 +111,29 @@ export const styles = makeStyles(() => ({
   clsIcon: {
     color: '#c6c6c6',
     fontSize: '16px',
+  },
+  delayStyle: {
+    color: 'grey',
+    display: 'block',
+    fontSize: '12px',
+  },
+  priceLink: {
+    maxWidth: '183px',
+    width: '100%',
+  },
+  priceNumber: {
+    font: '32px MullerLight,sans-serif',
+    lineHeight: 1,
+    transition: '.2s ease',
+  },
+  thePrice: {
+    alignItems: 'center',
+    border: '1px solid #bdc4d0',
+    borderRadius: '0 0 5px 5px',
+    display: 'flex',
+    flexDirection: 'column',
+    transition: '.5s ease',
+    borderTop: 'none',
+    flexGrow: 1,
   },
 }))

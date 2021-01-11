@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
+import { Button } from '@material-ui/core'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -131,7 +132,7 @@ export default function TabsWrappedLabelSection5() {
             <li>
               <p>Advanced Trading Educational Course</p>
             </li>
-            <li>
+            <li className={classes.rowvw}>
               <h4>MARKETPLACE</h4>
               <p>Addons, Market Data and Educational courses (Sold separately)</p>
             </li>
@@ -142,7 +143,7 @@ export default function TabsWrappedLabelSection5() {
             <p>digital</p>
           </Box>
           <ul className={classes.priceTags}>
-            <li>
+            <li className={classes.roww}>
               <p>
                 <CheckIcon className={classes.chIcon} />
               </p>
@@ -157,7 +158,7 @@ export default function TabsWrappedLabelSection5() {
                 <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
-            <li>
+            <li className={classes.roww}>
               <p>
                 <CheckIcon className={classes.chIcon} />
               </p>
@@ -167,21 +168,21 @@ export default function TabsWrappedLabelSection5() {
                 <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
-            <li>
+            <li className={classes.rowvw}>
               <p>
                 <CheckIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
-              <p>
+              <div>
                 <ClearIcon className={classes.clsIcon} />
-                <span>Delayed</span>
-              </p>
+              </div>
+              <span className={classes.delayStyle}>Delayed</span>
             </li>
             <li>
               <p>1</p>
             </li>
-            <li>
+            <li className={classes.rowvw}>
               <p>
                 <CheckIcon className={classes.chIcon} />
               </p>
@@ -201,22 +202,27 @@ export default function TabsWrappedLabelSection5() {
                 <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
-            <li>
-              <p>
+            <li className={classes.rowvw}>
+              <p
+                style={{
+                  font: '14px/16px MullerRegular,sans-serif',
+                }}
+              >
                 Compatible with <b>SOME</b> addons
               </p>
             </li>
           </ul>
-          <div>
+          <div className={classes.thePrice}>
             <div>
-              <span>Free</span>
+              <span className={classes.priceNumber}>Free</span>
             </div>
-            <div>
-              <a href="https://bookmap.com/members/signup/thAhOgYUg">
-                <span>Select digital</span>
-                <span className="link-circle"></span>
-              </a>
-            </div>
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://bookmap.com/members/signup/thAhOgYUg"
+            >
+              START FOR FREE
+            </Button>
           </div>
         </Box>
         <Box className={classes.digital}>
@@ -375,7 +381,7 @@ export default function TabsWrappedLabelSection5() {
             <div>
               <span>Free</span>
             </div>
-            <div>
+            <div className={classes.priceLink}>
               <a href="https://bookmap.com/members/signup/thAhOgYUg">
                 <span>Select digital</span>
                 <span className="link-circle"></span>

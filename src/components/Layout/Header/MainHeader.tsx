@@ -47,8 +47,15 @@ const useStyles = makeStyles(() => ({
   },
   menuButton: {
     fontWeight: 700,
+    font: '14px/14px MullerLight,sans-serif',
+    color: '#1a1833',
     size: '18px',
     marginLeft: '38px',
+    backgroundColor: '#f5f5f5;',
+    border: 'none!important',
+    '&:hover': {
+      backgroundColor: '#f5f5f5;',
+    },
   },
   toolbar: {
     display: 'flex',
@@ -87,7 +94,7 @@ export default function Header() {
         {bookmapLogo}
         <div>{getMenuButtons()}</div>
         <Box>
-          <Button color={'inherit'} variant="outlined">
+          <Button variant="outlined">
             <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
             <span> LOG IN</span>
           </Button>
@@ -152,7 +159,7 @@ export default function Header() {
   const getMenuButtons = () => {
     return headersData.map(({ label, href }) => {
       return (
-        <Button key={label} color={'inherit'} href={href} component={Link} className={menuButton}>
+        <Button key={label} href={href} component={Link} className={menuButton}>
           {label}
         </Button>
       )

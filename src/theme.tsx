@@ -44,6 +44,25 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#0085f9',
+          borderRadius: '5px',
+          marginBottom: '10px',
+          transition: '.5s ease',
+          fontFamily: 'MullerRegular',
+          fontSize: '14px',
+          height: '43px',
+          letterSpacing: '0.77px',
+          '&:hover': {
+            backgroundColor: '#0e67d0',
+          },
+        },
+      },
+    },
+  },
 })
 
 export default theme

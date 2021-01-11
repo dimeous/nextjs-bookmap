@@ -105,9 +105,9 @@ export default function TabsWrappedLabelSection4() {
         </AppBar>
         {/* 1-st Panel*/}
         <TabPanel value={value} index="one">
-          <Grid container>
+          <Grid container alignItems="center">
             {/* First line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/dxfeed.png"
@@ -151,7 +151,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 2 line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/gain-capital.svg"
@@ -196,7 +196,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 3 line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/stage.svg"
@@ -246,7 +246,7 @@ export default function TabsWrappedLabelSection4() {
         <TabPanel value={value} index="two">
           <Grid container>
             {/* First line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/1/dxfeed.png"
@@ -296,7 +296,7 @@ export default function TabsWrappedLabelSection4() {
         <TabPanel value={value} index="three">
           <Grid container>
             {/* First line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/binance.png"
@@ -341,7 +341,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 2 line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bitstamp.png"
@@ -386,7 +386,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 3 line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/bitfinex.svg"
@@ -431,7 +431,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 4 line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/ftx.png"
@@ -476,7 +476,7 @@ export default function TabsWrappedLabelSection4() {
               </Box>
             </Grid>
             {/* 5 line*/}
-            <Grid md={3} xs={6} item alignItems="center">
+            <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <Image
                   src="/static/main/s4/3/kraken.png"

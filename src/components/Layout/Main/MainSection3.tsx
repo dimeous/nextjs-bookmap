@@ -46,17 +46,8 @@ const useStyles = makeStyles(() => ({
     boxShadow: 'none',
   },
   button: {
-    fontFamily: 'MullerRegular',
-    fontSize: '14px',
-    letterSpacing: '0.77px',
-    borderRadius: '4px',
-    height: '43px',
     width: '230px',
-    transition: '.2s ease',
     marginTop: '35px',
-    '&:hover': {
-      backgroundColor: '#0e67d0',
-    },
   },
 }))
 
