@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Box, Grid, Button } from '@material-ui/core'
+import { makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Image from 'next/image'
@@ -72,7 +72,7 @@ export default function MainSection6Trading() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
-      <Typography variant="h2">Start with Bookmap in 3 simple steps</Typography>
+      <Typography variant="h2">Live Advanced Trading Education</Typography>
 
       <Box className={classes.eduBlock}>
         <Box sx={{ display: 'flex' }}>
