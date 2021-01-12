@@ -5,6 +5,7 @@
 }
 
 .slideranimated {
+    overflow: hidden;
     animation-name: sliding;
     animation-timing-function: linear;
     animation-duration: 5s;

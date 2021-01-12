@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.light,
   },
   bImage: {
-    height: '100%',
+    width: '616px',
     display: 'grid',
   },
   backImage: {

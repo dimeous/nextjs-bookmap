@@ -13,6 +13,7 @@ import MainSection2 from '../src/components/Layout/Main/MainSection2'
 import MainSection3 from '../src/components/Layout/Main/MainSection3'
 import MainSection4 from '../src/components/Layout/Main/MainSection4'
 import MainSection5Pricing from '../src/components/Layout/Main/MainSection5Pricing'
+import MainSection6Trading from '../src/components/Layout/Main/MainSection6Trading'
 
 export default function Index() {
   return (
@@ -26,6 +27,7 @@ export default function Index() {
         <MainSection3 />
         <MainSection4 />
         <MainSection5Pricing />
+        <MainSection6Trading />
         <Container maxWidth="sm">
           <Box sx={{ my: 4 }}>
             <Typography variant="h4" component="h1" gutterBottom>

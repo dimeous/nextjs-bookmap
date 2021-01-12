@@ -1,8 +1,22 @@
-import { makeStyles, Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 export const styles = makeStyles(() => ({
   root: {
     color: '#1a1833',
+  },
+  tabs: {
+    marginBottom: '33px',
+  },
+  tabTwo: {
+    color: '#0185f9',
+    font: '14px/14px MullerMedium,sans-serif',
+    position: 'absolute',
+    textTransform: 'capitalize',
+    transition: '.5s ease',
+    width: '100%',
+    marginLeft: '210px',
+    transform: 'translateY(-23px)',
+    zIndex: 1,
   },
   cPrices: {
     display: 'flex',
@@ -14,6 +28,10 @@ export const styles = makeStyles(() => ({
       borderBottom: '1px solid #e8e8e8',
       justifyContent: 'center',
       minHeight: '40px',
+    },
+    '& ul': {
+      margin: 0,
+      width: '100%',
     },
   },
   naming: {
@@ -67,6 +85,7 @@ export const styles = makeStyles(() => ({
     '& li': {
       height: '40px',
     },
+    width: '100%',
   },
   priceName: {
     backgroundColor: '#0e67d0',
@@ -116,6 +135,11 @@ export const styles = makeStyles(() => ({
     color: 'grey',
     display: 'block',
     fontSize: '12px',
+    fontWeight: 600,
+  },
+  freeText: {
+    font: '14px/16px MullerRegular,sans-serif',
+    textAlign: 'center',
   },
   priceLink: {
     maxWidth: '183px',
@@ -134,6 +158,59 @@ export const styles = makeStyles(() => ({
     flexDirection: 'column',
     transition: '.5s ease',
     borderTop: 'none',
-    flexGrow: 1,
+    width: '100%',
+    justifyContent: 'center',
+    alignContent: 'space-between',
+    minHeight: '75px',
+  },
+  priceBlock: {
+    minHeight: '75px',
+    flexWrap: 'wrap',
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+  },
+  priceCurrency: {
+    font: '22px MullerLight, sans-serif',
+    marginRight: '5px',
+    transform: 'translateY(2px)',
+  },
+  pricePeriod: {
+    display: 'flex',
+    font: '20px MullerLight, sans-serif',
+  },
+  periodSpace: {},
+  priceSave: {
+    color: '#8a8a8a',
+    font: '12px MullerLight, sans-serif',
+    paddingLeft: '18px',
+    position: 'absolute',
+  },
+  lifetimeMessage: {
+    color: '#a4a4a4',
+    font: '12px/13px MullerRegular,sans-serif',
+    marginTop: '23px',
+  },
+  cta: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginTop: '27px',
+    alignItems: 'center',
+    textAligh: 'center',
+    '& p': {
+      color: '#000',
+      font: '12px/13px MullerRegular,sans-serif',
+      marginBottom: '13px',
+      textAlign: 'center',
+    },
+    '& a': {
+      color: '#0185f9',
+      font: '12px MullerMedium,sans-serif',
+      lineHeight: 1,
+      textDecoration: 'none',
+      textTransform: 'uppercase',
+      transition: '.5s ease',
+    },
   },
 }))

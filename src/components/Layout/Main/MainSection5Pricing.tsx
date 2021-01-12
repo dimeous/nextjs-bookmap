@@ -1,6 +1,5 @@
 import React from 'react'
 import { styles } from './MainSection5PricingStyles'
-import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
@@ -9,6 +8,7 @@ import Container from '@material-ui/core/Container'
 import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
+import Link from '@material-ui/core/Link'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -62,21 +62,20 @@ export default function TabsWrappedLabelSection5() {
         <Typography component="h2" variant="subtitle1">
           Data is not included
         </Typography>
-        <AppBar position="static">
-          <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-            <Tab value="one" label="MONTHLY" wrapped {...a11yProps('one')} />
-            <Tab value="two" label="YARLY" {...a11yProps('two')} />
-            <Tab value="three" label="LIFETIME" {...a11yProps('three')} />
-          </Tabs>
-        </AppBar>
-        {/* 1-st Panel*/}
-        <TabPanel value={value} index="one"></TabPanel>
-        {/* 2-nd Panel*/}
+
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="wrapped label tabs example"
+          className={classes.tabs}
+        >
+          <Tab value="one" label="MONTHLY" wrapped {...a11yProps('one')} />
+          <Tab value="two" label="YARLY" {...a11yProps('two')} />
+          <Tab value="three" label="LIFETIME" {...a11yProps('three')} />
+        </Tabs>
         <TabPanel value={value} index="two">
-          <Typography paragraph> Save 20%</Typography>
+          <span className={classes.tabTwo}>Save 20%</span>
         </TabPanel>
-        {/* 3-d Panel*/}
-        <TabPanel value={value} index="three"></TabPanel>
       </div>
       <Box className={classes.cPrices}>
         <Box className={classes.naming}>
@@ -138,6 +137,7 @@ export default function TabsWrappedLabelSection5() {
             </li>
           </ul>
         </Box>
+        {/* first table list*/}
         <Box className={classes.digital}>
           <Box className={classes.priceName}>
             <p>digital</p>
@@ -208,12 +208,13 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                Compatible with <b>SOME</b> addons
+                Compatible with <br />
+                <b>SOME</b> addons
               </p>
             </li>
           </ul>
           <div className={classes.thePrice}>
-            <div>
+            <div className={classes.priceBlock}>
               <span className={classes.priceNumber}>Free</span>
             </div>
             <Button
@@ -221,28 +222,19 @@ export default function TabsWrappedLabelSection5() {
               color="secondary"
               href="https://bookmap.com/members/signup/thAhOgYUg"
             >
-              START FOR FREE
+              Select digital
             </Button>
           </div>
         </Box>
+        {/* Second table list*/}
         <Box className={classes.digital}>
           <Box className={classes.priceName}>
             <p>digital</p>
           </Box>
           <ul className={classes.priceTags}>
-            <li>
+            <li className={classes.roww}>
               <p>
                 <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
@@ -255,21 +247,7 @@ export default function TabsWrappedLabelSection5() {
                 <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-                <span>Delayed</span>
-              </p>
-            </li>
-            <li>
-              <p>1</p>
-            </li>
-            <li>
+            <li className={classes.roww}>
               <p>
                 <CheckIcon className={classes.chIcon} />
               </p>
@@ -279,52 +257,80 @@ export default function TabsWrappedLabelSection5() {
                 <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
-            <li>
+            <li className={classes.rowvw}>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <div>
+                <CheckIcon className={classes.chIcon} />
+              </div>
+              <span className={classes.delayStyle}>
+                Data required<sup>*</sup>
+              </span>
+            </li>
+            <li>
+              <p>20</p>
+            </li>
+            <li className={classes.rowvw}>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p className={classes.freeText}>
+                FREE
+                <span className={classes.delayStyle}> Until The End of 2020</span>
               </p>
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <CheckIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                Compatible with <b>SOME</b> addons
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li className={classes.rowvw}>
+              <p
+                style={{
+                  font: '14px/16px MullerRegular,sans-serif',
+                }}
+              >
+                Compatible with <b>ALL</b> addons
               </p>
             </li>
           </ul>
-          <div>
-            <div>
-              <span>Free</span>
+          <div className={classes.thePrice}>
+            <div className={classes.priceBlock}>
+              <span className={classes.priceCurrency}>$</span>
+              <span className={classes.priceNumber}>39</span>
+              <p className={classes.pricePeriod}>
+                <span className={classes.periodSpace}>&nbsp;</span>per month
+              </p>
             </div>
-            <div>
-              <a href="https://bookmap.com/members/signup/thAhOgYUg">
-                <span>Select digital</span>
-                <span className="link-circle"></span>
-              </a>
-            </div>
+            <Typography className={classes.priceSave}>Save $120 a year</Typography>
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104"
+            >
+              SELECT GLOBAL
+            </Button>
           </div>
         </Box>
+        {/* third table list*/}
         <Box className={classes.digital} style={{ marginRight: 0 }}>
           <Box className={classes.priceName}>
             <p>digital</p>
           </Box>
           <ul className={classes.priceTags}>
-            <li>
+            <li className={classes.roww}>
               <p>
                 <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
@@ -334,7 +340,44 @@ export default function TabsWrappedLabelSection5() {
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li className={classes.roww}>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li className={classes.rowvw}>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <div>
+                <CheckIcon className={classes.chIcon} />
+              </div>
+              <span className={classes.delayStyle}>
+                Data required<sup>*</sup>
+              </span>
+            </li>
+            <li>
+              <p>20</p>
+            </li>
+            <li className={classes.rowvw}>
+              <p>
+                <CheckIcon className={classes.chIcon} />
+              </p>
+            </li>
+            <li>
+              <p className={classes.freeText}>
+                FREE
+                <span className={classes.delayStyle}> Until The End of 2020</span>
               </p>
             </li>
             <li>
@@ -344,219 +387,49 @@ export default function TabsWrappedLabelSection5() {
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
-                <span>Delayed</span>
-              </p>
-            </li>
-            <li>
-              <p>1</p>
-            </li>
-            <li>
-              <p>
                 <CheckIcon className={classes.chIcon} />
               </p>
             </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                Compatible with <b>SOME</b> addons
+            <li className={classes.rowvw}>
+              <p
+                style={{
+                  font: '14px/16px MullerRegular,sans-serif',
+                }}
+              >
+                Compatible with <b>ALL</b> addons
               </p>
             </li>
           </ul>
-          <div>
-            <div>
-              <span>Free</span>
+          <div className={classes.thePrice}>
+            <div className={classes.priceBlock}>
+              <span className={classes.priceCurrency}>$</span>
+              <span className={classes.priceNumber}>79</span>
+              <p className={classes.pricePeriod}>
+                <span className={classes.periodSpace}>&nbsp;</span>per month
+              </p>
             </div>
-            <div className={classes.priceLink}>
-              <a href="https://bookmap.com/members/signup/thAhOgYUg">
-                <span>Select digital</span>
-                <span className="link-circle"></span>
-              </a>
-            </div>
+            <Typography className={classes.priceSave}>Save $240 a year</Typography>
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105"
+            >
+              SELECT GLOBAL PLUS
+            </Button>
           </div>
         </Box>
-
-        {/*
-        <Box className={classes.digital}>
-          <Box className={classes.priceName}>
-            <p>digital</p>
-          </Box>
-          <ul className={classes.priceTags}>
-            <li>
-              <p>
-           <CheckIcon  className={classes.chIcon}/>
-              </p>
-              <div>
-                <h4>Key Features</h4>
-                <p>
-             <CheckIcon  className={classes.chIcon}/>
-                </p>
-                <p>Heatmap, Volume dots, CVD &amp; Volume Profile columns</p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                </p>
-                <p>Record / Replay, VWAP, POC</p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                </p>
-                <p>LLT, Strength Level, Imbalance</p>
-              </div>
-            </li>
-            <li>
-              <p>
-           <CheckIcon  className={classes.chIcon}/>
-              </p>
-              <div>
-                <h4>ONE CLICK TRADING</h4>
-                <p>
-             <CheckIcon  className={classes.chIcon}/>
-                </p>
-                <p>Crypto</p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                </p>
-                <p>Futures, Stocks</p>
-              </div>
-            </li>
-            <li>
-              <p>
-           <CheckIcon  className={classes.chIcon}/>
-              </p>
-              <div>
-                <h4>MARKETS VISUALIZATION</h4>
-                <p>
-             <CheckIcon  className={classes.chIcon}/>
-                </p>
-                <p>Crypto currencies &gt; 15 exchanges (Free data) </p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-                <span>Delayed</span>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                  <span>Delayed</span>
-                </p>
-                <p>Futures &amp; Stocks </p>
-              </div>
-            </li>
-            <li>
-              <p>1</p>
-              <div>
-                <p>1</p>
-                <p>Maximum # of Trading Symbols Viewable at the Same Time</p>
-              </div>
-            </li>
-            <li>
-              <p>
-           <CheckIcon  className={classes.chIcon}/>
-              </p>
-              <div>
-                <h4>EDUCATION</h4>
-                <p>
-             <CheckIcon  className={classes.chIcon}/>
-                </p>
-                <p>Bookmap Basics Webinars with Q&amp;As</p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                </p>
-                <p>LIVE Trading Sessions with Pro Traders</p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                </p>
-                <p>Order Flow Analysis Webinars with Q&amp;As</p>
-              </div>
-            </li>
-            <li>
-              <p>
-             <ClearIcon  className={classes.clsIcon}/>
-              </p>
-              <div>
-                <p>
-               <ClearIcon  className={classes.clsIcon}/>
-                </p>
-                <p>Advanced Trading Educational Course </p>
-              </div>
-            </li>
-            <li>
-              <p>
-                Compatible with <b>SOME</b> addons
-              </p>
-              <div>
-                <h4>MARKETPLACE</h4>
-                <p>
-                  Compatible with <b>SOME</b> addons (Sold separately)
-                </p>
-                <p>Addons, Market Data and Educational courses (Sold separately)</p>
-              </div>
-            </li>
-          </ul>
-          <div>
-            <div>
-              <span>Free</span>
-            </div>
-            <div>
-              <a href="https://bookmap.com/members/signup/thAhOgYUg">
-                <span>Select digital</span>
-                <span className="link-circle"></span>
-              </a>
-            </div>
-          </div>
-        </Box>
-        */}
       </Box>
+      <p className={classes.lifetimeMessage}>
+        <sup>*</sup>
+        Futures &amp; stocks market data fees from third party providers are not included in the
+        price of the Bookmap software subscription
+      </p>
+      <div className={classes.cta}>
+        <p>Can’t decide which plan is right for you?</p>
+        <a href="https://bookmap.com/packages-comparison" target="_blank">
+          CLICK HERE
+        </a>
+      </div>
     </Container>
   )
 }
