@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core'
+import Reviews from './MainSection7Reviews'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -55,11 +56,13 @@ export default function TabsWrappedLabelSection7() {
       <Typography component="h2" variant="h2">
         Some good words about Bookmap®️
       </Typography>
-      <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
+      <Tabs value={value} onChange={handleChange} aria-label="Some good words about Bookmap®">
         <Tab value="one" label="TESTIMONIALS" wrapped {...a11yProps('one')} />
         <Tab value="two" label="MEDIA" {...a11yProps('two')} />
       </Tabs>
-      <TabPanel value={value} index="one"></TabPanel>
+      <TabPanel value={value} index="one">
+        <Reviews />
+      </TabPanel>
       <TabPanel value={value} index="two"></TabPanel>
     </Container>
   )
