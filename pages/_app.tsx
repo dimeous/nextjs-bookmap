@@ -12,7 +12,7 @@ import SEO from '../next-seo.config'
 // @ts-ignore
 import TagManager from 'react-gtm-module'
 import MainHeader from '../src/components/Layout/Header/MainHeader'
-import Footer from '../src/components/Layout/MainFooter'
+import Footer from '../src/components/Layout/Footer/MainFooter'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
