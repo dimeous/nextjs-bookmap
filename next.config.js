@@ -5,3 +5,6 @@ module.exports = withImages(withFonts({
         return config;
     }
 }))
+
+module.exports = {
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/<GITLAB_PROJECT_NAME>' : '',}
