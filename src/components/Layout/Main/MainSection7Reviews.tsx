@@ -80,7 +80,7 @@ const useStyles = makeStyles(() => ({
 
 export default function TabsWrappedLabelSection7() {
   const classes = useStyles()
-  const [value, setValue] = React.useState(1)
+  const [value, setValue] = React.useState(4)
 
   return (
     <Container fixed className={classes.root}>
