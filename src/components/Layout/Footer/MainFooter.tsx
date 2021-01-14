@@ -1,3 +1,4 @@
+import React from 'react'
 import { makeStyles, Box, Container } from '@material-ui/core'
 import Image from 'next/image'
 import NextLink from 'next/link'
@@ -36,6 +37,7 @@ const useStyles = makeStyles(() => ({
     margin: 0,
     maxWidth: '220px',
     paddingRight: '80px',
+    paddingLeft: 0,
     flexWrap: 'wrap',
     '& li': {
       marginBottom: '20px',
@@ -52,7 +54,7 @@ const useStyles = makeStyles(() => ({
       content: '""',
       position: 'absolute',
       width: '1px',
-      height: '340px',
+      height: '290px',
       marginLeft: '-1%',
     },
   },
@@ -75,9 +77,60 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'flex-start',
     marginRight: '40px',
   },
+  communicationBlock: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  generalContacts: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    lineHeight: 1,
+    margin: '0 0 30px!important',
+    maxWidth: '220px',
+    width: '100%',
+    '& li': {
+      marginBottom: '10px',
+      width: '100%',
+      '& a': {
+        transition: '.2s ease-out',
+        font: '16px/19px MullerLight,sans-serif',
+        fontWeight: 400,
+        textTransform: 'none',
+      },
+    },
+  },
+  generalSocials: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    margin: 0,
+    maxWidth: '220px',
+    width: 'auto',
+    alignItems: 'center',
+    '& li': {
+      marginRight: '24px',
+    },
+  },
+  SocialNormal: {
+    opacity: 1,
+    transition: '.2s linear',
+    '&:hover': {
+      opacity: 0,
+    },
+  },
+  SocialsHover: {
+    position: 'absolute',
+    marginLeft: '-25px',
+    transition: '.2s linear',
+    opacity: 0,
+    '&:hover': {
+      opacity: 1,
+    },
+  },
 }))
 
-export default function Footer() {
+export default function MainFooter() {
   const classes = useStyles()
   return (
     <footer className={classes.mainFooter}>
@@ -139,7 +192,11 @@ export default function Footer() {
                   <NextLink href="https://bookmap.com/blog/">Blog</NextLink>
                 </li>
                 <li>
-                  <a target="_blank" href="/forum/viewforum.php?f=19" rel={'noreferrer'}>
+                  <a
+                    target="_blank"
+                    href="https://bookmap.com/forum/viewforum.php?f=19"
+                    rel={'noreferrer'}
+                  >
                     Forum
                   </a>
                 </li>
@@ -182,6 +239,7 @@ export default function Footer() {
                   <a
                     target="_blank"
                     href="https://bookmap.com/wiki/Bookmap_API#Bookmap_Quant_solution"
+                    rel={'noreferrer'}
                   >
                     Quant solution
                   </a>
@@ -189,12 +247,13 @@ export default function Footer() {
               </ul>
             </li>
           </ul>
-          <div className="communicationBlock">
-            <ul className="general__contacts">
+          <div className={classes.communicationBlock}>
+            <ul className={classes.generalContacts}>
               <li>
                 <a
                   href="https://www.google.com.ua/maps/search/6+Australias+Street+Limassol,+Cyprus/@34.6917358,32.9930904,13z/data=!3m1!4b1"
                   target="_blank"
+                  rel={'noreferrer'}
                 >
                   6 Australias Street Limassol, Cyprus
                 </a>
@@ -212,28 +271,36 @@ export default function Footer() {
                 <a href="tel:19177088171">+1-917-708-8171</a>
               </li>
             </ul>
-            <ul className="generalSocials">
+            <ul className={classes.generalSocials}>
               <li>
-                <a href="https://www.facebook.com/bookmappro/?ref=br_rs" target="_blank">
+                <a
+                  href="https://www.facebook.com/bookmappro/?ref=br_rs"
+                  target="_blank"
+                  rel={'noreferrer'}
+                >
                   <img
-                    src="https://bookmap.com/wp-content/themes/bookmap/assets/images/footer-icons/facebook.svg"
-                    className="SocialNormal"
+                    src="/static/footer/facebook.svg"
+                    className={classes.SocialNormal}
+                    alt={'Facebook'}
                   />
                   <img
-                    src="https://bookmap.com/wp-content/themes/bookmap/assets/images/main-page/icons/facebook-active-white.svg"
-                    className="SocialsHover"
+                    src="/static/footer/facebook-hover.svg"
+                    className={classes.SocialsHover}
+                    alt={'Facebook'}
                   />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/bookmap_pro" target="_blank">
+                <a href="https://twitter.com/bookmap_pro" target="_blank" rel={'noreferrer'}>
                   <img
-                    src="https://bookmap.com/wp-content/themes/bookmap/assets/images/footer-icons/twitter.svg"
-                    className="SocialNormal"
+                    src="/static/footer/twitter.svg"
+                    className={classes.SocialNormal}
+                    alt={'Twitter'}
                   />
                   <img
-                    src="https://bookmap.com/wp-content/themes/bookmap/assets/images/main-page/icons/twitter-active-white.svg"
-                    className="SocialsHover"
+                    src="/static/footer/twitter-hover.svg"
+                    className={classes.SocialsHover}
+                    alt={'Twitter'}
                   />
                 </a>
               </li>
@@ -241,14 +308,17 @@ export default function Footer() {
                 <a
                   href="https://www.youtube.com/channel/UC3HKlZ_7gxRgef9SCxu54Lw?sub_confirmation=1"
                   target="_blank"
+                  rel={'noreferrer'}
                 >
                   <img
-                    src="https://bookmap.com/wp-content/themes/bookmap/assets/images/footer-icons/youtube.svg"
-                    className="SocialNormal"
+                    src="/static/footer/youtube.svg"
+                    className={classes.SocialNormal}
+                    alt={'Youtube'}
                   />
                   <img
-                    src="https://bookmap.com/wp-content/themes/bookmap/assets/images/main-page/icons/youtube-active-white.svg"
-                    className="SocialsHover"
+                    src="/static/footer/youtube-hover.svg"
+                    className={classes.SocialsHover}
+                    alt={'Youtube'}
                   />
                 </a>
               </li>
