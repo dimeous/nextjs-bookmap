@@ -229,7 +229,7 @@ export default function TabsWrappedLabelSection5() {
         {/* Second table list*/}
         <Box className={classes.digital}>
           <Box className={classes.priceName}>
-            <p>digital</p>
+            <p>global</p>
           </Box>
           <ul className={classes.priceTags}>
             <li className={classes.roww}>
@@ -325,7 +325,7 @@ export default function TabsWrappedLabelSection5() {
         {/* third table list*/}
         <Box className={classes.digital} style={{ marginRight: 0 }}>
           <Box className={classes.priceName}>
-            <p>digital</p>
+            <p>global plus</p>
           </Box>
           <ul className={classes.priceTags}>
             <li className={classes.roww}>
