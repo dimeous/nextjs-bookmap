@@ -27,8 +27,8 @@ const TrustBox = () => {
       data-tags="SelectedReview"
       data-review-languages="en"
     >
+      {/* eslint-disable-next-line react/jsx-no-target-blank */}
       <a href="https://www.trustpilot.com/review/bookmap.com" target="_blank" rel="noopener">
-        {' '}
         Trustpilot
       </a>
     </div>

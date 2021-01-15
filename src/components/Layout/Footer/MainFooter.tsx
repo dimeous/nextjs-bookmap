@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles, Box, Container } from '@material-ui/core'
 import Image from 'next/image'
 import NextLink from 'next/link'
+import TrustBoxFooter from './trustBoxFooter'
 
 const useStyles = makeStyles(() => ({
   mainFooter: {
@@ -18,6 +19,15 @@ const useStyles = makeStyles(() => ({
       transition: '.2s ease-out',
       textDecoration: 'none',
       textTransform: 'uppercase',
+    },
+  },
+  underFooter: {
+    color: '#a49dca',
+    paddingBottom: '40px',
+    font: '14px/19px MullerLight,sans-serif',
+    '& a': {
+      color: '#a49dca',
+      font: '14px/19px MullerLight,sans-serif',
     },
   },
   general: {
@@ -136,7 +146,7 @@ export default function MainFooter() {
     <footer className={classes.mainFooter}>
       <Container>
         <Box className={classes.general}>
-          <Box sx={{ width: '77.6%', margin: '0 0 72px' }}>
+          <Box sx={{ width: '72.6%', margin: '0 0 72px' }}>
             <NextLink href="/">
               <Image
                 src="/static/main/bookmap-white.svg"
@@ -146,7 +156,9 @@ export default function MainFooter() {
               />
             </NextLink>
           </Box>
-          <Box sx={{ float: 'right', width: '22%', height: '126px' }}>Trust pilot</Box>
+          <Box sx={{ float: 'right', width: '22%', height: '126px' }}>
+            <TrustBoxFooter />
+          </Box>
           <ul className={classes.generalNav}>
             <li>
               <NextLink href="/#features">Features</NextLink>
@@ -325,6 +337,36 @@ export default function MainFooter() {
             </ul>
           </div>
         </Box>
+      </Container>
+      <Container>
+        <div className={classes.underFooter}>
+          <p>All rights reserved, Bookmap Ltd.</p>
+          <p>
+            RISK DISCLOSURE: Futures trading contains substantial risk and is not for every
+            investor. An investor could potentially lose all or more than the initial investment.
+            Risk capital is money that can be lost without jeopardizing one{"'"}s financial security
+            or lifestyle. Only risk capital should be used for trading and only those with
+            sufficient risk capital should consider trading. Past Performance is not necessarily
+            indicative of future results.
+            <span>
+              <a
+                href="/disclaimer?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"
+                target="_blank"
+              >
+                Full Disclaimer
+              </a>
+            </span>{' '}
+            |
+            <span>
+              <a
+                href="/privacy-policy/?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"
+                target="_blank"
+              >
+                Privacy Policy
+              </a>
+            </span>
+          </p>
+        </div>
       </Container>
     </footer>
   )
