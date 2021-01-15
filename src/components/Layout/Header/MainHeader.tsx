@@ -1,17 +1,17 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
-  makeStyles,
-  Button,
+  Box,
   IconButton,
   Drawer,
   MenuItem,
-  Link,
-  Box,
+  Typography,
+  Fade,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useStyles } from './MainHeaderStyles'
 const headersData = [
   {
     label: 'Features',
@@ -19,62 +19,32 @@ const headersData = [
   },
   {
     label: 'Connectivity',
-    href: '#Connectivity',
+    href: '#connectivity',
   },
   {
     label: 'Pricing',
-    href: '#Pricing',
+    href: '#pricing',
   },
   {
     label: 'Education',
-    href: '#Education',
+    href: '#education',
   },
 ]
 
-const useStyles = makeStyles(() => ({
-  header: {
-    paddingRight: '79px',
-    paddingLeft: '118px',
-    '@media (max-width: 900px)': {
-      paddingLeft: 0,
-    },
-  },
-  logo: {
-    fontFamily: 'Work Sans, sans-serif',
-    fontWeight: 600,
-    color: '#FFFEFE',
-    textAlign: 'left',
-  },
-  menuButton: {
-    fontWeight: 700,
-    font: '14px/14px MullerLight,sans-serif',
-    color: '#1a1833',
-    size: '18px',
-    marginLeft: '38px',
-    backgroundColor: '#f5f5f5;',
-    border: 'none!important',
-    '&:hover': {
-      backgroundColor: '#f5f5f5;',
-    },
-  },
-  toolbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  drawerContainer: {
-    padding: '20px 30px',
-  },
-}))
-
 export default function Header() {
-  const { header, logo, menuButton, toolbar, drawerContainer } = useStyles()
+  const classes = useStyles()
 
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
+    checked: true,
   })
 
   const { mobileView, drawerOpen } = state
+  const [checked, setChecked] = React.useState(false)
+  const handleChange = () => {
+    setChecked((prev) => !prev)
+  }
 
   useEffect(() => {
     const setResponsiveness = () => {
@@ -90,16 +60,204 @@ export default function Header() {
 
   const displayDesktop = () => {
     return (
-      <Toolbar className={toolbar}>
+      <Box className={classes.toolbar}>
         {bookmapLogo}
-        <div>{getMenuButtons()}</div>
         <Box>
-          <Button variant="outlined">
+          <ul className={classes.headerNav}>
+            <li>
+              <Link href="/#features">Features</Link>
+            </li>
+            <li>
+              <Link href="/#connectivity">Connectivity</Link>
+            </li>
+            <li>
+              <Link href="/#pricing">Pricing</Link>
+            </li>
+            <li>
+              <Link href="/#education">Education</Link>
+            </li>
+          </ul>
+        </Box>
+        <div className={classes.moreButtonCont}>
+          <ul>
+            <li>
+              <Typography className={classes.moreButton} onClick={handleChange}>
+                More
+              </Typography>
+              <Fade in={checked}>
+                <div className={classes.subMenuWrap}>
+                  <ul className={classes.subMenu}>
+                    <li>
+                      <Link href="#resources">Resources</Link>
+                      <div className="sub-menu-wrap">
+                        <ul className={classes.subMenu2}>
+                          <li>
+                            <a
+                              target="_blank"
+                              href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
+                              rel={'noreferrer'}
+                            >
+                              Knowledge base
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://bookmap.com/symbol-table/">Symbol Table</a>
+                          </li>
+                          <li>
+                            <Link href="https://www.bookmap.com/knowledgebase/docs/KB-Help-Glossary">
+                              Glossary
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/educators/">Educators Directory</Link>
+                          </li>
+                          <li>
+                            <Link href="https://www.youtube.com/playlist?list=PLzaGy-3oukoTy7FtXV9KbFZ7pVXVolYw_">
+                              Pro Trader Webinars
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/blog/">Blog</Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <Link href="#product">Product</Link>
+                      <div className="sub-menu-wrap">
+                        <ul className={classes.subMenu2}>
+                          <li>
+                            <Link href="https://bookmap.com/education/">Education</Link>
+                          </li>
+                          <li>
+                            <a href="https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity">
+                              Connectivity Guide
+                            </a>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/features/">Features</Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/packages-comparison/">
+                              Pricing &amp; Packages
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/partner/">Partners</Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/referral/">Affiliates</Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/faq/">FAQ</Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <Link href="#solutions">Solutions</Link>
+                      <div className="sub-menu-wrap">
+                        <ul className={classes.subMenu2}>
+                          <li>
+                            <Link href="https://web.bookmap.com/?time=2021-01-13--17-39-04&amp;duration=1d&amp;prices=32092-35899.5">
+                              Bookmap Web
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/b2b/">Bookmap for Business</Link>
+                          </li>
+                          <li>
+                            <Link href="https://bookmap.com/crypto/">Bookmap for Crypto</Link>
+                          </li>
+                          <li>
+                            <a
+                              target="_blank"
+                              href="https://bookmap.com/dxfeed/"
+                              rel={'noreferrer'}
+                            >
+                              dxFeed Market Data
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              target="_blank"
+                              href="https://www.bookmap.com/knowledgebase/docs/API#the-quant-solution"
+                              rel={'noreferrer'}
+                            >
+                              Quant solution
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              target="_blank"
+                              href="https://www.bookmap.com/knowledgebase/docs/API"
+                              rel={'noreferrer'}
+                            >
+                              API
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <Link href="#Community">Community</Link>
+                      <div className="sub-menu-wrap">
+                        <ul className={classes.subMenu2}>
+                          <li>
+                            <a href="https://discord.com/invite/FATgzfq7">Chatroom (Discord)</a>
+                          </li>
+                          <li>
+                            <a
+                              target="_blank"
+                              href="https://www.bookmap.com/forum/viewforum.php?f=19"
+                              rel={'noreferrer'}
+                            >
+                              Forum
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <Link href="https://marketplace.bookmap.com/">Marketplace</Link>
+                      <div className="sub-menu-wrap">
+                        <ul className={classes.subMenu2}>
+                          <li>
+                            <Link href="https://marketplace.bookmap.com/product-category/addons/">
+                              Add-ons
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://marketplace.bookmap.com/product-category/services/market-data/">
+                              Market Data
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://marketplace.bookmap.com/product-category/others/education/">
+                              Education
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="https://marketplace.bookmap.com/product/mbo-bundle-beta-version/">
+                              MBO Bundle
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </Fade>
+            </li>
+          </ul>
+        </div>
+        <Link href="https://bookmap.com/portal?_ga=2.113314319.926453304.1529908174-380305212.1526294084">
+          <Box>
             <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
             <span> LOG IN</span>
-          </Button>
-        </Box>
-      </Toolbar>
+          </Box>
+        </Link>
+      </Box>
     )
   }
 
@@ -128,7 +286,7 @@ export default function Header() {
             onClose: handleDrawerClose,
           }}
         >
-          <div className={drawerContainer}>{getDrawerChoices()}</div>
+          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
 
         <div>{bookmapLogo}</div>
@@ -147,28 +305,14 @@ export default function Header() {
   }
 
   const bookmapLogo = (
-    <Typography className={logo}>
-      <Link href="/">
-        <a>
-          <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18} />
-        </a>
-      </Link>
-    </Typography>
+    <Link href="/">
+      <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18} />
+    </Link>
   )
-
-  const getMenuButtons = () => {
-    return headersData.map(({ label, href }) => {
-      return (
-        <Button key={label} href={href} component={Link} className={menuButton}>
-          {label}
-        </Button>
-      )
-    })
-  }
 
   return (
     <header color={'default'}>
-      <AppBar className={header} position={'fixed'} color={'default'}>
+      <AppBar className={classes.header} position={'fixed'} color={'default'}>
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </header>
