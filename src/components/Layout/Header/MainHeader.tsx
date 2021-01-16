@@ -81,7 +81,10 @@ export default function Header() {
         <div className={classes.moreButtonCont}>
           <ul>
             <li>
-              <Typography className={classes.moreButton} onClick={handleChange}>
+              <Typography
+                className={checked ? classes.moreButtonAcitve : classes.moreButton}
+                onClick={handleChange}
+              >
                 More
               </Typography>
               <Fade in={checked}>
@@ -200,7 +203,7 @@ export default function Header() {
                       </div>
                     </li>
                     <li>
-                      <Link href="#Community">Community</Link>
+                      <Link href="#community">Community</Link>
                       <div className="sub-menu-wrap">
                         <ul className={classes.subMenu2}>
                           <li>
@@ -252,7 +255,7 @@ export default function Header() {
           </ul>
         </div>
         <Link href="https://bookmap.com/portal?_ga=2.113314319.926453304.1529908174-380305212.1526294084">
-          <Box>
+          <Box className={classes.loginBut}>
             <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
             <span> LOG IN</span>
           </Box>
