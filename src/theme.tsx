@@ -23,6 +23,10 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    h1: {
+      fontSize: '48px',
+      lineHeight: '50px',
+    },
     h2: {
       fontSize: 32,
       lineHeight: 38 + 'px',

@@ -12,7 +12,7 @@ import MainSection8UserReviews from '../src/components/Layout/Main/MainSection8U
 
 export default function Index() {
   return (
-    <main style={{ paddingTop: 80 }}>
+    <main style={{ paddingTop: 60 }}>
       <MainSection0 />
       <MainSection1 />
       <MainSection2 />

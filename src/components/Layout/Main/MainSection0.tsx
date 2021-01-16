@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './MainSection0.module.css'
-import { Typography, makeStyles } from '@material-ui/core'
+import { Typography, makeStyles, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Image from 'next/image'
@@ -14,10 +14,16 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   headTradePlatform: {
-    paddingTop: '120px',
+    paddingTop: '70px',
   },
   secondTitle: {
-    color: theme.palette.secondary.light,
+    fontSize: '38px',
+    display: 'block',
+    lineHeight: '39px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    color: '#0085f9',
+    fontFamily: 'MullerMedium',
   },
   bImage: {
     width: '616px',
@@ -25,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
   backImage: {
     height: '100%',
+  },
+  button: {
+    width: '230px',
   },
 }))
 
@@ -37,7 +46,7 @@ export default function MainSection0() {
           <Grid item md={6}>
             <Typography
               component="h1"
-              variant="h2"
+              variant="h1"
               color="primary"
               gutterBottom
               className={classes.headTradePlatform}
@@ -50,6 +59,14 @@ export default function MainSection0() {
             <Typography color="primary" paragraph>
               for Global/Global+ subscribers
             </Typography>
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="secondary"
+              href="https://bookmap.com/members/signup/thAhOgYUg"
+            >
+              START FOR FREE
+            </Button>
           </Grid>
           <Grid item md={6}>
             <div className={styles.outer}>
