@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Link from '@material-ui/core/Link'
 import Tab from '@material-ui/core/Tab'
@@ -45,7 +44,7 @@ function a11yProps(index: any) {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    flexGrow: 1,
+    marginBottom: '145px',
     backgroundColor: theme.palette.background.paper,
   },
   link: {
@@ -96,13 +95,11 @@ export default function TabsWrappedLabelSection4() {
         <Typography component="h2" variant="subtitle1">
           Bookmap is compatible with many data providers / exchanges
         </Typography>
-        <AppBar position="static">
-          <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-            <Tab value="one" label="FUTURES" wrapped {...a11yProps('one')} />
-            <Tab value="two" label="STOCKS" {...a11yProps('two')} />
-            <Tab value="three" label="CRYPTO" {...a11yProps('three')} />
-          </Tabs>
-        </AppBar>
+        <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
+          <Tab value="one" label="FUTURES" wrapped {...a11yProps('one')} />
+          <Tab value="two" label="STOCKS" {...a11yProps('two')} />
+          <Tab value="three" label="CRYPTO" {...a11yProps('three')} />
+        </Tabs>
         {/* 1-st Panel*/}
         <TabPanel value={value} index="one">
           <Grid container alignItems="center">

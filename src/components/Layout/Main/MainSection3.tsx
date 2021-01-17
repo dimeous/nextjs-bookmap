@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography'
 const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
+    marginBottom: '145px',
   },
   cTreeSteps: {
     display: 'flex',

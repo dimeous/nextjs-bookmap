@@ -7,6 +7,7 @@ import Image from 'next/image'
 const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
+    marginBottom: '145px',
     fontFamily: 'MullerRegular',
     fontSize: '18px',
     '& ul': {

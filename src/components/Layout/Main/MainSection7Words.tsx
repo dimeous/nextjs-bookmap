@@ -4,7 +4,6 @@ import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import { makeStyles } from '@material-ui/core'
 import Reviews from './MainSection7Reviews'
 
 interface TabPanelProps {
@@ -39,12 +38,8 @@ function a11yProps(index: any) {
     'aria-controls': `wrapped-tabpanel-${index}`,
   }
 }
-const useStyles = makeStyles(() => ({
-  root: {},
-}))
 
 export default function TabsWrappedLabelSection7() {
-  const classes = useStyles()
   const [value, setValue] = React.useState('one')
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
@@ -52,7 +47,7 @@ export default function TabsWrappedLabelSection7() {
   }
 
   return (
-    <Container fixed className={classes.root}>
+    <Container fixed style={{ marginBottom: '145px' }}>
       <Typography component="h2" variant="h2">
         Some good words about Bookmap®️
       </Typography>

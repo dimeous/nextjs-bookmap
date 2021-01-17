@@ -8,7 +8,6 @@ import Container from '@material-ui/core/Container'
 import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
-import Link from '@material-ui/core/Link'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -54,7 +53,7 @@ export default function TabsWrappedLabelSection5() {
   }
 
   return (
-    <Container fixed>
+    <Container fixed style={{ marginBottom: '145px' }}>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
           Pricing and Packages

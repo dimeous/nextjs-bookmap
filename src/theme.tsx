@@ -30,6 +30,7 @@ const theme = createMuiTheme({
     h2: {
       fontSize: 32,
       lineHeight: 38 + 'px',
+      marginBottom: 22 + 'px',
     },
 
     fontSize: 16,
@@ -63,6 +64,13 @@ const theme = createMuiTheme({
           '&:hover': {
             backgroundColor: '#0e67d0',
           },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          marginBottom: '30px',
         },
       },
     },

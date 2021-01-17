@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Link from '@material-ui/core/Link'
 import Tab from '@material-ui/core/Tab'
@@ -46,14 +45,21 @@ function a11yProps(index: any) {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
+    marginBottom: '145px',
     backgroundColor: theme.palette.background.paper,
   },
   link: {
     color: theme.palette.primary.light,
   },
+  textBlock: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    justifyContent: 'center',
+  },
 }))
 
-export default function TabsWrappedLabelSection2() {
+export default function MainSection2Features() {
   const classes = useStyles()
   const [value, setValue] = React.useState('one')
 
@@ -67,13 +73,13 @@ export default function TabsWrappedLabelSection2() {
         <Typography component="h1" variant="h2">
           Bookmap features
         </Typography>
-        <AppBar position="static">
-          <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-            <Tab value="one" label="HEATMAP" wrapped {...a11yProps('one')} />
-            <Tab value="two" label="VOLUME" {...a11yProps('two')} />
-            <Tab value="three" label="INDICATORS" {...a11yProps('three')} />
-          </Tabs>
-        </AppBar>
+
+        <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
+          <Tab value="one" label="HEATMAP" wrapped {...a11yProps('one')} />
+          <Tab value="two" label="VOLUME" {...a11yProps('two')} />
+          <Tab value="three" label="INDICATORS" {...a11yProps('three')} />
+        </Tabs>
+
         <TabPanel value={value} index="one">
           <Grid container>
             <Grid item md={8}>
@@ -86,8 +92,8 @@ export default function TabsWrappedLabelSection2() {
               />
             </Grid>
             <Grid item md={4}>
-              <Container>
-                <Typography>
+              <Container className={classes.textBlock}>
+                <Typography gutterBottom>
                   The heatmap shows the historical limit order book (historical liquidity).
                 </Typography>
                 <Typography>

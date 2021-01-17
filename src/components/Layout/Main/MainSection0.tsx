@@ -8,6 +8,7 @@ import Image from 'next/image'
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#1e262d',
+    marginBottom: '145px',
   },
   media: {
     height: '500px',

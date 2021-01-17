@@ -7,6 +7,7 @@ import ReactPlayer from 'react-player'
 const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
+    marginBottom: '145px',
   },
   wrapper: {
     position: 'relative',
@@ -19,6 +20,12 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     height: '100%',
   },
+  textBlock: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    justifyContent: 'center',
+  },
 }))
 
 export default function MainSection1() {
@@ -27,13 +34,16 @@ export default function MainSection1() {
     <Container fixed className={classes.root}>
       <Grid container>
         <Grid item md={6}>
-          <Typography component="h1" variant="h2" color="inherit" gutterBottom>
-            So, what is Bookmap?
-          </Typography>
-          <Typography color="inherit" paragraph>
-            Bookmap<span>®</span>️ trading platform accurately shows the entire market liquidity and
-            trading activities. Identify market trends & hidden price patterns with high precision.
-          </Typography>
+          <Container className={classes.textBlock}>
+            <Typography component="h1" variant="h2" color="inherit" gutterBottom>
+              So, what is Bookmap?
+            </Typography>
+            <Typography color="inherit" paragraph>
+              Bookmap<span>®</span>️ trading platform accurately shows the entire market liquidity
+              and trading activities. Identify market trends & hidden price patterns with high
+              precision.
+            </Typography>
+          </Container>
         </Grid>
         <Grid item md={6}>
           <div className={classes.wrapper}>
