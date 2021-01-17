@@ -50,12 +50,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   link: {
     color: theme.palette.primary.light,
+    textTransform: 'uppercase',
+    font: '12px/13px MullerMedium,sans-serif',
   },
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'flex-end',
     height: '100%',
-    justifyContent: 'center',
+    '& p': {
+      marginBottom: '35px',
+    },
   },
 }))
 
@@ -93,7 +98,7 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4}>
               <Container className={classes.textBlock}>
-                <Typography gutterBottom>
+                <Typography>
                   The heatmap shows the historical limit order book (historical liquidity).
                 </Typography>
                 <Typography>
@@ -101,11 +106,9 @@ export default function MainSection2Features() {
                   by the market, allowing you to rapidly react to changes in sentiment. Read
                   liquidity like a map, and locate better trading opportunities.
                 </Typography>
-                <Typography>
-                  <Link href="https://bookmap.com/features/" className={classes.link}>
-                    Details about features
-                  </Link>
-                </Typography>
+                <Link href="https://bookmap.com/features/" className={classes.link}>
+                  Details about features
+                </Link>
               </Container>
             </Grid>
           </Grid>
@@ -122,7 +125,7 @@ export default function MainSection2Features() {
               />
             </Grid>
             <Grid item md={4}>
-              <Container>
+              <Container className={classes.textBlock}>
                 <Typography>
                   Watch the traded volume and identify the side in control by using Volume Delta,
                   Advance Volume Profiles, and Cumulative Volume Delta tools.
@@ -131,11 +134,9 @@ export default function MainSection2Features() {
                   See volume dots & volume delta right on the chart, without the need to wait for
                   the bar to load.
                 </Typography>
-                <Typography>
-                  <Link href="https://bookmap.com/features/" className={classes.link}>
-                    Details about features
-                  </Link>
-                </Typography>
+                <Link href="https://bookmap.com/features/" className={classes.link}>
+                  Details about features
+                </Link>
               </Container>
             </Grid>
           </Grid>
@@ -152,7 +153,7 @@ export default function MainSection2Features() {
               />
             </Grid>
             <Grid item md={4}>
-              <Container>
+              <Container className={classes.textBlock}>
                 <Typography>
                   Based on traders’ requests and Bookmap’s expertise in HFT trading, Bookmap
                   developers have created a unique set of indicators that add transparency and cover
@@ -162,11 +163,9 @@ export default function MainSection2Features() {
                   Confirm your trades with Imbalance Indicator, Strength Level Indicator, Large Lot
                   Tracker, Advanced Volume Delta, and more.
                 </Typography>
-                <Typography>
-                  <Link href="https://bookmap.com/features/" className={classes.link}>
-                    Details about features
-                  </Link>
-                </Typography>
+                <Link href="https://bookmap.com/features/" className={classes.link}>
+                  Details about features
+                </Link>
               </Container>
             </Grid>
           </Grid>
