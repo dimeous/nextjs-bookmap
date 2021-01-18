@@ -54,6 +54,7 @@ export default function TabsWrappedLabelSection5() {
 
   return (
     <Container fixed style={{ marginBottom: '145px' }}>
+      <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
           Pricing and Packages

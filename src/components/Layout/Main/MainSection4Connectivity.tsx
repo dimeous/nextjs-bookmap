@@ -88,6 +88,7 @@ export default function TabsWrappedLabelSection4() {
 
   return (
     <Container fixed className={classes.root}>
+      <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div>
         <Typography component="h2" variant="h2">
           Connectivity

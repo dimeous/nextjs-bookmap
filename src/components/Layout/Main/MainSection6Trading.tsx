@@ -73,8 +73,8 @@ export default function MainSection6Trading() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
+      <div id="education" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Typography variant="h2">Live Advanced Trading Education</Typography>
-
       <Box className={classes.eduBlock}>
         <Box sx={{ display: 'flex' }}>
           <div className="introImg">

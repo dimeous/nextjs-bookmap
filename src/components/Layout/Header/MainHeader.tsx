@@ -15,7 +15,7 @@ import { useStyles } from './MainHeaderStyles'
 const headersData = [
   {
     label: 'Features',
-    href: '#fаeatures',
+    href: '#features',
   },
   {
     label: 'Connectivity',
