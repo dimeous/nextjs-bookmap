@@ -91,7 +91,7 @@ export default function Header() {
                 <div className={classes.subMenuWrap}>
                   <ul className={classes.subMenu}>
                     <li>
-                      <Link href="#resources">Resources</Link>
+                      <Link href="/#resources">Resources</Link>
                       <div className="sub-menu-wrap">
                         <ul className={classes.subMenu2}>
                           <li>
@@ -126,7 +126,7 @@ export default function Header() {
                       </div>
                     </li>
                     <li>
-                      <Link href="#product">Product</Link>
+                      <Link href="/#product">Product</Link>
                       <div className="sub-menu-wrap">
                         <ul className={classes.subMenu2}>
                           <li>
@@ -158,7 +158,7 @@ export default function Header() {
                       </div>
                     </li>
                     <li>
-                      <Link href="#solutions">Solutions</Link>
+                      <a href="#solutions">Solutions</a>
                       <div className="sub-menu-wrap">
                         <ul className={classes.subMenu2}>
                           <li>
@@ -203,7 +203,7 @@ export default function Header() {
                       </div>
                     </li>
                     <li>
-                      <Link href="#community">Community</Link>
+                      <a href="#community">Community</a>
                       <div className="sub-menu-wrap">
                         <ul className={classes.subMenu2}>
                           <li>

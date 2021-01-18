@@ -75,7 +75,7 @@ export default function MainSection2Features() {
   return (
     <Container fixed>
       <div id="features" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-      <div className={classes.root}>
+      <Box className={classes.root}>
         <Typography component="h1" variant="h2">
           Bookmap features
         </Typography>
@@ -171,7 +171,7 @@ export default function MainSection2Features() {
             </Grid>
           </Grid>
         </TabPanel>
-      </div>
+      </Box>
     </Container>
   )
 }

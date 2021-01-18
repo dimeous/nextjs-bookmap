@@ -175,7 +175,7 @@ export default function MainFooter() {
           </ul>
           <ul className={classes.generalFooterMenu}>
             <li className={classes.hasChildren}>
-              <NextLink href="#resources">Resources</NextLink>
+              <a href="#resources">Resources</a>
               <ul className={classes.subMenu}>
                 <li>
                   <a
@@ -215,7 +215,7 @@ export default function MainFooter() {
               </ul>
             </li>
             <li className={classes.hasChildren}>
-              <NextLink href="#solutions">Solutions</NextLink>
+              <a href="#solutions">Solutions</a>
               <ul className={classes.subMenu}>
                 <li>
                   <a target="_blank" href="https://bookmap.com/dxfeed/" rel={'noreferrer'}>
@@ -237,7 +237,7 @@ export default function MainFooter() {
               </ul>
             </li>
             <li className={classes.hasChildren}>
-              <NextLink href="#b2b">BOOKMAP B2B</NextLink>
+              <a href="#b2b">BOOKMAP B2B</a>
               <ul className={classes.subMenu}>
                 <li>
                   <NextLink href="https://bookmap.com/b2b/">BOOKMAP FOR BUSINESS</NextLink>

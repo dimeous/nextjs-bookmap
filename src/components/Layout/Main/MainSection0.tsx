@@ -92,18 +92,6 @@ export default function MainSection0() {
                 </div>
               </div>
             </div>
-            {/*
-            <CardMedia
-              className={classes.media}
-              image="/static/main/bg-cr.png"
-              title="Bokmap Chart"
-            />
-            <div
-              className={styles.slideranimated}
-              style={{ backgroundImage: `url('/static/main/overlay-sec1.png')`, zIndex: 1 }}
-            >
-              </div>
-                */}
           </Grid>
         </Grid>
       </Container>
