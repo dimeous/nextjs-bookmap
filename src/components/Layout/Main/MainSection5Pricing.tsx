@@ -58,7 +58,7 @@ export default function TabsWrappedLabelSection5() {
         <Typography component="h2" variant="h2">
           Pricing and Packages
         </Typography>
-        <Typography component="h2" variant="subtitle1">
+        <Typography component="h3" variant="h3">
           Data is not included
         </Typography>
 
