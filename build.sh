@@ -2,8 +2,6 @@
 echo "Building and deploying app\n"
 echo "npm install"
 npm install && NODE_ENV=production npm run build
-#echo "Build app"
-#npx next build
 echo "delete app next"
 pm2 delete next
 echo "starting app as daemon"
