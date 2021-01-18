@@ -12,6 +12,8 @@ const useStyles = makeStyles(() => ({
   wrapper: {
     position: 'relative',
     paddingTop: '56.25%',
+    borderRadius: '20px',
+    overflow: 'hidden',
   },
   player: {
     position: 'absolute',

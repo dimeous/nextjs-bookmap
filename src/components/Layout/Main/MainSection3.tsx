@@ -29,9 +29,11 @@ const useStyles = makeStyles(() => ({
   },
   stepSeparator: {
     alignSelf: 'center',
+
     backgroundColor: '#0184f7',
     height: '3px',
     marginRight: '65px',
+    marginTop: '-20px',
     transform: 'translateY(13px)',
     width: '70px',
     '@media (max-width: 991px)': {
@@ -39,7 +41,8 @@ const useStyles = makeStyles(() => ({
     },
   },
   media: {
-    width: 50,
+    width: 'auto',
+    heght: '50px',
     marginLeft: '33%',
   },
   card: {
@@ -50,13 +53,25 @@ const useStyles = makeStyles(() => ({
     width: '230px',
     marginTop: '35px',
   },
+  stepHeader: {
+    display: 'flex',
+    margin: '18px 00 20px',
+    width: '100%',
+    font: '20px/20px MullerMedium,sans-serif',
+    color: '#0184f7',
+    '& span': {
+      marginRight: '10%',
+    },
+  },
 }))
 
 export default function MainSection3() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
-      <Typography variant="h2">Start with Bookmap in 3 simple steps</Typography>
+      <Typography variant="h2" style={{ marginBottom: 75 + 'px' }}>
+        Start with Bookmap in 3 simple steps
+      </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
           <Card className={classes.card}>
@@ -68,8 +83,10 @@ export default function MainSection3() {
               title="Get Software"
             />
             <CardContent>
-              <Typography gutterBottom>01 Get Software</Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography className={classes.stepHeader}>
+                <span>01</span> Get Software
+              </Typography>
+              <Typography variant="body2" color="textPrimary" component="p">
                 Register to Bookmap
                 <br />
                 Download and install the app
@@ -88,8 +105,10 @@ export default function MainSection3() {
               title="Connect Data"
             />
             <CardContent>
-              <Typography gutterBottom>02 Connect Data</Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography className={classes.stepHeader}>
+                <span>02</span> Connect Data
+              </Typography>
+              <Typography variant="body2" color="textPrimary" component="p">
                 Connect to market data provider (directly or via your broker)
               </Typography>
             </CardContent>
@@ -106,8 +125,11 @@ export default function MainSection3() {
               title="Educate yourself"
             />
             <CardContent>
-              <Typography gutterBottom>03 Educate yourself</Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography className={classes.stepHeader}>
+                <span>03</span>
+                Educate yourself
+              </Typography>
+              <Typography variant="body2" color="textPrimary" component="p">
                 Get free education including live basic or advance webinars
               </Typography>
             </CardContent>

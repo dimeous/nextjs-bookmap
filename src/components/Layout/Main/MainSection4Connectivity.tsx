@@ -87,12 +87,12 @@ export default function TabsWrappedLabelSection4() {
   }
 
   return (
-    <Container fixed>
-      <div className={classes.root}>
+    <Container fixed className={classes.root}>
+      <div>
         <Typography component="h2" variant="h2">
           Connectivity
         </Typography>
-        <Typography component="h2" variant="subtitle1">
+        <Typography component="h3" variant="h3">
           Bookmap is compatible with many data providers / exchanges
         </Typography>
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">

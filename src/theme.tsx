@@ -32,7 +32,10 @@ const theme = createMuiTheme({
       lineHeight: 38 + 'px',
       marginBottom: 22 + 'px',
     },
-
+    h3: {
+      font: '18px/30px MullerMedium,sans-serif',
+      marginBottom: 41 + 'px',
+    },
     fontSize: 16,
     fontWeightLight: 400,
     fontFamily: [
