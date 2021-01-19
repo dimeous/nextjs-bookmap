@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
   cleanCSS = new CleanCSS()
 }
 
-const GOOGLE_ID = process.env.NODE_ENV === 'production' ? 'G-DJLH85K3RX' : 'G-DJLH85K3RX'
+//const GOOGLE_ID = process.env.NODE_ENV === 'production' ? 'G-DJLH85K3RX' : 'G-DJLH85K3RX'
 
 export default class MyDocument extends Document {
   render() {
@@ -37,6 +37,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          {/*}
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
@@ -45,7 +46,7 @@ export default class MyDocument extends Document {
                 window.ga('create','${GOOGLE_ID}','auto');
               `,
             }}
-          />
+          />*/}
           <NextScript />
         </body>
       </Html>
