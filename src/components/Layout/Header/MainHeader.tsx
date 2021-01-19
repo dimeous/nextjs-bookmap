@@ -15,19 +15,19 @@ import { useStyles } from './MainHeaderStyles'
 const headersData = [
   {
     label: 'Features',
-    href: '#features',
+    href: '/#features',
   },
   {
     label: 'Connectivity',
-    href: '#connectivity',
+    href: '/#connectivity',
   },
   {
     label: 'Pricing',
-    href: '#pricing',
+    href: '/#pricing',
   },
   {
     label: 'Education',
-    href: '#education',
+    href: '/#education',
   },
 ]
 
@@ -48,7 +48,7 @@ export default function Header() {
 
   useEffect(() => {
     const setResponsiveness = () => {
-      return window.innerWidth < 900
+      return window.innerWidth < 990
         ? setState((prevState) => ({ ...prevState, mobileView: true }))
         : setState((prevState) => ({ ...prevState, mobileView: false }))
     }
@@ -64,18 +64,13 @@ export default function Header() {
         {bookmapLogo}
         <Box>
           <ul className={classes.headerNav}>
-            <li>
-              <Link href="/#features">Features</Link>
-            </li>
-            <li>
-              <Link href="/#connectivity">Connectivity</Link>
-            </li>
-            <li>
-              <Link href="/#pricing">Pricing</Link>
-            </li>
-            <li>
-              <Link href="/#education">Education</Link>
-            </li>
+            {headersData.map((v) => {
+              return (
+                <li key={v.label}>
+                  <Link href={v.href}>{v.label}</Link>
+                </li>
+              )
+            })}
           </ul>
         </Box>
         <div className={classes.moreButtonCont}>
@@ -270,18 +265,20 @@ export default function Header() {
 
     return (
       <Toolbar>
-        <IconButton
-          {...{
-            edge: 'start',
-            color: 'inherit',
-            'aria-label': 'menu',
-            'aria-haspopup': 'true',
-            onClick: handleDrawerOpen,
-          }}
-        >
-          <MenuIcon />
-        </IconButton>
-
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '50%' }}>
+          <Box sx={{ flexGrow: 1 }}>{bookmapLogo}</Box>
+          <IconButton
+            {...{
+              edge: 'start',
+              color: 'secondary',
+              'aria-label': 'menu',
+              'aria-haspopup': 'true',
+              onClick: handleDrawerOpen,
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Box>
         <Drawer
           {...{
             anchor: 'left',
@@ -291,8 +288,6 @@ export default function Header() {
         >
           <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
-
-        <div>{bookmapLogo}</div>
       </Toolbar>
     )
   }
