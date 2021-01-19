@@ -264,21 +264,21 @@ export default function Header() {
     const handleDrawerClose = () => setState((prevState) => ({ ...prevState, drawerOpen: false }))
 
     return (
-      <Toolbar>
-        <Box sx={{ display: 'flex', width: '60%', alignItems: 'center' }}>
-          <Box sx={{ flexGrow: 1 }}>{bookmapLogo}</Box>
-          <IconButton
-            {...{
-              edge: 'start',
-              color: 'secondary',
-              'aria-label': 'menu',
-              'aria-haspopup': 'true',
-              onClick: handleDrawerOpen,
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Box>
+      <Toolbar className={classes.toolbar}>
+        <Box sx={{ display: 'flex', flex: '0 1 auto' }}>{bookmapLogo}</Box>
+        <IconButton
+          {...{
+            edge: 'start',
+            color: 'secondary',
+            display: 'flex',
+            'aria-label': 'menu',
+            'aria-haspopup': 'true',
+            onClick: handleDrawerOpen,
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+
         <Drawer
           {...{
             anchor: 'left',
@@ -310,7 +310,11 @@ export default function Header() {
 
   return (
     <header color={'default'}>
-      <AppBar className={classes.header} position={'fixed'} color={'default'}>
+      <AppBar
+        className={classes.header}
+        position={mobileView ? 'static' : 'fixed'}
+        color={'default'}
+      >
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </header>

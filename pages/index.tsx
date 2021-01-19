@@ -15,7 +15,7 @@ export default function Index() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('md'))
   return (
-    <main style={{ paddingTop: 60 }}>
+    <main style={matches ? {} : { paddingTop: 60 }}>
       <MainSection0 mobile={matches} />
       <MainSection1 />
       <MainSection2Features />

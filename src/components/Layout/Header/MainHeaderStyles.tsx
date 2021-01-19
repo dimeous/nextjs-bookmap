@@ -23,6 +23,7 @@ export const useStyles = makeStyles(() => ({
     },
     '@media (max-width: 900px)': {
       paddingLeft: 0,
+      paddingRight: 0,
     },
   },
   headerNav: {
