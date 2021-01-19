@@ -44,7 +44,7 @@ export default function MainSection0() {
     <div className={classes.root}>
       <Container className={classes.root} maxWidth="lg">
         <Grid container>
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <Typography
               component="h1"
               variant="h1"
@@ -69,7 +69,7 @@ export default function MainSection0() {
               START FOR FREE
             </Button>
           </Grid>
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <div className={styles.outer}>
               <Image
                 src="/static/main/bg-cr.png"
