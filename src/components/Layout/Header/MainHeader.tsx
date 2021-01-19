@@ -265,7 +265,7 @@ export default function Header() {
 
     return (
       <Toolbar>
-        <Box sx={{ display: 'flex', alignItems: 'center', width: '50%' }}>
+        <Box sx={{ display: 'flex', width: '60%', alignItems: 'center' }}>
           <Box sx={{ flexGrow: 1 }}>{bookmapLogo}</Box>
           <IconButton
             {...{
@@ -295,7 +295,7 @@ export default function Header() {
   const getDrawerChoices = () => {
     return headersData.map(({ label, href }) => {
       return (
-        <Link href={href}>
+        <Link href={href} key={label}>
           <MenuItem>{label}</MenuItem>
         </Link>
       )

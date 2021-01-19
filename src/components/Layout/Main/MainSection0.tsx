@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#1e262d',
     marginBottom: '145px',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '24px',
+    },
   },
   media: {
     height: '500px',
@@ -16,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
   },
   headTradePlatform: {
     paddingTop: '70px',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '27px',
+      font: '32px/40px MullerLight,sans-sanserif',
+      letterSpacing: '1.41px',
+    },
   },
   secondTitle: {
     fontSize: '38px',
@@ -29,72 +37,103 @@ const useStyles = makeStyles((theme) => ({
   bImage: {
     width: '616px',
     display: 'grid',
+    [theme.breakpoints.down('md')]: {
+      width: '330px',
+    },
   },
   backImage: {
     height: '100%',
   },
   button: {
     width: '230px',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '16px',
+    },
   },
 }))
 
-export default function MainSection0() {
+type CardProps = {
+  mobile: boolean
+}
+
+export default function MainSection0({ mobile }: CardProps) {
   const classes = useStyles()
   return (
-    <div className={classes.root}>
-      <Container className={classes.root} maxWidth="lg">
-        <Grid container>
-          <Grid item md={6} xs={12}>
-            <Typography
-              component="h1"
-              variant="h1"
-              color="primary"
-              gutterBottom
-              className={classes.headTradePlatform}
-            >
-              A trading platform that displays market liquidity
-            </Typography>
-            <Typography component="h4" variant="h4" className={classes.secondTitle}>
-              NEW: live trading sessions with pro traders
-            </Typography>
-            <Typography color="primary" paragraph>
-              for Global/Global+ subscribers
-            </Typography>
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="secondary"
-              href="https://bookmap.com/members/signup/thAhOgYUg"
-            >
-              START FOR FREE
-            </Button>
-          </Grid>
-          <Grid item md={6} xs={12}>
-            <div className={styles.outer}>
-              <Image
-                src="/static/main/bg-cr.png"
-                alt="Bookmap chart"
-                layout="responsive"
-                height={1200}
-                width={1875}
-                className={classes.backImage}
-              />
-              <div className={styles.inner}>
-                <div className={styles.slideranimated}>
-                  <div className={classes.bImage}>
-                    <Image
-                      src="/static/main/overlay-sec1.png"
-                      alt="Bookmap chart"
-                      height={1200}
-                      width={1875}
-                    />
+    <>
+      <div className={classes.root}>
+        <Container className={classes.root} maxWidth="lg">
+          <Grid container>
+            <Grid item md={6} xs={12}>
+              <Typography
+                component="h1"
+                variant="h1"
+                color="primary"
+                gutterBottom
+                className={classes.headTradePlatform}
+              >
+                A trading platform that displays market liquidity
+              </Typography>
+              <Typography component="h4" variant="h4" className={classes.secondTitle}>
+                NEW: live trading sessions with pro traders
+              </Typography>
+              <Typography color="primary" paragraph>
+                for Global/Global+ subscribers
+              </Typography>
+              {!mobile && (
+                <Button
+                  className={classes.button}
+                  variant="contained"
+                  color="secondary"
+                  href="https://bookmap.com/members/signup/thAhOgYUg"
+                >
+                  START FOR FREE
+                </Button>
+              )}
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <div className={styles.outer}>
+                <Image
+                  src="/static/main/bg-cr.png"
+                  alt="Bookmap chart"
+                  layout="responsive"
+                  height={1200}
+                  width={1875}
+                  className={classes.backImage}
+                />
+                <div className={styles.inner}>
+                  <div className={styles.slideranimated}>
+                    <div className={classes.bImage}>
+                      <Image
+                        src="/static/main/overlay-sec1.png"
+                        alt="Bookmap chart"
+                        height={1200}
+                        width={1875}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Grid>
           </Grid>
+        </Container>
+      </div>
+      {mobile && (
+        <Grid
+          xs={12}
+          style={{
+            textAlign: 'center',
+          }}
+        >
+          <Button
+            variant="contained"
+            color="secondary"
+            href="https://bookmap.com/members/signup/thAhOgYUg"
+            className={classes.button}
+          >
+            START FOR FREE
+          </Button>
         </Grid>
-      </Container>
-    </div>
+      )}
+    </>
   )
 }
