@@ -12,4 +12,4 @@ http.createServer(function (req, res) {
     req.on('data', function(chunk) {
             exec('cd ' + repo + ` && npm install && ${BUILD_CMD} && ${PM2_CMD}`);
     res.end();
-}).listen(3000);
+}).listen(3000)
