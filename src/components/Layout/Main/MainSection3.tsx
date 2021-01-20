@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Box, Card, CardMedia, CardContent, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-
+import { text } from './MainSection3Content'
 import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(() => ({
@@ -70,7 +70,7 @@ export default function MainSection3() {
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" style={{ marginBottom: 75 + 'px' }}>
-        Start with Bookmap in 3 simple steps
+        {text.h1}
       </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
@@ -84,12 +84,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>01</span> Get Software
+                <span>01</span> {text.s1.lbl}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                Register to Bookmap
-                <br />
-                Download and install the app
+                {text.s1.txt}
               </Typography>
             </CardContent>
           </Card>
@@ -106,10 +104,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>02</span> Connect Data
+                <span>02</span> {text.s2.lbl}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                Connect to market data provider (directly or via your broker)
+                {text.s2.txt}
               </Typography>
             </CardContent>
           </Card>
@@ -126,11 +124,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>03</span>
-                Educate yourself
+                <span>03</span> {text.s3.lbl}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                Get free education including live basic or advance webinars
+                {text.s3.txt}
               </Typography>
             </CardContent>
           </Card>
@@ -142,7 +139,7 @@ export default function MainSection3() {
         color="secondary"
         href="https://bookmap.com/members/signup/thAhOgYUg"
       >
-        START FOR FREE
+        {text.btn}
       </Button>
     </Container>
   )
