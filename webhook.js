@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const exec = require('child_process').exec;
 
 const BUILD_CMD = 'npm install && NODE_ENV=production npm run build';
-const PM2_CMD = 'pm2 restart next-site';
+const PM2_CMD = 'pm2 restart bookmap-site';
 
 http.createServer(function (req, res) {
     req.on('data', function(chunk) {
