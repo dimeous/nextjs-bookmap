@@ -309,7 +309,7 @@ export default function Header() {
   )
 
   return (
-    <header color={'default'} style={{ width: '100%' }}>
+    <header color={'default'}>
       <AppBar
         className={classes.header}
         position={mobileView ? 'static' : 'fixed'}
