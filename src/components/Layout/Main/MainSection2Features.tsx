@@ -52,6 +52,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.primary.light,
     textTransform: 'uppercase',
     font: '12px/13px MullerMedium,sans-serif',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '18px',
+    },
   },
   textBlock: {
     display: 'flex',
@@ -60,6 +63,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '100%',
     '& p': {
       marginBottom: '35px',
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '24px',
     },
   },
 }))
@@ -88,7 +94,7 @@ export default function MainSection2Features() {
 
         <TabPanel value={value} index="one">
           <Grid container>
-            <Grid item md={8}>
+            <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/1_features_block.png"
                 alt="Heatmap shows the historical limit"
@@ -97,7 +103,7 @@ export default function MainSection2Features() {
                 layout="responsive"
               />
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
                   The heatmap shows the historical limit order book (historical liquidity).
@@ -116,7 +122,7 @@ export default function MainSection2Features() {
         </TabPanel>
         <TabPanel value={value} index="two">
           <Grid container>
-            <Grid item md={8}>
+            <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/2_features_block.png"
                 alt="Heatmap shows the historical limit"
@@ -125,7 +131,7 @@ export default function MainSection2Features() {
                 layout="responsive"
               />
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={8} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
                   Watch the traded volume and identify the side in control by using Volume Delta,
@@ -144,7 +150,7 @@ export default function MainSection2Features() {
         </TabPanel>
         <TabPanel value={value} index="three">
           <Grid container>
-            <Grid item md={8}>
+            <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/3_features_block.png"
                 alt="Heatmap shows the historical limit"
@@ -153,7 +159,7 @@ export default function MainSection2Features() {
                 layout="responsive"
               />
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={8} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
                   Based on traders’ requests and Bookmap’s expertise in HFT trading, Bookmap

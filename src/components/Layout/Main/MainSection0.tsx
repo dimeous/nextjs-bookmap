@@ -37,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'MullerMedium',
   },
   bImage: {
-    width: '616px',
+    width: '39vw',
+    height: '100%',
     display: 'grid',
     [theme.breakpoints.down('md')]: {
       width: '330px',

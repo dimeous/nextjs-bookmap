@@ -4,10 +4,14 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import ReactPlayer from 'react-player'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginBottom: '145px',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '110px',
+      marginBottom: '120px',
+    },
   },
   wrapper: {
     position: 'relative',
@@ -35,7 +39,7 @@ export default function MainSection1() {
   return (
     <Container fixed className={classes.root}>
       <Grid container>
-        <Grid item md={6}>
+        <Grid item md={6} xs={12}>
           <Container className={classes.textBlock}>
             <Typography component="h1" variant="h2" color="inherit" gutterBottom>
               So, what is Bookmap?
@@ -47,7 +51,7 @@ export default function MainSection1() {
             </Typography>
           </Container>
         </Grid>
-        <Grid item md={6}>
+        <Grid item md={6} xs={12}>
           <div className={classes.wrapper}>
             <ReactPlayer
               url="https://youtu.be/387ouy6QGPI"
