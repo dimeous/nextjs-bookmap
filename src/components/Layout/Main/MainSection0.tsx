@@ -8,9 +8,11 @@ import Image from 'next/image'
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#1e262d',
+    paddingTop: '30px',
     marginBottom: '145px',
     [theme.breakpoints.down('md')]: {
       marginBottom: '24px',
+      paddingTop: 0,
     },
   },
   media: {
