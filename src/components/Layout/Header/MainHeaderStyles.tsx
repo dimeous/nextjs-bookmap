@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core'
 
 export const useStyles = makeStyles(() => ({
   header: {
+    width: '100%',
     paddingRight: '79px',
     color: '#212529',
     paddingLeft: '118px',
