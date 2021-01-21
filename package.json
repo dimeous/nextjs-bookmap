@@ -73,6 +73,6 @@
     "typescript": "^4.0.5"
   },
   "optionalDependencies": {
-    "fsevents": "^2.2.1"
+    "fsevents": "^2.3.1"
   }
 }
