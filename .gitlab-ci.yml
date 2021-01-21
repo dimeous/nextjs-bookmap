@@ -20,7 +20,7 @@ test1:
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"
-    - -npm test
+    - npm test
 
 build1:
   stage: build
