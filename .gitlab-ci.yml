@@ -14,9 +14,13 @@ before_script:
   - echo "Or perhaps you might print out some debugging details"
   - npm install
 
-after_script:
-  - echo "After script section"
-  - echo "For example you might do some cleanup here"
+
+test1:
+  stage: test
+  script:
+    - echo "Do a test here"
+    - echo "For example run a test suite"
+    - -npm test
 
 build1:
   stage: build
@@ -26,17 +30,6 @@ build1:
     #- pm2 delete bookmap-site
 
 
-test1:
-  stage: test
-  script:
-    - echo "Do a test here"
-    - echo "For example run a test suite"
-
-test2:
-  stage: test
-  script:
-    - echo "Do another parallel test here"
-    - echo "For example run a lint test"
 
 deploy1:
   stage: deploy
