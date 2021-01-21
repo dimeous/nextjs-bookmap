@@ -1,13 +1,16 @@
 module.exports = {
     apps: [
         {
-            name: 'bookmap-site',
-            cwd: ' /home/landing',
+            name: 'bookmap',
             script: 'npm',
             args: 'start',
             env: {
-                NEXT_PUBLIC_BOOKMAP: 'NEXT_PUBLIC_BOOKMAP',
+                NODE_ENV: 'development'
             },
+            env_production: {
+                NODE_ENV: 'production',
+                PORT: 3000
+            }
         },
 // optionally a second project
     ],
