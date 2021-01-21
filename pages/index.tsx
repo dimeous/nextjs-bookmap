@@ -6,6 +6,7 @@ import MainSection3Desktop from '../src/components/Layout/Main/MainSection3Deskt
 import MainSection3Mobile from '../src/components/Layout/Main/MainSection3Mobile'
 import MainSection4 from '../src/components/Layout/Main/MainSection4Connectivity'
 import MainSection5Pricing from '../src/components/Layout/Main/MainSection5Pricing'
+import MainSection5MobilePricing from '../src/components/Layout/Main/MainSection5MobilePricing'
 import MainSection6Trading from '../src/components/Layout/Main/MainSection6Trading'
 import MainSection7Words from '../src/components/Layout/Main/MainSection7Words'
 import MainSection8UserReviews from '../src/components/Layout/Main/MainSection8UsersReviews'
@@ -26,7 +27,8 @@ export default function Index() {
         <MainSection3Desktop></MainSection3Desktop>
       )}
       <MainSection4 />
-      <MainSection5Pricing />
+      {mobile ? <MainSection5MobilePricing /> : <MainSection5Pricing />}
+
       <MainSection6Trading mobile={mobile} />
       <MainSection7Words />
       <MainSection8UserReviews />
