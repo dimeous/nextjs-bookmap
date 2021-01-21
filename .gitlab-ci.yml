@@ -5,8 +5,10 @@
 # image: busybox:latest
 
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
+    - .next/cache/
 
 before_script:
   - echo "Before script section"
