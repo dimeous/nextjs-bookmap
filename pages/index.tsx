@@ -27,7 +27,7 @@ export default function Index() {
       )}
       <MainSection4 />
       <MainSection5Pricing />
-      <MainSection6Trading />
+      <MainSection6Trading mobile={mobile} />
       <MainSection7Words />
       <MainSection8UserReviews />
     </main>
