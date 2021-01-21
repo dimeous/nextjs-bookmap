@@ -17,13 +17,6 @@ before_script:
 
 
 
-test1:
-  stage: test
-  script:
-    - echo "Do a test here"
-    - echo "For example run a test suite"
-
-
 build1:
   stage: build
   script:
@@ -38,5 +31,5 @@ deploy1:
   stage: deploy
   script:
     - echo "Do your deploy here"
-    #- pm2 start npm --name "bookmap-site" -- start
-    - pm2 restart bookmap-site
+    - pm2 start npm --name "bookmap-site" -- start
+    #- pm2 restart bookmap-site
