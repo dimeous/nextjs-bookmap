@@ -62,13 +62,36 @@ const useStyles = makeStyles(() => ({
     left: '-120px',
   },
   list_h4: {
-    color: '#1a1833',
-    fontFamily: 'MullerMedium',
-    letterSpacing: 0,
-    fontWeight: 400,
+    fontFamily: '16px/24px MullerMedium,sans-serif',
+    fontWeight: 500,
+    letterSpacing: '0.47px',
   },
 }))
 const useStylesMob = makeStyles(() => ({
+  root: {
+    width: '100%',
+    '& ul': {
+      listStyle: 'none',
+      paddingLeft: 0,
+      '& li': {
+        color: '#000',
+        font: '16px MullerLight,sans-serif',
+        lineHeight: '24px',
+        paddingLeft: '26px',
+        position: 'relative',
+        '&:before': {
+          background: 'url("/static/icons/check.svg") 50% no-repeat',
+          backgroundSize: 'contain',
+          height: '8px',
+          left: 0,
+          position: 'absolute',
+          content: '""',
+          top: '8px',
+          width: '10px',
+        },
+      },
+    },
+  },
   boxImgs: {
     width: '100%',
     display: 'flex',
@@ -80,11 +103,12 @@ const useStylesMob = makeStyles(() => ({
     zIndex: 1,
     margin: '-23px 0px 0px -38px',
   },
+  list_h4: {},
 }))
 export function Mobile() {
   const classes = useStylesMob()
   return (
-    <Container fixed>
+    <Container fixed className={classes.root}>
       <Typography variant="h2">{text.h1}</Typography>
       <Typography color="textPrimary" component="p">
         {text.h2}
@@ -95,6 +119,16 @@ export function Mobile() {
           {text.i1}
           <Box className={classes.boxImg2}>{text.i2}</Box>
         </Box>
+      </Box>
+
+      <Box>
+        <Typography color="textPrimary" component="p">
+          {text.h2}
+        </Typography>
+        <h4 className={classes.list_h4}> {text.h3}</h4>
+        {text.s1}
+        <h4 className={classes.list_h4}>{text.h4}</h4>
+        {text.s2}
       </Box>
     </Container>
   )
@@ -128,7 +162,7 @@ export function Desktop() {
             </p>
             <h4 className={classes.list_h4}> {text.h3}</h4>
             {text.s1}
-            <h4 className={classes.list_h4}></h4>
+            <h4 className={classes.list_h4}>{text.h4}</h4>
             {text.s2}
           </div>
         </Box>
