@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Building and deploying app\n"
 git pull
-echo "npm install"
+echo "npm install and build"
 npm install && NODE_ENV=production npm run build
 echo "restart app next"
 pm2 restart bookmap-site

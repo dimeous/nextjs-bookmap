@@ -4,6 +4,23 @@
 # you can delete this line if you're not using Docker
 # image: busybox:latest
 
+cache:
+  paths:
+    - node_modules/
+
+    stages:
+      - setup
+      - test
+      - build
+      - deploy
+
+      setup:
+        stage: setup
+        script: npm install
+test:
+  stage: test
+  script: npm test
+
 before_script:
   - echo "Before script section"
   - echo "For example you might run an update here or install a build dependency"
@@ -14,13 +31,13 @@ after_script:
   - echo "After script section"
   - echo "For example you might do some cleanup here"
 
-build1:
+build:
   stage: build
   script:
     - echo "Do your build here"
-    - npm install && NODE_ENV=production npm run build
+    - NODE_ENV=production npm run build
     #- pm2 delete bookmap-site
-    - pm2 restart bookmap-site
+
 
 test1:
   stage: test
@@ -38,3 +55,4 @@ deploy1:
   stage: deploy
   script:
     - echo "Do your deploy here"
+    - pm2 restart bookmap-site
