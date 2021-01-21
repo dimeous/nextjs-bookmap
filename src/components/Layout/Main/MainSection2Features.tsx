@@ -131,7 +131,7 @@ export default function MainSection2Features() {
                 layout="responsive"
               />
             </Grid>
-            <Grid item md={8} xs={12}>
+            <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
                   Watch the traded volume and identify the side in control by using Volume Delta,
@@ -159,7 +159,7 @@ export default function MainSection2Features() {
                 layout="responsive"
               />
             </Grid>
-            <Grid item md={8} xs={12}>
+            <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
                   Based on traders’ requests and Bookmap’s expertise in HFT trading, Bookmap

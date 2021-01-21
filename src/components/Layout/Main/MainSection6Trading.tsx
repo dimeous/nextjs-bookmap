@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Box, Button } from '@material-ui/core'
+import { makeStyles, Box, Button, Grid, CardContent } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { text } from './MainSection6Content'
@@ -68,9 +68,27 @@ const useStyles = makeStyles(() => ({
     fontWeight: 400,
   },
 }))
-
+const useStylesMob = makeStyles(() => ({
+  boxImgs: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'end',
+  },
+  boxImg1: {},
+}))
 export function Mobile() {
-  return <Container fixed> hello</Container>
+  const classes = useStylesMob()
+  return (
+    <Container fixed>
+      <Typography variant="h2">{text.h1}</Typography>
+      <Typography color="textPrimary" component="p">
+        {text.h2}
+      </Typography>
+      <Box className={classes.boxImgs}>
+        <Box>{text.i1}</Box>
+      </Box>
+    </Container>
+  )
 }
 
 export function Desktop() {
