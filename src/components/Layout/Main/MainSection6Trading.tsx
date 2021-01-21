@@ -73,8 +73,13 @@ const useStylesMob = makeStyles(() => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'end',
+    paddingTop: '24px',
   },
-  boxImg1: {},
+  boxImg2: {
+    position: 'relative',
+    zIndex: 1,
+    margin: '-23px 0px 0px -38px',
+  },
 }))
 export function Mobile() {
   const classes = useStylesMob()
@@ -84,8 +89,12 @@ export function Mobile() {
       <Typography color="textPrimary" component="p">
         {text.h2}
       </Typography>
+
       <Box className={classes.boxImgs}>
-        <Box>{text.i1}</Box>
+        <Box>
+          {text.i1}
+          <Box className={classes.boxImg2}>{text.i2}</Box>
+        </Box>
       </Box>
     </Container>
   )

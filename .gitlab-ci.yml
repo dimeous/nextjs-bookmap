@@ -8,8 +8,7 @@ before_script:
   - echo "Before script section"
   - echo "For example you might run an update here or install a build dependency"
   - echo "Or perhaps you might print out some debugging details"
-  - npm install && NODE_ENV=production npm run build
-  - pm2 restart bookmap-site
+
 
 after_script:
   - echo "After script section"
@@ -19,6 +18,9 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
+    - npm install && NODE_ENV=production npm run build
+    - pm2 delete bookmap-site
+    - pm2 start npm --name "bookmap-site" -- start
 
 test1:
   stage: test
