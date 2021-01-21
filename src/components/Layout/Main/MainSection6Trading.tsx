@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import Image from 'next/image'
+import { text } from './MainSection6Content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -69,19 +69,21 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function MainSection6Trading() {
+export function Mobile() {
+  return <Container fixed> hello</Container>
+}
+
+export function Desktop() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
       <div id="education" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-      <Typography variant="h2">Live Advanced Trading Education</Typography>
+      <Typography variant="h2">{text.h1}</Typography>
       <Box className={classes.eduBlock}>
         <Box sx={{ display: 'flex' }}>
           <div className="introImg">
-            <Image src="/static/main/s6/chart.png" width={300} height={155} />
-            <Box className={classes.nextImage}>
-              <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
-            </Box>
+            {text.i1}
+            <Box className={classes.nextImage}>{text.i2}</Box>
             <div>
               <Button
                 className={classes.button}
@@ -89,37 +91,28 @@ export default function MainSection6Trading() {
                 color="secondary"
                 href="https://bookmap.com/members/signup/thAhOgYUg"
               >
-                GO TO EDUCATION
+                {text.btn}
               </Button>
             </div>
           </div>
           <div style={{ marginLeft: '40px' }}>
             <p className={classes.introText} style={{ maxWidth: '100%', marginBottom: 0 }}>
-              Bookmap offers a robust Live Advanced Education for subscribers, and Free Educational
-              Resources to all.
+              {text.h2}
             </p>
-            <h4 className={classes.list_h4}>OPEN TO ALL</h4>
-            <div>
-              <ul>
-                <li>Register to a Free Basics webinar</li>
-                <li>Free access to Friday’s Live Advanced webinar</li>
-                <li>Other Free resources</li>
-              </ul>
-            </div>
-            <h4 className={classes.list_h4}>BOOKMAP SUBSCRIBERS (PAID)</h4>
-            <div>
-              <ul>
-                <li>Educational Course online</li>
-                <li>Daily Advanced webinars</li>
-                <li>
-                  <b>Live Trading</b> from Professionals
-                </li>
-                <li>Other Trading educational resources</li>
-              </ul>
-            </div>
+            <h4 className={classes.list_h4}> {text.h3}</h4>
+            {text.s1}
+            <h4 className={classes.list_h4}></h4>
+            {text.s2}
           </div>
         </Box>
       </Box>
     </Container>
   )
+}
+
+type CardProps = {
+  mobile: boolean
+}
+export default function MainSection6Trading({ mobile }: CardProps) {
+  return mobile ? <Mobile /> : <Desktop />
 }

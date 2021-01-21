@@ -3,7 +3,7 @@ import { red } from '@material-ui/core/colors'
 
 // Create a theme instance.
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: {
       main: '#fff',
@@ -79,5 +79,19 @@ const theme = createMuiTheme({
     },
   },
 })
+theme = {
+  ...theme,
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        h2: {
+          [theme.breakpoints.down('md')]: {
+            lineHeight: '48px',
+          },
+        },
+      },
+    },
+  },
+}
 
 export default theme

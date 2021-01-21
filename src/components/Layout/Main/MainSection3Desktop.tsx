@@ -21,11 +21,6 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     width: 'calc(33.33333% - 90px)',
-    '@media (max-width: 991px)': {
-      paddingLeft: 0,
-      flexDirection: 'column',
-      width: '100%',
-    },
   },
   stepSeparator: {
     alignSelf: 'center',

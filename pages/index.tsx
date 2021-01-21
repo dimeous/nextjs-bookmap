@@ -2,7 +2,8 @@ import React from 'react'
 import MainSection0 from '../src/components/Layout/Main/MainSection0'
 import MainSection1 from '../src/components/Layout/Main/MainSection1'
 import MainSection2Features from '../src/components/Layout/Main/MainSection2Features'
-import MainSection3 from '../src/components/Layout/Main/MainSection3'
+import MainSection3Desktop from '../src/components/Layout/Main/MainSection3Desktop'
+import MainSection3Mobile from '../src/components/Layout/Main/MainSection3Mobile'
 import MainSection4 from '../src/components/Layout/Main/MainSection4Connectivity'
 import MainSection5Pricing from '../src/components/Layout/Main/MainSection5Pricing'
 import MainSection6Trading from '../src/components/Layout/Main/MainSection6Trading'
@@ -13,13 +14,17 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 export default function Index() {
   const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.down('md'))
+  const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <main>
-      <MainSection0 mobile={matches} />
+      <MainSection0 mobile={mobile} />
       <MainSection1 />
       <MainSection2Features />
-      <MainSection3 />
+      {mobile ? (
+        <MainSection3Mobile></MainSection3Mobile>
+      ) : (
+        <MainSection3Desktop></MainSection3Desktop>
+      )}
       <MainSection4 />
       <MainSection5Pricing />
       <MainSection6Trading />
