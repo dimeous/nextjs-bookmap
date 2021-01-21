@@ -31,8 +31,8 @@ deploy1:
   stage: deploy
   script:
     - echo "Do your deploy here"
-    - pm2 stop bookmap  2> /dev/null
-    - pm2 delete bookmap  2> /dev/null
+    - pm2 kill 2>/dev/null
+    - pm2 delete all 2>/dev/null
     - NODE_ENV=production pm2 start --name bookmap
     #- pm2 start npm --name "bookmap-site" -- start
     #- pm2 restart bookmap-site
