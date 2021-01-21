@@ -26,7 +26,7 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
-    - NODE_ENV=production npm run build
+    - npm run build
     #- pm2 delete bookmap-site
 
 
@@ -35,4 +35,4 @@ deploy1:
   stage: deploy
   script:
     - echo "Do your deploy here"
-    - pm2 restart bookmap-site
+    - pm2 start npm --name "bookmap-site" -- start
