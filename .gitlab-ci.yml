@@ -18,7 +18,7 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
-    - NODE_ENV=production npm run build
+    - npm install && NODE_ENV=production npm run build
     #- pm2 delete bookmap-site
     - pm2 restart bookmap-site
 
