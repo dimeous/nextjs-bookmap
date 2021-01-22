@@ -9,6 +9,7 @@ import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
 import { text } from './MainSection5Content'
+import Grid from '@material-ui/core/Grid'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -78,6 +79,26 @@ export default function TabsWrappedLabelSection5() {
           <span className={classes.tabTwo}>{text.l4} </span>
         </TabPanel>
       </div>
+      <div className={classes.root}>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} spacing={0}>
+            <Box className={classes.priceName}>
+              <p>{text.t1}</p>
+            </Box>
+          </Grid>
+          <Grid container item xs={4} spacing={0}>
+            <Box className={classes.priceName}>
+              <p>{text.t2}</p>
+            </Box>
+          </Grid>
+          <Grid container item xs={4} spacing={0}>
+            <Box className={classes.priceName}>
+              <p>{text.t2}+</p>
+            </Box>
+          </Grid>
+        </Grid>
+      </div>
+
       <Box className={classes.cPrices}>
         <Box className={classes.naming}>
           <ul className={classes.namingList}>

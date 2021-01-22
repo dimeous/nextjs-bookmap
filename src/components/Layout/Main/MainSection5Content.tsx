@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import Image from 'next/image'
 
 export const text = {
   h1: 'Pricing and Packages',
@@ -8,6 +7,8 @@ export const text = {
   l2: 'YARLY',
   l3: 'LIFETIME',
   l4: 'Save 20%',
+  t1: 'digital',
+  t2: 'global',
   i2: <Fragment></Fragment>,
 
   btn: 'GO TO EDUCATION',

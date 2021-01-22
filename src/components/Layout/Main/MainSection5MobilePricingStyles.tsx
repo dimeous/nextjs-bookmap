@@ -14,9 +14,24 @@ export const styles = makeStyles(() => ({
     textTransform: 'capitalize',
     transition: '.5s ease',
     width: '100%',
-    marginLeft: '210px',
+    marginLeft: '27%',
     transform: 'translateY(-23px)',
     zIndex: 1,
+  },
+  container: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  blocks: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  block: {
+    width: '33%',
+    marginBottom: '60px',
   },
   cPrices: {
     display: 'flex',
