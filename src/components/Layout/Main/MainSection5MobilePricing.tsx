@@ -81,44 +81,38 @@ export default function TabsWrappedLabelSection5() {
       </div>
       <div className={classes.root}>
         <Grid container spacing={1}>
-          <Grid container item xs={4} spacing={0}>
+          <Grid container item xs={4}>
             <Box className={classes.priceName}>
               <p>{text.t1}</p>
             </Box>
           </Grid>
-          <Grid container item xs={4} spacing={0}>
+          <Grid container item xs={4}>
             <Box className={classes.priceName}>
               <p>{text.t2}</p>
             </Box>
           </Grid>
-          <Grid container item xs={4} spacing={0}>
+          <Grid container item xs={4}>
             <Box className={classes.priceName}>
               <p>{text.t2}+</p>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1}>
-          <Grid container item xs={12} spacing={0}>
-            <Box>
-              <Typography component={'h4'} display={'block'}>
-                KEY FEATURES
-              </Typography>
-              <Typography component={'p'} display={'block'}>
-                Heatmap, Volume dots, CVD
-                <br />
-                &amp; Volume Profile columns
-              </Typography>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ pl: 2 }}>
+              <Typography component={'h4'}>{text.KeyFeature}</Typography>
+              <Typography component={'p'}>{text.Heatmap}</Typography>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1}>
-          <Grid container item xs={4} spacing={0}>
+          <Grid container item xs={4} justifyContent={'center'}>
             <CheckIcon className={classes.chIcon} />
           </Grid>
-          <Grid container item xs={4} spacing={0}>
+          <Grid container item xs={4} justifyContent={'center'}>
             <CheckIcon className={classes.chIcon} />
           </Grid>
-          <Grid container item xs={4} spacing={0}>
+          <Grid container item xs={4} justifyContent={'center'}>
             <CheckIcon className={classes.chIcon} />
           </Grid>
         </Grid>

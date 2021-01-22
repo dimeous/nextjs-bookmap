@@ -11,7 +11,7 @@ echo "delete app "
 pm2 delete bookmap 2>/dev/null
 echo "start app next"
 pm2 start npm --name "bookmap" -- start
-#pm2 save
+pm2 save
 #echo "starting app as daemon"
 #pm2 start npm --name "bookmap" -- start
 #pm2 start npm --name "next" -- run dev

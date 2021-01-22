@@ -9,7 +9,14 @@ export const text = {
   l4: 'Save 20%',
   t1: 'digital',
   t2: 'global',
-  i2: <Fragment></Fragment>,
+  KeyFeature: 'KEY FEATURES',
+  Heatmap: (
+    <Fragment>
+      Heatmap, Volume dots, CVD
+      <br />
+      &amp; Volume Profile columns
+    </Fragment>
+  ),
 
   btn: 'GO TO EDUCATION',
 }

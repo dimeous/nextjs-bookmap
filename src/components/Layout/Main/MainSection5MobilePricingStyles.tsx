@@ -3,6 +3,11 @@ import { makeStyles } from '@material-ui/core/styles'
 export const styles = makeStyles(() => ({
   root: {
     color: '#1a1833',
+    '& h4': {
+      color: '#0185f9',
+      font: '16px MullerMedium,sans-serif',
+      textTransform: 'uppercase',
+    },
   },
   tabs: {
     marginBottom: '33px',
@@ -29,21 +34,6 @@ export const styles = makeStyles(() => ({
     marginLeft: '27%',
     transform: 'translateY(-23px)',
     zIndex: 1,
-  },
-  container: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  blocks: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
-  block: {
-    width: '33%',
-    marginBottom: '60px',
   },
   cPrices: {
     display: 'flex',

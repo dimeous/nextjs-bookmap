@@ -82,12 +82,8 @@ export default function TabsWrappedLabelSection5() {
         <Box className={classes.naming}>
           <ul className={classes.namingList}>
             <li className={classes.roww}>
-              <h4>KEY FEATURES</h4>
-              <p>
-                Heatmap, Volume dots, CVD
-                <br />
-                &amp; Volume Profile columns
-              </p>
+              <h4>{text.KeyFeature}</h4>
+              <p>{text.Heatmap}</p>
             </li>
             <li>
               <p>Record / Replay, VWAP, POC</p>
