@@ -34,7 +34,16 @@ export const text = {
       Data required<sup>*</sup>
     </Fragment>
   ),
+  maxTrSymbols: (
+    <Fragment>
+      Maximum # of Trading Symbols
+      <br />
+      Viewable at the Same Time
+    </Fragment>
+  ),
 
   deleyed: 'Delayed',
+  education: 'EDUCATION',
+  education2: 'Bookmap Basics Webinars with Q&As',
   btn: 'GO TO EDUCATION',
 }

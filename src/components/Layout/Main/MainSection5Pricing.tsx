@@ -109,15 +109,11 @@ export default function TabsWrappedLabelSection5() {
               <p>{text.Futures2}</p>
             </li>
             <li>
-              <p>
-                Maximum # of Trading Symbols
-                <br />
-                Viewable at the Same Time
-              </p>
+              <p>{text.maxTrSymbols}</p>
             </li>
             <li className={classes.rowvw}>
-              <h4>EDUCATION</h4>
-              <p>Bookmap Basics Webinars with Q&amp;As</p>
+              <h4>{text.education}</h4>
+              <p>{text.education2}</p>
             </li>
             <li>
               <p>LIVE Trading Sessions with Pro Traders</p>
@@ -419,7 +415,7 @@ export default function TabsWrappedLabelSection5() {
       </p>
       <div className={classes.cta}>
         <p>Can’t decide which plan is right for you?</p>
-        <a href="https://bookmap.com/packages-comparison" target="_blank">
+        <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
           CLICK HERE
         </a>
       </div>

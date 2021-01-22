@@ -267,6 +267,53 @@ export default function TabsWrappedLabelSection5() {
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
+        {/*  Maximum # of Trading Symbols */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.maxTrSymbols}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <Typography component={'p'}>1</Typography>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <Typography component={'p'}>20</Typography>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <Typography component={'p'}>20</Typography>
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* Education */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'h4'} sx={{ pt: 2 }}>
+                {text.education}
+              </Typography>
+              <Typography component={'p'}>{text.education2}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
       </div>
 
       <Box className={classes.cPrices}>
@@ -616,7 +663,7 @@ export default function TabsWrappedLabelSection5() {
       </p>
       <div className={classes.cta}>
         <p>Can’t decide which plan is right for you?</p>
-        <a href="https://bookmap.com/packages-comparison" target="_blank">
+        <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
           CLICK HERE
         </a>
       </div>
