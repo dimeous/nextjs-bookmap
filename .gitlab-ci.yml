@@ -4,25 +4,25 @@
 # you can delete this line if you're not using Docker
 # image: busybox:latest
 
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - node_modules/
-    - .next/cache/
+#cache:
+#  key: ${CI_COMMIT_REF_SLUG}
+#  paths:
+#    - node_modules/
+#    - .next/cache/
 
 before_script:
   - echo "Before script section"
   - echo "For example you might run an update here or install a build dependency"
   - echo "Or perhaps you might print out some debugging details"
-
+  -./build.sh
 
 
 build1:
   stage: build
   script:
     - echo "Do your build here"
-    - npm install && NODE_ENV=production npm run build
-    - echo "stop and delete"
+    # - npm install && NODE_ENV=production npm run build
+    #- echo "stop and delete"
     #- pm2 stop bookmap 2>/dev/null
     #- pm2 delete bookmap 2>/dev/null
     #- npm run build
@@ -32,8 +32,8 @@ deploy1:
   stage: deploy
   script:
     - echo "Start Deploy"
-    - pm2 start npm --name "bookmap" -- start
-    - pm2 save
+    #- pm2 start npm --name "bookmap" -- start
+    #- pm2 save
     #- pm2 kill && pm2 start ecosystem.config.js
     #- pm2 kill 2>/dev/null
     #- pm2 delete all 2>/dev/null
