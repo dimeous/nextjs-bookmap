@@ -31,7 +31,8 @@ deploy1:
   stage: deploy
   script:
     - echo "Do your deploy here"
-    - pm2 startOrReload ecosystem.config.js --env production
+    - pm2 startOrReload ecosystem.config.js --env production --update-env
+    #pm2 kill && pm2 start ecosystem.config.js
     - pm2 save
     #- pm2 kill 2>/dev/null
     #- pm2 delete all 2>/dev/null
