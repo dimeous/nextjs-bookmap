@@ -23,8 +23,8 @@ build1:
     - echo "Do your build here"
     - npm install && NODE_ENV=production npm run build
     - echo "stop and delete"
-    - pm2 stop bookmap 2>/dev/null
-    - pm2 delete bookmap 2>/dev/null
+    #- pm2 stop bookmap 2>/dev/null
+    #- pm2 delete bookmap 2>/dev/null
     #- npm run build
     #- pm2 delete bookmap-site
 

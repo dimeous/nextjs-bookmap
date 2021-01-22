@@ -8,6 +8,7 @@ import Container from '@material-ui/core/Container'
 import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
+import { text } from './MainSection5Content'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -57,10 +58,10 @@ export default function TabsWrappedLabelSection5() {
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
-          Pricing and Packages
+          {text.h1}
         </Typography>
         <Typography component="h3" variant="h3">
-          Data is not included
+          {text.h2}
         </Typography>
 
         <Tabs
@@ -69,12 +70,12 @@ export default function TabsWrappedLabelSection5() {
           aria-label="wrapped label tabs example"
           className={classes.tabs}
         >
-          <Tab value="one" label="MONTHLY" wrapped {...a11yProps('one')} />
-          <Tab value="two" label="YARLY" {...a11yProps('two')} />
-          <Tab value="three" label="LIFETIME" {...a11yProps('three')} />
+          <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
+          <Tab value="two" label={text.l2} {...a11yProps('two')} />
+          <Tab value="three" label={text.l3} {...a11yProps('three')} />
         </Tabs>
         <TabPanel value={value} index="two">
-          <span className={classes.tabTwo}>Save 20%</span>
+          <span className={classes.tabTwo}>{text.l4} </span>
         </TabPanel>
       </div>
       <Box className={classes.cPrices}>

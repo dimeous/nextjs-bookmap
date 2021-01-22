@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Box, Button, Grid, CardContent } from '@material-ui/core'
+import { makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { text } from './MainSection6Content'
