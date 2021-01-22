@@ -7,6 +7,18 @@ export const styles = makeStyles(() => ({
   tabs: {
     marginBottom: '33px',
   },
+  checkIcon: {
+    color: '#0084f6',
+    fontSize: '16px',
+  },
+  chIcon: {
+    color: '#0084f6',
+    fontSize: '16px',
+  },
+  clsIcon: {
+    color: '#c6c6c6',
+    fontSize: '16px',
+  },
   tabTwo: {
     color: '#0185f9',
     font: '14px/14px MullerMedium,sans-serif',
@@ -134,18 +146,7 @@ export const styles = makeStyles(() => ({
       paddingBottom: '10px',
     },
   },
-  checkIcon: {
-    color: '#0084f6',
-    fontSize: '16px',
-  },
-  chIcon: {
-    color: '#0084f6',
-    fontSize: '16px',
-  },
-  clsIcon: {
-    color: '#c6c6c6',
-    fontSize: '16px',
-  },
+
   delayStyle: {
     color: 'grey',
     display: 'block',

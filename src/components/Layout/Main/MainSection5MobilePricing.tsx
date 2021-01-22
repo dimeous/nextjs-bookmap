@@ -97,6 +97,31 @@ export default function TabsWrappedLabelSection5() {
             </Box>
           </Grid>
         </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={0}>
+            <Box>
+              <Typography component={'h4'} display={'block'}>
+                KEY FEATURES
+              </Typography>
+              <Typography component={'p'} display={'block'}>
+                Heatmap, Volume dots, CVD
+                <br />
+                &amp; Volume Profile columns
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} spacing={0}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} spacing={0}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} spacing={0}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+        </Grid>
       </div>
 
       <Box className={classes.cPrices}>
