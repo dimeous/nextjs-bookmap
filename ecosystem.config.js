@@ -13,16 +13,6 @@ module.exports = {
                 PORT: 3000
             }
         },
-
 // optionally a second project
     ],
-    deploy: {
-        production: {
-            host: '127.0.0.1',
-            'post-deploy': 'npm install --production'
-                + ' && pm2 startOrRestart ecosystem.config.js --env=production'
-                + ' && pm2 save'
-        }
-    }
-
 };

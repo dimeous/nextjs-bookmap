@@ -1,12 +1,46 @@
-image: keymetrics/pm2:6
+# This file is a template, and might need editing before it works on your project.
+# see https://docs.gitlab.com/ce/ci/yaml/README.html for all available options
 
-stages:
-  - deploy
+# you can delete this line if you're not using Docker
+# image: busybox:latest
 
-deploy_prod:
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .next/cache/
+
+before_script:
+  - echo "Before script section"
+  - echo "For example you might run an update here or install a build dependency"
+  - echo "Or perhaps you might print out some debugging details"
+
+
+
+build1:
+  stage: build
+  script:
+    - echo "Do your build here"
+    - npm install && NODE_ENV=production npm run build
+    #- npm run build
+    #- pm2 delete bookmap-site
+
+delete1:
+  stage: delete
+    - echo "Kill and delete"
+    - pm2 kill bookmap 2>/dev/null
+    - pm2 delete all 2>/dev/null
+
+
+deploy1:
   stage: deploy
   script:
-    - echo "make deploy"
-    - pm2 deploy ecosystem.config.js production
-  environment:
-    name: deploying
+    - echo "Start Deploy"
+    - pm2 start npm --name "bookmap" -- start
+    - pm2 save
+    #- pm2 kill && pm2 start ecosystem.config.js
+    #- pm2 kill 2>/dev/null
+    #- pm2 delete all 2>/dev/null
+    #- NODE_ENV=production pm2 start npm --name bookmap -- start
+    #- pm2 start npm --name "bookmap-site" -- start
+    #- pm2 restart bookmap-site
