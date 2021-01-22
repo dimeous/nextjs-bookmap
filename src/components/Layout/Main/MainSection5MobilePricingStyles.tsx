@@ -5,8 +5,12 @@ export const styles = makeStyles(() => ({
     color: '#1a1833',
     '& h4': {
       color: '#0185f9',
-      font: '16px MullerMedium,sans-serif',
+      font: '16px/24px MullerMedium,sans-serif',
       textTransform: 'uppercase',
+    },
+    '& p': {
+      color: '#3B4858',
+      font: '16px/24px MullerLight,sans-serif',
     },
   },
   tabs: {
@@ -35,6 +39,18 @@ export const styles = makeStyles(() => ({
     transform: 'translateY(-23px)',
     zIndex: 1,
   },
+  borederBotom: {
+    borderBottom: '1px solid #E8E8E8',
+    width: '90%',
+    paddingTop: '8px',
+  },
+  delayStyle: {
+    color: 'grey',
+    display: 'block',
+    fontSize: '12px',
+    fontWeight: 600,
+  },
+
   cPrices: {
     display: 'flex',
     font: '14px/16px MullerRegular,sans-serif',
@@ -137,12 +153,6 @@ export const styles = makeStyles(() => ({
     },
   },
 
-  delayStyle: {
-    color: 'grey',
-    display: 'block',
-    fontSize: '12px',
-    fontWeight: 600,
-  },
   freeText: {
     font: '14px/16px MullerRegular,sans-serif',
     textAlign: 'center',

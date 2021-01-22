@@ -86,27 +86,27 @@ export default function TabsWrappedLabelSection5() {
               <p>{text.Heatmap}</p>
             </li>
             <li>
-              <p>Record / Replay, VWAP, POC</p>
+              <p>{text.Record}</p>
             </li>
             <li>
-              <p>LLT, Strength Level, Imbalance</p>
+              <p>{text.LLT}</p>
             </li>
             <li className={classes.roww}>
-              <h4>ONE CLICK TRADING</h4>
+              <h4>{text.oneclick}</h4>
               <p>Crypto</p>
             </li>
             <li>
-              <p>Futures, Stocks</p>
+              <p>{text.Futures}</p>
             </li>
             <li className={classes.rowvw}>
-              <h4>MARKETS VISUALIZATION</h4>
+              <h4>{text.Market}</h4>
               <p>
                 Crypto currencies <br />
                 &gt; 15 exchanges (Free data)
               </p>
             </li>
             <li>
-              <p>Futures &amp; Stocks </p>
+              <p>{text.Futures2}</p>
             </li>
             <li>
               <p>
@@ -263,9 +263,7 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <CheckIcon className={classes.chIcon} />
               </div>
-              <span className={classes.delayStyle}>
-                Data required<sup>*</sup>
-              </span>
+              <span className={classes.delayStyle}>{text.dataReq}</span>
             </li>
             <li>
               <p>20</p>
@@ -359,9 +357,7 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <CheckIcon className={classes.chIcon} />
               </div>
-              <span className={classes.delayStyle}>
-                Data required<sup>*</sup>
-              </span>
+              <span className={classes.delayStyle}>{text.dataReq}</span>
             </li>
             <li>
               <p>20</p>

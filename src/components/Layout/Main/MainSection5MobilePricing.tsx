@@ -97,9 +97,10 @@ export default function TabsWrappedLabelSection5() {
             </Box>
           </Grid>
         </Grid>
+        {/* Key features */}
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
-            <Box sx={{ pl: 2 }}>
+            <Box sx={{ p: 2 }}>
               <Typography component={'h4'}>{text.KeyFeature}</Typography>
               <Typography component={'p'}>{text.Heatmap}</Typography>
             </Box>
@@ -114,6 +115,156 @@ export default function TabsWrappedLabelSection5() {
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
             <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* Record / Replay, VWAP, POC */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.Record}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* LLT, Strength Level, Imbalance*/}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.LLT}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* ONE CLICK TRADING */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'h4'} sx={{ pt: 2 }}>
+                {text.oneclick}
+              </Typography>
+              <Typography component={'p'}>Crypto</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* Feature stocks*/}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.Futures}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* MARKETS VISUALIZATION */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'h4'} sx={{ pt: 2 }}>
+                {text.Market}
+              </Typography>
+              <Typography component={'p'}>{text.Market2}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* Feature & stocks*/}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.Futures2}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <div style={{ textAlign: 'center' }}>
+              <ClearIcon className={classes.clsIcon} />
+              <span className={classes.delayStyle}>Delayed</span>
+            </div>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <div style={{ textAlign: 'center' }}>
+              <ClearIcon className={classes.clsIcon} />
+              <span className={classes.delayStyle}>{text.dataReq}</span>
+            </div>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <div style={{ textAlign: 'center' }}>
+              <CheckIcon className={classes.chIcon} />
+              <span className={classes.delayStyle}>{text.dataReq}</span>
+            </div>
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
       </div>
@@ -309,9 +460,7 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <CheckIcon className={classes.chIcon} />
               </div>
-              <span className={classes.delayStyle}>
-                Data required<sup>*</sup>
-              </span>
+              <span className={classes.delayStyle}>{text.dataReq}</span>
             </li>
             <li>
               <p>20</p>
@@ -405,9 +554,7 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <CheckIcon className={classes.chIcon} />
               </div>
-              <span className={classes.delayStyle}>
-                Data required<sup>*</sup>
-              </span>
+              <span className={classes.delayStyle}>{text.dataReq}</span>
             </li>
             <li>
               <p>20</p>

@@ -17,6 +17,24 @@ export const text = {
       &amp; Volume Profile columns
     </Fragment>
   ),
+  Record: 'Record / Replay, VWAP, POC',
+  LLT: 'LLT, Strength Level, Imbalance',
+  oneclick: 'ONE CLICK TRADING',
+  Futures: 'Futures, Stocks',
+  Futures2: 'Futures & Stocks ',
+  Market: 'MARKETS VISUALIZATION',
+  Market2: (
+    <Fragment>
+      Crypto currencies <br />
+      &gt; 15 exchanges (Free data)
+    </Fragment>
+  ),
+  dataReq: (
+    <Fragment>
+      Data required<sup>*</sup>
+    </Fragment>
+  ),
 
+  deleyed: 'Delayed',
   btn: 'GO TO EDUCATION',
 }
