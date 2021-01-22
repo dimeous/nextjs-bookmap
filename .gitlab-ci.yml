@@ -22,15 +22,11 @@ build1:
   script:
     - echo "Do your build here"
     - npm install && NODE_ENV=production npm run build
-    #- npm run build
-    #- pm2 delete bookmap-site
-
-delete1:
-  stage: delete
     - echo "Kill and delete"
     - pm2 kill bookmap 2>/dev/null
-    - pm2 delete all 2>/dev/null
-
+    - pm2 delete bookmap 2>/dev/null
+    #- npm run build
+    #- pm2 delete bookmap-site
 
 deploy1:
   stage: deploy
