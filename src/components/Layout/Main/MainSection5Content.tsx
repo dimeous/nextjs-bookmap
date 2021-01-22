@@ -8,11 +8,7 @@ export const text = {
   l2: 'YARLY',
   l3: 'LIFETIME',
   l4: 'Save 20%',
-  i2: (
-    <Fragment>
-      <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
-    </Fragment>
-  ),
+  i2: <Fragment></Fragment>,
 
   btn: 'GO TO EDUCATION',
 }
