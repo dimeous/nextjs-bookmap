@@ -116,17 +116,17 @@ export default function TabsWrappedLabelSection5() {
               <p>{text.education2}</p>
             </li>
             <li>
-              <p>LIVE Trading Sessions with Pro Traders</p>
+              <p>{text.livetrdss}</p>
             </li>
             <li>
-              <p>Order Flow Analysis Webinars</p>
+              <p>{text.orderFlow}</p>
             </li>
             <li>
-              <p>Advanced Trading Educational Course</p>
+              <p>{text.AdvTradEducation}</p>
             </li>
             <li className={classes.rowvw}>
-              <h4>MARKETPLACE</h4>
-              <p>Addons, Market Data and Educational courses (Sold separately)</p>
+              <h4>{text.marketplace}</h4>
+              <p>{text.addons}</p>
             </li>
           </ul>
         </Box>
@@ -201,14 +201,13 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                Compatible with <br />
-                <b>SOME</b> addons
+                {text.addonsSome}
               </p>
             </li>
           </ul>
           <div className={classes.thePrice}>
             <div className={classes.priceBlock}>
-              <span className={classes.priceNumber}>Free</span>
+              <span className={classes.priceNumber}>{text.free}</span>
             </div>
             <Button
               variant="contained"
@@ -271,7 +270,7 @@ export default function TabsWrappedLabelSection5() {
             </li>
             <li>
               <p className={classes.freeText}>
-                FREE
+                {text.free}
                 <span className={classes.delayStyle}> Until The End of 2020</span>
               </p>
             </li>
@@ -291,7 +290,7 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                Compatible with <b>ALL</b> addons
+                {text.addonsAll}
               </p>
             </li>
           </ul>
@@ -365,7 +364,7 @@ export default function TabsWrappedLabelSection5() {
             </li>
             <li>
               <p className={classes.freeText}>
-                FREE
+                {text.free}
                 <span className={classes.delayStyle}> Until The End of 2020</span>
               </p>
             </li>
@@ -385,7 +384,7 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                Compatible with <b>ALL</b> addons
+                {text.addonsAll}
               </p>
             </li>
           </ul>

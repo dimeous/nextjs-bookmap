@@ -314,6 +314,97 @@ export default function TabsWrappedLabelSection5() {
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
+        {/* Education */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.livetrdss}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <Typography component={'p'}>{text.free}</Typography>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <Typography component={'p'}>{text.free}</Typography>
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* Order Flow Analysis Webinars */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.orderFlow}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* Advanced Trading Educational Course */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'p'}>{text.AdvTradEducation}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <ClearIcon className={classes.clsIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <CheckIcon className={classes.chIcon} />
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
+        {/* MARKETPLACE */}
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={1}>
+            <Box sx={{ p: 2 }}>
+              <Typography component={'h4'} sx={{ pt: 2 }}>
+                {text.marketplace}
+              </Typography>
+              <Typography component={'p'}>{text.addons}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1} className={classes.allTrading}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <p>{text.addonsSome}</p>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <p className={classes.allTrading}>{text.addonsAll}</p>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <p className={classes.allTrading}>{text.addonsAll}</p>
+          </Grid>
+          <Grid container item xs={12} justifyContent={'center'}>
+            <Box className={classes.borederBotom}></Box>
+          </Grid>
+        </Grid>
       </div>
 
       <Box className={classes.cPrices}>

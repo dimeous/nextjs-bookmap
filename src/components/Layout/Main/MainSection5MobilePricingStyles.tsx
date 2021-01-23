@@ -13,6 +13,14 @@ export const styles = makeStyles(() => ({
       font: '16px/24px MullerLight,sans-serif',
     },
   },
+  allTrading: {
+    '& p': {
+      font: '12px/12px MullerRegular,sans-serif',
+      textAlign: 'center',
+      letterApacing: '1px',
+      margin: '0px 10px',
+    },
+  },
   tabs: {
     marginBottom: '33px',
   },

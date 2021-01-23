@@ -45,5 +45,21 @@ export const text = {
   deleyed: 'Delayed',
   education: 'EDUCATION',
   education2: 'Bookmap Basics Webinars with Q&As',
+  livetrdss: 'LIVE Trading Sessions with Pro Traders',
+  free: 'FREE',
+  orderFlow: 'Order Flow Analysis Webinars',
+  AdvTradEducation: 'Advanced Trading Educational Course',
+  marketplace: 'MARKETPLACE',
+  addons: 'Addons, Market Data and Educational courses (Sold separately)',
+  addonsAll: (
+    <Fragment>
+      Compatible with <b>ALL</b> addons
+    </Fragment>
+  ),
+  addonsSome: (
+    <Fragment>
+      Compatible with <b>SOME</b> addons
+    </Fragment>
+  ),
   btn: 'GO TO EDUCATION',
 }

@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Building and deploying app\n"
-echo "npm install"
-npm install
-#npm install && NODE_ENV=production npm run build
-echo "npm build"
-npm run build
+echo "npm install and build"
+#npm install
+npm install && NODE_ENV=production npm run build
+#echo "npm build"
+#npm run build
 echo "stop app "
 pm2 stop bookmap 2>/dev/null
 echo "delete app "
