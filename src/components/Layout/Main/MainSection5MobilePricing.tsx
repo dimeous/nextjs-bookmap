@@ -405,348 +405,60 @@ export default function TabsWrappedLabelSection5() {
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
+        {/* Pricing*/}
+        <Grid container spacing={1}>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <div className={classes.thePrice}>
+              <div className={classes.priceBlock}>
+                <span className={classes.priceNumber}>Free</span>
+              </div>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://bookmap.com/members/signup/thAhOgYUg"
+              >
+                Select
+              </Button>
+            </div>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <div className={classes.thePrice}>
+              <div className={classes.priceBlock}>
+                <span className={classes.priceCurrency}>$</span>
+                <span className={classes.priceNumber}>39</span>
+                <p className={classes.pricePeriod}>
+                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                </p>
+              </div>
+              <Typography className={classes.priceSave}>Save $120/y</Typography>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104"
+              >
+                SELECT
+              </Button>
+            </div>
+          </Grid>
+          <Grid container item xs={4} justifyContent={'center'}>
+            <div className={classes.thePrice}>
+              <div className={classes.priceBlock}>
+                <span className={classes.priceCurrency}>$</span>
+                <span className={classes.priceNumber}>79</span>
+                <span className={classes.priceCurrency}>/mo</span>
+              </div>
+              <Typography className={classes.priceSave}>Save $240/y</Typography>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105"
+              >
+                SELECT
+              </Button>
+            </div>
+          </Grid>
+        </Grid>
       </div>
-
-      <Box className={classes.cPrices}>
-        <Box className={classes.naming}>
-          <ul className={classes.namingList}>
-            <li className={classes.roww}>
-              <h4>KEY FEATURES</h4>
-              <p>
-                Heatmap, Volume dots, CVDHeatmap, Volume dots, CVDHeatmap, Volume dots, CVDHeatmap,
-                Volume dots, CVDHeatmap, Volume dots, CVDHeatmap, Volume dots, CVDHeatmap, Volume
-                dots, CVDHeatmap, Volume dots, CVDHeatmap, Volume dots, CVD
-                <br />
-                &amp; Volume Profile columns
-              </p>
-            </li>
-            <li>
-              <p>Record / Replay, VWAP, POC</p>
-            </li>
-            <li>
-              <p>LLT, Strength Level, Imbalance</p>
-            </li>
-            <li className={classes.roww}>
-              <h4>ONE CLICK TRADING</h4>
-              <p>Crypto</p>
-            </li>
-            <li>
-              <p>Futures, Stocks</p>
-            </li>
-            <li className={classes.rowvw}>
-              <h4>MARKETS VISUALIZATION</h4>
-              <p>
-                Crypto currencies <br />
-                &gt; 15 exchanges (Free data)
-              </p>
-            </li>
-            <li>
-              <p>Futures &amp; Stocks </p>
-            </li>
-            <li>
-              <p>
-                Maximum # of Trading Symbols
-                <br />
-                Viewable at the Same Time
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <h4>EDUCATION</h4>
-              <p>Bookmap Basics Webinars with Q&amp;As</p>
-            </li>
-            <li>
-              <p>LIVE Trading Sessions with Pro Traders</p>
-            </li>
-            <li>
-              <p>Order Flow Analysis Webinars</p>
-            </li>
-            <li>
-              <p>Advanced Trading Educational Course</p>
-            </li>
-            <li className={classes.rowvw}>
-              <h4>MARKETPLACE</h4>
-              <p>Addons, Market Data and Educational courses (Sold separately)</p>
-            </li>
-          </ul>
-        </Box>
-        {/* first table list*/}
-        <Box className={classes.digital}>
-          <Box className={classes.priceName}>
-            <p>digital</p>
-          </Box>
-          <ul className={classes.priceTags}>
-            <li className={classes.roww}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li className={classes.roww}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <div>
-                <ClearIcon className={classes.clsIcon} />
-              </div>
-              <span className={classes.delayStyle}>Delayed</span>
-            </li>
-            <li>
-              <p>1</p>
-            </li>
-            <li className={classes.rowvw}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <p
-                style={{
-                  font: '14px/16px MullerRegular,sans-serif',
-                }}
-              >
-                Compatible with <br />
-                <b>SOME</b> addons
-              </p>
-            </li>
-          </ul>
-          <div className={classes.thePrice}>
-            <div className={classes.priceBlock}>
-              <span className={classes.priceNumber}>Free</span>
-            </div>
-            <Button
-              variant="contained"
-              color="secondary"
-              href="https://bookmap.com/members/signup/thAhOgYUg"
-            >
-              Select digital
-            </Button>
-          </div>
-        </Box>
-        {/* Second table list*/}
-        <Box className={classes.digital}>
-          <Box className={classes.priceName}>
-            <p>global</p>
-          </Box>
-          <ul className={classes.priceTags}>
-            <li className={classes.roww}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li className={classes.roww}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <ClearIcon className={classes.clsIcon} />
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <div>
-                <CheckIcon className={classes.chIcon} />
-              </div>
-              <span className={classes.delayStyle}>{text.dataReq}</span>
-            </li>
-            <li>
-              <p>20</p>
-            </li>
-            <li className={classes.rowvw}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p className={classes.freeText}>
-                FREE
-                <span className={classes.delayStyle}> Until The End of 2020</span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <p
-                style={{
-                  font: '14px/16px MullerRegular,sans-serif',
-                }}
-              >
-                Compatible with <b>ALL</b> addons
-              </p>
-            </li>
-          </ul>
-          <div className={classes.thePrice}>
-            <div className={classes.priceBlock}>
-              <span className={classes.priceCurrency}>$</span>
-              <span className={classes.priceNumber}>39</span>
-              <p className={classes.pricePeriod}>
-                <span className={classes.periodSpace}>&nbsp;</span>per month
-              </p>
-            </div>
-            <Typography className={classes.priceSave}>Save $120 a year</Typography>
-            <Button
-              variant="contained"
-              color="secondary"
-              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104"
-            >
-              SELECT GLOBAL
-            </Button>
-          </div>
-        </Box>
-        {/* third table list*/}
-        <Box className={classes.digital} style={{ marginRight: 0 }}>
-          <Box className={classes.priceName}>
-            <p>global plus</p>
-          </Box>
-          <ul className={classes.priceTags}>
-            <li className={classes.roww}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li className={classes.roww}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <div>
-                <CheckIcon className={classes.chIcon} />
-              </div>
-              <span className={classes.delayStyle}>{text.dataReq}</span>
-            </li>
-            <li>
-              <p>20</p>
-            </li>
-            <li className={classes.rowvw}>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p className={classes.freeText}>
-                FREE
-                <span className={classes.delayStyle}> Until The End of 2020</span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li>
-              <p>
-                <CheckIcon className={classes.chIcon} />
-              </p>
-            </li>
-            <li className={classes.rowvw}>
-              <p
-                style={{
-                  font: '14px/16px MullerRegular,sans-serif',
-                }}
-              >
-                Compatible with <b>ALL</b> addons
-              </p>
-            </li>
-          </ul>
-          <div className={classes.thePrice}>
-            <div className={classes.priceBlock}>
-              <span className={classes.priceCurrency}>$</span>
-              <span className={classes.priceNumber}>79</span>
-              <p className={classes.pricePeriod}>
-                <span className={classes.periodSpace}>&nbsp;</span>per month
-              </p>
-            </div>
-            <Typography className={classes.priceSave}>Save $240 a year</Typography>
-            <Button
-              variant="contained"
-              color="secondary"
-              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105"
-            >
-              SELECT GLOBAL PLUS
-            </Button>
-          </div>
-        </Box>
-      </Box>
       <p className={classes.lifetimeMessage}>
         <sup>*</sup>
         Futures &amp; stocks market data fees from third party providers are not included in the

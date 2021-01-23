@@ -207,7 +207,7 @@ export default function TabsWrappedLabelSection5() {
           </ul>
           <div className={classes.thePrice}>
             <div className={classes.priceBlock}>
-              <span className={classes.priceNumber}>{text.free}</span>
+              <span className={classes.priceNumber}>Free</span>
             </div>
             <Button
               variant="contained"
