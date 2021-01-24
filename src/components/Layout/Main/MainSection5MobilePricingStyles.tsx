@@ -59,62 +59,6 @@ export const styles = makeStyles(() => ({
     fontWeight: 600,
   },
 
-  cPrices: {
-    display: 'flex',
-    font: '14px/16px MullerRegular,sans-serif',
-    '& li': {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      borderBottom: '1px solid #e8e8e8',
-      justifyContent: 'center',
-      minHeight: '40px',
-    },
-    '& ul': {
-      margin: 0,
-      width: '100%',
-    },
-  },
-  naming: {
-    minWidth: '250px',
-    width: '252px',
-    alignItems: 'flex-start',
-    display: 'flex',
-    marginRight: '40px',
-    transform: 'translateY(-5px)',
-    ' & p': {
-      margin: 0,
-    },
-  },
-  namingList: {
-    padding: '77px 0px',
-    minWidth: '250px',
-    listStyle: 'none',
-    width: '252px',
-    '& li': {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      borderBottom: '1px solid #e8e8e8',
-      '&:first-child': {
-        position: 'relative',
-        '& h4': {
-          left: 0,
-          position: 'absolute',
-          top: '-25px',
-        },
-      },
-    },
-    '& h4': {
-      color: '#0185f9',
-      font: '12px MullerMedium,sans-serif',
-      justifyContent: 'flex-start',
-      lineHeight: 1,
-      textTransform: 'uppercase',
-      margin: 0,
-    },
-  },
-
   priceName: {
     backgroundColor: '#0e67d0',
     display: 'flex',
@@ -140,23 +84,11 @@ export const styles = makeStyles(() => ({
     width: '100%',
   },
   priceNumber: {
-    font: '32px MullerLight,sans-serif',
+    font: '24px MullerRegular,sans-serif',
     lineHeight: 1,
     transition: '.2s ease',
   },
-  thePrice: {
-    alignItems: 'center',
-    border: '1px solid #bdc4d0',
-    borderRadius: '0 0 5px 5px',
-    display: 'flex',
-    flexDirection: 'column',
-    transition: '.5s ease',
-    borderTop: 'none',
-    width: '100%',
-    justifyContent: 'center',
-    alignContent: 'space-between',
-    minHeight: '75px',
-  },
+
   priceBlock: {
     minHeight: '75px',
     flexWrap: 'wrap',
@@ -166,9 +98,15 @@ export const styles = makeStyles(() => ({
     alignItems: 'center',
   },
   priceCurrency: {
-    font: '22px MullerLight, sans-serif',
+    font: '12px MullerRegular, sans-serif',
+    letterSpacing: '1px',
     marginRight: '5px',
     transform: 'translateY(2px)',
+  },
+  priceFree: {
+    font: '12px/12px MullerRegular, sans-serif',
+    color: '#3B4858',
+    letterSpacing: '1px',
   },
   pricePeriod: {
     display: 'flex',
@@ -177,30 +115,32 @@ export const styles = makeStyles(() => ({
   periodSpace: {},
   priceSave: {
     color: '#8a8a8a',
-    font: '12px MullerLight, sans-serif',
+    font: '12px MullerRegular, sans-serif',
     paddingLeft: '18px',
     position: 'absolute',
+    margin: '0px 0px -50px -20px',
   },
   lifetimeMessage: {
     color: '#a4a4a4',
-    font: '12px/13px MullerRegular,sans-serif',
+    font: '12px/18px MullerRegular,sans-serif',
+    letterSpacing: '1px',
     marginTop: '23px',
   },
   cta: {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: '27px',
+    marginTop: '24px',
     alignItems: 'center',
     textAligh: 'center',
     '& p': {
       color: '#000',
-      font: '12px/13px MullerRegular,sans-serif',
-      marginBottom: '13px',
+      font: '12px/18px MullerRegular,sans-serif',
+      letterSpacing: '1px',
       textAlign: 'center',
     },
     '& a': {
       color: '#0185f9',
-      font: '12px MullerMedium,sans-serif',
+      font: '16px/24px MullerMedium,sans-serif',
       lineHeight: 1,
       textDecoration: 'none',
       textTransform: 'uppercase',

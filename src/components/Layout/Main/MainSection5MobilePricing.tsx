@@ -79,19 +79,22 @@ export default function TabsWrappedLabelSection5() {
           <span className={classes.tabTwo}>{text.l4} </span>
         </TabPanel>
       </div>
-      <div className={classes.root}>
+      <div
+        className={classes.root}
+        style={{ border: '1px solid #bdc4d0', borderRadius: '8px', overflow: 'hidden' }}
+      >
         <Grid container spacing={1}>
-          <Grid container item xs={4}>
+          <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
             <Box className={classes.priceName}>
               <p>{text.t1}</p>
             </Box>
           </Grid>
-          <Grid container item xs={4}>
+          <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
             <Box className={classes.priceName}>
               <p>{text.t2}</p>
             </Box>
           </Grid>
-          <Grid container item xs={4}>
+          <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
             <Box className={classes.priceName}>
               <p>{text.t2}+</p>
             </Box>
@@ -408,9 +411,9 @@ export default function TabsWrappedLabelSection5() {
         {/* Pricing*/}
         <Grid container spacing={1}>
           <Grid container item xs={4} justifyContent={'center'}>
-            <div className={classes.thePrice}>
+            <div>
               <div className={classes.priceBlock}>
-                <span className={classes.priceNumber}>Free</span>
+                <span className={classes.priceFree}>FREE</span>
               </div>
               <Button
                 variant="contained"
@@ -422,15 +425,14 @@ export default function TabsWrappedLabelSection5() {
             </div>
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <div className={classes.thePrice}>
+            <div>
               <div className={classes.priceBlock}>
                 <span className={classes.priceCurrency}>$</span>
                 <span className={classes.priceNumber}>39</span>
-                <p className={classes.pricePeriod}>
-                  <span className={classes.periodSpace}>&nbsp;</span>per month
-                </p>
+                <span className={classes.priceCurrency}>/mo</span>
+                <span className={classes.priceSave}>Save $120/y</span>
               </div>
-              <Typography className={classes.priceSave}>Save $120/y</Typography>
+
               <Button
                 variant="contained"
                 color="secondary"
@@ -440,14 +442,15 @@ export default function TabsWrappedLabelSection5() {
               </Button>
             </div>
           </Grid>
-          <Grid container item xs={4} justifyContent={'center'}>
-            <div className={classes.thePrice}>
+          <Grid container item xs={4} justifyContent={'center'} style={{ paddingBottom: '24px' }}>
+            <div>
               <div className={classes.priceBlock}>
                 <span className={classes.priceCurrency}>$</span>
                 <span className={classes.priceNumber}>79</span>
                 <span className={classes.priceCurrency}>/mo</span>
+                <span className={classes.priceSave}>Save $240/y</span>
               </div>
-              <Typography className={classes.priceSave}>Save $240/y</Typography>
+
               <Button
                 variant="contained"
                 color="secondary"
@@ -459,11 +462,7 @@ export default function TabsWrappedLabelSection5() {
           </Grid>
         </Grid>
       </div>
-      <p className={classes.lifetimeMessage}>
-        <sup>*</sup>
-        Futures &amp; stocks market data fees from third party providers are not included in the
-        price of the Bookmap software subscription
-      </p>
+      <p className={classes.lifetimeMessage}>{text.endtext}</p>
       <div className={classes.cta}>
         <p>Can’t decide which plan is right for you?</p>
         <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>

@@ -61,5 +61,12 @@ export const text = {
       Compatible with <b>SOME</b> addons
     </Fragment>
   ),
+  endtext: (
+    <Fragment>
+      <sup>*</sup>
+      Futures & stocks market data fees from third party providers are not included in the price of
+      the Bookmap software subscription
+    </Fragment>
+  ),
   btn: 'GO TO EDUCATION',
 }

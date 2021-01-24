@@ -407,11 +407,7 @@ export default function TabsWrappedLabelSection5() {
           </div>
         </Box>
       </Box>
-      <p className={classes.lifetimeMessage}>
-        <sup>*</sup>
-        Futures &amp; stocks market data fees from third party providers are not included in the
-        price of the Bookmap software subscription
-      </p>
+      <p className={classes.lifetimeMessage}>{text.endtext}</p>
       <div className={classes.cta}>
         <p>Can’t decide which plan is right for you?</p>
         <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
