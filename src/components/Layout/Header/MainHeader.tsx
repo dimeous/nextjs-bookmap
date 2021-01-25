@@ -12,7 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useStyles } from './MainHeaderStyles'
-import { headersData, resources, products, solutions } from './menuLinks'
+import { headersData, resources, products, solutions, community, marketplace } from './menuLinks'
 
 export default function Header() {
   const classes = useStyles()
@@ -41,7 +41,7 @@ export default function Header() {
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
 
-  const generateDeskTopSubMenu = (data: any) => {
+  const generateDeskTopSubMenu = (data: Array<{ label: string; href: string; blank: boolean }>) => {
     return data.map(({ label, href, blank }) => {
       return (
         <li key={label}>
@@ -94,47 +94,13 @@ export default function Header() {
                   <li>
                     <a href="#community">Community</a>
                     <div className="sub-menu-wrap">
-                      <ul className={classes.subMenu2}>
-                        <li>
-                          <a href="https://discord.com/invite/FATgzfq7">Chatroom (Discord)</a>
-                        </li>
-                        <li>
-                          <a
-                            target="_blank"
-                            href="https://www.bookmap.com/forum/viewforum.php?f=19"
-                            rel={'noreferrer'}
-                          >
-                            Forum
-                          </a>
-                        </li>
-                      </ul>
+                      <ul className={classes.subMenu2}>{generateDeskTopSubMenu(community)}</ul>
                     </div>
                   </li>
                   <li>
                     <Link href="https://marketplace.bookmap.com/">Marketplace</Link>
                     <div className="sub-menu-wrap">
-                      <ul className={classes.subMenu2}>
-                        <li>
-                          <Link href="https://marketplace.bookmap.com/product-category/addons/">
-                            Add-ons
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://marketplace.bookmap.com/product-category/services/market-data/">
-                            Market Data
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://marketplace.bookmap.com/product-category/others/education/">
-                            Education
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://marketplace.bookmap.com/product/mbo-bundle-beta-version/">
-                            MBO Bundle
-                          </Link>
-                        </li>
-                      </ul>
+                      <ul className={classes.subMenu2}>{generateDeskTopSubMenu(marketplace)}</ul>
                     </div>
                   </li>
                 </ul>

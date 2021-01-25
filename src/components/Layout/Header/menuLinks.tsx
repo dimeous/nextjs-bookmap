@@ -1,6 +1,3 @@
-import Link from 'next/link'
-import React from 'react'
-
 export const headersData = [
   {
     label: 'Features',
@@ -89,6 +86,19 @@ export const products = [
     blank: false,
   },
 ]
+export const community = [
+  {
+    label: 'Chatroom (Discord)',
+    href: 'https://discord.com/invite/FATgzfq7',
+    blank: false,
+  },
+  {
+    label: 'Forum',
+    href: 'https://www.bookmap.com/forum/viewforum.php?f=19',
+    blank: true,
+  },
+]
+
 export const solutions = [
   {
     label: 'Bookmap Web',
@@ -120,5 +130,28 @@ export const solutions = [
     label: 'API',
     href: 'https://www.bookmap.com/knowledgebase/docs/API',
     blank: true,
+  },
+]
+
+export const marketplace = [
+  {
+    label: 'Add-ons',
+    href: 'https://marketplace.bookmap.com/product-category/addons/',
+    blank: false,
+  },
+  {
+    label: 'Market Data',
+    href: 'https://marketplace.bookmap.com/product-category/services/market-data/',
+    blank: false,
+  },
+  {
+    label: 'Education',
+    href: 'https://marketplace.bookmap.com/product-category/others/education/',
+    blank: false,
+  },
+  {
+    label: ' MBO Bundle',
+    href: 'https://marketplace.bookmap.com/product/mbo-bundle-beta-version/',
+    blank: false,
   },
 ]
