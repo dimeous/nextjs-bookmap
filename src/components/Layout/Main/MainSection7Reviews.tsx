@@ -31,7 +31,7 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {},
   reviewsAuthor: {
     display: 'block',
@@ -43,6 +43,9 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
     marginBottom: '125px',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '24px',
+    },
   },
   imageBlock: {
     height: '75px',

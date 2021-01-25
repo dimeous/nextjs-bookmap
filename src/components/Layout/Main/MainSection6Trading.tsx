@@ -69,6 +69,7 @@ const useStyles = makeStyles(() => ({
 }))
 const useStylesMob = makeStyles(() => ({
   root: {
+    marginBottom: '124px',
     width: '100%',
     '& ul': {
       listStyle: 'none',

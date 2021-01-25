@@ -41,9 +41,7 @@ export const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  drawerContainer: {
-    padding: '20px 30px',
-  },
+
   moreButtonCont: {
     marginRight: '199px',
   },
@@ -154,6 +152,13 @@ export const useStyles = makeStyles(() => ({
       height: '14px',
       top: '2px',
       left: '-8px',
+    },
+  },
+  drawerContainer: {
+    padding: '16px 24px',
+    '& li': {
+      font: '14px/21px MullerLight, sans-serif',
+      letterSpacing: '1px',
     },
   },
 }))

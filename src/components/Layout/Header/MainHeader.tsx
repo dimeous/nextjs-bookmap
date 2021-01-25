@@ -58,6 +58,182 @@ export default function Header() {
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
 
+  const popUpMenu = () => {
+    return (
+      <div className={classes.moreButtonCont}>
+        <ul>
+          <li>
+            <Typography
+              className={checked ? classes.moreButtonAcitve : classes.moreButton}
+              onClick={handleChange}
+            >
+              More
+            </Typography>
+            <Fade in={checked}>
+              <div className={classes.subMenuWrap}>
+                <ul className={classes.subMenu}>
+                  <li>
+                    <Link href="/#resources">Resources</Link>
+                    <div className="sub-menu-wrap">
+                      <ul className={classes.subMenu2}>
+                        <li>
+                          <a
+                            target="_blank"
+                            href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
+                            rel={'noreferrer'}
+                          >
+                            Knowledge base
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://bookmap.com/symbol-table/">Symbol Table</a>
+                        </li>
+                        <li>
+                          <Link href="https://www.bookmap.com/knowledgebase/docs/KB-Help-Glossary">
+                            Glossary
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/educators/">Educators Directory</Link>
+                        </li>
+                        <li>
+                          <Link href="https://www.youtube.com/playlist?list=PLzaGy-3oukoTy7FtXV9KbFZ7pVXVolYw_">
+                            Pro Trader Webinars
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/blog/">Blog</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <Link href="/#product">Product</Link>
+                    <div className="sub-menu-wrap">
+                      <ul className={classes.subMenu2}>
+                        <li>
+                          <Link href="https://bookmap.com/education/">Education</Link>
+                        </li>
+                        <li>
+                          <a href="https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity">
+                            Connectivity Guide
+                          </a>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/features/">Features</Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/packages-comparison/">
+                            Pricing &amp; Packages
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/partner/">Partners</Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/referral/">Affiliates</Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/faq/">FAQ</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#solutions">Solutions</a>
+                    <div className="sub-menu-wrap">
+                      <ul className={classes.subMenu2}>
+                        <li>
+                          <Link href="https://web.bookmap.com/?time=2021-01-13--17-39-04&amp;duration=1d&amp;prices=32092-35899.5">
+                            Bookmap Web
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/b2b/">Bookmap for Business</Link>
+                        </li>
+                        <li>
+                          <Link href="https://bookmap.com/crypto/">Bookmap for Crypto</Link>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://bookmap.com/dxfeed/" rel={'noreferrer'}>
+                            dxFeed Market Data
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            target="_blank"
+                            href="https://www.bookmap.com/knowledgebase/docs/API#the-quant-solution"
+                            rel={'noreferrer'}
+                          >
+                            Quant solution
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            target="_blank"
+                            href="https://www.bookmap.com/knowledgebase/docs/API"
+                            rel={'noreferrer'}
+                          >
+                            API
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#community">Community</a>
+                    <div className="sub-menu-wrap">
+                      <ul className={classes.subMenu2}>
+                        <li>
+                          <a href="https://discord.com/invite/FATgzfq7">Chatroom (Discord)</a>
+                        </li>
+                        <li>
+                          <a
+                            target="_blank"
+                            href="https://www.bookmap.com/forum/viewforum.php?f=19"
+                            rel={'noreferrer'}
+                          >
+                            Forum
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <Link href="https://marketplace.bookmap.com/">Marketplace</Link>
+                    <div className="sub-menu-wrap">
+                      <ul className={classes.subMenu2}>
+                        <li>
+                          <Link href="https://marketplace.bookmap.com/product-category/addons/">
+                            Add-ons
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://marketplace.bookmap.com/product-category/services/market-data/">
+                            Market Data
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://marketplace.bookmap.com/product-category/others/education/">
+                            Education
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://marketplace.bookmap.com/product/mbo-bundle-beta-version/">
+                            MBO Bundle
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </Fade>
+          </li>
+        </ul>
+      </div>
+    )
+  }
   const displayDesktop = () => {
     return (
       <Box className={classes.toolbar}>
@@ -73,182 +249,7 @@ export default function Header() {
             })}
           </ul>
         </Box>
-        <div className={classes.moreButtonCont}>
-          <ul>
-            <li>
-              <Typography
-                className={checked ? classes.moreButtonAcitve : classes.moreButton}
-                onClick={handleChange}
-              >
-                More
-              </Typography>
-              <Fade in={checked}>
-                <div className={classes.subMenuWrap}>
-                  <ul className={classes.subMenu}>
-                    <li>
-                      <Link href="/#resources">Resources</Link>
-                      <div className="sub-menu-wrap">
-                        <ul className={classes.subMenu2}>
-                          <li>
-                            <a
-                              target="_blank"
-                              href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
-                              rel={'noreferrer'}
-                            >
-                              Knowledge base
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://bookmap.com/symbol-table/">Symbol Table</a>
-                          </li>
-                          <li>
-                            <Link href="https://www.bookmap.com/knowledgebase/docs/KB-Help-Glossary">
-                              Glossary
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/educators/">Educators Directory</Link>
-                          </li>
-                          <li>
-                            <Link href="https://www.youtube.com/playlist?list=PLzaGy-3oukoTy7FtXV9KbFZ7pVXVolYw_">
-                              Pro Trader Webinars
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/blog/">Blog</Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <Link href="/#product">Product</Link>
-                      <div className="sub-menu-wrap">
-                        <ul className={classes.subMenu2}>
-                          <li>
-                            <Link href="https://bookmap.com/education/">Education</Link>
-                          </li>
-                          <li>
-                            <a href="https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity">
-                              Connectivity Guide
-                            </a>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/features/">Features</Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/packages-comparison/">
-                              Pricing &amp; Packages
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/partner/">Partners</Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/referral/">Affiliates</Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/faq/">FAQ</Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#solutions">Solutions</a>
-                      <div className="sub-menu-wrap">
-                        <ul className={classes.subMenu2}>
-                          <li>
-                            <Link href="https://web.bookmap.com/?time=2021-01-13--17-39-04&amp;duration=1d&amp;prices=32092-35899.5">
-                              Bookmap Web
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/b2b/">Bookmap for Business</Link>
-                          </li>
-                          <li>
-                            <Link href="https://bookmap.com/crypto/">Bookmap for Crypto</Link>
-                          </li>
-                          <li>
-                            <a
-                              target="_blank"
-                              href="https://bookmap.com/dxfeed/"
-                              rel={'noreferrer'}
-                            >
-                              dxFeed Market Data
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              target="_blank"
-                              href="https://www.bookmap.com/knowledgebase/docs/API#the-quant-solution"
-                              rel={'noreferrer'}
-                            >
-                              Quant solution
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              target="_blank"
-                              href="https://www.bookmap.com/knowledgebase/docs/API"
-                              rel={'noreferrer'}
-                            >
-                              API
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#community">Community</a>
-                      <div className="sub-menu-wrap">
-                        <ul className={classes.subMenu2}>
-                          <li>
-                            <a href="https://discord.com/invite/FATgzfq7">Chatroom (Discord)</a>
-                          </li>
-                          <li>
-                            <a
-                              target="_blank"
-                              href="https://www.bookmap.com/forum/viewforum.php?f=19"
-                              rel={'noreferrer'}
-                            >
-                              Forum
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <Link href="https://marketplace.bookmap.com/">Marketplace</Link>
-                      <div className="sub-menu-wrap">
-                        <ul className={classes.subMenu2}>
-                          <li>
-                            <Link href="https://marketplace.bookmap.com/product-category/addons/">
-                              Add-ons
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://marketplace.bookmap.com/product-category/services/market-data/">
-                              Market Data
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://marketplace.bookmap.com/product-category/others/education/">
-                              Education
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://marketplace.bookmap.com/product/mbo-bundle-beta-version/">
-                              MBO Bundle
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </Fade>
-            </li>
-          </ul>
-        </div>
+        {popUpMenu()}
         <Link href="https://bookmap.com/portal?_ga=2.113314319.926453304.1529908174-380305212.1526294084">
           <Box className={classes.loginBut}>
             <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
@@ -286,7 +287,14 @@ export default function Header() {
             onClose: handleDrawerClose,
           }}
         >
-          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
+          <div className={classes.drawerContainer}>
+            <MenuItem>
+              <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
+              <span style={{ paddingLeft: '10px' }}>LOG IN</span>
+            </MenuItem>
+            {getDrawerChoices()}
+            {popUpMenu()}
+          </div>
         </Drawer>
       </Toolbar>
     )
@@ -296,7 +304,7 @@ export default function Header() {
     return headersData.map(({ label, href }) => {
       return (
         <Link href={href} key={label}>
-          <MenuItem>{label}</MenuItem>
+          <MenuItem style={{ textTransform: 'uppercase' }}>{label}</MenuItem>
         </Link>
       )
     })
