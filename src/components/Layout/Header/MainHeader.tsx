@@ -12,24 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useStyles } from './MainHeaderStyles'
-const headersData = [
-  {
-    label: 'Features',
-    href: '/#features',
-  },
-  {
-    label: 'Connectivity',
-    href: '/#connectivity',
-  },
-  {
-    label: 'Pricing',
-    href: '/#pricing',
-  },
-  {
-    label: 'Education',
-    href: '/#education',
-  },
-]
+import { headersData, resources, products, solutions } from './menuLinks'
 
 export default function Header() {
   const classes = useStyles()
@@ -58,6 +41,24 @@ export default function Header() {
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
 
+  const generateDeskTopSubMenu = (data: any) => {
+    return data.map(({ label, href, blank }) => {
+      return (
+        <li key={label}>
+          {blank ? (
+            <a href={href} key={label} target="_blank" rel={'noreferrer'}>
+              {label}
+            </a>
+          ) : (
+            <Link href={href} key={label}>
+              {label}
+            </Link>
+          )}
+        </li>
+      )
+    })
+  }
+
   const popUpMenu = () => {
     return (
       <div className={classes.moreButtonCont}>
@@ -75,109 +76,19 @@ export default function Header() {
                   <li>
                     <Link href="/#resources">Resources</Link>
                     <div className="sub-menu-wrap">
-                      <ul className={classes.subMenu2}>
-                        <li>
-                          <a
-                            target="_blank"
-                            href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
-                            rel={'noreferrer'}
-                          >
-                            Knowledge base
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://bookmap.com/symbol-table/">Symbol Table</a>
-                        </li>
-                        <li>
-                          <Link href="https://www.bookmap.com/knowledgebase/docs/KB-Help-Glossary">
-                            Glossary
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/educators/">Educators Directory</Link>
-                        </li>
-                        <li>
-                          <Link href="https://www.youtube.com/playlist?list=PLzaGy-3oukoTy7FtXV9KbFZ7pVXVolYw_">
-                            Pro Trader Webinars
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/blog/">Blog</Link>
-                        </li>
-                      </ul>
+                      <ul className={classes.subMenu2}>{generateDeskTopSubMenu(resources)}</ul>
                     </div>
                   </li>
                   <li>
                     <Link href="/#product">Product</Link>
                     <div className="sub-menu-wrap">
-                      <ul className={classes.subMenu2}>
-                        <li>
-                          <Link href="https://bookmap.com/education/">Education</Link>
-                        </li>
-                        <li>
-                          <a href="https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity">
-                            Connectivity Guide
-                          </a>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/features/">Features</Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/packages-comparison/">
-                            Pricing &amp; Packages
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/partner/">Partners</Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/referral/">Affiliates</Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/faq/">FAQ</Link>
-                        </li>
-                      </ul>
+                      <ul className={classes.subMenu2}>{generateDeskTopSubMenu(products)}</ul>
                     </div>
                   </li>
                   <li>
                     <a href="#solutions">Solutions</a>
                     <div className="sub-menu-wrap">
-                      <ul className={classes.subMenu2}>
-                        <li>
-                          <Link href="https://web.bookmap.com/?time=2021-01-13--17-39-04&amp;duration=1d&amp;prices=32092-35899.5">
-                            Bookmap Web
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/b2b/">Bookmap for Business</Link>
-                        </li>
-                        <li>
-                          <Link href="https://bookmap.com/crypto/">Bookmap for Crypto</Link>
-                        </li>
-                        <li>
-                          <a target="_blank" href="https://bookmap.com/dxfeed/" rel={'noreferrer'}>
-                            dxFeed Market Data
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            target="_blank"
-                            href="https://www.bookmap.com/knowledgebase/docs/API#the-quant-solution"
-                            rel={'noreferrer'}
-                          >
-                            Quant solution
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            target="_blank"
-                            href="https://www.bookmap.com/knowledgebase/docs/API"
-                            rel={'noreferrer'}
-                          >
-                            API
-                          </a>
-                        </li>
-                      </ul>
+                      <ul className={classes.subMenu2}>{generateDeskTopSubMenu(solutions)}</ul>
                     </div>
                   </li>
                   <li>
