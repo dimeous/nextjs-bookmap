@@ -5,7 +5,7 @@ import NextLink from 'next/link'
 import TrustBoxFooter from './trustBoxFooter'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import MenuListComposition from '../Header/toggleMenu'
+import MenuListComposition from './toggleMenu'
 import { resources, products, solutions, community, marketplace } from '../Header/menuLinks'
 
 const useStyles = makeStyles(() => ({
@@ -119,7 +119,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexWrap: 'wrap',
     margin: 0,
-    maxWidth: '220px',
+    maxWidth: '250px',
     width: 'auto',
     alignItems: 'center',
     '& li': {
@@ -358,6 +358,11 @@ export default function MainFooter() {
                     className={classes.SocialsHover}
                     alt={'Youtube'}
                   />
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.com/invite/8uHDzgjEMq" target="_blank" rel={'noreferrer'}>
+                  <img src="/static/footer/discord.svg" alt={'Bookmap Chatroom'} />
                 </a>
               </li>
             </ul>
