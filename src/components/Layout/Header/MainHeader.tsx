@@ -12,6 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useStyles } from './MainHeaderStyles'
+import MenuListComposition from './toggleMenu'
 import { headersData, resources, products, solutions, community, marketplace } from './menuLinks'
 
 export default function Header() {
@@ -169,22 +170,31 @@ export default function Header() {
               <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
               <span style={{ paddingLeft: '10px' }}>LOG IN</span>
             </MenuItem>
-            {getDrawerChoices()}
-            {popUpMenu()}
+            {headersData.map(({ label, href }) => {
+              return (
+                <Link href={href} key={label}>
+                  <MenuItem style={{ textTransform: 'uppercase' }} onClick={handleDrawerClose}>
+                    {label}
+                  </MenuItem>
+                </Link>
+              )
+            })}
+            <MenuItem>
+              <MenuListComposition name="Resources" links={resources} />
+            </MenuItem>
+            <MenuItem>
+              <MenuListComposition name="Products" links={products} />
+            </MenuItem>
+            <MenuItem>
+              <MenuListComposition name="Solutions" links={solutions} />
+            </MenuItem>
+            <MenuItem>
+              <MenuListComposition name="Community" links={community} />
+            </MenuItem>
           </div>
         </Drawer>
       </Toolbar>
     )
-  }
-
-  const getDrawerChoices = () => {
-    return headersData.map(({ label, href }) => {
-      return (
-        <Link href={href} key={label}>
-          <MenuItem style={{ textTransform: 'uppercase' }}>{label}</MenuItem>
-        </Link>
-      )
-    })
   }
 
   const bookmapLogo = (

@@ -1,95 +1,82 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
-import Grow from '@material-ui/core/Grow'
-import Paper from '@material-ui/core/Paper'
-import Popper from '@material-ui/core/Popper'
-import MenuItem from '@material-ui/core/MenuItem'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import Typography from '@material-ui/core/Typography'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import MenuList from '@material-ui/core/MenuList'
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import MenuItem from '@material-ui/core/MenuItem'
+import Link from 'next/link'
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      display: 'flex',
+      width: '100%',
+      '& a': {
+        font: '14px/21px MullerLight, sans-serif',
+        letterSpacing: '1px',
+        color: '#3B4858',
+        textDecoration: 'none',
+      },
+      '& ul': { padding: 0 },
     },
-    paper: {
-      marginRight: theme.spacing(2),
+    menuItem: {
+      padding: 0,
+    },
+    heading: {
+      font: '14px/21px MullerMedium, sans-serif',
+      fontWeight: 500,
+      letterSpacing: '0.88px',
+      textTransform: 'uppercase',
+    },
+    drawerContainer: {
+      padding: '16px 24px',
+      '& li': {
+        font: '14px/21px MullerLight, sans-serif',
+        letterSpacing: '1px',
+      },
     },
   })
 )
+type CardProps = {
+  name: string
+  links: Array<{ label: string; href: string; blank: boolean }>
+}
 
-export default function MenuListComposition() {
+export default function MenuListComposition({ name, links }: CardProps) {
   const classes = useStyles()
-  const [open, setOpen] = React.useState(false)
-  const anchorRef = React.useRef<HTMLButtonElement>(null)
-
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen)
-  }
-
-  const handleClose = (event: React.MouseEvent<EventTarget>) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target as HTMLElement)) {
-      return
-    }
-
-    setOpen(false)
-  }
-
-  function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === 'Tab') {
-      event.preventDefault()
-      setOpen(false)
-    }
-  }
-
-  // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open)
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current!.focus()
-    }
-
-    prevOpen.current = open
-  }, [open])
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <MenuList>
-          <MenuItem>Profile</MenuItem>
-          <MenuItem>My account</MenuItem>
-          <MenuItem>Logout</MenuItem>
-        </MenuList>
-      </Paper>
-      <div>
-        <Button
-          ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
         >
-          Toggle Menu Grow
-        </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      </div>
+          <Typography className={classes.heading}>{name}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <MenuList className={classes.drawerContainer}>
+            {links.map(({ label, href, blank }) => {
+              return (
+                <MenuItem key={label} className={classes.menuItem}>
+                  {blank ? (
+                    <a href={href} key={label} target="_blank" rel={'noreferrer'}>
+                      {label}
+                    </a>
+                  ) : (
+                    <Link href={href} key={label}>
+                      {label}
+                    </Link>
+                  )}
+                </MenuItem>
+              )
+            })}
+          </MenuList>
+        </AccordionDetails>
+      </Accordion>
     </div>
   )
 }
