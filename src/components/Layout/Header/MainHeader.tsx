@@ -191,6 +191,9 @@ export default function Header() {
             <MenuItem>
               <MenuListComposition name="Community" links={community} />
             </MenuItem>
+            <MenuItem>
+              <MenuListComposition name="Marketplace" links={marketplace} />
+            </MenuItem>
           </div>
         </Drawer>
       </Toolbar>

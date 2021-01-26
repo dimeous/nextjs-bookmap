@@ -1,8 +1,12 @@
 import React from 'react'
-import { makeStyles, Box, Container } from '@material-ui/core'
+import { makeStyles, Box, Container, MenuItem, MenuList } from '@material-ui/core'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import TrustBoxFooter from './trustBoxFooter'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import MenuListComposition from '../Header/toggleMenu'
+import { resources, products, solutions, community, marketplace } from '../Header/menuLinks'
 
 const useStyles = makeStyles(() => ({
   mainFooter: {
@@ -141,6 +145,8 @@ const useStyles = makeStyles(() => ({
 }))
 
 export default function MainFooter() {
+  const theme = useTheme()
+  const mobile = useMediaQuery(theme.breakpoints.down('md'))
   const classes = useStyles()
   return (
     <footer className={classes.mainFooter}>
@@ -173,92 +179,112 @@ export default function MainFooter() {
               <NextLink href="/#education">Education</NextLink>
             </li>
           </ul>
-          <ul className={classes.generalFooterMenu}>
-            <li className={classes.hasChildren}>
-              <a href="#resources">Resources</a>
-              <ul className={classes.subMenu}>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
-                    rel={'noreferrer'}
-                  >
-                    Knowledge base
-                  </a>
-                </li>
-                <li>
-                  <NextLink href="https://bookmap.com/faq/">FAQ</NextLink>
-                </li>
-                <li>
-                  <NextLink href="https://bookmap.com/symbol-table/">Symbol table</NextLink>
-                </li>
-                <li>
-                  <NextLink href="https://bookmap.com/pro-trader-webinars/">
-                    Pro Trader Webinars
-                  </NextLink>
-                </li>
-                <li>
-                  <NextLink href="https://bookmap.com/educators/">Partner Educators</NextLink>
-                </li>
-                <li>
-                  <NextLink href="https://bookmap.com/blog/">Blog</NextLink>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://bookmap.com/forum/viewforum.php?f=19"
-                    rel={'noreferrer'}
-                  >
-                    Forum
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className={classes.hasChildren}>
-              <a href="#solutions">Solutions</a>
-              <ul className={classes.subMenu}>
-                <li>
-                  <a target="_blank" href="https://bookmap.com/dxfeed/" rel={'noreferrer'}>
-                    US stocks data
-                  </a>
-                </li>
-                <li>
-                  <NextLink href="https://bookmap.com/crypto/">Bookmap Crypto</NextLink>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.bookmap.com/knowledgebase/docs/API"
-                    rel={'noreferrer'}
-                  >
-                    Bookmap API
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className={classes.hasChildren}>
-              <a href="#b2b">BOOKMAP B2B</a>
-              <ul className={classes.subMenu}>
-                <li>
-                  <NextLink href="https://bookmap.com/b2b/">BOOKMAP FOR BUSINESS</NextLink>
-                </li>
-                <li>
-                  <NextLink href="https://web.bookmap.com/?time=2020-12-16--18-14-04&amp;duration=7d">
-                    Bookmap Web
-                  </NextLink>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://bookmap.com/wiki/Bookmap_API#Bookmap_Quant_solution"
-                    rel={'noreferrer'}
-                  >
-                    Quant solution
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          {mobile ? (
+            <MenuList>
+              <MenuItem>
+                <MenuListComposition name="Resources" links={resources} />
+              </MenuItem>
+              <MenuItem>
+                <MenuListComposition name="Products" links={products} />
+              </MenuItem>
+              <MenuItem>
+                <MenuListComposition name="Solutions" links={solutions} />
+              </MenuItem>
+              <MenuItem>
+                <MenuListComposition name="Community" links={community} />
+              </MenuItem>
+              <MenuItem>
+                <MenuListComposition name="Marketplace" links={marketplace} />
+              </MenuItem>
+            </MenuList>
+          ) : (
+            <ul className={classes.generalFooterMenu}>
+              <li className={classes.hasChildren}>
+                <a href="#resources">Resources</a>
+                <ul className={classes.subMenu}>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
+                      rel={'noreferrer'}
+                    >
+                      Knowledge base
+                    </a>
+                  </li>
+                  <li>
+                    <NextLink href="https://bookmap.com/faq/">FAQ</NextLink>
+                  </li>
+                  <li>
+                    <NextLink href="https://bookmap.com/symbol-table/">Symbol table</NextLink>
+                  </li>
+                  <li>
+                    <NextLink href="https://bookmap.com/pro-trader-webinars/">
+                      Pro Trader Webinars
+                    </NextLink>
+                  </li>
+                  <li>
+                    <NextLink href="https://bookmap.com/educators/">Partner Educators</NextLink>
+                  </li>
+                  <li>
+                    <NextLink href="https://bookmap.com/blog/">Blog</NextLink>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://bookmap.com/forum/viewforum.php?f=19"
+                      rel={'noreferrer'}
+                    >
+                      Forum
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className={classes.hasChildren}>
+                <a href="#solutions">Solutions</a>
+                <ul className={classes.subMenu}>
+                  <li>
+                    <a target="_blank" href="https://bookmap.com/dxfeed/" rel={'noreferrer'}>
+                      US stocks data
+                    </a>
+                  </li>
+                  <li>
+                    <NextLink href="https://bookmap.com/crypto/">Bookmap Crypto</NextLink>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.bookmap.com/knowledgebase/docs/API"
+                      rel={'noreferrer'}
+                    >
+                      Bookmap API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className={classes.hasChildren}>
+                <a href="#b2b">BOOKMAP B2B</a>
+                <ul className={classes.subMenu}>
+                  <li>
+                    <NextLink href="https://bookmap.com/b2b/">BOOKMAP FOR BUSINESS</NextLink>
+                  </li>
+                  <li>
+                    <NextLink href="https://web.bookmap.com/?time=2020-12-16--18-14-04&amp;duration=7d">
+                      Bookmap Web
+                    </NextLink>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://bookmap.com/wiki/Bookmap_API#Bookmap_Quant_solution"
+                      rel={'noreferrer'}
+                    >
+                      Quant solution
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          )}
           <div className={classes.communicationBlock}>
             <ul className={classes.generalContacts}>
               <li>
