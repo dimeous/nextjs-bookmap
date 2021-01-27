@@ -1,5 +1,5 @@
 import React from 'react'
-import { createStyles, makeStyles } from '@material-ui/core/styles'
+import { createStyles, makeStyles, withStyles } from '@material-ui/core/styles'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -46,10 +46,16 @@ type CardProps = {
 
 export default function MenuListComposition({ name, links }: CardProps) {
   const classes = useStyles()
+  const StyledAccordion = withStyles({
+    root: {
+      background: 'none',
+      borderBottom: '1px solid grey',
+    },
+  })(Accordion)
 
   return (
     <div className={classes.root}>
-      <Accordion>
+      <StyledAccordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -76,7 +82,7 @@ export default function MenuListComposition({ name, links }: CardProps) {
             })}
           </MenuList>
         </AccordionDetails>
-      </Accordion>
+      </StyledAccordion>
     </div>
   )
 }
