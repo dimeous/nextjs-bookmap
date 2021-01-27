@@ -52,7 +52,19 @@ let theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
+})
+theme = {
+  ...theme,
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        h2: {
+          [theme.breakpoints.down('md')]: {
+            lineHeight: '48px',
+          },
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -74,20 +86,6 @@ let theme = createMuiTheme({
       styleOverrides: {
         root: {
           marginBottom: '30px',
-        },
-      },
-    },
-  },
-})
-theme = {
-  ...theme,
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        h2: {
-          [theme.breakpoints.down('md')]: {
-            lineHeight: '48px',
-          },
         },
       },
     },

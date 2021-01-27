@@ -248,7 +248,7 @@ export default function MainFooter() {
                     </a>
                   </li>
                   <li>
-                    <NextLink href="https://bookmap.com/crypto/">Bookmap Crypto</NextLink>
+                    <NextLink href="/crypto/">Bookmap Crypto</NextLink>
                   </li>
                   <li>
                     <a

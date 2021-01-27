@@ -113,7 +113,7 @@ export const solutions = [
   },
   {
     label: 'Bookmap for Crypto',
-    href: 'https://bookmap.com/crypto/',
+    href: '/crypto/',
     blank: false,
   },
   {

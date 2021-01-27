@@ -1,6 +1,6 @@
 import React from 'react'
-import MainSection0 from '../src/components/Layout/Main/MainSection0'
-import MainSection1 from '../src/components/Layout/Main/MainSection1'
+import CryptoSection0 from '../src/components/Layout/Crypto/CryptoSection0'
+import CryptoSection1 from '../src/components/Layout/Crypto/CryptoSection1'
 import MainSection2Features from '../src/components/Layout/Main/MainSection2Features'
 import MainSection3Desktop from '../src/components/Layout/Main/MainSection3Desktop'
 import MainSection3Mobile from '../src/components/Layout/Main/MainSection3Mobile'
@@ -13,17 +13,17 @@ import MainSection8UserReviews from '../src/components/Layout/Main/MainSection8U
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Footer from '../src/components/Layout/Footer/MainFooter'
-import MainHeader from '../src/components/Layout/Header/MainHeader'
+import CryptoHeader from '../src/components/Layout/Crypto/Header/CryptoHeader'
 
 export default function Index() {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <>
-      <MainHeader />
+      <CryptoHeader />
       <main>
-        <MainSection0 mobile={mobile} />
-        <MainSection1 />
+        <CryptoSection0 mobile={mobile} />
+        <CryptoSection1 />
         <MainSection2Features />
         {mobile ? (
           <MainSection3Mobile></MainSection3Mobile>
