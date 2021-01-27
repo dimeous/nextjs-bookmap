@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import Image from 'next/image'
+import ImagePopover from './MainSection4Popover'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -107,134 +107,147 @@ export default function TabsWrappedLabelSection4() {
             {/* First line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/dxfeed.png"
                   alt="dxFeed"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="https://bookmap.com/dxfeed/"
+                  label="bookmap.com/dxfeed"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/rithmic.svg"
                   alt="Rithmic"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://yyy3.rithmic.com/"
+                  label="yyy3.rithmic.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/trading-tech.svg"
                   alt="Trading Technology"
                   width={142}
                   height={41}
+                  link="http://www.tradingtechnologies.com"
+                  label="www.tradingtechnologies.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/cqg.svg"
                   alt="CQG"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://www.cqg.com"
+                  label="www.cqg.com"
                 />
               </Box>
             </Grid>
             {/* 2 line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/gain-capital.svg"
                   alt="Gain Capital"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://www.gaincapital.com"
+                  label="www.gaincapital.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/ninja-traders.svg"
                   alt="Ninja Traders"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://ninjatrader.com"
+                  label="ninjatrader.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/transact.svg"
                   alt="TransAct Futures"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://www.transactfutures.com"
+                  label="www.transactfutures.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/iqfeed.svg"
                   alt="iQFEED"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://www.transactfutures.com"
+                  label="www.transactfutures.com"
                 />
               </Box>
             </Grid>
             {/* 3 line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/stage.svg"
                   alt="Stage Five"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://stage5trading.com"
+                  label="stage5trading.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/cedro.png"
                   alt="Cedro Technologies"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://www.cedrotech.com"
+                  label="www.cedrotech.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/eurex.png"
                   alt="EUREX"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://eurexchange.com"
+                  label="eurexchange.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/edge-clear.png"
                   alt="Edge Clear"
                   width={120}
                   height={100}
-                  layout="intrinsic"
+                  link="http://edgeclear.com"
+                  label="edgeclear.com"
                 />
               </Box>
             </Grid>
@@ -246,45 +259,49 @@ export default function TabsWrappedLabelSection4() {
             {/* First line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/dxfeed.png"
                   alt="dxFeed"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://bookmap.com/dxfeed/"
+                  label="bookmap.com/dxfeed/"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/2/ts.jpg"
                   alt="Trade Station"
                   width={142}
-                  height={80}
-                  layout="intrinsic"
+                  height={70}
+                  link="http://www.tradestation.com/promo/bookmap/"
+                  label="www.tradestation.com/promo/bookmap/"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/2/ib.jpg"
                   alt="Interactive brokers"
                   width={142}
-                  height={80}
-                  layout="intrinsic"
+                  height={70}
+                  link="http://interactivebrokers.co.uk"
+                  label="interactivebrokers.co.uk"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/1/cedro.png"
                   alt="CEDRO Technologies"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://cedrotech.com"
+                  label="cedrotech.com"
                 />
               </Box>
             </Grid>
@@ -296,236 +313,257 @@ export default function TabsWrappedLabelSection4() {
             {/* First line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/binance.png"
                   alt="Binance"
                   width={142}
                   height={35}
-                  layout="intrinsic"
+                  link="http://binance.com/en/register?ref=39242647"
+                  label="binance.com/en/register?ref=39242647"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/binance-futures.png"
                   alt="Binance Futures"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://binance.com/en/register?ref=39242647"
+                  label="binance.com/en/register?ref=39242647"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/bitmex.png"
                   alt="BitMEX"
                   width={142}
                   height={25}
-                  layout="intrinsic"
+                  link="http://bitmex.com/register/9cZLmk"
+                  label="bitmex.com/register/9cZLmk"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/bitflyer.png"
                   alt="BitFlyer"
                   width={142}
                   height={65}
-                  layout="intrinsic"
+                  link="http://bitflyer.com"
+                  label="bitflyer.com"
                 />
               </Box>
             </Grid>
             {/* 2 line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/bitstamp.png"
                   alt="BitStamp"
                   width={130}
                   height={90}
-                  layout="intrinsic"
+                  link="http://bitstamp.net"
+                  label="bitstamp.net"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/btse.png"
                   alt="BTSE"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="https://www.btse.com/en/ref?c=33KWaq"
+                  label="btse.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/bittrex.png"
                   alt="BITTREX"
                   width={142}
                   height={30}
-                  layout="intrinsic"
+                  link="http://bittrex.com"
+                  label="bittrex.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/bybit.png"
                   alt="bybit"
                   width={110}
                   height={41}
-                  layout="intrinsic"
+                  link="http://bybit.com"
+                  label="bybit.com"
                 />
               </Box>
             </Grid>
             {/* 3 line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/bitfinex.svg"
                   alt="BITFINEX"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://bitfinex.com/?refcode=c11gDfxcm"
+                  label="bitfinex.com/?refcode=c11gDfxcm"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/coinbase.png"
                   alt="Coinbase"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://coinbase.com"
+                  label="coinbase.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/coinflex.png"
                   alt="CoinFLEX"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://coinflex.com"
+                  label="coinflex.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/deribit.png"
                   alt="Deribit"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://deribit.com"
+                  label="deribit.com"
                 />
               </Box>
             </Grid>
             {/* 4 line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/ftx.png"
                   alt="FTX"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://ftx.com/#a=2572003"
+                  label="ftx.com/#a=2572003"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/hitbtc.jpg"
                   alt="HitBTC"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://hitbtc.com"
+                  label="hitbtc.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/huobi.png"
                   alt="Huobi"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://huobi.com"
+                  label="huobi.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/krakenf.jpg"
                   alt="KRAKEN Futures"
                   width={142}
                   height={16}
-                  layout="intrinsic"
+                  link="http://r.kraken.com/mPOeM"
+                  label="r.kraken.com/mPOeM"
                 />
               </Box>
             </Grid>
             {/* 5 line*/}
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/kraken.png"
                   alt="KRAKEN"
                   width={142}
                   height={20}
-                  layout="intrinsic"
+                  link="http://r.kraken.com/mPOeM"
+                  label="r.kraken.com/mPOeM"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/liquid.png"
                   alt="Liquid"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://liquid.com"
+                  label="liquid.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/okex.png"
                   alt="OKEX"
                   width={142}
                   height={41}
-                  layout="intrinsic"
+                  link="http://okex.com/join/1915841"
+                  label="okex.com/join/1915841"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/okcoin.svg"
                   alt="OKCOIN"
                   width={142}
                   height={20}
-                  layout="intrinsic"
+                  link="http://okcoin.com"
+                  label="okcoin.com"
                 />
               </Box>
             </Grid>
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
-                <Image
+                <ImagePopover
                   src="/static/main/s4/3/poloniex.png"
                   alt="POLONIEX"
                   width={142}
-                  height={80}
-                  layout="intrinsic"
+                  height={70}
+                  link="http://poloniex.com"
+                  label="poloniex.com"
                 />
               </Box>
             </Grid>
