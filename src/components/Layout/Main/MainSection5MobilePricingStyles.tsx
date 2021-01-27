@@ -118,7 +118,7 @@ export const styles = makeStyles(() => ({
     font: '12px MullerRegular, sans-serif',
     paddingLeft: '18px',
     position: 'absolute',
-    margin: '0px 0px -50px -20px',
+    padding: '50px 20px 0px 0px',
   },
   lifetimeMessage: {
     color: '#a4a4a4',
