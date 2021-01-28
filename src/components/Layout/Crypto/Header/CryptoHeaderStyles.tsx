@@ -1,10 +1,8 @@
 import { makeStyles } from '@material-ui/core'
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles((theme) => ({
   header: {
-    paddingRight: '79px',
     color: '#212529',
-    paddingLeft: '118px',
   },
   toolbar: {
     display: 'flex',
@@ -16,5 +14,10 @@ export const useStyles = makeStyles(() => ({
     fontWeight: 900,
     font: '16px/19px MullerMedium, sans-serif',
     textAlign: 'right',
+  },
+  button: {
+    [theme.breakpoints.down('md')]: {
+      width: '110px',
+    },
   },
 }))

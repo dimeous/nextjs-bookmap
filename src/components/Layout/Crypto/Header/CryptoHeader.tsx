@@ -17,6 +17,7 @@ export default function CryptoHeader() {
             variant="contained"
             color="secondary"
             href="https://bookmap.com/members/signup/thAhOgYUg"
+            className={classes.button}
           >
             Subscribe for free
           </Button>
