@@ -11,6 +11,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     marginBottom: '145px',
     backgroundColor: theme.palette.background.paper,
+    '& h3': {
+      [theme.breakpoints.up('md')]: {
+        fontSize: '32px',
+        paddingRight: '10%',
+      },
+    },
   },
   link: {
     width: '100%',
@@ -49,7 +55,7 @@ export default function CryptoSection2Exchanges() {
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-      <Typography variant={'subtitle1'}>
+      <Typography variant={'h3'} component={'h3'} sx={{ textAlign: 'center' }}>
         Bookmap allows connecting to the following Crypto exchanges
       </Typography>
       <div>
@@ -73,7 +79,7 @@ export default function CryptoSection2Exchanges() {
                 src="/static/main/s4/3/binance-futures.png"
                 alt="Binance Futures"
                 width={142}
-                height={70}
+                height={40}
                 link="http://binance.com/en/register?ref=39242647"
                 label="binance.com/en/register?ref=39242647"
               />
