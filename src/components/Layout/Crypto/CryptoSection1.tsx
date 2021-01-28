@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '145px',
     height: '300px',
     [theme.breakpoints.down('md')]: {
-      marginTop: '110px',
+      marginTop: '16px',
       marginBottom: '120px',
       height: 'auto',
     },
@@ -30,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+      '& h2': {
+        fontSize: '24px',
+        fontHeight: '32px',
+        textAlign: 'center',
+      },
+    },
   },
   listitem: {
     width: '45%',
