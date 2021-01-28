@@ -33,8 +33,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       '& h2': {
         fontSize: '24px',
-        fontHeight: '32px',
+        lineHeight: '32px',
         textAlign: 'center',
+        paddingTop: '16px',
       },
     },
   },

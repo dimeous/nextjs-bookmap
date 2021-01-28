@@ -4,6 +4,7 @@ import Link from '@material-ui/core/Link'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 import ImagePopover from '../Main/MainSection4Popover'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -48,7 +49,9 @@ export default function CryptoSection2Exchanges() {
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-
+      <Typography variant={'subtitle1'}>
+        Bookmap allows connecting to the following Crypto exchanges
+      </Typography>
       <div>
         <Grid container>
           {/* First line*/}
@@ -70,7 +73,7 @@ export default function CryptoSection2Exchanges() {
                 src="/static/main/s4/3/binance-futures.png"
                 alt="Binance Futures"
                 width={142}
-                height={41}
+                height={70}
                 link="http://binance.com/en/register?ref=39242647"
                 label="binance.com/en/register?ref=39242647"
               />

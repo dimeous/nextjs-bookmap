@@ -23,6 +23,13 @@ const useStyles = makeStyles(() =>
         backgroundColor: '#d1dbdb',
       },
     },
+    button2: {
+      backgroundColor: '#fff',
+      margin: 0,
+      '&:hover': {
+        backgroundColor: '#d1dbdb',
+      },
+    },
     siteWrapper: {
       marginRight: '10px',
     },
@@ -83,7 +90,7 @@ export default function ImagePopover(prop: {
         }}
       >
         <Link href={prop.link} target="_blank">
-          <Button variant="text" sx={{ alignItems: 'center' }}>
+          <Button variant="text" sx={{ alignItems: 'center' }} className={classes.button2}>
             <Image src="/static/icons/site-ic.svg" alt={prop.alt} width={26} height={25} />
             <Typography variant={'body2'} className={classes.txt}>
               {prop.label}
