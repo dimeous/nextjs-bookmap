@@ -27,13 +27,13 @@ build1:
     #- pm2 delete bookmap 2>/dev/null
     #- npm run build
     #- pm2 delete bookmap-site
-
-deploy1:
-  stage: deploy
-  script:
     - echo "Start Deploy"
     - chmod a+x build.sh
     - ./build.sh
+#deploy1:
+ # stage: deploy
+  #script:
+
     #- pm2 start npm --name "bookmap" -- start
     #- pm2 save
     #- pm2 kill && pm2 start ecosystem.config.js
