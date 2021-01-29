@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../Main/MainSection0.module.css'
 import { Typography, makeStyles, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
@@ -64,10 +64,11 @@ type CardProps = {
 
 export default function CryptoSection0({ mobile }: CardProps) {
   const [width, setWidth] = useState(0)
-  const elementRef = useRef(null)
+  const elementRef = React.useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setWidth(elementRef!.current.getBoundingClientRect().width)
+    const { current } = elementRef
+    if (current) setWidth(current.getBoundingClientRect().width)
   }, [])
 
   const classes = useStyles()
