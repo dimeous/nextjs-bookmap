@@ -75,7 +75,7 @@ export default function MainSection0({ mobile }: CardProps) {
   const elementRef = useRef(null)
 
   useEffect(() => {
-    setWidth(elementRef.current.getBoundingClientRect().width)
+    setWidth(elementRef!.current.getBoundingClientRect().width)
   }, [])
 
   const classes = useStyles()
