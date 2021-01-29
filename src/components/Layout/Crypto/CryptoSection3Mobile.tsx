@@ -1,7 +1,7 @@
 import React from 'react'
-import { makeStyles, Box, Button, Grid } from '@material-ui/core'
+import { makeStyles, Box, Grid } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import { text } from './MainSection3Content'
+import { text } from './CryptoSection3Content'
 import Typography from '@material-ui/core/Typography'
 import Image from 'next/image'
 
@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function MainSection3() {
+export default function CryptoSection3Mobile() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
@@ -92,16 +92,7 @@ export default function MainSection3() {
         style={{
           textAlign: 'center',
         }}
-      >
-        <Button
-          className={classes.button}
-          variant="contained"
-          color="secondary"
-          href="https://bookmap.com/members/signup/thAhOgYUg"
-        >
-          {text.btn}
-        </Button>
-      </Grid>
+      ></Grid>
     </Container>
   )
 }
