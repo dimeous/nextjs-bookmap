@@ -1,8 +1,10 @@
 import React from 'react'
 import { Typography, makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import TrustPreloadPilot from '../../trustPreloadPilot'
-
+import dynamic from 'next/dynamic'
+const TrustPreloadPilot = dynamic(() => import('../../trustPreloadPilot'), {
+  ssr: false,
+})
 const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
