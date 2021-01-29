@@ -4,7 +4,7 @@ export const text = {
   h1: 'Pricing and Packages',
   h2: 'Data is not included',
   l1: 'MONTHLY',
-  l2: 'YARLY',
+  l2: 'YEARLY',
   l3: 'LIFETIME',
   l4: 'Save 20%',
   t1: 'digital',

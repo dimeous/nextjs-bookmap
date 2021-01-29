@@ -60,13 +60,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: '5px',
     cursor: 'pointer',
+    /*
+    borderRadius: '5px',
     border: '1px solid #e5e5e5',
     '&:hover': {
       borderColor: 'transparent',
       boxShadow: '0 0 6px rgba(81, 112, 136, .35)',
     },
+   */
     '@media (max-width: 991px)': {
       margin: '10px 10px',
     },

@@ -47,13 +47,12 @@ export default function TabsWrappedLabelSection7() {
   }
 
   return (
-    <Container fixed style={{ marginBottom: '145px' }}>
+    <Container fixed style={{ marginBottom: '24px' }}>
       <Typography component="h2" variant="h2">
         Some good words about Bookmap®️
       </Typography>
       <Tabs value={value} onChange={handleChange} aria-label="Some good words about Bookmap®">
         <Tab value="one" label="TESTIMONIALS" wrapped {...a11yProps('one')} />
-        <Tab value="two" label="MEDIA" {...a11yProps('two')} />
       </Tabs>
       <TabPanel value={value} index="one">
         <Reviews />

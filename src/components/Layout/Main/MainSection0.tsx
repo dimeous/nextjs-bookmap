@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './MainSection0.module.css'
 import { Typography, makeStyles, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
@@ -14,9 +14,24 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '24px',
       paddingTop: 0,
     },
+    [theme.breakpoints.up('md')]: {
+      minHeight: '450px',
+    },
   },
+  outer: {
+    position: 'relative',
+    width: '100%',
+  },
+
+  inner: {
+    position: 'absolute',
+    zIndex: 1,
+    height: '100%',
+    width: '100%',
+    top: 0,
+  },
+
   media: {
-    height: '500px',
     width: '100%',
   },
   headTradePlatform: {
@@ -37,12 +52,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'MullerMedium',
   },
   bImage: {
-    width: '39vw',
     height: '100%',
     display: 'grid',
-    [theme.breakpoints.down('md')]: {
-      width: '330px',
-    },
   },
   backImage: {
     height: '100%',
@@ -60,6 +71,13 @@ type CardProps = {
 }
 
 export default function MainSection0({ mobile }: CardProps) {
+  const [width, setWidth] = useState(0)
+  const elementRef = useRef(null)
+
+  useEffect(() => {
+    setWidth(elementRef.current.getBoundingClientRect().width)
+  }, [])
+
   const classes = useStyles()
   return (
     <>
@@ -94,22 +112,22 @@ export default function MainSection0({ mobile }: CardProps) {
               )}
             </Grid>
             <Grid item md={6} xs={12}>
-              <div className={styles.outer}>
+              <div className={classes.outer} ref={elementRef}>
                 <Image
                   src="/static/main/bg-cr.png"
                   alt="Bookmap chart"
                   layout="responsive"
-                  height={1200}
+                  height={1300}
                   width={1875}
                   className={classes.backImage}
                 />
-                <div className={styles.inner}>
+                <div className={classes.inner}>
                   <div className={styles.slideranimated}>
-                    <div className={classes.bImage}>
+                    <div className={classes.bImage} style={{ width: width }}>
                       <Image
                         src="/static/main/overlay-sec1.png"
                         alt="Bookmap chart"
-                        height={1200}
+                        height={1300}
                         width={1875}
                       />
                     </div>

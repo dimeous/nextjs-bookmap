@@ -2,10 +2,7 @@ import React from 'react'
 import { makeStyles, Box, Container, MenuItem, MenuList } from '@material-ui/core'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import dynamic from 'next/dynamic'
-const TrustBoxFooter = dynamic(() => import('./trustBoxFooter'), {
-  ssr: false,
-})
+import TrustBoxFooter from './trustBoxFooter'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuListComposition from './toggleMenu'

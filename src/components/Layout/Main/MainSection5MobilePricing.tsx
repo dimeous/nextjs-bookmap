@@ -48,7 +48,7 @@ const useStyles = styles
 
 export default function TabsWrappedLabelSection5() {
   const classes = useStyles()
-  const [value, setValue] = React.useState('one')
+  const [value, setValue] = React.useState('two')
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
@@ -428,9 +428,13 @@ export default function TabsWrappedLabelSection5() {
             <div>
               <div className={classes.priceBlock}>
                 <span className={classes.priceCurrency}>$</span>
-                <span className={classes.priceNumber}>39</span>
-                <span className={classes.priceCurrency}>/mo</span>
-                <span className={classes.priceSave}>Save $120/y</span>
+                <span className={classes.priceNumber}>
+                  {value == 'one' && 49}
+                  {value == 'two' && 39}
+                  {value == 'three' && 990}
+                </span>
+                {value != 'three' && <span className={classes.priceCurrency}>/mo</span>}
+                {value == 'two' && <span className={classes.priceSave}>Save $120/y</span>}
               </div>
 
               <Button
@@ -446,9 +450,13 @@ export default function TabsWrappedLabelSection5() {
             <div>
               <div className={classes.priceBlock}>
                 <span className={classes.priceCurrency}>$</span>
-                <span className={classes.priceNumber}>79</span>
-                <span className={classes.priceCurrency}>/mo</span>
-                <span className={classes.priceSave}>Save $240/y</span>
+                <span className={classes.priceNumber}>
+                  {value == 'one' && 99}
+                  {value == 'two' && 79}
+                  {value == 'three' && 1990}
+                </span>
+                {value != 'three' && <span className={classes.priceCurrency}>/mo</span>}
+                {value == 'two' && <span className={classes.priceSave}>Save $240/y</span>}
               </div>
 
               <Button

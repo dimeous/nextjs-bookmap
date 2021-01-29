@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    /*justifyContent: 'flex-end',*/
     height: '100%',
     '& p': {
       marginBottom: '35px',

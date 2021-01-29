@@ -7,6 +7,7 @@ import {
   MenuItem,
   Typography,
   Fade,
+  ClickAwayListener,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
@@ -21,13 +22,15 @@ export default function Header() {
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
-    checked: true,
   })
 
   const { mobileView, drawerOpen } = state
   const [checked, setChecked] = React.useState(false)
   const handleChange = () => {
     setChecked((prev) => !prev)
+  }
+  const handleClickAway = () => {
+    setChecked(false)
   }
 
   useEffect(() => {
@@ -65,12 +68,14 @@ export default function Header() {
       <div className={classes.moreButtonCont}>
         <ul>
           <li>
-            <Typography
-              className={checked ? classes.moreButtonAcitve : classes.moreButton}
-              onClick={handleChange}
-            >
-              More
-            </Typography>
+            <ClickAwayListener onClickAway={handleClickAway}>
+              <Typography
+                className={checked ? classes.moreButtonAcitve : classes.moreButton}
+                onClick={handleChange}
+              >
+                More
+              </Typography>
+            </ClickAwayListener>
             <Fade in={checked}>
               <div className={classes.subMenuWrap}>
                 <ul className={classes.subMenu}>

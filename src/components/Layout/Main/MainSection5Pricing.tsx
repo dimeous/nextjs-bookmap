@@ -47,7 +47,7 @@ const useStyles = styles
 
 export default function TabsWrappedLabelSection5() {
   const classes = useStyles()
-  const [value, setValue] = React.useState('one')
+  const [value, setValue] = React.useState('two')
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
@@ -297,12 +297,21 @@ export default function TabsWrappedLabelSection5() {
           <div className={classes.thePrice}>
             <div className={classes.priceBlock}>
               <span className={classes.priceCurrency}>$</span>
-              <span className={classes.priceNumber}>39</span>
-              <p className={classes.pricePeriod}>
-                <span className={classes.periodSpace}>&nbsp;</span>per month
-              </p>
+              <span className={classes.priceNumber}>
+                {value == 'one' && 49}
+                {value == 'two' && 39}
+                {value == 'three' && 990}
+              </span>
+
+              {value != 'three' && (
+                <p className={classes.pricePeriod}>
+                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                </p>
+              )}
             </div>
-            <Typography className={classes.priceSave}>Save $120 a year</Typography>
+            {value == 'two' && (
+              <Typography className={classes.priceSave}>Save $120 a year</Typography>
+            )}
             <Button
               variant="contained"
               color="secondary"
@@ -391,12 +400,21 @@ export default function TabsWrappedLabelSection5() {
           <div className={classes.thePrice}>
             <div className={classes.priceBlock}>
               <span className={classes.priceCurrency}>$</span>
-              <span className={classes.priceNumber}>79</span>
-              <p className={classes.pricePeriod}>
-                <span className={classes.periodSpace}>&nbsp;</span>per month
-              </p>
+              <span className={classes.priceNumber}>
+                {value == 'one' && 99}
+                {value == 'two' && 79}
+                {value == 'three' && 1990}
+              </span>
+              {value != 'three' && (
+                <p className={classes.pricePeriod}>
+                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                </p>
+              )}
             </div>
-            <Typography className={classes.priceSave}>Save $240 a year</Typography>
+
+            {value == 'two' && (
+              <Typography className={classes.priceSave}>Save $240 a year</Typography>
+            )}
             <Button
               variant="contained"
               color="secondary"
