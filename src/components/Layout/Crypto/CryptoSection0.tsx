@@ -8,7 +8,6 @@ import Image from 'next/image'
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#1e262d',
-    paddingTop: '30px',
     marginBottom: '145px',
     [theme.breakpoints.down('md')]: {
       marginBottom: '24px',
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   headTradePlatform: {
-    paddingTop: '110px',
+    paddingTop: '70px',
     [theme.breakpoints.down('md')]: {
       paddingTop: '27px',
       font: '32px/40px MullerLight,sans-sanserif',
@@ -102,7 +101,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
               </Container>
             </Grid>
             <Grid item md={6} xs={12}>
-              <div className={styles.outer}>
+              <div className={classes.outer} ref={elementRef}>
                 <Image
                   src="/static/main/bg-cr.png"
                   alt="Bookmap chart"

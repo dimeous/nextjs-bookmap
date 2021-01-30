@@ -73,7 +73,7 @@ export default function CryptoSection3Desktop() {
               className={classes.media}
               component="img"
               alt="Install Bookmap and connect to exchanges"
-              image="/static/crypto/s3/computing.png"
+              image="/static/crypto/s3/comp.png"
               title="Get Software"
             />
             <CardContent>

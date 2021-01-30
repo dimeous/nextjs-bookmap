@@ -63,7 +63,7 @@ export default function CryptoSection3Mobile() {
           <h4>{text.s2.lbl}</h4>
         </Grid>
         <Grid item xs={2}>
-          <Image src="/static/main/s3/planet.svg" width={32} height={24}></Image>
+          <Image src="/static/main/s3/note.svg" width={32} height={24}></Image>
         </Grid>
       </Grid>
       <Box className={classes.textBox}>
@@ -79,7 +79,7 @@ export default function CryptoSection3Mobile() {
           <h4>{text.s3.lbl}</h4>
         </Grid>
         <Grid item xs={2}>
-          <Image src="/static/main/s3/note.svg" width={32} height={24}></Image>
+          <Image src="/static/main/s3/rocket.svg" width={32} height={24}></Image>
         </Grid>
       </Grid>
       <Box className={classes.textBox}>
@@ -87,12 +87,6 @@ export default function CryptoSection3Mobile() {
           {text.s3.txt}
         </Typography>
       </Box>
-      <Grid
-        xs={12}
-        style={{
-          textAlign: 'center',
-        }}
-      ></Grid>
     </Container>
   )
 }
