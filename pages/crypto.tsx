@@ -1,10 +1,8 @@
 import React from 'react'
 import CryptoSection0 from '../src/components/Layout/Crypto/CryptoSection0'
 import CryptoSection1 from '../src/components/Layout/Crypto/CryptoSection1'
-import MainSection5Pricing from '../src/components/Layout/Main/MainSection5Pricing'
-import MainSection5MobilePricing from '../src/components/Layout/Main/MainSection5MobilePricing'
-import MainSection6Trading from '../src/components/Layout/Main/MainSection6Trading'
-import MainSection7Words from '../src/components/Layout/Main/MainSection7Words'
+import CryptoSection4MobilePricing from '../src/components/Layout/Crypto/CryptoSection4MobilePricing'
+import CryptoSection4Pricing from '../src/components/Layout/Crypto/CryptoSection4Pricing'
 import MainSection8UserReviews from '../src/components/Layout/Main/MainSection8UsersReviews'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -24,12 +22,9 @@ export default function Index() {
         <CryptoSection0 mobile={mobile} />
         <CryptoSection1 />
         <CryptoSection2Exchanges />
-
         {mobile ? <CryptoSection3Mobile /> : <CryptoSection3Desktop />}
-        {mobile ? <MainSection5MobilePricing /> : <MainSection5Pricing />}
+        {mobile ? <CryptoSection4MobilePricing /> : <CryptoSection4Pricing />}
 
-        <MainSection6Trading mobile={mobile} />
-        <MainSection7Words />
         <MainSection8UserReviews />
       </main>
       <Footer />
