@@ -15,7 +15,11 @@ before_script:
   - echo "For example you might run an update here or install a build dependency"
   - echo "Or perhaps you might print out some debugging details"
 
-
+remove2:
+  stage: remove
+  script:
+    - echo "If the files are built successfully, test some files with one command: Remove node modules"
+    - rm -rf node_modules
 
 build1:
   stage: build
