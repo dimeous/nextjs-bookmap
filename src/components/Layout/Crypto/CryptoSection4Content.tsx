@@ -1,72 +1,20 @@
-import React, { Fragment } from 'react'
-
-export const text = {
+export const text: { [index: string]: any } = {
   h1: 'Pricing and Packages',
-  h2: 'Data is not included',
+  h2: 'Trade cryptocurrencies and get many features with Bookmap desktop application ',
   l1: 'MONTHLY',
   l2: 'YEARLY',
-  l3: 'LIFETIME',
-  l4: 'Save 20%',
   t1: 'digital',
-  t2: 'global',
-  KeyFeature: 'KEY FEATURES',
-  Heatmap: (
-    <Fragment>
-      Heatmap, Volume dots, CVD
-      <br />
-      &amp; Volume Profile columns
-    </Fragment>
-  ),
-  Record: 'Record / Replay, VWAP, POC',
-  LLT: 'LLT, Strength Level, Imbalance',
-  oneclick: 'ONE CLICK TRADING',
-  Futures: 'Futures, Stocks',
-  Futures2: 'Futures & Stocks ',
-  Market: 'MARKETS VISUALIZATION',
-  Market2: (
-    <Fragment>
-      Crypto currencies <br />
-      &gt; 15 exchanges (Free data)
-    </Fragment>
-  ),
-  dataReq: (
-    <Fragment>
-      Data required<sup>*</sup>
-    </Fragment>
-  ),
-  maxTrSymbols: (
-    <Fragment>
-      Maximum # of Trading Symbols
-      <br />
-      Viewable at the Same Time
-    </Fragment>
-  ),
-
-  deleyed: 'Delayed',
-  education: 'EDUCATION',
-  education2: 'Bookmap Basics Webinars with Q&As',
-  livetrdss: 'LIVE Trading Sessions with Pro Traders',
-  free: 'FREE',
-  orderFlow: 'Order Flow Analysis Webinars',
-  AdvTradEducation: 'Advanced Trading Educational Course',
-  marketplace: 'MARKETPLACE',
-  addons: 'Addons, Market Data and Educational courses (Sold separately)',
-  addonsAll: (
-    <Fragment>
-      Compatible with <b>ALL</b> addons
-    </Fragment>
-  ),
-  addonsSome: (
-    <Fragment>
-      Compatible with <b>SOME</b> addons
-    </Fragment>
-  ),
-  endtext: (
-    <Fragment>
-      <sup>*</sup>
-      Futures & stocks market data fees from third party providers are not included in the price of
-      the Bookmap software subscription
-    </Fragment>
-  ),
-  btn: 'GO TO EDUCATION',
+  t2: 'digital+',
+  r1: 'Bookmap desktop application',
+  r2: 'Real-time market data ',
+  r3: 'Simulated & Live Trading ',
+  r4: 'API for custom indicators & automated strategies ',
+  r5: 'Supported exchanges ',
+  r6: 'Max # of trading pairs\n' + 'viewable at the same time',
+  r7: 'Backfill data',
+  r8: 'Record and Replay',
+  r9: 'VWAP',
+  r10: 'Correlation Tracker',
+  r11: 'Advanced Education',
+  td1: '∿15 Crypto exchanges',
 }
