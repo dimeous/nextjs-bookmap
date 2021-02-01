@@ -29,7 +29,7 @@ export default function CryptoSection4MobilePricing() {
   }
 
   return (
-    <Container fixed style={{ marginBottom: '145px' }}>
+    <Container fixed style={{ marginBottom: '24px' }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
@@ -93,7 +93,7 @@ export default function CryptoSection4MobilePricing() {
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
             <CheckIcon className={classes.chIcon} />
@@ -111,10 +111,10 @@ export default function CryptoSection4MobilePricing() {
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
@@ -148,10 +148,10 @@ export default function CryptoSection4MobilePricing() {
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <Typography sx={{ width: '49%' }}>{text.td1}</Typography>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <Typography sx={{ width: '49%' }}>{text.td1}</Typography>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
@@ -166,10 +166,14 @@ export default function CryptoSection4MobilePricing() {
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <CheckIcon className={classes.chIcon} />
+            <Typography>
+              <b>1</b>
+            </Typography>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <CheckIcon className={classes.chIcon} />
+            <Typography>
+              <b>20</b>
+            </Typography>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
@@ -186,134 +190,104 @@ export default function CryptoSection4MobilePricing() {
           <Grid container item xs={6} justifyContent={'center'}>
             <div style={{ textAlign: 'center' }}>
               <ClearIcon className={classes.clsIcon} />
-              <span className={classes.delayStyle}>Delayed</span>
             </div>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
             <div style={{ textAlign: 'center' }}>
-              <ClearIcon className={classes.clsIcon} />
-              <span className={classes.delayStyle}>{text.dataReq}</span>
+              <CheckIcon className={classes.chIcon} />
             </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
-        {/*  Maximum # of Trading Symbols */}
+
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.maxTrSymbols}</Typography>
+              <Typography component={'p'}>{text.r8}</Typography>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <Typography component={'p'}>1</Typography>
+            <div style={{ textAlign: 'center' }}>
+              <ClearIcon className={classes.clsIcon} />
+            </div>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <Typography component={'p'}>20</Typography>
+            <div style={{ textAlign: 'center' }}>
+              <CheckIcon className={classes.chIcon} />
+            </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
-        {/* Education */}
+
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'h4'} sx={{ pt: 2 }}>
-                {text.education}
-              </Typography>
-              <Typography component={'p'}>{text.education2}</Typography>
+              <Typography component={'p'}>{text.r9}</Typography>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <CheckIcon className={classes.chIcon} />
+            <div style={{ textAlign: 'center' }}>
+              <ClearIcon className={classes.clsIcon} />
+            </div>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <CheckIcon className={classes.chIcon} />
+            <div style={{ textAlign: 'center' }}>
+              <CheckIcon className={classes.chIcon} />
+            </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
-        {/* Education */}
+
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.livetrdss}</Typography>
+              <Typography component={'p'}>{text.r10}</Typography>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <div style={{ textAlign: 'center' }}>
+              <ClearIcon className={classes.clsIcon} />
+            </div>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <Typography component={'p'}>{text.free}</Typography>
+            <div style={{ textAlign: 'center' }}>
+              <CheckIcon className={classes.chIcon} />
+            </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
           </Grid>
         </Grid>
-        {/* Order Flow Analysis Webinars */}
+
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.orderFlow}</Typography>
+              <Typography component={'p'}>{text.r11}</Typography>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1}>
           <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
+            <div style={{ textAlign: 'center' }}>
+              <ClearIcon className={classes.clsIcon} />
+            </div>
           </Grid>
           <Grid container item xs={6} justifyContent={'center'}>
-            <CheckIcon className={classes.chIcon} />
-          </Grid>
-          <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
-          </Grid>
-        </Grid>
-        {/* Advanced Trading Educational Course */}
-        <Grid container spacing={1}>
-          <Grid container item xs={12} spacing={1}>
-            <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.AdvTradEducation}</Typography>
-            </Box>
-          </Grid>
-        </Grid>
-        <Grid container spacing={1}>
-          <Grid container item xs={6} justifyContent={'center'}>
-            <ClearIcon className={classes.clsIcon} />
-          </Grid>
-          <Grid container item xs={6} justifyContent={'center'}>
-            <CheckIcon className={classes.chIcon} />
-          </Grid>
-          <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
-          </Grid>
-        </Grid>
-        {/* MARKETPLACE */}
-        <Grid container spacing={1}>
-          <Grid container item xs={12} spacing={1}>
-            <Box sx={{ p: 2 }}>
-              <Typography component={'h4'} sx={{ pt: 2 }}>
-                {text.marketplace}
-              </Typography>
-              <Typography component={'p'}>{text.addons}</Typography>
-            </Box>
-          </Grid>
-        </Grid>
-        <Grid container spacing={1} className={classes.allTrading}>
-          <Grid container item xs={6} justifyContent={'center'}>
-            <p>{text.addonsSome}</p>
-          </Grid>
-          <Grid container item xs={6} justifyContent={'center'}>
-            <p className={classes.allTrading}>{text.addonsAll}</p>
+            <div style={{ textAlign: 'center' }}>
+              <CheckIcon className={classes.chIcon} />
+            </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
@@ -354,20 +328,13 @@ export default function CryptoSection4MobilePricing() {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104"
+                href="https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171"
               >
                 SELECT
               </Button>
             </div>
           </Grid>
         </Grid>
-      </div>
-      <p className={classes.lifetimeMessage}>{text.endtext}</p>
-      <div className={classes.cta}>
-        <p>Can’t decide which plan is right for you?</p>
-        <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
-          CLICK HERE
-        </a>
       </div>
     </Container>
   )
