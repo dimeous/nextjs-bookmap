@@ -13,9 +13,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '24px',
       paddingTop: 0,
     },
-    [theme.breakpoints.up('md')]: {
-      minHeight: '450px',
-    },
+    [theme.breakpoints.up('md')]: {},
   },
   outer: {
     position: 'relative',
