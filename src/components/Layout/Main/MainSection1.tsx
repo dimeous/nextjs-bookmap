@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Typography, makeStyles } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '100%',
   },
+  image: {
+    cursor: 'pointer',
+  },
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
@@ -35,11 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-type CardProps = {
-  mobile: boolean
-}
-
-export default function MainSection1({ mobile }: CardProps) {
+export default function MainSection1() {
   const [checked, setChecked] = React.useState(false)
   const handleClick = () => {
     setChecked(true)
@@ -61,17 +60,27 @@ export default function MainSection1({ mobile }: CardProps) {
           </Container>
         </Grid>
         <Grid item md={6} xs={12}>
-          <div className={classes.wrapper}>
-            {(!mobile || checked) && <ReactPlayer url="https://youtu.be/387ouy6QGPI" />}
-            {mobile && !checked && (
-              <Image
-                src="/static/main/s1/youtube.jpg"
-                width={800}
-                height={500}
-                onClick={handleClick}
+          {checked && (
+            <div className={classes.wrapper}>
+              <ReactPlayer
+                url="https://youtu.be/387ouy6QGPI"
+                controls
+                width="100%"
+                height="100%"
+                className={classes.player}
+                playing={true}
               />
-            )}
-          </div>
+            </div>
+          )}
+          {!checked && (
+            <Image
+              src="/static/main/s1/youtube.png"
+              width={800}
+              height={450}
+              onClick={handleClick}
+              className={classes.image}
+            />
+          )}
         </Grid>
       </Grid>
     </Container>
