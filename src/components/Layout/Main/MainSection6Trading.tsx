@@ -42,7 +42,6 @@ const useStyles = makeStyles(() => ({
     paddingTop: '40px',
   },
   introImg: {
-    paddinTop: '6px',
     flexDirection: 'column',
     position: 'relative',
     display: 'flex',
@@ -62,7 +61,7 @@ const useStyles = makeStyles(() => ({
     left: '-120px',
   },
   list_h4: {
-    fontFamily: '16px/24px MullerMedium,sans-serif',
+    font: '16px/24px MullerMedium,sans-serif',
     fontWeight: 500,
     letterSpacing: '0.47px',
   },

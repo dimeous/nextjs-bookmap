@@ -4,7 +4,7 @@ import Popover from '@material-ui/core/Popover'
 import Button from '@material-ui/core/Button'
 import Link from '@material-ui/core/Link'
 import Image from 'next/image'
-import { Typography } from '@material-ui/core'
+import { Box, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -91,10 +91,12 @@ export default function ImagePopover(prop: {
       >
         <Link href={prop.link} target="_blank">
           <Button variant="text" sx={{ alignItems: 'center' }} className={classes.button2}>
-            <Image src="/static/icons/site-ic.svg" alt={prop.alt} width={26} height={25} />
-            <Typography variant={'body2'} className={classes.txt}>
-              {prop.label}
-            </Typography>
+            <Box>
+              <Image src="/static/icons/site-ic.svg" alt={prop.alt} width={26} height={25} />
+              <Typography variant={'body2'} className={classes.txt}>
+                {prop.label}
+              </Typography>
+            </Box>
           </Button>
         </Link>
       </Popover>

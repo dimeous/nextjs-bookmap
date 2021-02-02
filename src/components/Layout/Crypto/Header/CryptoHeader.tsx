@@ -36,7 +36,7 @@ export default function CryptoHeader() {
   )
 
   return (
-    <header color={'default'}>
+    <header>
       <AppBar className={classes.header} position={'static'} color={'default'}>
         {displayDesktop()}
       </AppBar>

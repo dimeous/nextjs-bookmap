@@ -212,7 +212,7 @@ export default function Header() {
   )
 
   return (
-    <header color={'default'}>
+    <header>
       <AppBar
         className={classes.header}
         position={mobileView ? 'static' : 'fixed'}

@@ -38,16 +38,13 @@ const useStyles = makeStyles(() => ({
     alignItems: 'flex-start',
     display: 'flex',
     flexFlow: 'row wrap',
-    justifyContent: 'flexStart',
     marginBottom: '90px',
     padding: '72px 0',
     color: '#fff',
   },
   generalNav: {
-    alignItems: 'flexStart',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flexStart',
     margin: 0,
     maxWidth: '220px',
     paddingRight: '80px',
@@ -297,7 +294,7 @@ export default function MainFooter() {
                 </a>
               </li>
               <li>
-                <a target="_blank">
+                <a>
                   71 Cooper St Apt 2A <br />
                   New York, NY 10034
                 </a>
