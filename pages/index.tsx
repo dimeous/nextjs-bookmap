@@ -32,7 +32,6 @@ export default function Index() {
         )}
         <MainSection4 />
         {mobile ? <MainSection5MobilePricing /> : <MainSection5Pricing />}
-
         <MainSection6Trading mobile={mobile} />
         <MainSection7Words />
         <MainSection8UserReviews />
