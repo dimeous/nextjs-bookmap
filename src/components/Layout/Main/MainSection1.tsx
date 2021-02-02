@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Typography, makeStyles } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import ReactPlayer from 'react-player/lazy'
+import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +35,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function MainSection1() {
+type CardProps = {
+  mobile: boolean
+}
+
+export default function MainSection1({ mobile }: CardProps) {
+  const [checked, setChecked] = React.useState(false)
+  const handleClick = () => {
+    setChecked(true)
+  }
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
@@ -53,7 +62,15 @@ export default function MainSection1() {
         </Grid>
         <Grid item md={6} xs={12}>
           <div className={classes.wrapper}>
-            <ReactPlayer url="https://youtu.be/387ouy6QGPI" />
+            {(!mobile || checked) && <ReactPlayer url="https://youtu.be/387ouy6QGPI" />}
+            {mobile && !checked && (
+              <Image
+                src="/static/main/s1/youtube.jpg"
+                width={800}
+                height={500}
+                onClick={handleClick}
+              />
+            )}
           </div>
         </Grid>
       </Grid>

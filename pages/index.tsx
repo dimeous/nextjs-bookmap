@@ -23,7 +23,7 @@ export default function Index() {
       <MainHeader />
       <main>
         <MainSection0 mobile={mobile} />
-        <MainSection1 />
+        <MainSection1 mobile={mobile} />
         <MainSection2Features />
         {mobile ? (
           <MainSection3Mobile></MainSection3Mobile>
