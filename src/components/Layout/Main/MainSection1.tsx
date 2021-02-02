@@ -79,6 +79,7 @@ export default function MainSection1() {
               height={450}
               onClick={handleClick}
               className={classes.image}
+              alt="Youtube: Bookmap - 2 minutes introduction of hidden values"
             />
           )}
         </Grid>
