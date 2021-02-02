@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography, makeStyles } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lazy'
 
 const useStyles = makeStyles((theme) => ({
   root: {
