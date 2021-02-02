@@ -53,13 +53,7 @@ export default function MainSection1() {
         </Grid>
         <Grid item md={6} xs={12}>
           <div className={classes.wrapper}>
-            <ReactPlayer
-              url="https://youtu.be/387ouy6QGPI"
-              controls
-              width="100%"
-              height="100%"
-              className={classes.player}
-            />
+            <ReactPlayer url="https://youtu.be/387ouy6QGPI" className={classes.player} />
           </div>
         </Grid>
       </Grid>
