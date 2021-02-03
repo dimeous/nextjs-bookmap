@@ -2,6 +2,7 @@ import React from 'react'
 import { Typography, makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import TrustPreloadPilot from '../../trustPreloadPilot'
+import VisibilitySensor from 'react-visibility-sensor'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -31,13 +32,20 @@ const useStyles = makeStyles(() => ({
 }))
 
 export default function MainSection8UserReviews() {
+  const onChange = function (isVisible: boolean) {
+    if (isVisible) setChecked(true)
+  }
+  const [checked, setChecked] = React.useState(false)
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
-      <Typography align={'center'} variant={'h3'} className={classes.title}>
-        User Reviews
-      </Typography>
-      <TrustPreloadPilot />
+      <VisibilitySensor onChange={onChange}>
+        <Typography align={'center'} variant={'h3'} className={classes.title}>
+          User Reviews
+        </Typography>
+      </VisibilitySensor>
+
+      {checked && <TrustPreloadPilot />}
       <Box
         sx={{
           display: 'flex',
