@@ -39,21 +39,21 @@ export default class MyDocument extends Document {
               font-style: normal;
               font-weight: 400;
               font-display: swap;
-              src: url('./fonts/MullerRegular.woff2') format('woff2');
+              src: url('/static/fonts/MullerRegular.woff2') format('woff2');
             }
             @font-face {
               font-family: 'MullerLight';
               font-style: normal;
               font-weight: 400;
               font-display: swap;
-              src: url('./fonts/MullerLight.woff2') format('woff2');
+              src: url('/static/fonts/MullerLight.woff2') format('woff2');
             }
             @font-face {
               font-family: 'MullerMedium';
               font-style: normal;
               font-weight: 400;
               font-display: swap;
-              src: url('./fonts/MullerMedium.woff2') format('woff2');
+              src: url/static/fonts/MullerMedium.woff2') format('woff2');
             }
           `}</style>
           {/* Google Tag manager */}
