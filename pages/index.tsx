@@ -34,7 +34,7 @@ export default function Index() {
         {mobile ? <MainSection5MobilePricing /> : <MainSection5Pricing />}
         <MainSection6Trading mobile={mobile} />
         <MainSection7Words />
-        <MainSection8UserReviews mobile={mobile} />
+        <MainSection8UserReviews />
       </main>
       <Footer />
     </>
