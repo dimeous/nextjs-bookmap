@@ -32,30 +32,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          {/*<link rel="stylesheet" href="/static/fonts/load-font.css" />*/}
-          <style global jsx>{`
-            @font-face {
-              font-family: 'MullerRegular';
-              font-style: normal;
-              font-weight: 400;
-              font-display: swap;
-              src: url('/static/fonts/MullerRegular.woff2') format('woff2');
-            }
-            @font-face {
-              font-family: 'MullerLight';
-              font-style: normal;
-              font-weight: 400;
-              font-display: swap;
-              src: url('/static/fonts/MullerLight.woff2') format('woff2');
-            }
-            @font-face {
-              font-family: 'MullerMedium';
-              font-style: normal;
-              font-weight: 400;
-              font-display: swap;
-              src: url('/static/fonts/MullerMedium.woff2') format('woff2');
-            }
-          `}</style>
+          <link rel="stylesheet" href="/static/fonts/load-font.css" />
           {/* Google Tag manager */}
         </Head>
         <body>
@@ -69,7 +46,6 @@ export default class MyDocument extends Document {
                 window.ga('create','${GOOGLE_ID}','auto');
               `,
             }}
-
           />*/}
           <NextScript />
         </body>
