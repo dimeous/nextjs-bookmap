@@ -31,7 +31,10 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function MainSection8UserReviews() {
+type CardProps = {
+  mobile: boolean
+}
+export default function MainSection8UserReviews({ mobile }: CardProps) {
   const onChange = function (isVisible: boolean) {
     if (isVisible) setChecked(true)
   }
@@ -45,7 +48,7 @@ export default function MainSection8UserReviews() {
         </Typography>
       </VisibilitySensor>
 
-      {checked && <TrustPreloadPilot />}
+      {(checked || !mobile) && <TrustPreloadPilot />}
       <Box
         sx={{
           display: 'flex',
