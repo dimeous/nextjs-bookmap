@@ -90,12 +90,7 @@ export default function ImagePopover(prop: {
         }}
       >
         <Link href={prop.link} target="_blank">
-          <Button
-            variant="text"
-            component="div"
-            sx={{ alignItems: 'center' }}
-            className={classes.button2}
-          >
+          <Button variant="text" sx={{ alignItems: 'center' }} className={classes.button2}>
             <Box>
               <Image src="/static/icons/site-ic.svg" alt={prop.alt} width={26} height={25} />
               <Typography variant={'body2'} className={classes.txt}>
