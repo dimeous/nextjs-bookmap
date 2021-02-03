@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
               font-style: normal;
               font-weight: 400;
               font-display: swap;
-              src: url/static/fonts/MullerMedium.woff2') format('woff2');
+              src: url('/static/fonts/MullerMedium.woff2') format('woff2');
             }
           `}</style>
           {/* Google Tag manager */}
