@@ -48,7 +48,7 @@ export default function MainSection8UserReviews({ mobile }: CardProps) {
         </Typography>
       </VisibilitySensor>
 
-      {checked && <TrustPreloadPilot />}
+      {(checked || !mobile) && <TrustPreloadPilot />}
       <Box
         sx={{
           display: 'flex',
