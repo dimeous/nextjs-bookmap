@@ -330,10 +330,10 @@ export default function TabsWrappedLabelSection5() {
             <ClearIcon className={classes.clsIcon} />
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <Typography component={'p'}>{text.free}</Typography>
+            <ClearIcon className={classes.clsIcon} />
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <Typography component={'p'}>{text.free}</Typography>
+            <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>

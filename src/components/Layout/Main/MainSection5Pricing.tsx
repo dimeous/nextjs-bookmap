@@ -265,9 +265,8 @@ export default function TabsWrappedLabelSection5() {
               </p>
             </li>
             <li>
-              <p className={classes.freeText}>
-                {text.free}
-                <span className={classes.delayStyle}> Until The End of 2020</span>
+              <p>
+                <ClearIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
@@ -368,9 +367,8 @@ export default function TabsWrappedLabelSection5() {
               </p>
             </li>
             <li>
-              <p className={classes.freeText}>
-                {text.free}
-                <span className={classes.delayStyle}> Until The End of 2020</span>
+              <p>
+                <CheckIcon className={classes.chIcon} />
               </p>
             </li>
             <li>

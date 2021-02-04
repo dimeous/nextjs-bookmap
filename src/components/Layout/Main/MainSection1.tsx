@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: 'pointer',
     height: '340px',
     [theme.breakpoints.down('md')]: {
-      height: '200px',
+      height: '100%',
     },
     overflow: 'hidden',
     position: 'relative',
