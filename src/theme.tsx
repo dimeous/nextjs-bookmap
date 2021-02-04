@@ -89,6 +89,13 @@ theme = {
         },
       },
     },
+    MuiTab: {
+      styleOverrides: {
+        wrapper: {
+          fontSize: '1rem',
+        },
+      },
+    },
   },
 }
 

@@ -209,11 +209,7 @@ export default function TabsWrappedLabelSection5() {
             <div className={classes.priceBlock}>
               <span className={classes.priceNumber}>Free</span>
             </div>
-            <Button
-              variant="contained"
-              color="secondary"
-              href="https://bookmap.com/members/signup/thAhOgYUg"
-            >
+            <Button variant="contained" color="secondary" href={text.link1}>
               Select digital
             </Button>
           </div>
@@ -315,7 +311,7 @@ export default function TabsWrappedLabelSection5() {
             <Button
               variant="contained"
               color="secondary"
-              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104"
+              href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
             >
               SELECT GLOBAL
             </Button>
@@ -418,7 +414,7 @@ export default function TabsWrappedLabelSection5() {
             <Button
               variant="contained"
               color="secondary"
-              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105"
+              href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
             >
               SELECT GLOBAL PLUS
             </Button>

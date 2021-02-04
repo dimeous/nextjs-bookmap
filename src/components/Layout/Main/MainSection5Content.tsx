@@ -69,4 +69,11 @@ export const text = {
     </Fragment>
   ),
   btn: 'GO TO EDUCATION',
+  link1: 'https://bookmap.com/members/signup/thAhOgYUg',
+  link12: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=101-101',
+  link13: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=102-102',
+  link22: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104',
+  link23: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105',
+  link32: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=72-72',
+  link33: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=63-63',
 }

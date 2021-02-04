@@ -328,7 +328,7 @@ export default function CryptoSection4MobilePricing() {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171"
+                href={value == 'one' ? text.link12 : text.link22}
               >
                 SELECT
               </Button>

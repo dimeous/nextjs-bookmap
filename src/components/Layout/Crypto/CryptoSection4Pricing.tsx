@@ -215,7 +215,7 @@ export default function CryptoSection4Pricing() {
             <Button
               variant="contained"
               color="secondary"
-              href="https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105"
+              href={value == 'one' ? text.link12 : text.link22}
             >
               SELECT DIGITAL+
             </Button>

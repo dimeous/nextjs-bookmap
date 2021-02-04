@@ -7,6 +7,7 @@ import {
   MenuItem,
   Typography,
   Fade,
+  Container,
   ClickAwayListener,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -119,27 +120,29 @@ export default function Header() {
   }
   const displayDesktop = () => {
     return (
-      <Box className={classes.toolbar}>
-        {bookmapLogo}
-        <Box>
-          <ul className={classes.headerNav}>
-            {headersData.map((v) => {
-              return (
-                <li key={v.label}>
-                  <Link href={v.href}>{v.label}</Link>
-                </li>
-              )
-            })}
-          </ul>
-        </Box>
-        {popUpMenu()}
-        <Link href="https://bookmap.com/portal?_ga=2.113314319.926453304.1529908174-380305212.1526294084">
-          <Box className={classes.loginBut}>
-            <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
-            <span> LOG IN</span>
+      <Container>
+        <Box className={classes.toolbar}>
+          {bookmapLogo}
+          <Box>
+            <ul className={classes.headerNav}>
+              {headersData.map((v) => {
+                return (
+                  <li key={v.label}>
+                    <Link href={v.href}>{v.label}</Link>
+                  </li>
+                )
+              })}
+            </ul>
           </Box>
-        </Link>
-      </Box>
+          {popUpMenu()}
+          <Link href="https://bookmap.com/portal?_ga=2.113314319.926453304.1529908174-380305212.1526294084">
+            <Box className={classes.loginBut}>
+              <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
+              <span> LOG IN</span>
+            </Box>
+          </Link>
+        </Box>
+      </Container>
     )
   }
 

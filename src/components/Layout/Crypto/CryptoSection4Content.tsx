@@ -17,4 +17,6 @@ export const text: { [index: string]: any } = {
   r10: 'Correlation Tracker',
   r11: 'Advanced Education',
   td1: '∿15 Crypto exchanges',
+  link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',
+  link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171',
 }
