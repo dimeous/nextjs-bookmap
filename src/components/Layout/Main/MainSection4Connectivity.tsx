@@ -318,7 +318,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/binance.png"
                   alt="Binance"
-                  width={100}
+                  width={130}
                   height={31}
                   link="http://binance.com/en/register?ref=39242647"
                   label="binance.com/en/register?ref=39242647"
@@ -416,7 +416,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/bitfinex.svg"
                   alt="BITFINEX"
-                  width={142}
+                  width={110}
                   height={41}
                   link="http://bitfinex.com/?refcode=c11gDfxcm"
                   label="bitfinex.com/?refcode=c11gDfxcm"
