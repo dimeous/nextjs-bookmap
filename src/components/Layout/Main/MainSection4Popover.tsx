@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Popover from '@material-ui/core/Popover'
-import Button from '@material-ui/core/Button'
 import Link from '@material-ui/core/Link'
 import Image from 'next/image'
 import { Box, Typography, ButtonBase } from '@material-ui/core'
@@ -24,8 +23,9 @@ const useStyles = makeStyles(() =>
       alignItems: 'center',
       border: '1px solid #e5e5e5',
       '&:hover': {
-        backgroundColor: '#d1dbdb',
+        boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
         border: '1px solid transparent',
+        transition: '.3s',
       },
     },
     button: {
