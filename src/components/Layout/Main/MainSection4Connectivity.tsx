@@ -318,8 +318,8 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/binance.png"
                   alt="Binance"
-                  width={142}
-                  height={35}
+                  width={100}
+                  height={31}
                   link="http://binance.com/en/register?ref=39242647"
                   label="binance.com/en/register?ref=39242647"
                 />
@@ -367,7 +367,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/bitstamp.png"
                   alt="BitStamp"
-                  width={130}
+                  width={100}
                   height={90}
                   link="http://bitstamp.net"
                   label="bitstamp.net"
@@ -379,8 +379,8 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/btse.png"
                   alt="BTSE"
-                  width={142}
-                  height={41}
+                  width={150}
+                  height={31}
                   link="https://www.btse.com/en/ref?c=33KWaq"
                   label="btse.com"
                 />
@@ -403,7 +403,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/bybit.png"
                   alt="bybit"
-                  width={110}
+                  width={100}
                   height={41}
                   link="http://bybit.com"
                   label="bybit.com"
@@ -465,7 +465,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/ftx.png"
                   alt="FTX"
-                  width={142}
+                  width={110}
                   height={41}
                   link="http://ftx.com/#a=2572003"
                   label="ftx.com/#a=2572003"
@@ -477,7 +477,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/hitbtc.jpg"
                   alt="HitBTC"
-                  width={142}
+                  width={130}
                   height={41}
                   link="http://hitbtc.com"
                   label="hitbtc.com"
@@ -501,7 +501,7 @@ export default function TabsWrappedLabelSection4() {
                 <ImagePopover
                   src="/static/main/s4/3/krakenf.jpg"
                   alt="KRAKEN Futures"
-                  width={142}
+                  width={130}
                   height={16}
                   link="http://r.kraken.com/mPOeM"
                   label="r.kraken.com/mPOeM"
