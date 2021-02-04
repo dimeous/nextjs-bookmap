@@ -4,7 +4,7 @@ import Popover from '@material-ui/core/Popover'
 import Button from '@material-ui/core/Button'
 import Link from '@material-ui/core/Link'
 import Image from 'next/image'
-import { Box, Typography } from '@material-ui/core'
+import { Box, Typography, ButtonBase } from '@material-ui/core'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -15,13 +15,23 @@ const useStyles = makeStyles(() =>
       textTransform: 'uppercase',
       marginLeft: '8px',
     },
-    button: {
+    buttonBox: {
+      height: '85px',
+      borderRadius: '5px',
       width: '100%',
-      height: '75px',
-      backgroundColor: '#fff',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      border: '1px solid #e5e5e5',
       '&:hover': {
         backgroundColor: '#d1dbdb',
+        border: '1px solid transparent',
       },
+    },
+    button: {
+      width: '90%',
+      height: '75px',
+      backgroundColor: '#fff',
     },
     button2: {
       backgroundColor: '#fff',
@@ -59,14 +69,8 @@ export default function ImagePopover(prop: {
   const id = open ? 'simple-popover' : undefined
 
   return (
-    <div>
-      <Button
-        aria-describedby={id}
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-        className={classes.button}
-      >
+    <Box className={classes.buttonBox}>
+      <ButtonBase aria-describedby={id} onClick={handleClick} className={classes.button}>
         <Image
           src={prop.src}
           alt={prop.alt}
@@ -74,7 +78,7 @@ export default function ImagePopover(prop: {
           height={prop.height}
           layout="intrinsic"
         />
-      </Button>
+      </ButtonBase>
       <Popover
         id={id}
         open={open}
@@ -90,16 +94,16 @@ export default function ImagePopover(prop: {
         }}
       >
         <Link href={prop.link} target="_blank">
-          <Button variant="text" sx={{ alignItems: 'center' }} className={classes.button2}>
+          <ButtonBase sx={{ alignItems: 'center' }} className={classes.button2}>
             <Box>
               <Image src="/static/icons/site-ic.svg" alt={prop.alt} width={26} height={25} />
               <Typography variant={'body2'} className={classes.txt}>
                 {prop.label}
               </Typography>
             </Box>
-          </Button>
+          </ButtonBase>
         </Link>
       </Popover>
-    </div>
+    </Box>
   )
 }
