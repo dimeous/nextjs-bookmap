@@ -274,7 +274,7 @@ export default function TabsWrappedLabelSection4() {
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <ImagePopover
-                  src="/static/main/s4/2/ts.jpg"
+                  src="/static/main/s4/2/ts.png"
                   alt="Trade Station"
                   width={142}
                   height={70}
@@ -286,7 +286,7 @@ export default function TabsWrappedLabelSection4() {
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <ImagePopover
-                  src="/static/main/s4/2/ib.jpg"
+                  src="/static/main/s4/2/ib.png"
                   alt="Interactive brokers"
                   width={142}
                   height={70}
@@ -499,7 +499,7 @@ export default function TabsWrappedLabelSection4() {
             <Grid md={3} xs={6} item>
               <Box className={classes.imageItem}>
                 <ImagePopover
-                  src="/static/main/s4/3/krakenf.jpg"
+                  src="/static/main/s4/3/krakenf.png"
                   alt="KRAKEN Futures"
                   width={130}
                   height={16}
