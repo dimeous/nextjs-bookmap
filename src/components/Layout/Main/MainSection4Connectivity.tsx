@@ -574,10 +574,12 @@ export default function TabsWrappedLabelSection4() {
       </div>
       <Box className={classes.link}>
         <Link
-          href="https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity"
+          href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
           color="secondary"
+          target={'_blank'}
+          rel={'noreferrer'}
         >
-          Learn more
+          See Crypto Connectivity Guide
         </Link>
       </Box>
     </Container>
