@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     marginBottom: '145px',
     height: '300px',
+
     [theme.breakpoints.down('md')]: {
       marginTop: '16px',
       marginBottom: '120px',
@@ -41,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
   },
   listitem: {
     width: '45%',
+    '&:hover': {
+      background: 'none',
+    },
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },

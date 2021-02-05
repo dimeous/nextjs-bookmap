@@ -57,7 +57,7 @@ export default function CryptoSection2Exchanges() {
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-      <Typography variant={'h3'} component={'h3'} sx={{ textAlign: 'center' }}>
+      <Typography variant={'h3'} component={'h3'}>
         Bookmap allows connecting to the following Crypto exchanges
       </Typography>
       <div>
@@ -69,7 +69,7 @@ export default function CryptoSection2Exchanges() {
                 src="/static/main/s4/3/binance.png"
                 alt="Binance"
                 width={142}
-                height={35}
+                height={30}
                 link="http://binance.com/en/register?ref=39242647"
                 label="binance.com/en/register?ref=39242647"
               />
@@ -117,7 +117,7 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/bitstamp.png"
                 alt="BitStamp"
-                width={130}
+                width={110}
                 height={90}
                 link="http://bitstamp.net"
                 label="bitstamp.net"
@@ -153,7 +153,7 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/bybit.png"
                 alt="bybit"
-                width={110}
+                width={100}
                 height={41}
                 link="http://bybit.com"
                 label="bybit.com"
@@ -191,7 +191,7 @@ export default function CryptoSection2Exchanges() {
                 src="/static/main/s4/3/coinflex.png"
                 alt="CoinFLEX"
                 width={142}
-                height={41}
+                height={31}
                 link="http://coinflex.com"
                 label="coinflex.com"
               />
@@ -215,7 +215,7 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/ftx.png"
                 alt="FTX"
-                width={142}
+                width={100}
                 height={41}
                 link="http://ftx.com/#a=2572003"
                 label="ftx.com/#a=2572003"
@@ -227,7 +227,7 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/hitbtc.jpg"
                 alt="HitBTC"
-                width={142}
+                width={110}
                 height={41}
                 link="http://hitbtc.com"
                 label="hitbtc.com"
@@ -249,9 +249,9 @@ export default function CryptoSection2Exchanges() {
           <Grid md={3} xs={6} item>
             <Box className={classes.imageItem}>
               <ImagePopover
-                src="/static/main/s4/3/krakenf.jpg"
+                src="/static/main/s4/3/krakenf.png"
                 alt="KRAKEN Futures"
-                width={142}
+                width={152}
                 height={16}
                 link="http://r.kraken.com/mPOeM"
                 label="r.kraken.com/mPOeM"
@@ -277,7 +277,7 @@ export default function CryptoSection2Exchanges() {
                 src="/static/main/s4/3/liquid.png"
                 alt="Liquid"
                 width={142}
-                height={41}
+                height={31}
                 link="http://liquid.com"
                 label="liquid.com"
               />
@@ -300,8 +300,8 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/okcoin.svg"
                 alt="OKCOIN"
-                width={142}
-                height={20}
+                width={110}
+                height={31}
                 link="http://okcoin.com"
                 label="okcoin.com"
               />
@@ -312,7 +312,7 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/poloniex.png"
                 alt="POLONIEX"
-                width={142}
+                width={110}
                 height={70}
                 link="http://poloniex.com"
                 label="poloniex.com"

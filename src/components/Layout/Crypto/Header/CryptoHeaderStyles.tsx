@@ -8,6 +8,9 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: '32px',
+    },
   },
   logoTxt: {
     color: '#0099ff',
