@@ -26,7 +26,7 @@ export const text = {
   Market2: (
     <Fragment>
       Crypto currencies <br />
-      &gt; 15 exchanges (Free data)
+      &gt; 20 Crypto exchanges (Free data)
     </Fragment>
   ),
   dataReq: (

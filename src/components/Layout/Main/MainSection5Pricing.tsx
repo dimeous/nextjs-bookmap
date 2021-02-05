@@ -102,7 +102,7 @@ export default function TabsWrappedLabelSection5() {
               <h4>{text.Market}</h4>
               <p>
                 Crypto currencies <br />
-                &gt; 15 exchanges (Free data)
+                &gt; 20 Crypto exchange (Free data)
               </p>
             </li>
             <li>
