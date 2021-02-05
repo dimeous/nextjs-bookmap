@@ -227,8 +227,8 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/hitbtc.jpg"
                 alt="HitBTC"
-                width={110}
-                height={41}
+                width={130}
+                height={51}
                 link="http://hitbtc.com"
                 label="hitbtc.com"
               />
@@ -264,7 +264,7 @@ export default function CryptoSection2Exchanges() {
               <ImagePopover
                 src="/static/main/s4/3/kraken.png"
                 alt="KRAKEN"
-                width={142}
+                width={122}
                 height={20}
                 link="http://r.kraken.com/mPOeM"
                 label="r.kraken.com/mPOeM"
@@ -324,10 +324,12 @@ export default function CryptoSection2Exchanges() {
 
       <Box className={classes.link}>
         <Link
-          href="https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity"
+          href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
           color="secondary"
+          target={'_blank'}
+          rel={'noreferrer'}
         >
-          Learn more
+          See Crypto Connectivity Guide
         </Link>
       </Box>
     </Container>

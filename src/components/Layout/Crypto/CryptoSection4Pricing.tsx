@@ -222,6 +222,13 @@ export default function CryptoSection4Pricing() {
           </div>
         </Box>
       </Box>
+      <p className={classes.lifetimeMessage}>{text.endtext}</p>
+      <div className={classes.cta}>
+        <p>Trading Stocks or Futures? Explore more features and opportunities Bookmap provides</p>
+        <a href="https://bookmap.com/#pricing" target="_blank" rel={'noreferrer'}>
+          Compare Prices & Packages
+        </a>
+      </div>
     </Container>
   )
 }
