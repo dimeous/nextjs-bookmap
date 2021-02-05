@@ -99,7 +99,7 @@ export default function MainSection0({ mobile }: CardProps) {
                 NEW: live trading sessions with pro traders
               </Typography>
               <Typography color="primary" paragraph>
-                for Global/Global+ subscribers
+                for Global+ subscribers
               </Typography>
               {!mobile && (
                 <Button
