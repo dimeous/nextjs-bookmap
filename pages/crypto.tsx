@@ -25,7 +25,7 @@ export default function Index() {
         <CryptoSection2Exchanges />
         {mobile ? <CryptoSection3Mobile /> : <CryptoSection3Desktop />}
         {mobile ? <CryptoSection4MobilePricing /> : <CryptoSection4Pricing />}
-        <MainSection8UserReviews mobile={mobile} />
+        <MainSection8UserReviews mobile={mobile} crypto={true} />
         <CryptoSection6FAQ />
       </main>
       <Footer />

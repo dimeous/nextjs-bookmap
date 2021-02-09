@@ -33,6 +33,7 @@ const useStyles = makeStyles(() => ({
 
 type CardProps = {
   mobile: boolean
+  crypto: boolean
 }
 export default function MainSection8UserReviews({ mobile }: CardProps) {
   const onChange = function (isVisible: boolean) {
@@ -62,7 +63,7 @@ export default function MainSection8UserReviews({ mobile }: CardProps) {
           variant="contained"
           color="secondary"
           href="https://bookmap.com/members/signup/thAhOgYUg"
-          id={'main_end_start_for_free '}
+          id={crypto ? 'crypto_middle_get_it_now' : 'main_end_start_for_free'}
         >
           GET FREE BOOKMAP
         </Button>

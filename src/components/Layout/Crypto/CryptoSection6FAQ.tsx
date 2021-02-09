@@ -183,6 +183,7 @@ export default function CryptoSection6FAQ() {
           color="secondary"
           href="https://bookmap.com/members/signup/thAhOgYUg"
           sx={{ color: '#fff' }}
+          id={'crypto_end_get_it_now'}
         >
           SUBSCRIBE FOR FREE
         </Button>

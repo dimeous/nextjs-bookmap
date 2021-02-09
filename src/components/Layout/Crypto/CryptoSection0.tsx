@@ -91,6 +91,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
                     variant="contained"
                     color="secondary"
                     href="https://bookmap.com/members/signup/thAhOgYUg"
+                    id={'crypto_top_get_it_now'}
                     sx={{ mt: 7 }}
                   >
                     Subscribe for free
@@ -137,6 +138,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
             color="secondary"
             href="https://bookmap.com/members/signup/thAhOgYUg"
             className={classes.button}
+            id={'crypto_top_get_it_now'}
           >
             Subscribe for free
           </Button>
