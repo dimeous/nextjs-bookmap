@@ -37,7 +37,7 @@ function PolicyWidget() {
     Cookies.set('policy', 'checked')
     setChecked(true)
   }
-  console.log(policy)
+
   if (policy != 'checked' && !checked)
     return (
       <div className={classes.root}>
