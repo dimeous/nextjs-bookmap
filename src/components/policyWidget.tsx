@@ -28,14 +28,6 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-function handleChange() {
-  const newpolicy = 1
-  const d = new Date()
-  d.setTime(d.getTime() + 180 * 24 * 60 * 1000)
-  const expires = 'expires=' + d.toUTCString()
-  document.cookie = `policy=${newpolicy}; ${expires};`
-}
-
 function PolicyWidget() {
   const classes = useStyles()
   const policy = Cookies.get('policy')
@@ -45,7 +37,8 @@ function PolicyWidget() {
     Cookies.set('policy', 1)
     setChecked(true)
   }
-  if (!policy || checked)
+  console.log(policy)
+  if (policy != 1 && !checked)
     return (
       <div className={classes.root}>
         <div className={classes.iubenda}>
