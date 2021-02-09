@@ -44,13 +44,11 @@ class PolicyWidget extends React.Component<any, any> {
 
   handleChange() {
     const newpolicy = 1
+    const d = new Date()
+    d.setTime(d.getTime() + 180 * 24 * 60 * 1000)
+    const expires = 'expires=' + d.toUTCString()
     this.setState({ policy: newpolicy })
-    document.cookie = `policy=${newpolicy}; path=/`
-  }
-
-  reset() {
-    this.setState({ policy: '' })
-    document.cookie = 'policy=; path=/;'
+    document.cookie = `policy=${newpolicy}; ${expires};`
   }
 
   render() {
