@@ -1,7 +1,7 @@
 import React from 'react'
 import { withStyles, Button } from '@material-ui/core'
 import cookies from 'next-cookies'
-const useStyles = () => ({
+const useStyles = {
   root: {
     background: '#0184f6',
     bottom: '0 !important',
@@ -25,7 +25,7 @@ const useStyles = () => ({
     display: 'flex',
     justifyContent: 'center',
   },
-})
+}
 
 class PolicyWidget extends React.Component<any, any> {
   static async getInitialProps(ctx: {
