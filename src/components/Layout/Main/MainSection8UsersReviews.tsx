@@ -33,8 +33,9 @@ const useStyles = makeStyles(() => ({
 
 type CardProps = {
   mobile: boolean
+  crypto: boolean
 }
-export default function MainSection8UserReviews({ mobile }: CardProps, crypto: boolean) {
+export default function MainSection8UserReviews({ mobile, crypto }: CardProps) {
   const onChange = function (isVisible: boolean) {
     if (isVisible) setChecked(true)
   }
