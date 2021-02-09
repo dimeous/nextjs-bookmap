@@ -34,11 +34,11 @@ function PolicyWidget() {
   const [checked, setChecked] = React.useState(false)
 
   const handleChange = () => {
-    Cookies.set('policy', 1)
+    Cookies.set('policy', 'checked')
     setChecked(true)
   }
   console.log(policy)
-  if (policy != 1 && !checked)
+  if (policy != 'checked' && !checked)
     return (
       <div className={classes.root}>
         <div className={classes.iubenda}>
