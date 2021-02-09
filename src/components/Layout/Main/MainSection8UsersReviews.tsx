@@ -62,6 +62,7 @@ export default function MainSection8UserReviews({ mobile }: CardProps) {
           variant="contained"
           color="secondary"
           href="https://bookmap.com/members/signup/thAhOgYUg"
+          id={'main_end_start_for_free '}
         >
           GET FREE BOOKMAP
         </Button>

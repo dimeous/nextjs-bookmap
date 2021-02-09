@@ -103,6 +103,7 @@ export default function MainSection0({ mobile }: CardProps) {
               </Typography>
               {!mobile && (
                 <Button
+                  id={'main_top_start_for_free'}
                   className={classes.button}
                   variant="contained"
                   color="secondary"
@@ -151,6 +152,7 @@ export default function MainSection0({ mobile }: CardProps) {
             color="secondary"
             href="https://bookmap.com/members/signup/thAhOgYUg"
             className={classes.button}
+            id={'main_top_start_for_free'}
           >
             START FOR FREE
           </Button>

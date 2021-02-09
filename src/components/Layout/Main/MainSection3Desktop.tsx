@@ -133,6 +133,7 @@ export default function MainSection3() {
         variant="contained"
         color="secondary"
         href="https://bookmap.com/members/signup/thAhOgYUg"
+        id={'main_middle_start_for_free'}
       >
         {text.btn}
       </Button>
