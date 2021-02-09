@@ -1,7 +1,8 @@
 import React from 'react'
-import { withStyles, Button } from '@material-ui/core'
-import cookies from 'next-cookies'
-const useStyles = {
+import { Button } from '@material-ui/core'
+import Cookies from 'js-cookie'
+import { makeStyles } from '@material-ui/styles'
+const useStyles = makeStyles(() => ({
   root: {
     background: '#0184f6',
     bottom: '0 !important',
@@ -25,34 +26,26 @@ const useStyles = {
     display: 'flex',
     justifyContent: 'center',
   },
+}))
+
+function handleChange() {
+  const newpolicy = 1
+  const d = new Date()
+  d.setTime(d.getTime() + 180 * 24 * 60 * 1000)
+  const expires = 'expires=' + d.toUTCString()
+  document.cookie = `policy=${newpolicy}; ${expires};`
 }
 
-class PolicyWidget extends React.Component<any, any> {
-  static async getInitialProps(ctx: {
-    req?: { headers: { cookie?: string | undefined } } | undefined
-  }) {
-    return {
-      initialPolicy: cookies(ctx).policy || '',
-    }
-  }
+function PolicyWidget() {
+  const classes = useStyles()
+  const policy = Cookies.get('policy')
+  const [checked, setChecked] = React.useState(false)
 
-  constructor(props: any) {
-    super(props)
-    this.state = { policy: props.initialPolicy || '' }
-    this.handleChange = this.handleChange.bind(this)
+  const handleChange = () => {
+    Cookies.set('policy', 1)
+    setChecked(true)
   }
-
-  handleChange() {
-    const newpolicy = 1
-    const d = new Date()
-    d.setTime(d.getTime() + 180 * 24 * 60 * 1000)
-    const expires = 'expires=' + d.toUTCString()
-    this.setState({ policy: newpolicy })
-    document.cookie = `policy=${newpolicy}; ${expires};`
-  }
-
-  render() {
-    const { classes } = this.props
+  if (!policy || checked)
     return (
       <div className={classes.root}>
         <div className={classes.iubenda}>
@@ -66,15 +59,14 @@ class PolicyWidget extends React.Component<any, any> {
               Privacy Policy
             </a>{' '}
             for more information
-            <input type="text" placeholder="Your name here" value={this.state.policy} />
           </div>
-          <Button sx={{ ml: 1 }} onClick={this.handleChange}>
+          <Button sx={{ ml: 1 }} onClick={handleChange}>
             ×
           </Button>
         </div>
       </div>
     )
-  }
+  else return null
 }
 
-export default withStyles(useStyles)(PolicyWidget)
+export default PolicyWidget
