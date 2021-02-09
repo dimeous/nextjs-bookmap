@@ -27,7 +27,7 @@ const useStyles = () => ({
   },
 })
 
-class PolicyWidget extends React.Component {
+class PolicyWidget extends React.Component<any, any> {
   static async getInitialProps(ctx: {
     req?: { headers: { cookie?: string | undefined } } | undefined
   }) {
