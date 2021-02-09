@@ -18,6 +18,7 @@ export default function CryptoHeader() {
             color="secondary"
             href="https://bookmap.com/members/signup/thAhOgYUg"
             className={classes.button}
+            id={'crypto_header_get_it_now'}
           >
             Subscribe for free
           </Button>
