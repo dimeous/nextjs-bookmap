@@ -8,6 +8,7 @@ import createCache from '@emotion/cache'
 import theme from '../src/theme'
 import { DefaultSeo } from 'next-seo'
 import SEO from '../next-seo.config'
+import PolicyWidget from '../src/components/policyWidget'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import TagManager from 'react-gtm-module'
@@ -41,6 +42,7 @@ export default function MyApp(props: AppProps) {
         <DefaultSeo {...SEO} />
 
         <Component {...pageProps} />
+        <PolicyWidget />
       </ThemeProvider>
     </CacheProvider>
   )
