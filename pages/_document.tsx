@@ -48,6 +48,15 @@ export default class MyDocument extends Document {
             }}
           />*/}
           <NextScript />
+          {/*Zoho chat widget */}
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+                var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"d9ccfe496cc68345a6b253ffe17120fc572ce1f41c91062605affd3fc1620aea", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+              `,
+            }}
+          />
         </body>
       </Html>
     )
