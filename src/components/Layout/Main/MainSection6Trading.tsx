@@ -150,7 +150,7 @@ export function Desktop() {
                 className={classes.button}
                 variant="contained"
                 color="secondary"
-                href="https://bookmap.com/members/signup/thAhOgYUg"
+                href="https://bookmap.com/education/"
               >
                 {text.btn}
               </Button>
