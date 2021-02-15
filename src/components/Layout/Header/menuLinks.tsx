@@ -89,7 +89,7 @@ export const products = [
 export const community = [
   {
     label: 'Chatroom (Discord)',
-    href: 'https://discord.com/invite/FATgzfq7',
+    href: 'https://discord.gg/prjSDDupYh',
     blank: false,
   },
   {

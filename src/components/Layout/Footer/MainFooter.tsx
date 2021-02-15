@@ -358,7 +358,7 @@ export default function MainFooter() {
                 </a>
               </li>
               <li>
-                <a href="https://discord.com/invite/8uHDzgjEMq" target="_blank" rel={'noreferrer'}>
+                <a href="https://discord.gg/prjSDDupYh" target="_blank" rel={'noreferrer'}>
                   <img src="/static/footer/discord.svg" alt={'Bookmap Chatroom'} />
                 </a>
               </li>
