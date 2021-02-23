@@ -307,6 +307,18 @@ export default function TabsWrappedLabelSection4() {
                 />
               </Box>
             </Grid>
+            <Grid md={3} xs={6} item>
+              <Box className={classes.imageItem}>
+                <ImagePopover
+                  src="/static/main/s4/2/qa.png"
+                  alt="CEDRO Technologies"
+                  width={142}
+                  height={31}
+                  link="https://marketplace.bookmap.com/product/quotemedia/"
+                  label="Quotemedia"
+                />
+              </Box>
+            </Grid>
           </Grid>
         </TabPanel>
         {/* 3-d Panel*/}
