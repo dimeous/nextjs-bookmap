@@ -579,7 +579,7 @@ export default function TabsWrappedLabelSection4() {
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See Crypto Connectivity Guide
+          See Connectivity Guide
         </Link>
       </Box>
     </Container>
