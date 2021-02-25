@@ -75,21 +75,21 @@ export default function MainSection6Carousel() {
     <Container>
       <Carousel
         swipeable={true}
-        centerMode
-        showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
-        infinite={true}
+        infinite={false}
         autoPlay={true}
         autoPlaySpeed={12000}
         keyBoardControl={true}
         minimumTouchDrag={80}
         customTransition="all .5"
         transitionDuration={1000}
+        centerMode={true}
         containerClass="carousel-container"
         removeArrowOnDeviceType={['tablet', 'mobile']}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
+        draggable={true}
       >
         {items.map((item, i) => {
           return (
@@ -112,7 +112,9 @@ export default function MainSection6Carousel() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link href={item.link}>{item.linkLabel}</Link>
+                <Link href={item.link} target={'_blank'}>
+                  {item.linkLabel}
+                </Link>
               </CardActions>
             </Card>
           )
