@@ -7,10 +7,12 @@ import {
   Card,
   CardContent,
   CardActions,
+  Box,
 } from '@material-ui/core'
 
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import Image from 'next/image'
 
 const responsive = {
   desktop: {
@@ -40,36 +42,12 @@ const useStyles = makeStyles((theme) => ({
     width: '295px',
     height: '193px',
   },
+  cardHead: {
+    display: 'flex',
+  },
   title: {},
   pos: {},
 }))
-
-function Item(props: {
-  key: number
-  item: {
-    name: string
-    description: string
-    link: string
-    linkLabel: string
-  }
-}) {
-  const classes = useStyles()
-  return (
-    <Card className={classes.card}>
-      <CardContent>
-        <Typography className={classes.title} gutterBottom>
-          {props.key} {props.item.name}
-        </Typography>
-        <Typography variant="body2" component="p">
-          {props.item.description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Link href={props.item.link}>{props.item.linkLabel}</Link>
-      </CardActions>
-    </Card>
-  )
-}
 
 export default function MainSection6Carousel() {
   const items = [
@@ -92,18 +70,20 @@ export default function MainSection6Carousel() {
       link: 'https://bookmap.com/b2b/',
     },
   ]
+  const classes = useStyles()
   return (
     <Container>
       <Carousel
         swipeable={true}
-        draggable={false}
+        centerMode
         showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1000}
+        autoPlaySpeed={12000}
         keyBoardControl={true}
+        minimumTouchDrag={80}
         customTransition="all .5"
         transitionDuration={1000}
         containerClass="carousel-container"
@@ -111,9 +91,32 @@ export default function MainSection6Carousel() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {items.map((item, i) => (
-          <Item key={i} item={item} />
-        ))}
+        {items.map((item, i) => {
+          return (
+            <Card className={classes.card} key={i}>
+              <CardContent>
+                <Box className={classes.cardHead}>
+                  <Typography className={classes.title} gutterBottom>
+                    {i} {item.name}
+                  </Typography>
+                  <Image
+                    src={'/static/main/s6/' + (i + 1) + '.svg'}
+                    alt={i + ' img'}
+                    width={102}
+                    height={24}
+                    layout="intrinsic"
+                  />
+                </Box>
+                <Typography variant="body2" component="p">
+                  {item.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link href={item.link}>{item.linkLabel}</Link>
+              </CardActions>
+            </Card>
+          )
+        })}
       </Carousel>
     </Container>
   )
