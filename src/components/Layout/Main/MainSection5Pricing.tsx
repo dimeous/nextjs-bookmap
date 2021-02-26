@@ -9,6 +9,7 @@ import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
 import { text } from './MainSection5Content'
+import Link from '@material-ui/core/Link'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -129,6 +130,24 @@ export default function TabsWrappedLabelSection5() {
               <p>{text.addons}</p>
             </li>
           </ul>
+          <div className={classes.bubble}>
+            <Typography component={'h5'} variant={'h5'} gutterBottom>
+              Trading Crypto?
+            </Typography>
+            <Typography component={'p'} gutterBottom>
+              Discover more features and opportunities Bookmap offers for cryptocurrency traders
+            </Typography>
+            <Box sx={{ textAlign: 'center', pt: 1 }}>
+              <Link
+                href="https://bookmap.com/crypto/"
+                color="secondary"
+                target={'_blank'}
+                rel={'noreferrer'}
+              >
+                Open Crypto Page
+              </Link>
+            </Box>
+          </div>
         </Box>
         {/* first table list*/}
         <Box className={classes.digital}>
@@ -419,13 +438,15 @@ export default function TabsWrappedLabelSection5() {
           </div>
         </Box>
       </Box>
-      <p className={classes.lifetimeMessage}>{text.endtext}</p>
-      <div className={classes.cta}>
-        <p>Can’t decide which plan is right for you?</p>
-        <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
-          CLICK HERE
-        </a>
-      </div>
+      <Box sx={{ marginLeft: '300px' }}>
+        <p className={classes.lifetimeMessage}>{text.endtext}</p>
+        <div className={classes.cta}>
+          <p>Can’t decide which plan is right for you?</p>
+          <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
+            CLICK HERE
+          </a>
+        </div>
+      </Box>
     </Container>
   )
 }
