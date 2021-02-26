@@ -14,7 +14,7 @@ export const styles = makeStyles(() => ({
     lineHeight: '16px',
     borderRadius: '40px',
     '& h5': {
-      font: '14px/16px MullerMedium,sans-serif',
+      font: '16px/24px MullerMedium,sans-serif',
       fontWeight: 700,
     },
     '& p': {

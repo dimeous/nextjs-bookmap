@@ -131,10 +131,10 @@ export default function TabsWrappedLabelSection5() {
             </li>
           </ul>
           <div className={classes.bubble}>
-            <Typography component={'h5'} variant={'h5'} gutterBottom>
+            <Typography component={'h5'} variant={'h5'} sx={{ paddingBottom: 2, paddingTop: 2 }}>
               Trading Crypto?
             </Typography>
-            <Typography component={'p'} gutterBottom>
+            <Typography component={'p'} sx={{ paddingBottom: 2 }}>
               Discover more features and opportunities Bookmap offers for cryptocurrency traders
             </Typography>
             <Box sx={{ textAlign: 'center', pt: 1 }}>
