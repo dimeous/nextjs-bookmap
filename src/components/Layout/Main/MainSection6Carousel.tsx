@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {},
   pos: {},
+  caruselConteriner: {
+    width: '80%',
+  },
 }))
 
 export default function MainSection6Carousel() {
@@ -69,6 +72,18 @@ export default function MainSection6Carousel() {
       linkLabel: 'Become a member',
       link: 'https://bookmap.com/b2b/',
     },
+    {
+      name: 'Features 2',
+      description: 'Explore Bookmap B2B Solution for Crypto, Stocks, Futures',
+      linkLabel: 'Become a member',
+      link: 'https://bookmap.com/b2b/',
+    },
+    {
+      name: 'Features 3',
+      description: 'Explore Bookmap B2B Solution for Crypto, Stocks, Futures',
+      linkLabel: 'Become a member',
+      link: 'https://bookmap.com/b2b/',
+    },
   ]
   const classes = useStyles()
   return (
@@ -79,15 +94,14 @@ export default function MainSection6Carousel() {
         ssr={true} // means to render carousel on server-side.
         infinite={false}
         autoPlay={true}
-        autoPlaySpeed={12000}
+        autoPlaySpeed={1000}
         keyBoardControl={true}
         minimumTouchDrag={80}
         customTransition="all .5"
         transitionDuration={1000}
-        centerMode={true}
+        deviceType="desktop"
         containerClass="carousel-container"
         removeArrowOnDeviceType={['tablet', 'mobile']}
-        dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         draggable={true}
       >
@@ -97,10 +111,10 @@ export default function MainSection6Carousel() {
               <CardContent>
                 <Box className={classes.cardHead}>
                   <Typography className={classes.title} gutterBottom>
-                    {i} {item.name}
+                    {item.name}
                   </Typography>
                   <Image
-                    src={'/static/main/s6/' + (i + 1) + '.svg'}
+                    src={'/static/main/s6/' + ((i % 3) + 1) + '.svg'}
                     alt={i + ' img'}
                     width={102}
                     height={24}
