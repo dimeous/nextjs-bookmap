@@ -44,11 +44,25 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHead: {
     display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'bottom',
   },
-  title: {},
+  carouselItem: {
+    width: '295px',
+    height: '193px',
+  },
+  title: {
+    fontWeight: 700,
+  },
   pos: {},
-  caruselConteriner: {
-    width: '80%',
+  carouselContainer: {
+    paddingLeft: '60px',
+    '& .react-multiple-carousel__arrow--right': {
+      right: 'calc(0% + 1px)',
+    },
+    '& .react-multiple-carousel__arrow--left': {
+      left: 'calc(0% + 1px)',
+    },
   },
 }))
 
@@ -92,18 +106,17 @@ export default function MainSection6Carousel() {
         swipeable={true}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
-        infinite={false}
+        infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1000}
+        autoPlaySpeed={12000}
         keyBoardControl={true}
         minimumTouchDrag={80}
         customTransition="all .5"
         transitionDuration={1000}
-        deviceType="desktop"
-        containerClass="carousel-container"
+        containerClass={classes.carouselContainer}
         removeArrowOnDeviceType={['tablet', 'mobile']}
-        itemClass="carousel-item-padding-40-px"
         draggable={true}
+        arrows={true}
       >
         {items.map((item, i) => {
           return (
@@ -126,7 +139,7 @@ export default function MainSection6Carousel() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link href={item.link} target={'_blank'}>
+                <Link href={item.link} target={'_blank'} color="secondary">
                   {item.linkLabel}
                 </Link>
               </CardActions>
