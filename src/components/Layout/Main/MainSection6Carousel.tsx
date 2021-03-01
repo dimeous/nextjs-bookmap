@@ -36,7 +36,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginBottom: '145px',
-    [theme.breakpoints.down('md')]: {},
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '30px',
+    },
   },
   card: {
     width: '295px',
