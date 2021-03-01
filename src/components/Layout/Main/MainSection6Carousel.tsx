@@ -52,17 +52,34 @@ const useStyles = makeStyles((theme) => ({
     height: '193px',
   },
   title: {
+    font: '14px/24px MullerMedium, sans-serif',
     fontWeight: 700,
   },
-  pos: {},
+  link: {
+    fontSize: '16px',
+    lineHeght: '18px',
+  },
+  descr: {
+    paddingTop: '16px',
+    fontSize: '1.3rem',
+  },
   carouselContainer: {
     paddingLeft: '60px',
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: '5%',
+    },
     '& .react-multiple-carousel__arrow--right': {
       right: 'calc(0% + 1px)',
     },
     '& .react-multiple-carousel__arrow--left': {
       left: 'calc(0% + 1px)',
     },
+  },
+  action: {
+    paddingLeft: '16px',
+  },
+  cardContent: {
+    paddingBottom: 0,
   },
 }))
 
@@ -101,7 +118,7 @@ export default function MainSection6Carousel() {
   ]
   const classes = useStyles()
   return (
-    <Container>
+    <Container className={classes.root}>
       <Carousel
         swipeable={true}
         responsive={responsive}
@@ -121,7 +138,7 @@ export default function MainSection6Carousel() {
         {items.map((item, i) => {
           return (
             <Card className={classes.card} key={i}>
-              <CardContent>
+              <CardContent className={classes.cardContent}>
                 <Box className={classes.cardHead}>
                   <Typography className={classes.title} gutterBottom>
                     {item.name}
@@ -134,12 +151,12 @@ export default function MainSection6Carousel() {
                     layout="intrinsic"
                   />
                 </Box>
-                <Typography variant="body2" component="p">
+                <Typography variant="body2" component="p" className={classes.descr}>
                   {item.description}
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Link href={item.link} target={'_blank'} color="secondary">
+              <CardActions className={classes.action}>
+                <Link href={item.link} target={'_blank'} color="secondary" className={classes.link}>
                   {item.linkLabel}
                 </Link>
               </CardActions>
