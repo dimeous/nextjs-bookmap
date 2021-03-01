@@ -14,7 +14,6 @@ import PolicyWidget from '../src/components/policyWidget'
 import TagManager from 'react-gtm-module'
 
 export const cache = createCache({ key: 'css', prepend: true })
-export const config = { amp: true }
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
