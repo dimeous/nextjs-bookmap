@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     fontSize: '16px',
-    lineHeght: '18px',
+    lineHeight: '18px',
   },
   descr: {
     paddingTop: '16px',
