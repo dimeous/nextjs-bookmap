@@ -14,7 +14,6 @@ import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Footer from '../src/components/Layout/Footer/MainFooter'
 import MainHeader from '../src/components/Layout/Header/MainHeader'
-import MainSection6Carousel from '../src/components/Layout/Main/MainSection6Carousel'
 
 export default function Index() {
   const theme = useTheme()
@@ -33,7 +32,7 @@ export default function Index() {
         )}
         <MainSection4 />
         {mobile ? <MainSection5MobilePricing /> : <MainSection5Pricing />}
-        <MainSection6Carousel />
+
         <MainSection6Trading mobile={mobile} />
         <MainSection7Words />
         <MainSection8UserReviews mobile={mobile} crypto={false} />
