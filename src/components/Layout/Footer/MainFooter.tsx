@@ -234,6 +234,7 @@ export default function MainFooter() {
                       Forum
                     </a>
                   </li>
+		  <li><a href="https://bookmap.com/support/">Support</a></li>
                 </ul>
               </li>
               <li className={classes.hasChildren}>
@@ -262,7 +263,7 @@ export default function MainFooter() {
                 <a href="#b2b">BOOKMAP B2B</a>
                 <ul className={classes.subMenu}>
                   <li>
-                    <NextLink href="https://bookmap.com/b2b/">BOOKMAP FOR BUSINESS</NextLink>
+                    <NextLink href="https://bookmap.com/b2b/">Bookmap®️ B2B</NextLink>
                   </li>
                   <li>
                     <NextLink href="https://web.bookmap.com/?time=2020-12-16--18-14-04&amp;duration=7d">
