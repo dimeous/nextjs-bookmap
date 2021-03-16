@@ -51,15 +51,16 @@ export const resources = [
 ]
 export const products = [
   {
-    label: 'Education',
-    href: 'https://bookmap.com/education/',
-    blank: false,
-  },
-  {
     label: 'Connectivity Guide',
     href: 'https://www.bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity',
     blank: false,
   },
+  {
+    label: 'Education',
+    href: 'https://bookmap.com/education/',
+    blank: false,
+  },
+
   {
     label: 'Features',
     href: 'https://bookmap.com/features/',
@@ -76,17 +77,17 @@ export const products = [
     blank: false,
   },
   {
-    label: 'Affiliates',
-    href: 'https://bookmap.com/referral/',
-    blank: false,
-  },
-  {
     label: 'FAQ',
     href: 'https://bookmap.com/faq/',
     blank: false,
   },
 ]
 export const community = [
+  {
+    label: 'Support',
+    href: 'https://bookmap.com/support/',
+    blank: true,
+  },
   {
     label: 'Chatroom (Discord)',
     href: 'https://discord.gg/prjSDDupYh',
@@ -96,6 +97,11 @@ export const community = [
     label: 'Forum',
     href: 'https://www.bookmap.com/forum/viewforum.php?f=19',
     blank: true,
+  },
+  {
+    label: 'Affiliates',
+    href: 'https://bookmap.com/referral/',
+    blank: false,
   },
 ]
 
@@ -114,6 +120,11 @@ export const solutions = [
   {
     label: 'Bookmap for Crypto',
     href: '/crypto/',
+    blank: false,
+  },
+  {
+    label: 'Bookmap for Brazil',
+    href: '/brazil/',
     blank: false,
   },
   {
