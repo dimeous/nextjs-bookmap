@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function MainSection2Features() {
-  const flippingTime = 6000
+  const flippingTime = 5000
   const classes = useStyles()
   const [clicked, setClicked] = React.useState(0)
   const [value, setValue] = React.useState('one')
