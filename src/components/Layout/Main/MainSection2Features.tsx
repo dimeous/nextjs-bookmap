@@ -117,8 +117,8 @@ export default function MainSection2Features() {
           <Tab value="three" label="INDICATORS" {...a11yProps('three')} />
         </Tabs>
 
-        <TabPanel value={value} index="one" onClick={() => setClicked(1)}>
-          <Grid container>
+        <TabPanel value={value} index="one">
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/1_features_block.png"
@@ -145,8 +145,8 @@ export default function MainSection2Features() {
             </Grid>
           </Grid>
         </TabPanel>
-        <TabPanel value={value} index="two" onClick={() => setClicked(1)}>
-          <Grid container>
+        <TabPanel value={value} index="two">
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/2_features_block.png"
@@ -173,8 +173,8 @@ export default function MainSection2Features() {
             </Grid>
           </Grid>
         </TabPanel>
-        <TabPanel value={value} index="three" onClick={() => setClicked(1)}>
-          <Grid container>
+        <TabPanel value={value} index="three">
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/3_features_block.png"
