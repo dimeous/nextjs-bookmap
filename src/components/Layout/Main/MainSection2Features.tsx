@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function MainSection2Features() {
-  const flippingTime = 5000
+  const flippingTime = 6000
   const classes = useStyles()
   const [clicked, setClicked] = React.useState(0)
   const [value, setValue] = React.useState('one')
@@ -117,7 +117,7 @@ export default function MainSection2Features() {
           <Tab value="three" label="INDICATORS" {...a11yProps('three')} />
         </Tabs>
 
-        <TabPanel value={value} index="one">
+        <TabPanel value={value} index="one" onClick={() => setClicked(1)}>
           <Grid container>
             <Grid item md={8} xs={12}>
               <Image
@@ -145,7 +145,7 @@ export default function MainSection2Features() {
             </Grid>
           </Grid>
         </TabPanel>
-        <TabPanel value={value} index="two">
+        <TabPanel value={value} index="two" onClick={() => setClicked(1)}>
           <Grid container>
             <Grid item md={8} xs={12}>
               <Image
@@ -173,7 +173,7 @@ export default function MainSection2Features() {
             </Grid>
           </Grid>
         </TabPanel>
-        <TabPanel value={value} index="three">
+        <TabPanel value={value} index="three" onClick={() => setClicked(1)}>
           <Grid container>
             <Grid item md={8} xs={12}>
               <Image
