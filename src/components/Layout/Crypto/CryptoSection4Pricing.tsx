@@ -10,6 +10,31 @@ import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
 import { text } from './CryptoSection4Content'
 
+interface TabPanelProps {
+  children?: React.ReactNode
+  index: any
+  value: any
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`wrapped-tabpanel-${index}`}
+      aria-labelledby={`wrapped-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  )
+}
 function a11yProps(index: any) {
   return {
     id: `wrapped-tab-${index}`,
@@ -58,6 +83,9 @@ export default function CryptoSection4Pricing() {
           <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
           <Tab value="two" label={text.l2} {...a11yProps('two')} />
         </Tabs>
+        <TabPanel value={value} index="two">
+          <span className={classes.tabTwo}>{text.l4} </span>
+        </TabPanel>
       </div>
       <Box className={classes.cPrices}>
         <Box className={classes.naming}>
@@ -211,7 +239,9 @@ export default function CryptoSection4Pricing() {
                 {value == 'two' && 'annual'}
               </span>
             </div>
-
+            {value == 'two' && (
+              <Typography className={classes.priceSave}>Save $28 a year</Typography>
+            )}
             <Button
               variant="contained"
               color="secondary"

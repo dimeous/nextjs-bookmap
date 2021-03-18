@@ -11,6 +11,31 @@ import { Button } from '@material-ui/core'
 import { text } from './CryptoSection4Content'
 import Grid from '@material-ui/core/Grid'
 
+interface TabPanelProps {
+  children?: React.ReactNode
+  index: any
+  value: any
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`wrapped-tabpanel-${index}`}
+      aria-labelledby={`wrapped-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  )
+}
 function a11yProps(index: any) {
   return {
     id: `wrapped-tab-${index}`,
@@ -48,6 +73,11 @@ export default function CryptoSection4MobilePricing() {
           <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
           <Tab value="two" label={text.l2} {...a11yProps('two')} />
         </Tabs>
+        <TabPanel value={value} index="two">
+          <span className={classes.tabTwo} style={{ marginLeft: '31%' }}>
+            {text.l4}{' '}
+          </span>
+        </TabPanel>
       </div>
       <div
         className={classes.root}
@@ -319,9 +349,12 @@ export default function CryptoSection4MobilePricing() {
                 </span>
                 {value == 'one' && <span className={classes.priceCurrency}>/mo</span>}
                 {value == 'two' && (
-                  <span className={classes.priceCurrency} style={{ marginLeft: '8px' }}>
-                    annual
-                  </span>
+                  <>
+                    <span className={classes.priceCurrency} style={{ marginLeft: '8px' }}>
+                      annual
+                    </span>
+                    <span className={classes.priceSave}>Save $28/y</span>
+                  </>
                 )}
               </div>
 
