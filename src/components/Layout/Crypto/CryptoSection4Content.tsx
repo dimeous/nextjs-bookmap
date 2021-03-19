@@ -3,7 +3,7 @@ export const text: { [index: string]: any } = {
   h2: 'Trade cryptocurrencies and get many features with Bookmap desktop application ',
   l1: 'MONTHLY',
   l2: 'YEARLY',
-  l4: 'Save 16%',
+  l4: 'Save 15%',
   t1: 'digital',
   t2: 'digital+',
   r1: 'Bookmap desktop application',
