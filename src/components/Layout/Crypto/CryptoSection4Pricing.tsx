@@ -23,7 +23,7 @@ function Loop() {
   const content = []
   for (let i = 1; i <= 11; i++) {
     content.push(
-      <li>
+      <li key={i}>
         <p>{text['r' + i]}</p>
       </li>
     )

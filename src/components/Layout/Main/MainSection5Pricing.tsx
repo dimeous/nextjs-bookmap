@@ -130,7 +130,7 @@ export default function TabsWrappedLabelSection5() {
               <p>{text.addons}</p>
             </li>
           </ul>
-          {/*<div className={classes.bubble}>
+          <div className={classes.bubble}>
             <Typography component={'h5'} variant={'h5'} sx={{ paddingBottom: 2, paddingTop: 2 }}>
               Trading Crypto?
             </Typography>
@@ -147,7 +147,7 @@ export default function TabsWrappedLabelSection5() {
                 Open Crypto Page
               </Link>
             </Box>
-          </div>*/}
+          </div>
         </Box>
         {/* first table list*/}
         <Box className={classes.digital}>
