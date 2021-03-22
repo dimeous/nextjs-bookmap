@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import Tabs from '@material-ui/core/Tabs'
 import Link from '@material-ui/core/Link'
@@ -71,11 +71,36 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function MainSection2Features() {
+  const flippingTime = 5000
   const classes = useStyles()
+  const [clicked, setClicked] = React.useState(0)
   const [value, setValue] = React.useState('one')
+  const nextSlide = () => {
+    if (clicked) return
+    if (value == 'one') {
+      setValue('two')
+      return
+    }
+    if (value == 'two') {
+      setValue('three')
+      return
+    }
+    if (value == 'three') {
+      setValue('one')
+      return
+    }
+  }
+
+  useEffect(() => {
+    const interval_id = setInterval(nextSlide, flippingTime)
+    return () => {
+      clearInterval(interval_id)
+    }
+  })
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
+    setClicked(1)
   }
 
   return (
@@ -93,7 +118,7 @@ export default function MainSection2Features() {
         </Tabs>
 
         <TabPanel value={value} index="one">
-          <Grid container>
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/1_features_block.png"
@@ -121,7 +146,7 @@ export default function MainSection2Features() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index="two">
-          <Grid container>
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/2_features_block.png"
@@ -149,7 +174,7 @@ export default function MainSection2Features() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index="three">
-          <Grid container>
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/3_features_block.png"
