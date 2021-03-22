@@ -15,6 +15,11 @@ export const headersData = [
     label: 'Education',
     href: '/#education',
   },
+  {
+    label: 'Bookmap for Crypto',
+    href: '/crypto',
+    blank: true,
+  },
 ]
 
 export const resources = [
