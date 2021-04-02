@@ -33,13 +33,16 @@ const useStyles = makeStyles((theme) => ({
   },
   headTradePlatform: {
     paddingTop: '70px',
+    fontFamily: 'MullerRegular,sans-sanserif',
     [theme.breakpoints.down('md')]: {
       paddingTop: '27px',
       font: '32px/40px MullerLight,sans-sanserif',
       letterSpacing: '1.41px',
     },
   },
-
+  subHeader: {
+    font: '18px/28px MullerLight,sans-sanserif',
+  },
   bImage: {
     height: '100%',
     display: 'grid',
@@ -83,7 +86,10 @@ export default function CryptoSection0({ mobile }: CardProps) {
                   gutterBottom
                   className={classes.headTradePlatform}
                 >
-                  See market liquidity in real-time and gain a competitive advantage
+                  A trading platform that displays market liquidity
+                </Typography>
+                <Typography color="primary" paragraph className={classes.subHeader}>
+                  New! Multibook - see multiple order books in one chart
                 </Typography>
                 {!mobile && (
                   <Button
@@ -94,7 +100,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
                     id={'crypto_top_get_it_now'}
                     sx={{ mt: 7 }}
                   >
-                    Subscribe for free
+                    GET IT NOW
                   </Button>
                 )}
               </Container>
@@ -140,7 +146,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
             className={classes.button}
             id={'crypto_top_get_it_now'}
           >
-            Subscribe for free
+            GET IT NOW
           </Button>
         </Grid>
       )}
