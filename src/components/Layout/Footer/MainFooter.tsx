@@ -215,7 +215,7 @@ export default function MainFooter() {
                     <NextLink href="https://bookmap.com/symbol-table/">Symbol table</NextLink>
                   </li>
                   <li>
-                    <NextLink href="https://bookmap.com/pro-trader-webinars/">
+                    <NextLink href="https://bookmap.com/pro-trader-webinars">
                       Pro Trader Webinars
                     </NextLink>
                   </li>
@@ -234,7 +234,9 @@ export default function MainFooter() {
                       Forum
                     </a>
                   </li>
-		  <li><a href="https://bookmap.com/support/">Support</a></li>
+                  <li>
+                    <a href="https://bookmap.com/support/">Support</a>
+                  </li>
                 </ul>
               </li>
               <li className={classes.hasChildren}>
