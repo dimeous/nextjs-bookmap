@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Box, Grid } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import { text } from './CryptoSection3Content'
+import { text } from './CryptoSection5Content'
 import Typography from '@material-ui/core/Typography'
 import Image from 'next/image'
 
@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function CryptoSection3Mobile() {
+export default function CryptoSection5Mobile() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>

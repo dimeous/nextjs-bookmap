@@ -32,14 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    /*
-    borderRadius: '5px',
-    border: '1px solid #e5e5e5',
-    '&:hover': {
-      borderColor: 'transparent',
-      boxShadow: '0 0 6px rgba(81, 112, 136, .35)',
-    },
-        */
+
     '@media (max-width: 991px)': {
       margin: '10px 10px',
     },
@@ -57,8 +50,8 @@ export default function CryptoSection2Exchanges() {
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-      <Typography variant={'h3'} component={'h3'}>
-        Bookmap allows connecting to the following Crypto exchanges
+      <Typography variant={'h2'} component={'h2'}>
+        Connect to more <b>than 20 Crypto</b> exchanges
       </Typography>
       <div>
         <Grid container>
