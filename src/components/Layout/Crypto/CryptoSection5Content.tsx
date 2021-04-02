@@ -1,13 +1,13 @@
 export const text = {
-  h1: 'Take three simple steps to gain clarity with the Bookmap desktop application ',
+  h1: 'Get started in',
+  h2: 'three simple steps ',
   s1: {
-    lbl: 'Install Bookmap and connect to exchanges',
-    txt: 'Install Bookmap on Windows or macOS, and connect to compatible crypto exchanges',
+    lbl: 'Get Bookmap Digital+',
+    txt: 'Register, install and connect Bookmap to compatible crypto exchange',
   },
   s2: {
-    lbl: 'Delve into the advanced education',
-    txt:
-      'Explore free content or upgrade to Digital+ for professional education with live order flow analysis ',
+    lbl: 'Get Multibook',
+    txt: 'explore the benefit of multiple instruments within one chart',
   },
   s3: {
     lbl: 'Make informed trading decisions',

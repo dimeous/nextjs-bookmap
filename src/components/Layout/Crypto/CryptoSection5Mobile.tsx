@@ -39,6 +39,9 @@ export default function CryptoSection5Mobile() {
       <Typography variant="h2" style={{ width: '90%' }}>
         {text.h1}
       </Typography>
+      <Typography variant="h4" style={{ width: '90%' }}>
+        {text.h2}
+      </Typography>
       <Grid container>
         <Grid item xs={2}>
           <h4>01</h4>
@@ -57,7 +60,7 @@ export default function CryptoSection5Mobile() {
       </Box>
       <Grid container>
         <Grid item xs={2}>
-          <h4>02</h4>
+          <h4>2</h4>
         </Grid>
         <Grid item xs={8}>
           <h4>{text.s2.lbl}</h4>

@@ -63,8 +63,11 @@ export default function CryptoSection5DesktopGetStart() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
-      <Typography variant="h2" style={{ marginBottom: 75 + 'px' }}>
+      <Typography variant="h2" align="center">
         {text.h1}
+      </Typography>
+      <Typography variant="h3" style={{ marginBottom: 75 + 'px', color: '#0184f7' }} align="center">
+        {text.h2}
       </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
@@ -72,13 +75,13 @@ export default function CryptoSection5DesktopGetStart() {
             <CardMedia
               className={classes.media}
               component="img"
-              alt="Install Bookmap and connect to exchanges"
-              image="/static/crypto/s3/comp.png"
+              alt="1. Get Bookmap Digital+"
+              image="/static/crypto/s5/1.svg"
               title="Get Software"
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>01</span> {text.s1.lbl}
+                <span>1.</span> {text.s1.lbl}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
                 {text.s1.txt}
@@ -92,13 +95,13 @@ export default function CryptoSection5DesktopGetStart() {
             <CardMedia
               className={classes.media}
               component="img"
-              alt="Install Bookmap and connect to exchanges"
-              image="/static/crypto/s3/knowledge.png"
+              alt="2. Get Multibook"
+              image="/static/crypto/s5/2.svg"
               title="Connect Data"
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>02</span> {text.s2.lbl}
+                <span>2.</span> {text.s2.lbl}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
                 {text.s2.txt}
@@ -112,13 +115,13 @@ export default function CryptoSection5DesktopGetStart() {
             <CardMedia
               className={classes.media}
               component="img"
-              alt="Educate yourself"
-              image="/static/crypto/s3/rocket.png"
+              alt="3. Make informed trading decisions"
+              image="/static/crypto/s5/3.svg"
               title="Educate yourself"
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>03</span> {text.s3.lbl}
+                <span>3.</span> {text.s3.lbl}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
                 {text.s3.txt}
