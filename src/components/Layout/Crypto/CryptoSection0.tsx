@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headTradePlatform: {
     paddingTop: '70px',
-    fontFamily: 'MullerRegular,sans-sanserif',
+    fontFamily: 'MullerMedium,sans-sanserif',
     [theme.breakpoints.down('md')]: {
       paddingTop: '27px',
       font: '32px/40px MullerLight,sans-sanserif',
@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subHeader: {
     font: '18px/28px MullerLight,sans-sanserif',
+    maxWidth: '359px',
   },
   bImage: {
     height: '100%',

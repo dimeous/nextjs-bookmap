@@ -51,22 +51,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function CryptoSection1() {
+export default function CryptoSection1Features() {
   const list = [
     'View full-depth historical data with the dynamic heatmap',
     'Watch the battle between buyers and sellers in 3D with traded volume visualization',
-    'Master the order flow with advanced education, live trading webinars and more',
-    'Identify trends and intentions of others with unique indicators',
-    'Use Bookmap in real-time, or in replay to debrief your trading sessions',
+    'Connect to multiple exchanges / instruments at the same time',
+    'See all market data without aggregation',
+    'Use Bookmap in real-time or in replay to debrief your trading session',
+    'Access to many addons, including Multibook',
   ]
   const classes = useStyles()
   return (
     <Container fixed>
       <Container className={classes.textBlock}>
         <Typography component="h2" variant="h2" color="inherit" gutterBottom>
-          Bookmap<span>®</span>️ is the leading data visualization and trading platform, showing
-          what exactly is happening in the market to help crypto traders make informed trading
-          decisions
+          Key features
         </Typography>
       </Container>
       <List dense className={classes.root}>
@@ -76,7 +75,7 @@ export default function CryptoSection1() {
             <ListItem key={index} button className={classes.listitem}>
               <ListItemAvatar>
                 <Image
-                  src={`/static/crypto/s1/${index + 1}.png`}
+                  src={`/static/crypto/s1/${index + 1}.svg`}
                   width={75}
                   height={65}
                   alt={value}

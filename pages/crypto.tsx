@@ -1,6 +1,6 @@
 import React from 'react'
 import CryptoSection0 from '../src/components/Layout/Crypto/CryptoSection0'
-import CryptoSection1 from '../src/components/Layout/Crypto/CryptoSection1'
+import CryptoSection1Features from '../src/components/Layout/Crypto/CryptoSection1Features'
 import CryptoSection4MobilePricing from '../src/components/Layout/Crypto/CryptoSection4MobilePricing'
 import CryptoSection4Pricing from '../src/components/Layout/Crypto/CryptoSection4Pricing'
 import MainSection8UserReviews from '../src/components/Layout/Main/MainSection8UsersReviews'
@@ -21,7 +21,7 @@ export default function Index() {
       <CryptoHeader />
       <main>
         <CryptoSection0 mobile={mobile} />
-        <CryptoSection1 />
+        <CryptoSection1Features />
         <CryptoSection2Exchanges />
         {mobile ? <CryptoSection3Mobile /> : <CryptoSection3Desktop />}
         {mobile ? <CryptoSection4MobilePricing /> : <CryptoSection4Pricing />}
