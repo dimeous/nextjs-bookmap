@@ -5,9 +5,9 @@ import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import ClearIcon from '@material-ui/icons/Clear'
-import CheckIcon from '@material-ui/icons/Check'
-import { Button } from '@material-ui/core'
+import HighlightOffIcon from '@material-ui/icons/HighlightOff'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import { Button, Paper } from '@material-ui/core'
 import { text } from './CryptoSection4Content'
 
 function a11yProps(index: any) {
@@ -49,15 +49,17 @@ export default function CryptoSection4Pricing() {
           {text.h2}
         </Typography>
 
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="wrapped label tabs example"
-          className={classes.tabs}
-        >
-          <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
-          <Tab value="two" label={text.l2} {...a11yProps('two')} />
-        </Tabs>
+        <Paper square={false}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="wrapped label tabs example"
+            className={classes.tabs}
+          >
+            <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
+            <Tab value="two" label={text.l2} {...a11yProps('two')} />
+          </Tabs>
+        </Paper>
         <div>
           <span className={classes.tabTwo}>{text.l4} </span>
         </div>
@@ -74,22 +76,22 @@ export default function CryptoSection4Pricing() {
           <ul className={classes.priceTags}>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
@@ -102,27 +104,27 @@ export default function CryptoSection4Pricing() {
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <HighlightOffIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <HighlightOffIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <HighlightOffIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <HighlightOffIcon className={classes.clsIcon} />
               </p>
             </li>
             <li>
               <p>
-                <ClearIcon className={classes.clsIcon} />
+                <HighlightOffIcon className={classes.clsIcon} />
               </p>
             </li>
           </ul>
@@ -147,22 +149,22 @@ export default function CryptoSection4Pricing() {
           <ul className={classes.priceTags}>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
@@ -175,27 +177,27 @@ export default function CryptoSection4Pricing() {
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
             <li>
               <p>
-                <CheckIcon className={classes.chIcon} />
+                <CheckCircleIcon className={classes.chIcon} />
               </p>
             </li>
           </ul>

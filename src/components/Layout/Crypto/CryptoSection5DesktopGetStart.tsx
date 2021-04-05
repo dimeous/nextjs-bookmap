@@ -18,21 +18,7 @@ const useStyles = makeStyles(() => ({
   },
   oneStep: {
     display: 'flex',
-    alignItems: 'center',
     width: 'calc(33.33333% - 90px)',
-  },
-  stepSeparator: {
-    alignSelf: 'center',
-
-    backgroundColor: '#0184f7',
-    height: '3px',
-    marginRight: '65px',
-    marginTop: '-20px',
-    transform: 'translateY(13px)',
-    width: '70px',
-    '@media (max-width: 991px)': {
-      display: 'none',
-    },
   },
   media: {
     width: 'auto',
@@ -89,7 +75,6 @@ export default function CryptoSection5DesktopGetStart() {
             </CardContent>
           </Card>
         </Box>
-        <Box className={classes.stepSeparator}></Box>
         <Box className={classes.oneStep}>
           <Card className={classes.card}>
             <CardMedia
@@ -109,7 +94,7 @@ export default function CryptoSection5DesktopGetStart() {
             </CardContent>
           </Card>
         </Box>
-        <Box className={classes.stepSeparator}></Box>
+
         <Box className={classes.oneStep}>
           <Card className={classes.card}>
             <CardMedia
