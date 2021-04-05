@@ -2,8 +2,7 @@ import React from 'react'
 import { Typography, makeStyles } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import ReactPlayer from 'react-player/lazy'
-import Image from 'next/image'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,12 +13,6 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '110px',
       marginBottom: '120px',
     },
-  },
-  wrapper: {
-    position: 'relative',
-    paddingTop: '56.25%',
-    borderRadius: '20px',
-    overflow: 'hidden',
   },
 
   textBlock: {
