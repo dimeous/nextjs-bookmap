@@ -2,7 +2,7 @@ export default {
     title: "Bookmap®️ | Online Trading Platform 2020",
     description:
         "Best online trading platform ➤ See the volume with amazing clarity ➤ Different packages that best fits your trading needs ➤ Bookmap®️ - market data visualization and trading platform",
-    canonical: "https://bookmap.com/",
+    canonical: "https://bookmap.com",
     noindex: true,
     openGraph: {
         url: "https://bookmap.com",

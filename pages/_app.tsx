@@ -12,6 +12,7 @@ import PolicyWidget from '../src/components/policyWidget'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import TagManager from 'react-gtm-module'
+import { useRouter } from 'next/router'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
@@ -28,6 +29,7 @@ export default function MyApp(props: AppProps) {
     TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
   }, [])
 
+  SEO.canonical = SEO.canonical + useRouter().pathname
   return (
     <CacheProvider value={cache}>
       <Head>
