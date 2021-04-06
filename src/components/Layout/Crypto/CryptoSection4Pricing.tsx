@@ -1,5 +1,5 @@
 import React from 'react'
-import { styles } from '../Main/MainSection5PricingStyles'
+import { styles } from '../Crypto/CryptoSection4PricingStyles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
@@ -49,7 +49,7 @@ export default function CryptoSection4Pricing() {
           {text.h2}
         </Typography>
 
-        <Paper square={false}>
+        <Paper square={false} className={classes.papaerTabs}>
           <Tabs
             value={value}
             onChange={handleChange}
