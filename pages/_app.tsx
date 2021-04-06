@@ -29,7 +29,7 @@ export default function MyApp(props: AppProps) {
     TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
   }, [])
 
-  SEO.canonical = SEO.canonical + useRouter().pathname
+  SEO.canonical = SEO.canonical + useRouter().pathname + '/'
   return (
     <CacheProvider value={cache}>
       <Head>
