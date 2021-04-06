@@ -41,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   listitem: {
+    paddingTop: '8px',
+    paddingBottom: '8px',
     width: '45%',
     '&:hover': {
       background: 'none',

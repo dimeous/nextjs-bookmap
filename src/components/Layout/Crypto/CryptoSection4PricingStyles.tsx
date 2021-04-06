@@ -4,7 +4,7 @@ export const styles = makeStyles(() => ({
   root: {
     color: '#1a1833',
   },
-  papaerTabs: {
+  paperTabs: {
     width: '25%',
     borderRadius: '20px',
   },

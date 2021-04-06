@@ -9,6 +9,7 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import { Button, Paper } from '@material-ui/core'
 import { text } from './CryptoSection4Content'
+import { withStyles } from '@material-ui/core/styles'
 
 function a11yProps(index: any) {
   return {
@@ -30,6 +31,19 @@ function Loop() {
   }
   return content
 }
+
+const styleTab = {
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+  },
+}
+
 export default function CryptoSection4Pricing() {
   const classes = useStyles()
   const [value, setValue] = React.useState('one')
@@ -49,7 +63,7 @@ export default function CryptoSection4Pricing() {
           {text.h2}
         </Typography>
 
-        <Paper square={false} className={classes.papaerTabs}>
+        <Paper square={false} className={classes.paperTabs}>
           <Tabs
             value={value}
             onChange={handleChange}
