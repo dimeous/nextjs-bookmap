@@ -195,10 +195,24 @@ export default function CryptoSection4Pricing() {
                   <Typography component="h3" variant="h3" className={classes.cardT1}>
                     {text.t1}
                   </Typography>
-                  <Typography component="h4" variant="h4" className={classes.cardT2}>
-                    {value == 'one' && 19}
-                    {value == 'two' && 195}$
-                  </Typography>
+                  <Box>
+                    <Typography
+                      component="h4"
+                      variant="h4"
+                      className={classes.cardT2}
+                      style={{ display: 'inline-block' }}
+                    >
+                      {value == 'one' && 19}
+                      {value == 'two' && 195}$
+                    </Typography>
+                    <Typography
+                      className={classes.priceCurrency}
+                      style={{ marginLeft: '10px', fontSize: '20px', display: 'inline-block' }}
+                    >
+                      {value == 'one' && 'per month'}
+                      {value == 'two' && 'annual'}
+                    </Typography>
+                  </Box>
                 </Box>
                 <List className={classes.list}>
                   <ListItem>
