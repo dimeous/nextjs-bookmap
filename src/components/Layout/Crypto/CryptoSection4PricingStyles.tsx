@@ -4,21 +4,66 @@ export const styles = makeStyles(() => ({
   root: {
     color: '#1a1833',
   },
+  list: {
+    '& li': {
+      padding: '4px 0 0 16px',
+    },
+  },
+  noCard: {
+    background: 'none',
+    border: 'none',
+    boxShadow: 'none',
+  },
+  item: {
+    padding: 0,
+  },
+  cardT1: {
+    textTransform: 'uppercase',
+    color: '#4F6773',
+    marginBottom: '4px',
+  },
+  cardT2: {
+    fontWeight: 800,
+  },
+  cardAction: {
+    justifyContent: 'center',
+  },
+  clsText: {
+    color: '#8DA2AC',
+  },
+  noIndicator: {
+    display: 'none',
+  },
+  circle: {
+    width: '6px',
+    height: '6px',
+    backgroundColor: '#0085F9',
+    borderRadius: '3px',
+    position: 'absolute',
+    marginTop: '-6px',
+    marginLeft: '230px',
+    zIndex: 1,
+  },
+  selectedTab: {
+    backgroundColor: '#0085F9',
+    borderRadius: '20px',
+    color: '#fff',
+    fontWeight: 800,
+    transition: '.4s ease',
+  },
   paperTabs: {
-    width: '25%',
+    width: '328px',
     borderRadius: '20px',
   },
   tabs: {
-    marginBottom: '33px',
+    marginBottom: '4px',
+    padding: '4px 4px 4px 4px',
   },
   tabTwo: {
-    color: '#0185f9',
-    font: '14px/14px MullerMedium,sans-serif',
-    position: 'absolute',
-    textTransform: 'capitalize',
+    color: '#607D8B',
+    font: '12px/32px MullerMedium,sans-serif',
+    fontStyle: 'italic',
     transition: '.5s ease',
-    marginLeft: '210px',
-    transform: 'translateY(-23px)',
     zIndex: 1,
   },
   cPrices: {

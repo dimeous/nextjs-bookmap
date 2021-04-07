@@ -11,7 +11,6 @@ import CryptoHeader from '../src/components/Layout/Crypto/Header/CryptoHeader'
 import CryptoSection2Exchanges from '../src/components/Layout/Crypto/CryptoSection2Exchanges'
 import CryptoSection5DesktopGetStart from '../src/components/Layout/Crypto/CryptoSection5DesktopGetStart'
 import CryptoSection5Mobile from '../src/components/Layout/Crypto/CryptoSection5Mobile'
-import CryptoSection6FAQ from '../src/components/Layout/Crypto/CryptoSection6FAQ'
 import CryptoSection3MultiBook from '../src/components/Layout/Crypto/CryptoSection3MultiBook'
 
 export default function Index() {
@@ -28,7 +27,6 @@ export default function Index() {
         {mobile ? <CryptoSection5Mobile /> : <CryptoSection5DesktopGetStart />}
         {mobile ? <CryptoSection4MobilePricing /> : <CryptoSection4Pricing />}
         <MainSection8UserReviews mobile={mobile} crypto={true} />
-        <CryptoSection6FAQ />
       </main>
       <Footer />
     </>
