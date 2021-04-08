@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   carouselBox: {
     width: '60%',
   },
+  picCard: {
+    backgroundColor: '#37474F',
+  },
 }))
 
 export default function CryptoSection3MultiBook() {
@@ -117,7 +120,7 @@ export default function CryptoSection3MultiBook() {
                 <Typography>30 Day | 12 Hours</Typography>
               </CardContent>
             </Card>
-            <Card>
+            <Card className={classes.picCard}>
               <CardContent>
                 <Carousel
                   swipeable={true}
