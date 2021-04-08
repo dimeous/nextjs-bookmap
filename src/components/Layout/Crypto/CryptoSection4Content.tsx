@@ -36,6 +36,7 @@ export const text: { [index: string]: any } = {
   r12: '*NEW Multibook (Until August, 2021)',
   b1: 'GET DIGITAL',
   b2: 'GET DIGITAL+',
+  endtext: '* Available as part of Digital+ until August 2021',
   link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',
   link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171',
 }

@@ -202,11 +202,11 @@ export default function CryptoSection4Pricing() {
                       className={classes.cardT2}
                       style={{ display: 'inline-block' }}
                     >
+                      <b style={{ fontSize: '20px' }}>$</b>
                       {value == 'one' && 19}
-                      {value == 'two' && 195}$
+                      {value == 'two' && 195}
                     </Typography>
                     <Typography
-                      className={classes.priceCurrency}
                       style={{ marginLeft: '10px', fontSize: '20px', display: 'inline-block' }}
                     >
                       {value == 'one' && 'per month'}
@@ -249,47 +249,43 @@ export default function CryptoSection4Pricing() {
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r62} className={classes.clsText} />
+                    <ListItemText primary={text.r62} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r7} className={classes.clsText} />
+                    <ListItemText primary={text.r7} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r8} className={classes.clsText} />
+                    <ListItemText primary={text.r8} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r9} className={classes.clsText} />
+                    <ListItemText primary={text.r9} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r10} className={classes.clsText} />
+                    <ListItemText primary={text.r10} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r11} className={classes.clsText} />
+                    <ListItemText primary={text.r11} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} style={{ color: '#F08C3C' }} />
                     </ListItemIcon>
-                    <ListItemText
-                      primary={text.r12}
-                      className={classes.clsText}
-                      style={{ color: '#F08C3C' }}
-                    />
+                    <ListItemText primary={text.r12} style={{ color: '#F08C3C' }} />
                   </ListItem>
                 </List>
               </CardContent>
@@ -305,9 +301,11 @@ export default function CryptoSection4Pricing() {
             </Card>
           </Grid>
         </Grid>
-        <p className={classes.lifetimeMessage}>{text.endtext}</p>
+        <Typography className={classes.lifetimeMessage}>{text.endtext}</Typography>
         <div className={classes.cta}>
-          <p>Trading Stocks or Futures? Explore more features and opportunities Bookmap provides</p>
+          <Typography gutterBottom>
+            Trading Stocks or Futures? Explore more features and opportunities Bookmap provides
+          </Typography>
           <a href="https://bookmap.com/#pricing" target="_blank" rel={'noreferrer'}>
             Compare Prices & Packages
           </a>
