@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
+    color: '#fff',
   },
   cardHead: {},
   topBlock: {},
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   picCard: {
     backgroundColor: '#37474F',
   },
+  cardStar: {},
 }))
 
 export default function CryptoSection3MultiBook() {
@@ -115,6 +117,9 @@ export default function CryptoSection3MultiBook() {
           </Grid>
           <Grid item md={6} xs={12}>
             <Card>
+              <Box className={classes.cardStar}>
+                <Image src={'/static/crypto/s3/checkstar.svg'} alt="star" width={48} height={48} />
+              </Box>
               <CardContent>
                 <Typography>Limited Time OFFER</Typography>
                 <Typography>30 Day | 12 Hours</Typography>
