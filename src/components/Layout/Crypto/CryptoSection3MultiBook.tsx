@@ -1,7 +1,10 @@
-import React from 'react'
-import { Typography, makeStyles } from '@material-ui/core'
+import React, { Fragment } from 'react'
+import { Typography, makeStyles, Box, Card, CardContent } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
+import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '120px',
     },
   },
-
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
@@ -23,9 +25,52 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: 'MullerMedium, sans-serif',
   },
+  cardHead: {},
+  topBlock: {},
+  carouselBox: {
+    width: '60%',
+  },
 }))
 
 export default function CryptoSection3MultiBook() {
+  const items = [
+    {
+      name: 'Binance',
+    },
+    {
+      name: 'Bitstamp',
+    },
+    {
+      name: 'Coinbase',
+    },
+    {
+      name: 'Huobi',
+    },
+    {
+      name: (
+        <Fragment>
+          <b>Multibook</b> - all 4 combined
+        </Fragment>
+      ),
+    },
+  ]
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  }
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -65,7 +110,52 @@ export default function CryptoSection3MultiBook() {
               </div>
             </Container>
           </Grid>
-          <Grid item md={6} xs={12}></Grid>
+          <Grid item md={6} xs={12}>
+            <Card>
+              <CardContent>
+                <Typography>Limited Time OFFER</Typography>
+                <Typography>30 Day | 12 Hours</Typography>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <Carousel
+                  swipeable={true}
+                  responsive={responsive}
+                  ssr={true} // means to render carousel on server-side.
+                  infinite={true}
+                  autoPlay={true}
+                  autoPlaySpeed={5000}
+                  keyBoardControl={true}
+                  minimumTouchDrag={80}
+                  customTransition="all .5"
+                  transitionDuration={1000}
+                  removeArrowOnDeviceType={['tablet', 'mobile']}
+                  draggable={true}
+                  arrows={true}
+                >
+                  {items.map((item, i) => {
+                    return (
+                      <Box key={i} className={classes.carouselBox}>
+                        <Box className={classes.cardHead}>
+                          <Typography className={classes.title} gutterBottom>
+                            {item.name}
+                          </Typography>
+                          <Image
+                            src={'/static/crypto/s3/' + (i + 1) + '.png'}
+                            alt={i + ' img'}
+                            width={510}
+                            height={400}
+                            layout="intrinsic"
+                          />
+                        </Box>
+                      </Box>
+                    )
+                  })}
+                </Carousel>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
       </Container>
     </div>
