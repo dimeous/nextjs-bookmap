@@ -12,8 +12,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#E6ECEF',
     marginBottom: '145px',
     [theme.breakpoints.down('md')]: {
-      marginTop: '110px',
-      marginBottom: '120px',
+      marginBottom: '16px',
     },
   },
   container: {
@@ -33,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
   carouselBox: {
     width: '70%',
     marginLeft: '16%',
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
+      marginLeft: '5%',
+    },
   },
   picCard: {
     backgroundColor: '#37474F',
@@ -40,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     marginTop: '24px',
     height: '340px',
+    [theme.breakpoints.down('md')]: {
+      height: 'auto',
+    },
   },
 
   cardStarT1: {
@@ -68,7 +74,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function CryptoSection3MultiBook() {
+type CardProps = {
+  mobile: boolean
+}
+
+export default function CryptoSection3MultiBook({ mobile }: CardProps) {
   const items = [
     {
       name: 'Binance',
@@ -108,6 +118,19 @@ export default function CryptoSection3MultiBook() {
     },
   }
   const classes = useStyles()
+
+  const topCard = (
+    <Card className={classes.titleCard}>
+      <Box>
+        <Image src={'/static/crypto/s3/checkstar.svg'} alt="star" width={48} height={48} />
+      </Box>
+      <CardContent>
+        <Typography className={classes.cardStarT1}>Limited Time OFFER</Typography>
+        <Typography className={classes.cardStarT2}>30 Day | 12 Hours</Typography>
+      </CardContent>
+    </Card>
+  )
+
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -136,6 +159,7 @@ export default function CryptoSection3MultiBook() {
                 A new feature available in Digital+ allows you to view a consolidated order book and
                 traded volume in real-time from multiple exchanges.
               </Typography>
+              {mobile && <Box sx={{ pb: '48px', pt: '40px' }}>{topCard}</Box>}
               <Typography component="h3" variant="h3" color="secondary" gutterBottom>
                 Main benefits:
               </Typography>
@@ -161,22 +185,7 @@ export default function CryptoSection3MultiBook() {
             </Container>
           </Grid>
           <Grid item md={6} xs={12}>
-            <Box sx={{ display: 'flex', justifyContent: 'right' }}>
-              <Card className={classes.titleCard}>
-                <Box>
-                  <Image
-                    src={'/static/crypto/s3/checkstar.svg'}
-                    alt="star"
-                    width={48}
-                    height={48}
-                  />
-                </Box>
-                <CardContent>
-                  <Typography className={classes.cardStarT1}>Limited Time OFFER</Typography>
-                  <Typography className={classes.cardStarT2}>30 Day | 12 Hours</Typography>
-                </CardContent>
-              </Card>
-            </Box>
+            <Box sx={{ display: 'flex', justifyContent: 'right' }}>{!mobile && topCard}</Box>
             <Card className={classes.picCard}>
               <CardContent>
                 <Carousel

@@ -8,7 +8,7 @@ import Container from '@material-ui/core/Container'
 import ClearIcon from '@material-ui/icons/Clear'
 import CheckIcon from '@material-ui/icons/Check'
 import { Button } from '@material-ui/core'
-import { text } from './CryptoSection4Content'
+import { text } from './CryptoSection5Content'
 import Grid from '@material-ui/core/Grid'
 
 function a11yProps(index: any) {
@@ -20,7 +20,7 @@ function a11yProps(index: any) {
 
 const useStyles = styles
 
-export default function CryptoSection4MobilePricing() {
+export default function CryptoSection5MobilePricing() {
   const classes = useStyles()
   const [value, setValue] = React.useState('one')
 

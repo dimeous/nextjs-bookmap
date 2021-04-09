@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Box, Card, CardMedia, CardContent, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import { text } from './CryptoSection5Content'
+import { text } from './CryptoSection4Content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -45,7 +45,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function CryptoSection5DesktopGetStart() {
+export default function CryptoSection4DesktopGetStart() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>

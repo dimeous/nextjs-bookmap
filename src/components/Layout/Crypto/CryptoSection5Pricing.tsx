@@ -1,5 +1,5 @@
 import React from 'react'
-import { styles } from '../Crypto/CryptoSection4PricingStyles'
+import { styles } from './CryptoSection5PricingStyles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
@@ -19,7 +19,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@material-ui/core'
-import { text } from './CryptoSection4Content'
+import { text } from './CryptoSection5Content'
 
 function a11yProps(index: any) {
   return {
@@ -42,7 +42,7 @@ function Loop() {
   return content
 }
 
-export default function CryptoSection4Pricing() {
+export default function CryptoSection5Pricing() {
   const classes = useStyles()
   const [value, setValue] = React.useState('one')
 
