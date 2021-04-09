@@ -16,10 +16,8 @@ export const styles = makeStyles(() => ({
     },
   },
   container: {
-    [theme.breakpoints.down('md')]: {
-      paddingTop: '45px',
-      paddingBottom: '45px',
-    },
+    paddingTop: '45px',
+    paddingBottom: '45px',
   },
   divDiscount: {
     [theme.breakpoints.down('md')]: {
