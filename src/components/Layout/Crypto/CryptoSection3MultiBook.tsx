@@ -198,7 +198,6 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
                   keyBoardControl={true}
                   minimumTouchDrag={80}
                   customTransition="all .5"
-                  transitionDuration={1000}
                   removeArrowOnDeviceType={['tablet', 'mobile']}
                   draggable={true}
                   arrows={true}
