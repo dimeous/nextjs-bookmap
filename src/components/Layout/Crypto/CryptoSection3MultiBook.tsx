@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Typography, makeStyles, Box, Card, CardContent } from '@material-ui/core'
+import { Typography, makeStyles, Box, Card, CardContent, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Carousel from 'react-multi-carousel'
@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '120px',
     },
   },
+  container: {
+    paddingTop: '75px',
+    paddingBottom: '75px',
+  },
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
@@ -24,17 +28,44 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#fff',
+    color: '#124258',
   },
-  cardHead: {},
-  topBlock: {},
   carouselBox: {
-    width: '60%',
+    width: '70%',
+    marginLeft: '16%',
   },
   picCard: {
     backgroundColor: '#37474F',
+    borderRadius: '10px',
+    width: '100%',
+    marginTop: '24px',
+    height: '340px',
   },
-  cardStar: {},
+
+  cardStarT1: {
+    font: '14px/22px MullerMedium, sans-serif',
+  },
+  cardStarT2: {
+    font: '18px/22px MullerLight, sans-serif',
+    color: '#607D8B',
+    fontWeight: 700,
+  },
+
+  titleCard: {
+    width: '265px',
+    height: '82px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '9px 16px',
+    border: '1px solid #0085F9',
+  },
+  picTitle: {
+    textAlign: 'center',
+    font: '22px/32px MullerMedium, sans-serif',
+    color: '#fff',
+  },
 }))
 
 export default function CryptoSection3MultiBook() {
@@ -79,7 +110,7 @@ export default function CryptoSection3MultiBook() {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Container fixed>
+      <Container fixed className={classes.container}>
         <Grid container>
           <Grid item md={6} xs={12}>
             <Container className={classes.textBlock}>
@@ -92,7 +123,13 @@ export default function CryptoSection3MultiBook() {
               >
                 New! Multibook
               </Typography>
-              <Typography component="h5" variant="h5" color="inherit" gutterBottom>
+              <Typography
+                component="h5"
+                variant="h5"
+                color="inherit"
+                gutterBottom
+                sx={{ color: '#124258', fontWeight: 800 }}
+              >
                 One pair across multiple exchanges
               </Typography>
               <Typography color="inherit" paragraph>
@@ -113,18 +150,33 @@ export default function CryptoSection3MultiBook() {
                   <li>Build your own synthetic instrument.</li>
                 </ul>
               </div>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171"
+                sx={{ width: '300px' }}
+              >
+                Get MultiBook with Digital+ &rarr;
+              </Button>
             </Container>
           </Grid>
           <Grid item md={6} xs={12}>
-            <Card>
-              <Box className={classes.cardStar}>
-                <Image src={'/static/crypto/s3/checkstar.svg'} alt="star" width={48} height={48} />
-              </Box>
-              <CardContent>
-                <Typography>Limited Time OFFER</Typography>
-                <Typography>30 Day | 12 Hours</Typography>
-              </CardContent>
-            </Card>
+            <Box sx={{ display: 'flex', justifyContent: 'right' }}>
+              <Card className={classes.titleCard}>
+                <Box>
+                  <Image
+                    src={'/static/crypto/s3/checkstar.svg'}
+                    alt="star"
+                    width={48}
+                    height={48}
+                  />
+                </Box>
+                <CardContent>
+                  <Typography className={classes.cardStarT1}>Limited Time OFFER</Typography>
+                  <Typography className={classes.cardStarT2}>30 Day | 12 Hours</Typography>
+                </CardContent>
+              </Card>
+            </Box>
             <Card className={classes.picCard}>
               <CardContent>
                 <Carousel
@@ -145,15 +197,15 @@ export default function CryptoSection3MultiBook() {
                   {items.map((item, i) => {
                     return (
                       <Box key={i} className={classes.carouselBox}>
-                        <Box className={classes.cardHead}>
-                          <Typography className={classes.title} gutterBottom>
+                        <Box>
+                          <Typography className={classes.picTitle} gutterBottom>
                             {item.name}
                           </Typography>
                           <Image
                             src={'/static/crypto/s3/' + (i + 1) + '.png'}
                             alt={i + ' img'}
-                            width={510}
-                            height={400}
+                            width={800}
+                            height={510}
                             layout="intrinsic"
                           />
                         </Box>

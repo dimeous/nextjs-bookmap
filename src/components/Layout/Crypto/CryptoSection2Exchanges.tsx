@@ -9,7 +9,7 @@ import ImagePopover from '../Main/MainSection4Popover'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    marginBottom: '145px',
+    marginBottom: '32px',
     backgroundColor: theme.palette.background.paper,
     '& h3': {
       [theme.breakpoints.up('md')]: {
