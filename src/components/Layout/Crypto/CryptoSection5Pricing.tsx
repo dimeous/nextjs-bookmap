@@ -30,18 +30,6 @@ function a11yProps(index: any) {
 
 const useStyles = styles
 
-function Loop() {
-  const content = []
-  for (let i = 1; i <= 11; i++) {
-    content.push(
-      <li key={i}>
-        <p>{text['r' + i]}</p>
-      </li>
-    )
-  }
-  return content
-}
-
 export default function CryptoSection5Pricing() {
   const classes = useStyles()
   const [value, setValue] = React.useState('one')
@@ -52,8 +40,7 @@ export default function CryptoSection5Pricing() {
 
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
-      <Container fixed style={{ marginBottom: '145px' }}>
-        <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
+      <Container fixed className={classes.container}>
         <div className={classes.root}>
           <Typography component="h2" variant="h2">
             {text.h1}
@@ -86,7 +73,7 @@ export default function CryptoSection5Pricing() {
             </Tabs>
             <div className={classes.circle}> </div>
           </Paper>
-          <div>
+          <div className={classes.divDiscount}>
             <span className={classes.tabTwo}>*15% discount{"'"} for the Yearly subscription</span>
           </div>
         </div>

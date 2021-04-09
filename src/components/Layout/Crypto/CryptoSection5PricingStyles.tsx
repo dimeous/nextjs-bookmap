@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import theme from '../../../theme'
 
 export const styles = makeStyles(() => ({
   root: {
@@ -7,6 +8,23 @@ export const styles = makeStyles(() => ({
   list: {
     '& li': {
       padding: '4px 0 0 16px',
+      '& span': {
+        [theme.breakpoints.down('md')]: {
+          fontSize: '1rem',
+        },
+      },
+    },
+  },
+  container: {
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '45px',
+      paddingBottom: '45px',
+    },
+  },
+  divDiscount: {
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      justifyContent: 'right',
     },
   },
   noCard: {
@@ -43,6 +61,12 @@ export const styles = makeStyles(() => ({
     marginTop: '-6px',
     marginLeft: '230px',
     zIndex: 1,
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '325px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '52%',
+    },
   },
   selectedTab: {
     backgroundColor: '#0085F9',
@@ -54,10 +78,18 @@ export const styles = makeStyles(() => ({
   paperTabs: {
     width: '328px',
     borderRadius: '20px',
+    [theme.breakpoints.down('md')]: {
+      width: '63%',
+    },
   },
   tabs: {
     marginBottom: '4px',
     padding: '4px 4px 4px 4px',
+    [theme.breakpoints.down('md')]: {
+      '& button': {
+        minHeight: 0,
+      },
+    },
   },
   tabTwo: {
     color: '#607D8B',
@@ -94,6 +126,9 @@ export const styles = makeStyles(() => ({
       color: '#607D8B',
       fontFamily: 'MullerRegular,sans-serif',
       textAlign: 'center',
+      [theme.breakpoints.down('md')]: {
+        fontSize: '1rem',
+      },
     },
     '& a': {
       color: '#0185f9',
@@ -102,6 +137,9 @@ export const styles = makeStyles(() => ({
       textDecoration: 'none',
       textTransform: 'uppercase',
       transition: '.5s ease',
+      [theme.breakpoints.down('md')]: {
+        fontSize: '1rem',
+      },
     },
   },
 }))
