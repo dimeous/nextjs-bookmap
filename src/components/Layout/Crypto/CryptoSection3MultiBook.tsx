@@ -38,8 +38,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   picCard: {
-    backgroundColor: '#37474F',
-    borderRadius: '10px',
     width: '100%',
     marginTop: '24px',
     height: '340px',
@@ -70,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
   picTitle: {
     textAlign: 'center',
     font: '22px/32px MullerMedium, sans-serif',
-    color: '#fff',
   },
 }))
 
@@ -186,18 +183,17 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
           </Grid>
           <Grid item md={6} xs={12}>
             <Box sx={{ display: 'flex', justifyContent: 'right' }}>{!mobile && topCard}</Box>
-            <Card className={classes.picCard}>
-              <CardContent>
+            <Box className={classes.picCard}>
+              <Box>
                 <Carousel
                   swipeable={true}
                   responsive={responsive}
                   //  ssr={true}  means to render carousel on server-side.
                   infinite={true}
                   autoPlay={true}
-                  autoPlaySpeed={5000}
+                  autoPlaySpeed={3000}
                   keyBoardControl={true}
                   minimumTouchDrag={80}
-                  customTransition="all .5"
                   removeArrowOnDeviceType={['tablet', 'mobile']}
                   draggable={true}
                   arrows={true}
@@ -221,8 +217,8 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
                     )
                   })}
                 </Carousel>
-              </CardContent>
-            </Card>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Container>
