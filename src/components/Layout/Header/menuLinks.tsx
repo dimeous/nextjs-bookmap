@@ -17,7 +17,7 @@ export const headersData = [
   },
   {
     label: 'Bookmap for Crypto',
-    href: '/crypto',
+    href: '/crypto/',
     blank: true,
   },
 ]
