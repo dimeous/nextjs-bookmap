@@ -6,6 +6,25 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import Image from 'next/image'
 import StarIcon from '@material-ui/icons/Star'
+import { GetStaticProps } from 'next'
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,13 +74,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const StarsRaiting = function (num: number) {
+const StarsRaiting = function (num: number): JSX.Element {
   const content = []
-  for (let i = 0; i < 5; i++) content.push(<StarIcon sx={{ color: '#0085F9' }} />)
-  return <div>{content}</div>
+  for (let i = 0; i < num; i++) content.push(<StarIcon style={{ color: '#0085F9' }} />)
+  for (let i = num; i < 5; i++) content.push(<StarIcon style={{ color: '#CCD8DD' }} />)
+  return <>{content}</>
 }
 
-export default function CryptoSection6UserReviews() {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { data } = await fetch(`https://jsonplaceholder.typicode.com/todos`)
+  console.log(data)
+  return {
+    props: {
+      data,
+    },
+  }
+}
+
+export default function CryptoSection6UserReviews({ data }) {
   const items = [
     {
       name: 'Binance',
@@ -83,32 +113,20 @@ export default function CryptoSection6UserReviews() {
       ),
     },
   ]
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  }
-  const classes = useStyles()
 
+  const classes = useStyles()
+  const handleClick = (e) => {
+    console.log(e)
+  }
   return (
     <div className={classes.root}>
+      {data}
       <Container fixed className={classes.container}>
         <Grid container>
           <Grid item md={3} xs={12}>
             <Container className={classes.textBlock}>
-              <div>{StarsRaiting(5)}</div>
+              <button onClick={handleClick}> Активировать лазеры</button>
+
               <Typography
                 component="h2"
                 variant="h2"
@@ -118,6 +136,8 @@ export default function CryptoSection6UserReviews() {
               >
                 User Reviews
               </Typography>
+              <div>{StarsRaiting(4)}</div>
+
               <Typography
                 component="h5"
                 variant="h5"
