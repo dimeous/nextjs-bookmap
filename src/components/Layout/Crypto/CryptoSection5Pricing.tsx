@@ -63,7 +63,7 @@ export default function CryptoSection5Pricing() {
         </div>
         <Grid container>
           <Grid item md={6}>
-            <Card className={classes.noCard}>
+            <Box className={classes.noCard}>
               <CardContent>
                 <Box sx={{ pl: 2 }}>
                   <Typography component="h3" variant="h3" className={classes.cardT1}>
@@ -157,7 +157,7 @@ export default function CryptoSection5Pricing() {
                   {text.b1}
                 </Button>
               </CardActions>
-            </Card>
+            </Box>
           </Grid>
           <Grid item md={6}>
             <Card>
