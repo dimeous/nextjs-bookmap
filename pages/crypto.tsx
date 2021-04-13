@@ -11,7 +11,7 @@ import CryptoSection2Exchanges from '../src/components/Layout/Crypto/CryptoSecti
 import CryptoSection4DesktopGetStart from '../src/components/Layout/Crypto/CryptoSection4DesktopGetStart'
 import CryptoSection4MobileGetStart from '../src/components/Layout/Crypto/CryptoSection4MobileGetStart'
 import CryptoSection3MultiBook from '../src/components/Layout/Crypto/CryptoSection3MultiBook'
-import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
+//import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
 
 export default function Index() {
   const theme = useTheme()
@@ -26,7 +26,6 @@ export default function Index() {
         <CryptoSection3MultiBook mobile={mobile} />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
         <CryptoSection5Pricing />
-        <CryptoSection6UserReviews />
         <MainSection8UserReviews mobile={mobile} crypto={true} />
       </main>
       <Footer />

@@ -6,7 +6,6 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import Image from 'next/image'
 import StarIcon from '@material-ui/icons/Star'
-import { GetStaticProps } from 'next'
 
 const responsive = {
   desktop: {
@@ -81,17 +80,7 @@ const StarsRaiting = function (num: number): JSX.Element {
   return <>{content}</>
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { data } = await fetch(`https://jsonplaceholder.typicode.com/todos`)
-  console.log(data)
-  return {
-    props: {
-      data,
-    },
-  }
-}
-
-export default function CryptoSection6UserReviews({ data }) {
+export default function CryptoSection6UserReviews() {
   const items = [
     {
       name: 'Binance',
@@ -115,8 +104,8 @@ export default function CryptoSection6UserReviews({ data }) {
   ]
 
   const classes = useStyles()
-  const handleClick = (e) => {
-    console.log(e)
+  const handleClick = () => {
+    console.log()
   }
   return (
     <div className={classes.root}>
