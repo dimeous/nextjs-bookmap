@@ -51,7 +51,7 @@ export default function CryptoSection2Exchanges() {
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Typography variant={'h2'} component={'h2'}>
-        Connect to more <b>than 20 Crypto</b> exchanges
+        Connect to over <b>20 Crypto</b> exchanges and get data for free
       </Typography>
       <div>
         <Grid container>

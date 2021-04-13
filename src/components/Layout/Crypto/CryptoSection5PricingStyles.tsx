@@ -5,6 +5,23 @@ export const styles = makeStyles(() => ({
   root: {
     color: '#1a1833',
   },
+  tabTwo: {
+    color: '#0185f9',
+    font: '14px/14px MullerMedium,sans-serif',
+    position: 'absolute',
+    textTransform: 'capitalize',
+    transition: '.5s ease',
+    marginLeft: '210px',
+    transform: 'translateY(-23px)',
+    zIndex: 1,
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '29%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '31%',
+    },
+  },
+
   list: {
     '& li': {
       padding: '4px 0 0 16px',
@@ -19,12 +36,7 @@ export const styles = makeStyles(() => ({
     paddingTop: '45px',
     paddingBottom: '45px',
   },
-  divDiscount: {
-    [theme.breakpoints.down('md')]: {
-      display: 'flex',
-      justifyContent: 'right',
-    },
-  },
+
   noCard: {
     background: 'none',
     border: 'none',
@@ -47,54 +59,8 @@ export const styles = makeStyles(() => ({
   clsText: {
     color: '#8DA2AC',
   },
-  noIndicator: {
-    display: 'none',
-  },
-  circle: {
-    width: '6px',
-    height: '6px',
-    backgroundColor: '#0085F9',
-    borderRadius: '3px',
-    position: 'absolute',
-    marginTop: '-6px',
-    marginLeft: '230px',
-    zIndex: 1,
-    [theme.breakpoints.down('md')]: {
-      marginLeft: '325px',
-    },
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: '52%',
-    },
-  },
-  selectedTab: {
-    backgroundColor: '#0085F9',
-    borderRadius: '20px',
-    color: '#fff',
-    fontWeight: 800,
-    transition: '.4s ease',
-  },
-  paperTabs: {
-    width: '328px',
-    borderRadius: '20px',
-    [theme.breakpoints.down('md')]: {
-      width: '63%',
-    },
-  },
   tabs: {
-    marginBottom: '4px',
-    padding: '4px 4px 4px 4px',
-    [theme.breakpoints.down('md')]: {
-      '& button': {
-        minHeight: 0,
-      },
-    },
-  },
-  tabTwo: {
-    color: '#607D8B',
-    font: '12px/32px MullerMedium,sans-serif',
-    fontStyle: 'italic',
-    transition: '.5s ease',
-    zIndex: 1,
+    marginBottom: '33px',
   },
   checkIcon: {
     color: '#0084f6',

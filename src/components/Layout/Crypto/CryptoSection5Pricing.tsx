@@ -10,7 +10,6 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import {
   Button,
   Grid,
-  Paper,
   Card,
   CardContent,
   CardActions,
@@ -49,32 +48,17 @@ export default function CryptoSection5Pricing() {
             {text.h2}
           </Typography>
 
-          <Paper square={false} className={classes.paperTabs}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="wrapped label tabs example"
-              className={classes.tabs}
-              classes={{ indicator: classes.noIndicator }}
-            >
-              <Tab
-                value="one"
-                label={text.l1}
-                wrapped
-                {...a11yProps('one')}
-                classes={{ selected: classes.selectedTab }}
-              />
-              <Tab
-                value="two"
-                label={text.l2}
-                {...a11yProps('two')}
-                classes={{ selected: classes.selectedTab }}
-              />
-            </Tabs>
-            <div className={classes.circle}> </div>
-          </Paper>
-          <div className={classes.divDiscount}>
-            <span className={classes.tabTwo}>*15% discount{"'"} for the Yearly subscription</span>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="wrapped label tabs example"
+            className={classes.tabs}
+          >
+            <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
+            <Tab value="two" label={text.l2} {...a11yProps('two')} />
+          </Tabs>
+          <div>
+            <span className={classes.tabTwo}>{text.l4} </span>
           </div>
         </div>
         <Grid container>
@@ -180,7 +164,7 @@ export default function CryptoSection5Pricing() {
               <CardContent>
                 <Box sx={{ pl: 2 }}>
                   <Typography component="h3" variant="h3" className={classes.cardT1}>
-                    {text.t1}
+                    {text.t2}
                   </Typography>
                   <Box>
                     <Typography
@@ -288,12 +272,17 @@ export default function CryptoSection5Pricing() {
             </Card>
           </Grid>
         </Grid>
-        <Typography className={classes.lifetimeMessage}>{text.endtext}</Typography>
+
         <div className={classes.cta}>
-          <Typography gutterBottom>
+          <Typography sx={{ pt: 4, pb: 4 }}>
             Trading Stocks or Futures? Explore more features and opportunities Bookmap provides
           </Typography>
-          <a href="https://bookmap.com/#pricing" target="_blank" rel={'noreferrer'}>
+          <a
+            href="https://bookmap.com/#pricing"
+            target="_blank"
+            rel={'noreferrer'}
+            style={{ textTransform: 'none' }}
+          >
             Compare Prices & Packages
           </a>
         </div>

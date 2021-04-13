@@ -57,7 +57,7 @@ export default function CryptoSection1Features() {
   const list = [
     'View full-depth historical data with the dynamic heatmap',
     'Watch the battle between buyers and sellers in 3D with traded volume visualization',
-    'Connect to multiple exchanges / instruments at the same time',
+    'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
     'See all market data without aggregation',
     'Use Bookmap in real-time or in replay to debrief your trading session',
     'Access to many addons, including Multibook',

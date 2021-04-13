@@ -141,7 +141,7 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
                 gutterBottom
                 className={classes.title}
               >
-                New! Multibook
+                New Addon, Multibook!
               </Typography>
               <Typography
                 component="h5"
@@ -150,25 +150,19 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
                 gutterBottom
                 sx={{ color: '#124258', fontWeight: 800 }}
               >
-                One pair across multiple exchanges
+                Binance + Coinbase + Huobi = Multibook
               </Typography>
               <Typography color="inherit" paragraph>
-                A new feature available in Digital+ allows you to view a consolidated order book and
-                traded volume in real-time from multiple exchanges.
+                Create synthetic instruments and see multiple crypto exchanges in one chart.
               </Typography>
               {mobile && <Box sx={{ pb: '48px', pt: '40px' }}>{topCard}</Box>}
-              <Typography component="h3" variant="h3" color="secondary" gutterBottom>
-                Main benefits:
-              </Typography>
+
               <div>
                 <ul>
-                  <li>
-                    See market liquidity and traded volume of the largest exchanges in a single
-                    chart.
-                  </li>
-                  <li>View total volume delta across multiple exchanges.</li>
-                  <li>Watch Best Bid and Offer from multiple exchanges.</li>
-                  <li>Build your own synthetic instrument.</li>
+                  <li>See market liquidity and traded volume</li>
+                  <li>View total volume delta across</li>
+                  <li>Analyze Best Bid and Offer</li>
+                  <li>Build your own synthetic instrument</li>
                 </ul>
               </div>
               <Button
@@ -177,7 +171,7 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
                 href="https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171"
                 sx={{ width: '300px' }}
               >
-                Get MultiBook with Digital+ &rarr;
+                Get MultiBook with Digital+
               </Button>
             </Container>
           </Grid>

@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
   },
   oneStep: {
     display: 'flex',
-    width: 'calc(33.33333% - 90px)',
+    width: 'calc(38.33333% - 90px)',
   },
   media: {
     width: 'auto',
@@ -43,6 +43,11 @@ const useStyles = makeStyles(() => ({
       marginRight: '10%',
     },
   },
+  stepNumber: {
+    color: '#0184f7',
+    font: '40px/40px MullerMedium,sans-serif',
+    paddingTop: '23px',
+  },
 }))
 
 export default function CryptoSection4DesktopGetStart() {
@@ -51,9 +56,6 @@ export default function CryptoSection4DesktopGetStart() {
     <Container fixed className={classes.root}>
       <Typography variant="h2" align="center">
         {text.h1}
-      </Typography>
-      <Typography variant="h3" style={{ marginBottom: 75 + 'px', color: '#0184f7' }} align="center">
-        {text.h2}
       </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
@@ -66,12 +68,17 @@ export default function CryptoSection4DesktopGetStart() {
               title="Get Software"
             />
             <CardContent>
-              <Typography className={classes.stepHeader}>
-                <span>1.</span> {text.s1.lbl}
-              </Typography>
-              <Typography variant="body2" color="textPrimary" component="p">
-                {text.s1.txt}
-              </Typography>
+              <Box sx={{ display: 'inline-flex' }}>
+                <Box sx={{ p: 1 }}>
+                  <Typography className={classes.stepNumber}>1. </Typography>
+                </Box>
+                <Box sx={{ pl: 2 }}>
+                  <Typography className={classes.stepHeader}>{text.s1.lbl}</Typography>
+                  <Typography variant="body2" color="textPrimary" component="p">
+                    {text.s1.txt}
+                  </Typography>
+                </Box>
+              </Box>
             </CardContent>
           </Card>
         </Box>
@@ -85,12 +92,17 @@ export default function CryptoSection4DesktopGetStart() {
               title="Connect Data"
             />
             <CardContent>
-              <Typography className={classes.stepHeader}>
-                <span>2.</span> {text.s2.lbl}
-              </Typography>
-              <Typography variant="body2" color="textPrimary" component="p">
-                {text.s2.txt}
-              </Typography>
+              <Box sx={{ display: 'inline-flex' }}>
+                <Box sx={{ p: 1 }}>
+                  <Typography className={classes.stepNumber}>2. </Typography>
+                </Box>
+                <Box sx={{ pl: 2 }}>
+                  <Typography className={classes.stepHeader}>{text.s2.lbl}</Typography>
+                  <Typography variant="body2" color="textPrimary" component="p">
+                    {text.s2.txt}
+                  </Typography>
+                </Box>
+              </Box>
             </CardContent>
           </Card>
         </Box>
@@ -105,12 +117,17 @@ export default function CryptoSection4DesktopGetStart() {
               title="Educate yourself"
             />
             <CardContent>
-              <Typography className={classes.stepHeader}>
-                <span>3.</span> {text.s3.lbl}
-              </Typography>
-              <Typography variant="body2" color="textPrimary" component="p">
-                {text.s3.txt}
-              </Typography>
+              <Box sx={{ display: 'inline-flex' }}>
+                <Box sx={{ p: 1 }}>
+                  <Typography className={classes.stepNumber}>3. </Typography>
+                </Box>
+                <Box sx={{ pl: 2 }}>
+                  <Typography className={classes.stepHeader}>{text.s3.lbl}</Typography>
+                  <Typography variant="body2" color="textPrimary" component="p">
+                    {text.s3.txt}
+                  </Typography>
+                </Box>
+              </Box>
             </CardContent>
           </Card>
         </Box>

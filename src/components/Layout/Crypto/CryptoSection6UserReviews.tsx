@@ -109,7 +109,6 @@ export default function CryptoSection6UserReviews() {
   }
   return (
     <div className={classes.root}>
-      {data}
       <Container fixed className={classes.container}>
         <Grid container>
           <Grid item md={3} xs={12}>

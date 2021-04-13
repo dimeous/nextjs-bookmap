@@ -88,9 +88,6 @@ export default function CryptoSection4MobileGetStart() {
         <Typography component="h2" variant="h2" color="inherit" gutterBottom>
           {text.h1}
         </Typography>
-        <Typography variant="h3" className={classes.head2} align="center">
-          {text.h2}
-        </Typography>
       </Container>
       <List dense className={classes.root}>
         {list.map((value, index) => {
