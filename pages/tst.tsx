@@ -25,15 +25,7 @@ const UserReview = function (html: { html: string }) {
     })
     return <ul>{content}</ul>
   }
-
-  //console.log(doc.que
-  // rySelector('body').innerHTML)
-  return (
-    <div>
-      asd
-      {arrReviews(docArticles)}
-    </div>
-  )
+  return <div>{arrReviews(docArticles)}</div>
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   try {
