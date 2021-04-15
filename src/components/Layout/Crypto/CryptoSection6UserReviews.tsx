@@ -252,7 +252,7 @@ export default function CryptoSection6UserReviews({ data }: CardProps) {
                           </CardContent>
                           <CardActions className={classes.cardAct}>
                             <Link
-                              href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
+                              href={item.socialShareUrl}
                               color="secondary"
                               target={'_blank'}
                               rel={'noreferrer'}
