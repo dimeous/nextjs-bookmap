@@ -139,9 +139,10 @@ const BookmapReviewParse = function (html: string) {
 }
 
 export default function CryptoSection6UserReviews({ data }: CardProps) {
+  const classes = useStyles()
   const usrReviews = UserReviews(data)
   const bokmapReview = BookmapReviewParse(data)
-  const classes = useStyles()
+
   return (
     <div className={classes.root} suppressHydrationWarning={true}>
       <Container fixed className={classes.container}>

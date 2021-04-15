@@ -11,10 +11,10 @@ import CryptoSection2Exchanges from '../src/components/Layout/Crypto/CryptoSecti
 import CryptoSection4DesktopGetStart from '../src/components/Layout/Crypto/CryptoSection4DesktopGetStart'
 import CryptoSection4MobileGetStart from '../src/components/Layout/Crypto/CryptoSection4MobileGetStart'
 import CryptoSection3MultiBook from '../src/components/Layout/Crypto/CryptoSection3MultiBook'
-import { GetStaticProps, NextPage } from 'next'
+import { GetStaticProps, NextPage, GetStaticPropsResult } from 'next'
 import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
 
-const Index: NextPage<{ data: string }> = (props) => {
+const Index: NextPage<{ data: string }> = (props: Props) => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
@@ -27,7 +27,7 @@ const Index: NextPage<{ data: string }> = (props) => {
         <CryptoSection3MultiBook mobile={mobile} />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
         <CryptoSection5Pricing />
-        <CryptoSection6UserReviews data={props.data} />
+        {props.data && <CryptoSection6UserReviews data={props.data} />}
       </main>
       <Footer />
     </>
@@ -38,7 +38,7 @@ interface Props {
   data: string
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export async function getStaticProps(context): Promise<GetStaticPropsResult<Props>> {
   try {
     const result2 = fetch('https://www.trustpilot.com/review/bookmap.com')
     const data = await result2
