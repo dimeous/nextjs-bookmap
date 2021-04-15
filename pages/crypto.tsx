@@ -11,9 +11,10 @@ import CryptoSection2Exchanges from '../src/components/Layout/Crypto/CryptoSecti
 import CryptoSection4DesktopGetStart from '../src/components/Layout/Crypto/CryptoSection4DesktopGetStart'
 import CryptoSection4MobileGetStart from '../src/components/Layout/Crypto/CryptoSection4MobileGetStart'
 import CryptoSection3MultiBook from '../src/components/Layout/Crypto/CryptoSection3MultiBook'
-//import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
+import { GetStaticProps, NextPage } from 'next'
+import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
 
-export default function Index() {
+const Index: NextPage<{ data: string }> = (props) => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
@@ -26,9 +27,37 @@ export default function Index() {
         <CryptoSection3MultiBook mobile={mobile} />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
         <CryptoSection5Pricing />
-        <MainSection8UserReviews mobile={mobile} crypto={true} />
+        <div suppressHydrationWarning={true}>
+          {process.browser && <CryptoSection6UserReviews data={props.data} />}
+        </div>
       </main>
       <Footer />
     </>
   )
 }
+
+export const getStaticProps: () => Promise<
+  { props: { data: string | void } } | { props: {} }
+> = async () => {
+  try {
+    const result2 = fetch('https://www.trustpilot.com/review/bookmap.com')
+    const data = await result2
+      .then(function (response) {
+        return response.text()
+      })
+      .then(function (html) {
+        return html
+      })
+      .catch(function (err) {
+        console.log('Failed to fetch page: ', err)
+      })
+    return {
+      props: { data: data },
+    }
+  } catch {
+    return {
+      props: {},
+    }
+  }
+}
+export default Index
