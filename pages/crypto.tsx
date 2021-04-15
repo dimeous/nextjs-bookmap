@@ -2,7 +2,6 @@ import React from 'react'
 import CryptoSection0 from '../src/components/Layout/Crypto/CryptoSection0'
 import CryptoSection1Features from '../src/components/Layout/Crypto/CryptoSection1Features'
 import CryptoSection5Pricing from '../src/components/Layout/Crypto/CryptoSection5Pricing'
-
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Footer from '../src/components/Layout/Footer/MainFooter'
