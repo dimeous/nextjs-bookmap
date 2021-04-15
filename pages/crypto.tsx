@@ -33,7 +33,7 @@ const Index: NextPage<{ data: string }> = (props) => {
   )
 }
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   try {
     const result2 = fetch('https://www.trustpilot.com/review/bookmap.com')
     const data = await result2
