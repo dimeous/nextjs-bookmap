@@ -2,7 +2,7 @@ import React from 'react'
 import CryptoSection0 from '../src/components/Layout/Crypto/CryptoSection0'
 import CryptoSection1Features from '../src/components/Layout/Crypto/CryptoSection1Features'
 import CryptoSection5Pricing from '../src/components/Layout/Crypto/CryptoSection5Pricing'
-import MainSection8UserReviews from '../src/components/Layout/Main/MainSection8UsersReviews'
+
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Footer from '../src/components/Layout/Footer/MainFooter'
@@ -27,18 +27,18 @@ const Index: NextPage<{ data: string }> = (props) => {
         <CryptoSection3MultiBook mobile={mobile} />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
         <CryptoSection5Pricing />
-        <div suppressHydrationWarning={true}>
-          {process.browser && <CryptoSection6UserReviews data={props.data} />}
-        </div>
+        <CryptoSection6UserReviews data={props.data} />
       </main>
       <Footer />
     </>
   )
 }
 
-export const getStaticProps: () => Promise<
-  { props: { data: string | void } } | { props: {} }
-> = async () => {
+interface Props {
+  data: string
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const result2 = fetch('https://www.trustpilot.com/review/bookmap.com')
     const data = await result2
