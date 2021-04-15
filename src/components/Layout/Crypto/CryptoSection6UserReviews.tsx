@@ -195,23 +195,24 @@ export default function CryptoSection6UserReviews({ data }: CardProps) {
             </Grid>
             <Grid item md={9} xs={12}>
               <Box>
-                <Carousel
-                  swipeable={true}
-                  responsive={responsive}
-                  //  ssr={true}  means to render carousel on server-side.
-                  infinite={true}
-                  autoPlay={true}
-                  autoPlaySpeed={5000}
-                  keyBoardControl={true}
-                  minimumTouchDrag={80}
-                  removeArrowOnDeviceType={['tablet', 'mobile']}
-                  draggable={true}
-                  arrows={true}
-                >
-                  {usrReviews.map((item, i) => {
-                    return (
-                      <Card key={i} className={classes.carouselBox}>
-                        {/*
+                {usrReviews && (
+                  <Carousel
+                    swipeable={true}
+                    responsive={responsive}
+                    //  ssr={true}  means to render carousel on server-side.
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={5000}
+                    keyBoardControl={true}
+                    minimumTouchDrag={80}
+                    removeArrowOnDeviceType={['tablet', 'mobile']}
+                    draggable={true}
+                    arrows={true}
+                  >
+                    {usrReviews.map((item, i) => {
+                      return (
+                        <Card key={i} className={classes.carouselBox}>
+                          {/*
                           const a = {
                           socialShareUrl: 'https://www.trustpilot.com/reviews/5fd63956755dc10b48215aa4',
                           businessUnitId: '5c76a89be6713b000151de49',
@@ -226,43 +227,44 @@ export default function CryptoSection6UserReviews({ data }: CardProps) {
                           stars: 1,
                         }
                           */}
-                        <CardContent className={classes.picCardCont}>
-                          {StarsRaiting(item.stars)}
-                          <Typography className={classes.picTitle} gutterBottom noWrap>
-                            by{' '}
-                            <a
-                              style={{ color: '#0085F9' }}
-                              href={item.socialShareUrl}
+                          <CardContent className={classes.picCardCont}>
+                            {StarsRaiting(item.stars)}
+                            <Typography className={classes.picTitle} gutterBottom noWrap>
+                              by{' '}
+                              <a
+                                style={{ color: '#0085F9' }}
+                                href={item.socialShareUrl}
+                                target={'_blank'}
+                                rel={'noreferrer'}
+                              >
+                                {item.consumerName}
+                              </a>
+                            </Typography>
+                            <Typography className={classes.picTitle2} gutterBottom>
+                              {item.reviewHeader}
+                            </Typography>
+
+                            <Typography className={classes.picText}>
+                              {item.reviewBody.length > 210
+                                ? item.reviewBody.substring(0, 210) + '...'
+                                : item.reviewBody}
+                            </Typography>
+                          </CardContent>
+                          <CardActions className={classes.cardAct}>
+                            <Link
+                              href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
+                              color="secondary"
                               target={'_blank'}
                               rel={'noreferrer'}
                             >
-                              {item.consumerName}
-                            </a>
-                          </Typography>
-                          <Typography className={classes.picTitle2} gutterBottom>
-                            {item.reviewHeader}
-                          </Typography>
-
-                          <Typography className={classes.picText}>
-                            {item.reviewBody.length > 210
-                              ? item.reviewBody.substring(0, 210) + '...'
-                              : item.reviewBody}
-                          </Typography>
-                        </CardContent>
-                        <CardActions className={classes.cardAct}>
-                          <Link
-                            href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
-                            color="secondary"
-                            target={'_blank'}
-                            rel={'noreferrer'}
-                          >
-                            Read More &rarr;
-                          </Link>
-                        </CardActions>
-                      </Card>
-                    )
-                  })}
-                </Carousel>
+                              Read More &rarr;
+                            </Link>
+                          </CardActions>
+                        </Card>
+                      )
+                    })}
+                  </Carousel>
+                )}
               </Box>
             </Grid>
           </Grid>

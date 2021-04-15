@@ -54,7 +54,7 @@ export default function CryptoSection4DesktopGetStart() {
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
-      <Typography variant="h2" align="center">
+      <Typography variant="h2" align="center" sx={{ pb: 4 }}>
         {text.h1}
       </Typography>
       <Box className={classes.cTreeSteps}>
