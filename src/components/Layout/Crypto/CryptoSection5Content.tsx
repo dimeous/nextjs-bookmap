@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import InfoIcon from '@material-ui/icons/Info'
+import ContactSupportIcon from '@material-ui/icons/ContactSupport'
 import Tooltip from '@material-ui/core/Tooltip'
 export const text: { [index: string]: any } = {
   h1: 'Pricing and Packages',
@@ -36,10 +36,10 @@ export const text: { [index: string]: any } = {
   r11: 'Advanced Education',
   r12: (
     <Fragment>
-      <Tooltip title="NEW Multibook (Until August, 2021)">
-        <InfoIcon style={{ fontSize: 'small', position: 'absolute', marginLeft: '-16px' }} />
-      </Tooltip>
       NEW Multibook (Until August, 2021)
+      <Tooltip title="NEW Multibook (Until August, 2021)">
+        <ContactSupportIcon style={{ position: 'absolute', marginLeft: '0px ' }} />
+      </Tooltip>
     </Fragment>
   ),
   b1: 'GET DIGITAL',

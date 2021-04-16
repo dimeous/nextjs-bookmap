@@ -41,7 +41,7 @@ export default function CryptoSection5Pricing() {
     <div style={{ backgroundColor: '#F6F8FA' }}>
       <Container fixed className={classes.container}>
         <div className={classes.root}>
-          <Typography component="h2" variant="h2">
+          <Typography component="h2" variant="h2" sx={{ pb: 1, mb: 0 }}>
             {text.h1}
           </Typography>
           <Typography component="h3" variant="h3">
@@ -61,7 +61,7 @@ export default function CryptoSection5Pricing() {
             <span className={classes.tabTwo}>{text.l4} </span>
           </div>
         </div>
-        <Grid container>
+        <Grid container style={{ paddingTop: '24px' }}>
           <Grid item md={6}>
             <Box className={classes.noCard}>
               <CardContent>
@@ -275,16 +275,16 @@ export default function CryptoSection5Pricing() {
 
         <div className={classes.cta}>
           <Typography sx={{ pt: 4, pb: 4 }}>
-            Trading Stocks or Futures? Explore more features and opportunities Bookmap provides
+            Trading Stocks or Futures? Explore more features and opportunities Bookmap provides{' '}
+            <a
+              href="https://bookmap.com/#pricing"
+              target="_blank"
+              rel={'noreferrer'}
+              style={{ textTransform: 'none' }}
+            >
+              Compare Prices & Packages
+            </a>
           </Typography>
-          <a
-            href="https://bookmap.com/#pricing"
-            target="_blank"
-            rel={'noreferrer'}
-            style={{ textTransform: 'none' }}
-          >
-            Compare Prices & Packages
-          </a>
         </div>
       </Container>
     </div>
