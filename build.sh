@@ -12,7 +12,7 @@ npm install && NODE_ENV=production npm run build
 #echo "npm build"
 #npm run build
 
-echo "start app next"
+echo "reload app next"
 pm2 reload bookmap
 #pm2 save
 #echo "starting app as daemon"
