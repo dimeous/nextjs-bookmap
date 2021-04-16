@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Typography, makeStyles, Box,  Button } from '@material-ui/core'
+import { Typography, makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Carousel from 'react-multi-carousel'
