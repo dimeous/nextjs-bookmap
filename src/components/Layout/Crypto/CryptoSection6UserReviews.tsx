@@ -3,7 +3,6 @@ import {
   Typography,
   makeStyles,
   Box,
-  Button,
   CardContent,
   Card,
   Link,
@@ -14,8 +13,8 @@ import Grid from '@material-ui/core/Grid'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import StarIcon from '@material-ui/icons/Star'
-import Image from 'next/image'
 import TrustPreloadPilot from '../../trustPreloadPilot'
+import TrustBoxFooter from '../Footer/trustBoxFooter'
 
 const responsive = {
   desktop: {
@@ -126,21 +125,9 @@ const UserReviews = function (html: string) {
   }
   return arrReviews(docArticles)
 }
-const BookmapReviewParse = function (html: string) {
-  const parser = new DOMParser()
-  const doc = parser.parseFromString(html, 'text/html')
-  const docArticles = doc.querySelector(
-    'head > script[type="application/json"][data-initial-state="business-unit-info"]'
-  )
-  if (docArticles) {
-    return JSON.parse(docArticles.innerHTML)
-  }
-  return null
-}
 
 export default function CryptoSection6UserReviews({ data }: CardProps) {
   const usrReviews = process.browser ? UserReviews(data) : null
-  const bokmapReview = process.browser ? BookmapReviewParse(data) : null
   const classes = useStyles()
   return (
     <div className={classes.root} suppressHydrationWarning={true}>
@@ -149,48 +136,8 @@ export default function CryptoSection6UserReviews({ data }: CardProps) {
           <Grid container>
             <Grid item md={3} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography
-                  component="h2"
-                  variant="h2"
-                  color="inherit"
-                  gutterBottom
-                  className={classes.title}
-                >
-                  User Reviews
-                </Typography>
-                <div>{StarsRaiting(Math.floor(bokmapReview.trustScore))}</div>
-
-                <Typography
-                  component="h5"
-                  variant="h5"
-                  color="inherit"
-                  gutterBottom
-                  sx={{ color: '#124258', fontWeight: 800 }}
-                >
-                  Great!
-                </Typography>
-                <Typography gutterBottom sx={{ color: '#607D8B', fontWeight: 800 }}>
-                  Based on{' '}
-                  <Link
-                    href={'https://www.trustpilot.com/review/bookmap.com'}
-                    target={'_blank'}
-                    color="secondary"
-                    rel={'norefer'}
-                  >
-                    {bokmapReview.numberOfReviews} reviews{' '}
-                  </Link>{' '}
-                </Typography>
-                <Box sx={{ pb: 2 }}>
-                  <Image src="/static/crypto/s6/Trustpilotlogo.png" width={97} height={40} />
-                </Box>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  href="https://bookmap.com/members/signup/thAhOgYUg"
-                  sx={{ width: '100%' }}
-                >
-                  Get Free Bookmap
-                </Button>
+                <TrustPreloadPilot render={false} />
+                <TrustBoxFooter light={true} />
               </Container>
             </Grid>
             <Grid item md={9} xs={12}>
@@ -212,21 +159,6 @@ export default function CryptoSection6UserReviews({ data }: CardProps) {
                     {usrReviews.map((item, i) => {
                       return (
                         <Card key={i} className={classes.carouselBox}>
-                          {/*
-                          const a = {
-                          socialShareUrl: 'https://www.trustpilot.com/reviews/5fd63956755dc10b48215aa4',
-                          businessUnitId: '5c76a89be6713b000151de49',
-                          businessUnitDisplayName: 'Bookmap',
-                          consumerId: '5fd63956f967dc001ba0539a',
-                          consumerName: 'Stephen',
-                          consumerProfileImage: null,
-                          reviewId: '5fd63956755dc10b48215aa4',
-                          reviewHeader: 'Not happy at all.',
-                          reviewBody:
-                          'Customer support is short and not thorough... There are too many versions of bookmap, Not all the videos pertain to me. Most videos I watch, are showing options on the platform i do not have. I\u0027m an equity / options trader only.. NOT Forex,Futures or Commodities.. I do have investments in Crypto. Maybe this Platform is not for me.. I do not know. Not to mention the price per month is a car payment for most people.',
-                          stars: 1,
-                        }
-                          */}
                           <CardContent className={classes.picCardCont}>
                             {StarsRaiting(item.stars)}
                             <Typography className={classes.picTitle} gutterBottom noWrap>
@@ -270,7 +202,6 @@ export default function CryptoSection6UserReviews({ data }: CardProps) {
           </Grid>
         )}
       </Container>
-      <TrustPreloadPilot render={false} />
     </div>
   )
 }

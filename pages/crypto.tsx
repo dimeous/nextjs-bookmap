@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         return html
       })
       .catch(function (err) {
-        console.log('Failed to fetch page: ', err)
+        console.log('Failed to fetch page trustpilot: ', err)
       })
     return {
       props: { data: data },

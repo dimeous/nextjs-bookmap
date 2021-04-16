@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Typography, makeStyles, Box, Card, CardContent, Button } from '@material-ui/core'
+import { Typography, makeStyles, Box,  Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Carousel from 'react-multi-carousel'
@@ -116,18 +116,6 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
   }
   const classes = useStyles()
 
-  const topCard = (
-    <Card className={classes.titleCard}>
-      <Box>
-        <Image src={'/static/crypto/s3/checkstar.svg'} alt="star" width={48} height={48} />
-      </Box>
-      <CardContent>
-        <Typography className={classes.cardStarT1}>Limited Time OFFER</Typography>
-        <Typography className={classes.cardStarT2}>30 Day | 12 Hours</Typography>
-      </CardContent>
-    </Card>
-  )
-
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -155,8 +143,6 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
               <Typography color="inherit" paragraph>
                 Create synthetic instruments and see multiple crypto exchanges in one chart.
               </Typography>
-              {mobile && <Box sx={{ pb: '48px', pt: '40px' }}>{topCard}</Box>}
-
               <div>
                 <ul>
                   <li>See market liquidity and traded volume</li>
@@ -176,7 +162,6 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
             </Container>
           </Grid>
           <Grid item md={6} xs={12}>
-            <Box sx={{ display: 'flex', justifyContent: 'right' }}>{!mobile && topCard}</Box>
             <Box className={classes.picCard}>
               <Box>
                 <Carousel
