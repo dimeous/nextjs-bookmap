@@ -1,7 +1,7 @@
 const withImages = require('next-images')
 const withFonts = require('next-fonts')
 
-module.exports = withImages(withFonts({
+module.exports = withImages({
     webpack(config) {
         config.resolve.alias = {
             ...config.resolve.alias,
@@ -24,4 +24,4 @@ module.exports = withImages(withFonts({
     future: {
         webpack5: true,
     },
-}))
+})
