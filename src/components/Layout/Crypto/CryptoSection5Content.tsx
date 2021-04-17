@@ -1,6 +1,15 @@
 import React, { Fragment } from 'react'
 import ContactSupportIcon from '@material-ui/icons/ContactSupport'
-import Tooltip from '@material-ui/core/Tooltip'
+import { Typography, Tooltip } from '@material-ui/core'
+const tooltipText = (
+  <Fragment>
+    <Typography sx={{ p: 2, fontSize: '1rem' }}>
+      Multibook is available for free to all Digital+ monthly or yearly subscribers only with
+      auto-renew. If subscription is ever cancelled or interrupted, Multibook can then only be
+      purchased as an Add-On.
+    </Typography>
+  </Fragment>
+)
 export const text: { [index: string]: any } = {
   h1: 'Pricing and Packages',
   h2: 'Trade cryptocurrencies and get many features with Bookmap desktop application ',
@@ -36,8 +45,8 @@ export const text: { [index: string]: any } = {
   r11: 'Advanced Education',
   r12: (
     <Fragment>
-      NEW Multibook (Until August, 2021)
-      <Tooltip title="NEW Multibook (Until August, 2021)">
+      Multibook: Exclusive to Digital+ Subscribers
+      <Tooltip title={tooltipText}>
         <ContactSupportIcon style={{ position: 'absolute', marginLeft: '0px ' }} />
       </Tooltip>
     </Fragment>

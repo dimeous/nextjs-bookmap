@@ -31,7 +31,7 @@ const useStyles = styles
 
 export default function CryptoSection5Pricing() {
   const classes = useStyles()
-  const [value, setValue] = React.useState('one')
+  const [value, setValue] = React.useState('two')
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
