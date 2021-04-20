@@ -29,7 +29,7 @@ export default function MyApp(props: AppProps) {
     TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
   }, [])
 
-  SEO.canonical = SEO.canonical + useRouter().pathname + '/'
+  SEO.canonical = 'https://bookmap.com' + useRouter().pathname
   return (
     <CacheProvider value={cache}>
       <Head>
@@ -43,7 +43,6 @@ export default function MyApp(props: AppProps) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <DefaultSeo {...SEO} />
-
         <Component {...pageProps} />
         <PolicyWidget />
       </ThemeProvider>
