@@ -23,7 +23,7 @@ const Index: NextPage<{ data: string }> = (props) => {
         <CryptoSection0 mobile={mobile} />
         <CryptoSection1Features />
         <CryptoSection2Exchanges />
-        <CryptoSection3MultiBook mobile={mobile} />
+        <CryptoSection3MultiBook />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
         <CryptoSection5Pricing />
         <CryptoSection6UserReviews data={props.data} />

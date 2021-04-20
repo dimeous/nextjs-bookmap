@@ -1,9 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Typography, makeStyles, Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
 import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
@@ -29,91 +27,22 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'MullerMedium, sans-serif',
     color: '#124258',
   },
-  carouselBox: {
-    width: '70%',
-    marginLeft: '16%',
-    [theme.breakpoints.down('md')]: {
-      width: '90%',
-      marginLeft: '5%',
-    },
-  },
   picCard: {
     width: '100%',
-    marginTop: '24px',
+    marginTop: 'auto',
+    marginBottom: 'auto',
     height: '340px',
     [theme.breakpoints.down('md')]: {
+      marginTop: '32px',
       height: 'auto',
     },
   },
-
-  cardStarT1: {
-    font: '14px/22px MullerMedium, sans-serif',
-  },
-  cardStarT2: {
-    font: '18px/22px MullerLight, sans-serif',
-    color: '#607D8B',
-    fontWeight: 700,
-  },
-
-  titleCard: {
-    width: '265px',
-    height: '82px',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '9px 16px',
-    border: '1px solid #0085F9',
-  },
-  picTitle: {
-    textAlign: 'center',
-    font: '22px/32px MullerMedium, sans-serif',
+  pic: {
+    borderRadius: '10px',
   },
 }))
 
-type CardProps = {
-  mobile: boolean
-}
-
-export default function CryptoSection3MultiBook({ mobile }: CardProps) {
-  const items = [
-    {
-      name: 'Binance',
-    },
-    {
-      name: 'Bitstamp',
-    },
-    {
-      name: 'Coinbase',
-    },
-    {
-      name: 'Huobi',
-    },
-    {
-      name: (
-        <Fragment>
-          <b>Multibook</b> - all 4 combined
-        </Fragment>
-      ),
-    },
-  ]
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  }
+export default function CryptoSection3MultiBook() {
   const classes = useStyles()
 
   return (
@@ -164,38 +93,14 @@ export default function CryptoSection3MultiBook({ mobile }: CardProps) {
           <Grid item md={6} xs={12}>
             <Box className={classes.picCard}>
               <Box>
-                <Carousel
-                  swipeable={true}
-                  responsive={responsive}
-                  //  ssr={true}  means to render carousel on server-side.
-                  infinite={true}
-                  autoPlay={true}
-                  autoPlaySpeed={3000}
-                  keyBoardControl={true}
-                  minimumTouchDrag={80}
-                  removeArrowOnDeviceType={['tablet', 'mobile']}
-                  draggable={true}
-                  arrows={true}
-                >
-                  {items.map((item, i) => {
-                    return (
-                      <Box key={i} className={classes.carouselBox}>
-                        <Box>
-                          <Typography className={classes.picTitle} gutterBottom>
-                            {item.name}
-                          </Typography>
-                          <Image
-                            src={'/static/crypto/s3/' + (i + 1) + '.png'}
-                            alt={i + ' img'}
-                            width={800}
-                            height={510}
-                            layout="intrinsic"
-                          />
-                        </Box>
-                      </Box>
-                    )
-                  })}
-                </Carousel>
+                <Image
+                  src={'/static/crypto/s3/pic.png'}
+                  alt={'multibook'}
+                  width={636}
+                  height={335}
+                  layout="intrinsic"
+                  className={classes.pic}
+                />
               </Box>
             </Box>
           </Grid>
