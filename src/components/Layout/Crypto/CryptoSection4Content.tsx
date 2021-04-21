@@ -2,7 +2,7 @@ export const text = {
   h1: 'Get started in three simple steps',
   s1: {
     lbl: 'Get Bookmap Digital+',
-    txt: 'Register, install and connect Bookmap to compatible crypto exchange',
+    txt: 'Register, install and connect Bookmap to a compatible crypto exchange',
   },
   s2: {
     lbl: 'Get Multibook',

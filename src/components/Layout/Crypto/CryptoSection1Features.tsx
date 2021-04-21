@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       background: 'none',
     },
+    '& span': {
+      fontSize: '1.1428rem',
+    },
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },

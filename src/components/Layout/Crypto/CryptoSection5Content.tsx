@@ -45,7 +45,7 @@ export const text: { [index: string]: any } = {
   r11: 'Advanced Education',
   r12: (
     <Fragment>
-      Multibook: Exclusive to Digital+ Subscribers
+      <b>Multibook: Exclusive to Digital+ Subscribers</b>
       <Tooltip title={tooltipText}>
         <ContactSupportIcon style={{ position: 'absolute', marginLeft: '0px ' }} />
       </Tooltip>

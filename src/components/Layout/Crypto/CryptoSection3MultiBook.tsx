@@ -75,7 +75,7 @@ export default function CryptoSection3MultiBook() {
               <div>
                 <ul>
                   <li>See market liquidity and traded volume</li>
-                  <li>View total volume delta across</li>
+                  <li>View volume delta across multiple instruments / exchanges</li>
                   <li>Analyze Best Bid and Offer</li>
                   <li>Build your own synthetic instrument</li>
                 </ul>
@@ -97,7 +97,7 @@ export default function CryptoSection3MultiBook() {
                   src={'/static/crypto/s3/pic.png'}
                   alt={'multibook'}
                   width={636}
-                  height={335}
+                  height={350}
                   layout="intrinsic"
                   className={classes.pic}
                 />
