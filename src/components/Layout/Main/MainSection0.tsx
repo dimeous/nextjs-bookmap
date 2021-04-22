@@ -61,13 +61,10 @@ export default function MainSection0({ mobile }: CardProps) {
                 gutterBottom
                 className={classes.headTradePlatform}
               >
-                A trading platform that displays market liquidity
+                Try Multibook for FREE with any paid subscription
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                NEW: live trading sessions with pro traders
-              </Typography>
-              <Typography color="primary" paragraph>
-                for Global+ subscribers
+                Choose from 20+ crypto exchanges, see multiple order books in one heatmap.
               </Typography>
               {!mobile && (
                 <Button
