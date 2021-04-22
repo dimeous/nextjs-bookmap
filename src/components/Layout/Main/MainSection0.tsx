@@ -17,22 +17,6 @@ const useStyles = makeStyles((theme) => ({
       minHeight: '450px',
     },
   },
-  outer: {
-    position: 'relative',
-    width: '100%',
-  },
-
-  inner: {
-    position: 'absolute',
-    zIndex: 1,
-    height: '100%',
-    width: '100%',
-    top: 0,
-  },
-
-  media: {
-    width: '100%',
-  },
   headTradePlatform: {
     paddingTop: '70px',
     [theme.breakpoints.down('lg')]: {
@@ -50,13 +34,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#0085f9',
     fontFamily: 'MullerMedium',
   },
-  bImage: {
-    height: '100%',
-    display: 'grid',
-  },
-  backImage: {
-    height: '100%',
-  },
   button: {
     width: '230px',
     [theme.breakpoints.down('md')]: {
@@ -70,14 +47,6 @@ type CardProps = {
 }
 
 export default function MainSection0({ mobile }: CardProps) {
-  const [width, setWidth] = useState(0)
-  const elementRef = React.useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const { current } = elementRef
-    if (current) setWidth(current.getBoundingClientRect().width)
-  }, [])
-
   const classes = useStyles()
   return (
     <>
