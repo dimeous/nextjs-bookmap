@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styles from './MainSection0.module.css'
 import { Typography, makeStyles, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -114,27 +113,14 @@ export default function MainSection0({ mobile }: CardProps) {
               )}
             </Grid>
             <Grid item md={6} xs={12}>
-              <div className={classes.outer} ref={elementRef}>
+              <div style={{ paddingTop: '16px' }}>
                 <Image
-                  src="/static/main/bg-cr.png"
+                  src="/static/main/s0/toppic.png"
                   alt="Bookmap chart"
                   layout="responsive"
-                  height={1300}
-                  width={1875}
-                  className={classes.backImage}
+                  height={373}
+                  width={636}
                 />
-                <div className={classes.inner}>
-                  <div className={styles.slideranimated}>
-                    <div className={classes.bImage} style={{ width: width }}>
-                      <Image
-                        src="/static/main/overlay-sec1.png"
-                        alt="Bookmap chart"
-                        height={1300}
-                        width={1875}
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </Grid>
           </Grid>

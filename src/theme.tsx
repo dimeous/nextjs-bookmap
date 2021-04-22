@@ -39,7 +39,7 @@ let theme = createMuiTheme({
     fontSize: 16,
     fontWeightLight: 400,
     fontFamily: [
-      'MullerLight',
+      'MullerMedium',
       'serix',
       '-apple-system',
       'BlinkMacSystemFont',
