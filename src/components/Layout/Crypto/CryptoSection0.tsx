@@ -73,9 +73,9 @@ export default function CryptoSection0({ mobile }: CardProps) {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href="https://bookmap.com/members/signup/thAhOgYUg"
+                  href="https://bookmap.com/members/signup/gv3uiH6Hi"
                 >
-                  START FOR FREE
+                  Get Multibook
                 </Button>
               )}
             </Grid>
@@ -103,11 +103,11 @@ export default function CryptoSection0({ mobile }: CardProps) {
           <Button
             variant="contained"
             color="secondary"
-            href="https://bookmap.com/members/signup/thAhOgYUg"
+            href="https://bookmap.com/members/signup/gv3uiH6Hi"
             className={classes.button}
             id={'main_top_start_for_free'}
           >
-            START FOR FREE
+            Get Multibook
           </Button>
         </Grid>
       )}
