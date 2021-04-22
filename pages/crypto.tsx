@@ -12,12 +12,49 @@ import CryptoSection4MobileGetStart from '../src/components/Layout/Crypto/Crypto
 import CryptoSection3MultiBook from '../src/components/Layout/Crypto/CryptoSection3MultiBook'
 import { GetStaticProps, NextPage } from 'next'
 import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
+import { createMuiTheme, Theme, ThemeProvider } from '@material-ui/core/styles'
 
 const Index: NextPage<{ data: string }> = (props) => {
-  const theme = useTheme()
-  const mobile = useMediaQuery(theme.breakpoints.down('md'))
+  const theme2 = useTheme()
+  const mobile = useMediaQuery(theme2.breakpoints.down('md'))
   return (
-    <>
+    <ThemeProvider
+      theme={(theme: Theme) =>
+        createMuiTheme({
+          ...theme,
+          typography: {
+            h1: {
+              fontSize: '48px',
+              lineHeight: '50px',
+            },
+            h2: {
+              fontSize: 32,
+              lineHeight: 38 + 'px',
+              marginBottom: 22 + 'px',
+            },
+            h3: {
+              font: '18px/30px MullerMedium,sans-serif',
+              marginBottom: 41 + 'px',
+            },
+            fontSize: 16,
+            fontWeightLight: 400,
+            fontFamily: [
+              'MullerMedium',
+              'serix',
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"Segoe UI"',
+              'Roboto',
+              '"Helvetica Neue"',
+              'sans-serif',
+              '"Apple Color Emoji"',
+              '"Segoe UI Emoji"',
+              '"Segoe UI Symbol"',
+            ].join(','),
+          },
+        })
+      }
+    >
       <CryptoHeader />
       <main>
         <CryptoSection0 mobile={mobile} />
@@ -29,7 +66,7 @@ const Index: NextPage<{ data: string }> = (props) => {
         <CryptoSection6UserReviews data={props.data} />
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 
