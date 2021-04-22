@@ -85,8 +85,8 @@ export default function MainSection0({ mobile }: CardProps) {
                   src="/static/main/s0/toppic.png"
                   alt="Bookmap chart"
                   layout="responsive"
-                  height={373}
-                  width={636}
+                  height={458}
+                  width={800}
                 />
               </div>
             </Grid>
