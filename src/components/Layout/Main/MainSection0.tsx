@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headTradePlatform: {
     paddingTop: '70px',
+    fontSize: '32px',
     [theme.breakpoints.down('lg')]: {
       paddingTop: '27px',
       font: '32px/40px MullerLight,sans-sanserif',
@@ -26,11 +27,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   secondTitle: {
-    fontSize: '38px',
+    fontSize: '32px',
     display: 'block',
     lineHeight: '39px',
     paddingTop: '10px',
-    paddingBottom: '10px',
+    paddingBottom: '32px',
     color: '#0085f9',
     fontFamily: 'MullerMedium',
   },
