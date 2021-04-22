@@ -83,7 +83,7 @@ export default function CryptoSection3MultiBook() {
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171"
+                href="https://bookmap.com/members/signup/gv3uiH6Hi"
                 sx={{ width: '300px' }}
               >
                 Get MultiBook with Digital+
