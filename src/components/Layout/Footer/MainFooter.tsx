@@ -120,7 +120,7 @@ const useStyles = makeStyles(() => ({
     width: 'auto',
     alignItems: 'center',
     '& li': {
-      marginRight: '24px',
+      marginRight: '16px',
     },
   },
   SocialNormal: {
@@ -128,6 +128,13 @@ const useStyles = makeStyles(() => ({
     transition: '.2s linear',
     '&:hover': {
       opacity: 0,
+    },
+  },
+  telegramIcon: {
+    opacity: '0.7',
+    transition: '.2s linear',
+    '&:hover': {
+      opacity: 1,
     },
   },
   SocialsHover: {
@@ -319,11 +326,15 @@ export default function MainFooter() {
                   <img
                     src="/static/footer/facebook.svg"
                     className={classes.SocialNormal}
+                    width={25}
+                    height={25}
                     alt={'Facebook'}
                   />
                   <img
                     src="/static/footer/facebook-hover.svg"
                     className={classes.SocialsHover}
+                    width={25}
+                    height={25}
                     alt={'Facebook'}
                   />
                 </a>
@@ -332,11 +343,15 @@ export default function MainFooter() {
                 <a href="https://twitter.com/bookmap_pro" target="_blank" rel={'noreferrer'}>
                   <img
                     src="/static/footer/twitter.svg"
+                    width={25}
+                    height={25}
                     className={classes.SocialNormal}
                     alt={'Twitter'}
                   />
                   <img
                     src="/static/footer/twitter-hover.svg"
+                    width={25}
+                    height={25}
                     className={classes.SocialsHover}
                     alt={'Twitter'}
                   />
@@ -350,19 +365,39 @@ export default function MainFooter() {
                 >
                   <img
                     src="/static/footer/youtube.svg"
+                    width={25}
+                    height={25}
                     className={classes.SocialNormal}
                     alt={'Youtube'}
                   />
                   <img
                     src="/static/footer/youtube-hover.svg"
                     className={classes.SocialsHover}
+                    width={25}
+                    height={25}
                     alt={'Youtube'}
                   />
                 </a>
               </li>
               <li>
+                <a href="https://t.me/bookmap_trading" target="_blank" rel={'noreferrer'}>
+                  <img
+                    src="/static/footer/telegram.svg"
+                    width={25}
+                    height={25}
+                    className={classes.telegramIcon}
+                    alt={'Bookmap Telegram'}
+                  />
+                </a>
+              </li>
+              <li>
                 <a href="https://discord.gg/prjSDDupYh" target="_blank" rel={'noreferrer'}>
-                  <img src="/static/footer/discord.svg" alt={'Bookmap Chatroom'} />
+                  <img
+                    src="/static/footer/discord.svg"
+                    width={25}
+                    height={25}
+                    alt={'Bookmap Chatroom'}
+                  />
                 </a>
               </li>
             </ul>
