@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import styles from './MainSection0.module.css'
 import { Typography, makeStyles, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -17,9 +18,24 @@ const useStyles = makeStyles((theme) => ({
       minHeight: '450px',
     },
   },
+  outer: {
+    position: 'relative',
+    width: '100%',
+  },
+
+  inner: {
+    position: 'absolute',
+    zIndex: 1,
+    height: '100%',
+    width: '100%',
+    top: 0,
+  },
+
+  media: {
+    width: '100%',
+  },
   headTradePlatform: {
     paddingTop: '70px',
-    fontSize: '32px',
     [theme.breakpoints.down('lg')]: {
       paddingTop: '27px',
       font: '32px/40px MullerLight,sans-sanserif',
@@ -27,13 +43,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   secondTitle: {
-    fontSize: '32px',
+    fontSize: '38px',
     display: 'block',
     lineHeight: '39px',
     paddingTop: '10px',
-    paddingBottom: '32px',
+    paddingBottom: '10px',
     color: '#0085f9',
     fontFamily: 'MullerMedium',
+  },
+  bImage: {
+    height: '100%',
+    display: 'grid',
+  },
+  backImage: {
+    height: '100%',
   },
   button: {
     width: '230px',
@@ -48,6 +71,14 @@ type CardProps = {
 }
 
 export default function MainSection0({ mobile }: CardProps) {
+  const [width, setWidth] = useState(0)
+  const elementRef = React.useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const { current } = elementRef
+    if (current) setWidth(current.getBoundingClientRect().width)
+  }, [])
+
   const classes = useStyles()
   return (
     <>
@@ -62,10 +93,13 @@ export default function MainSection0({ mobile }: CardProps) {
                 gutterBottom
                 className={classes.headTradePlatform}
               >
-                Try Multibook for FREE with any paid subscription
+                A trading platform that displays market liquidity
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                Choose from 20+ crypto exchanges, see multiple order books in one heatmap.
+                NEW: live trading sessions with pro traders
+              </Typography>
+              <Typography color="primary" paragraph>
+                for Global+ subscribers
               </Typography>
               {!mobile && (
                 <Button
@@ -80,14 +114,27 @@ export default function MainSection0({ mobile }: CardProps) {
               )}
             </Grid>
             <Grid item md={6} xs={12}>
-              <div style={{ paddingTop: '16px' }}>
+              <div className={classes.outer} ref={elementRef}>
                 <Image
-                  src="/static/main/s0/toppic.png"
+                  src="/static/main/bg-cr.png"
                   alt="Bookmap chart"
                   layout="responsive"
-                  height={458}
-                  width={800}
+                  height={1300}
+                  width={1875}
+                  className={classes.backImage}
                 />
+                <div className={classes.inner}>
+                  <div className={styles.slideranimated}>
+                    <div className={classes.bImage} style={{ width: width }}>
+                      <Image
+                        src="/static/main/overlay-sec1.png"
+                        alt="Bookmap chart"
+                        height={1300}
+                        width={1875}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </Grid>
           </Grid>

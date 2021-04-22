@@ -4,9 +4,7 @@ import { Typography, Tooltip } from '@material-ui/core'
 const tooltipText = (
   <Fragment>
     <Typography sx={{ p: 2, fontSize: '1rem' }}>
-      Multibook is available for free to all Digital+ monthly or yearly subscribers only with
-      auto-renew. If subscription is ever cancelled or interrupted, Multibook can then only be
-      purchased as an Add-On.
+      Multibook is available for free to all Digital+ monthly or yearly subscribers for one year.
     </Typography>
   </Fragment>
 )
