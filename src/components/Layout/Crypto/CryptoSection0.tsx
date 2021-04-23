@@ -62,7 +62,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
                 gutterBottom
                 className={classes.headTradePlatform}
               >
-                Try Multibook for FREE with any paid subscription
+                Multibook is yours at no additional cost with any paid subscription
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
                 Choose from 20+ crypto exchanges, see multiple order books in one heatmap.

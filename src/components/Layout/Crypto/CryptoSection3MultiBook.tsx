@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'center',
+    '& ul>li': {
+      fontFamily: 'MullerMedium, sans-serif',
+    },
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
