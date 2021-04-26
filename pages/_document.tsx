@@ -47,6 +47,26 @@ export default class MyDocument extends Document {
               `,
             }}
           />*/}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.addEventListener("load", function(event) {
+             const queryString = window.location.search;
+             const urlParams = new URLSearchParams(queryString);
+             let utm_source = urlParams.get('utm_source'),
+             utm_medium = urlParams.get('utm_medium'),
+             utm_campaign = urlParams.get('utm_campaign'),
+             utm_content = urlParams.get('utm_content');
+             utm_source != null ? localStorage.setItem('utm_source', utm_source) : false;
+             utm_medium != null ? localStorage.setItem('utm_medium', utm_medium) : false;
+             utm_campaign != null ? localStorage.setItem('utm_campaign', utm_campaign) : false;
+             utm_content != null ? localStorage.setItem('utm_content', utm_content) : false;
+             let elements = document.querySelectorAll('#menu-item-14221 .sub-menu');
+             for (let elem of elements) {
+              elem.style.padding = '20px 0 0 0';
+             }
+          });`,
+            }}
+          />
           <NextScript />
           {/*Zoho chat widget */}
           <script
