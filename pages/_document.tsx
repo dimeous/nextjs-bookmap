@@ -60,10 +60,6 @@ export default class MyDocument extends Document {
              utm_medium != null ? localStorage.setItem('utm_medium', utm_medium) : false;
              utm_campaign != null ? localStorage.setItem('utm_campaign', utm_campaign) : false;
              utm_content != null ? localStorage.setItem('utm_content', utm_content) : false;
-             let elements = document.querySelectorAll('#menu-item-14221 .sub-menu');
-             for (let elem of elements) {
-              elem.style.padding = '20px 0 0 0';
-             }
           });`,
             }}
           />
