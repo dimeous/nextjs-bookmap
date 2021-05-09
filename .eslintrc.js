@@ -1,46 +1,58 @@
 module.exports = {
   root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   env: {
+    browser: true,
+    amd: true,
     node: true,
     es6: true,
   },
-  parserOptions: { ecmaVersion: 8 }, // to enable features such as async/await
-  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
-  extends: ['eslint:recommended'],
-  overrides: [
-    {
-      files: ['**/*.ts', '**/*.tsx'],
-      parser: '@typescript-eslint/parser',
-      settings: { react: { version: 'detect' } },
-      env: {
-        browser: true,
-        node: true,
-        es6: true,
-      },
-      extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended', // TypeScript rules
-        'plugin:react/recommended', // React rules
-        'plugin:react-hooks/recommended', // React hooks rules
-        'plugin:jsx-a11y/recommended', // Accessibility rules
-        'prettier/@typescript-eslint', // Prettier plugin
-        'plugin:prettier/recommended', // Prettier recommended rules 
-      ],
-      rules: {
-        'react/prop-types': 'off', // We will use TypeScript's types for component props instead
-        'react/react-in-jsx-scope': 'off', // No need to import React with Next.js
-        'jsx-a11y/anchor-is-valid': 'off', // This rule is not compatible with how Next.js's <Link />
-        '@typescript-eslint/no-unused-vars': ['error'],
-        '@typescript-eslint/explicit-function-return-type': [
-          // I suggest this setting for requiring return types on functions only where usefull
-          'warn',
-          {
-            allowExpressions: true,
-            allowConciseArrowFunctionExpressionsStartingWithVoid: true,
-          },
-        ],
-        'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Includes .prettierrc.js rules
-      },
+  plugins: ['react', 'prettier', 'import', 'simple-import-sort'],
+  settings: {
+    react: {
+      version: 'detect',
     },
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:security/recommended',
+    'plugin:react-hooks/recommended',
   ],
+  rules: {
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'unicorn/prevent-abbreviations': [
+      'error',
+      { allowList: { props: true, getStaticProps: true } },
+    ],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
+  },
 }
