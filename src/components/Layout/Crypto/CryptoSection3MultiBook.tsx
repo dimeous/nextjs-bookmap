@@ -1,8 +1,8 @@
-import React from 'react'
-import { Typography, makeStyles, Box, Button } from '@material-ui/core'
+import { Box, Button, makeStyles, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Image from 'next/image'
+import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
   root: {

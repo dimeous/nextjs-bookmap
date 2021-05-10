@@ -1,8 +1,9 @@
-import React from 'react'
-import { Typography, makeStyles, Box, Button } from '@material-ui/core'
+import { Box, Button, makeStyles, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import TrustPreloadPilot from '../../trustPreloadPilot'
+import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
+
+import TrustPreloadPilot from '../../trustPreloadPilot'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -31,11 +32,12 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-type CardProps = {
+type CardProperties = {
   mobile: boolean
   crypto: boolean
 }
-export default function MainSection8UserReviews({ mobile, crypto }: CardProps) {
+
+export default function MainSection8UserReviews({ mobile, crypto }: CardProperties) {
   const onChange = function (isVisible: boolean) {
     if (isVisible) setChecked(true)
   }

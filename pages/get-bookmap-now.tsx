@@ -17,6 +17,14 @@ import Footer from '../src/components/Layout/Footer/MainFooter'
 const Index: NextPage<{ data: string }> = (props) => {
   const theme2 = useTheme()
   const mobile = useMediaQuery(theme2.breakpoints.down('md'))
+  const featureListArray = [
+    'View full-depth historical data with the dynamic heatmap',
+    'Watch the battle between buyers and sellers in 3D with execution volume  visualization',
+    'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
+    'See all market data without aggregation',
+    'Use Bookmap in real-time or in replay to debrief your session',
+    'Access to many addons, including Multibook',
+  ]
   return (
     <ThemeProvider
       theme={(theme: Theme) =>
@@ -58,7 +66,7 @@ const Index: NextPage<{ data: string }> = (props) => {
       <CryptoHeader />
       <main>
         <CryptoSection0 mobile={mobile} />
-        <CryptoSection1Features />
+        <CryptoSection1Features listArray={featureListArray} />
         <CryptoSection2Exchanges />
         <CryptoSection3MultiBook />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}

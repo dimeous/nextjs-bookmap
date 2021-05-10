@@ -1,14 +1,15 @@
-import React from 'react'
+// eslint-disable-next-line unicorn/filename-case
 import {
-  Typography,
-  makeStyles,
+  List,
   ListItem,
   ListItemAvatar,
   ListItemText,
-  List,
+  makeStyles,
+  Typography,
 } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Image from 'next/image'
+import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,15 +57,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function CryptoSection1Features() {
-  const list = [
-    'View full-depth historical data with the dynamic heatmap',
-    'Watch the battle between buyers and sellers in 3D with traded volume visualization',
-    'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
-    'See all market data without aggregation',
-    'Use Bookmap in real-time or in replay to debrief your trading session',
-    'Access to many addons, including Multibook',
-  ]
+type ElementProperties = {
+  listArray: Array<string>
+}
+
+const CryptoSection1Features = ({ listArray }: ElementProperties): React.ReactElement => {
+  const list: Array<string> = listArray
+    ? listArray
+    : [
+        'View full-depth historical data with the dynamic heatmap',
+        'Watch the battle between buyers and sellers in 3D with traded volume visualization',
+        'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
+        'See all market data without aggregation',
+        'Use Bookmap in real-time or in replay to debrief your trading session',
+        'Access to many addons, including Multibook',
+      ]
+
   const classes = useStyles()
   return (
     <Container fixed>
@@ -94,3 +102,4 @@ export default function CryptoSection1Features() {
     </Container>
   )
 }
+export default CryptoSection1Features
