@@ -1,6 +1,5 @@
 import { createMuiTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 
 import GbnSection0 from '../src/components/Layout/gbn/gbn-section-0'
@@ -10,11 +9,10 @@ import GbnSection3Multibook from '../src/components/Layout/gbn/gbn-section-3-mul
 import GbnSection4DeskGetStart from '../src/components/Layout/gbn/gbn-section-4-desk-get-start'
 import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-get-start'
 import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
-import GbnSection6UserReviews from '../src/components/Layout/gbn/gbn-section-6-user-reviews'
 import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
 import Footer from '../src/components/Layout/Footer/MainFooter'
 import { newContentSection5 } from '../src/components/Layout/GetBookmapNow/gbn-section-5-content'
-const Index: NextPage<{ data: string }> = (props) => {
+const Index = () => {
   const theme2 = useTheme()
   const mobile = useMediaQuery(theme2.breakpoints.down('md'))
   const featureListArray = [
@@ -74,33 +72,10 @@ const Index: NextPage<{ data: string }> = (props) => {
         <GbnSection3Multibook page={PageName} />
         {mobile ? <GbnSection4MGetStart page={PageName}  /> : <GbnSection4DeskGetStart page={PageName} />}
         <GbnSection5Pricing newContent={newContentSection5} />
-        <GbnSection6UserReviews data={props.data} />
       </main>
       <Footer page={PageName} />
     </ThemeProvider>
   )
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  try {
-    const result2 = fetch('https://www.trustpilot.com/review/bookmap.com')
-    const data = await result2
-      .then(function (response) {
-        return response.text()
-      })
-      .then(function (html) {
-        return html
-      })
-      .catch(function (error) {
-        console.log('Failed to fetch page trustpilot:', error)
-      })
-    return {
-      props: { data: data },
-    }
-  } catch {
-    return {
-      props: {},
-    }
-  }
-}
 export default Index

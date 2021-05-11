@@ -13,7 +13,7 @@ npm install && NODE_ENV=production npm run build
 #npm run build
 
 echo "reload app next"
-pm2 reload bookmap
+#pm2 reload bookmap
 #pm2 save
 #echo "starting app as daemon"
 #pm2 start npm --name "bookmap" -- start
