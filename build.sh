@@ -8,7 +8,7 @@ echo "Building and deploying app\n"
 
 echo "npm install and build"
 #npm install
-npm install && NODE_ENV=production npm run build
+#npm install && NODE_ENV=production npm run build
 #echo "npm build"
 #npm run build
 
