@@ -1,4 +1,4 @@
-export const text = {
+ const text =(params?:string) =>{return {
   h1: 'Get started in three simple steps',
   s1: {
     lbl: 'Get Bookmap Digital+',
@@ -10,7 +10,10 @@ export const text = {
   },
   s3: {
     lbl: 'Make informed decisions',
-    txt:
+    txt: params==='getbookmapnow'?
+        'Analyze markets in a new way. Clearly see market liquidity and hidden patterns'
+        :
       'Analyze crypto in a new way. Clearly see market liquidity and hidden patterns in trading.',
   },
-}
+}}
+ export default text

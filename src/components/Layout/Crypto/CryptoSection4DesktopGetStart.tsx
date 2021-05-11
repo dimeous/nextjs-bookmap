@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Box, Card, CardMedia, CardContent, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import { text } from './CryptoSection4Content'
+import  getText  from './CryptoSection4Content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -50,8 +50,12 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function CryptoSection4DesktopGetStart() {
+type ElementProperties = {
+  page?: string
+}
+const CryptoSection4DesktopGetStart=({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
+  const text:any=getText(page)
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" align="center" sx={{ pb: 4 }}>
@@ -135,3 +139,4 @@ export default function CryptoSection4DesktopGetStart() {
     </Container>
   )
 }
+export default CryptoSection4DesktopGetStart

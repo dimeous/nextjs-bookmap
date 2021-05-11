@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Image from 'next/image'
-import { text } from './CryptoSection4Content'
+import  getText  from './CryptoSection4Content'
 
 const useStylesText = makeStyles(() => ({
   t1: { fontSize: '1rem', color: ' #0085F9', fontFamily: 'MullerRegular, sans-serif' },
@@ -78,7 +78,12 @@ function GetTxt(i: number, lbl: string, txt: string) {
   )
 }
 
-export default function CryptoSection4MobileGetStart() {
+type ElementProperties = {
+  page?: string
+}
+
+const CryptoSection4MobileGetStart=({ page }: ElementProperties): React.ReactElement => {
+  const text:any=getText(page)
   const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
 
@@ -110,3 +115,4 @@ export default function CryptoSection4MobileGetStart() {
     </Container>
   )
 }
+export default CryptoSection4MobileGetStart

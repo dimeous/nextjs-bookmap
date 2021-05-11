@@ -26,6 +26,7 @@ const Index: NextPage<{ data: string }> = (props) => {
     'Access to many addons, including Multibook',
   ]
   const textSection3 = 'See market liquidity and execution volume '
+  const PageName = 'getbookmapnow'
   return (
     <ThemeProvider
       theme={(theme: Theme) =>
@@ -70,11 +71,11 @@ const Index: NextPage<{ data: string }> = (props) => {
         <CryptoSection1Features listArray={featureListArray} />
         <CryptoSection2Exchanges />
         <CryptoSection3MultiBook text={textSection3} />
-        {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
+        {mobile ? <CryptoSection4MobileGetStart page={PageName}  /> : <CryptoSection4DesktopGetStart page={PageName} />}
         <CryptoSection5Pricing newContent={newContentSection5} />
         <CryptoSection6UserReviews data={props.data} />
       </main>
-      <Footer page={'getbookmapnow'} />
+      <Footer page={PageName} />
     </ThemeProvider>
   )
 }
