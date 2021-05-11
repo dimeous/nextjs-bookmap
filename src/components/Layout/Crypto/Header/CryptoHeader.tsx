@@ -4,14 +4,23 @@ import React from 'react'
 import Link from 'next/link'
 import { useStyles } from './CryptoHeaderStyles'
 
-export default function CryptoHeader() {
+type ElementProperties = {
+    page?: string
+}
+const CryptoHeader=({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
 
   const displayDesktop = () => {
     return (
       <Container fixed sx={{ p: [2, 0, 0, 2] }}>
         <Box className={classes.toolbar}>
-          {bookmapLogo}
+            <Link href="/">
+                <Box>
+                    <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18}/>
+                    { page !== 'getbookmapnow' &&
+                    <Typography className={classes.logoTxt}>CRYPTO</Typography>}
+                </Box>
+            </Link>
 
           <Button
             variant="contained"
@@ -27,14 +36,7 @@ export default function CryptoHeader() {
     )
   }
 
-  const bookmapLogo = (
-    <Link href="/">
-      <Box>
-        <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18} />
-        <Typography className={classes.logoTxt}>CRYPTO</Typography>
-      </Box>
-    </Link>
-  )
+
 
   return (
     <header>
@@ -44,3 +46,4 @@ export default function CryptoHeader() {
     </header>
   )
 }
+export default CryptoHeader

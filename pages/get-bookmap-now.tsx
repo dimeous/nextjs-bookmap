@@ -25,7 +25,7 @@ const Index: NextPage<{ data: string }> = (props) => {
     'Use Bookmap in real-time or in replay to debrief your session',
     'Access to many addons, including Multibook',
   ]
-  const textSection3 = 'See market liquidity and execution volume '
+
   const PageName = 'getbookmapnow'
   return (
     <ThemeProvider
@@ -65,12 +65,13 @@ const Index: NextPage<{ data: string }> = (props) => {
         })
       }
     >
-      <CryptoHeader />
+
+      <CryptoHeader page={PageName}/>
       <main>
-        <CryptoSection0 mobile={mobile} />
+        <CryptoSection0 mobile={mobile} page={PageName}/>
         <CryptoSection1Features listArray={featureListArray} />
-        <CryptoSection2Exchanges />
-        <CryptoSection3MultiBook text={textSection3} />
+        <CryptoSection2Exchanges page={PageName}/>
+        <CryptoSection3MultiBook page={PageName} />
         {mobile ? <CryptoSection4MobileGetStart page={PageName}  /> : <CryptoSection4DesktopGetStart page={PageName} />}
         <CryptoSection5Pricing newContent={newContentSection5} />
         <CryptoSection6UserReviews data={props.data} />

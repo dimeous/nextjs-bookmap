@@ -46,10 +46,9 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 type ElementProperties = {
-  text?: string
+  page?: string
 }
-const CryptoSection3MultiBook = ({ text }: ElementProperties): React.ReactElement => {
-  const TextFromParameters = text ? text : 'See market liquidity and traded volume'
+const CryptoSection3MultiBook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -76,11 +75,11 @@ const CryptoSection3MultiBook = ({ text }: ElementProperties): React.ReactElemen
                 Binance + Coinbase + Huobi = Multibook
               </Typography>
               <Typography color="inherit" paragraph>
-                Create synthetic instruments and see multiple crypto exchanges in one chart.
+                Create synthetic instruments and see multiple {page ==='getbookmapnow'?'digital assets across':'crypto'} exchanges in one chart.
               </Typography>
               <div>
                 <ul>
-                  <li>{TextFromParameters}</li>
+                  <li>See market liquidity and {page ==='getbookmapnow' ? 'execution':'traded'} volume</li>
                   <li>View volume delta across multiple instruments / exchanges</li>
                   <li>Analyze Best Bid and Offer</li>
                   <li>Build your own synthetic instrument</li>

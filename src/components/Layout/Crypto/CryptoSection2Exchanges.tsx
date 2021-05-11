@@ -44,14 +44,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function CryptoSection2Exchanges() {
+type ElementProperties = {
+  page?: string
+}
+
+const CryptoSection2Exchanges=({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
 
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Typography variant={'h2'} component={'h2'}>
-        Connect to over <b>20 Crypto</b> exchanges and get data for free
+        Connect to over <b>20 {page==='getbookmapnow'? 'Digital Currency Exchanges' :'Crypto'}</b> exchanges and get data for free
       </Typography>
       <div>
         <Grid container>
@@ -322,9 +326,11 @@ export default function CryptoSection2Exchanges() {
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See Crypto Connectivity Guide
+          See {page==='getbookmapnow'?'':'Crypto'} Connectivity Guide
         </Link>
       </Box>
     </Container>
   )
 }
+
+export default CryptoSection2Exchanges

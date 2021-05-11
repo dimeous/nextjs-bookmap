@@ -2,7 +2,8 @@
   h1: 'Get started in three simple steps',
   s1: {
     lbl: 'Get Bookmap Digital+',
-    txt: 'Register, install and connect Bookmap to a compatible crypto exchange',
+    txt: 'Register, install and connect Bookmap to a compatible '
+        + (params==='getbookmapnow'?'digital assets':'crypto') +' exchange',
   },
   s2: {
     lbl: 'Get Multibook',
@@ -10,10 +11,8 @@
   },
   s3: {
     lbl: 'Make informed decisions',
-    txt: params==='getbookmapnow'?
-        'Analyze markets in a new way. Clearly see market liquidity and hidden patterns'
-        :
-      'Analyze crypto in a new way. Clearly see market liquidity and hidden patterns in trading.',
+    txt: 'Analyze markets in a new way. Clearly see market liquidity and hidden patterns' +(params==='getbookmapnow'?'':' in trading.')
+
   },
 }}
  export default text

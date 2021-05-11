@@ -45,9 +45,10 @@ const useStyles = makeStyles((theme) => ({
 
 type CardProps = {
   mobile: boolean
+  page?:string
 }
 
-export default function CryptoSection0({ mobile }: CardProps) {
+export default function CryptoSection0({ mobile,page }: CardProps) {
   const classes = useStyles()
   return (
     <>
@@ -65,7 +66,7 @@ export default function CryptoSection0({ mobile }: CardProps) {
                 Multibook is yours at no additional cost with any paid subscription
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                Choose from 20+ crypto exchanges, see multiple order books in one heatmap.
+                Choose from 20+ {page==='getbookmapnow' ?   'digital assets':'crypto'} exchanges, see multiple order books in one heatmap.
               </Typography>
               {!mobile && (
                 <Button

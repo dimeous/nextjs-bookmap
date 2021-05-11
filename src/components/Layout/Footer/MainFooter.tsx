@@ -261,9 +261,11 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                       US stocks data
                     </a>
                   </li>
+                  {page !== 'getbookmapnow' &&
                   <li>
                     <NextLink href="/crypto/">Bookmap Crypto</NextLink>
                   </li>
+                  }
                   <li>
                     <a
                       target="_blank"
