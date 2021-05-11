@@ -150,7 +150,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 type ElementProperties = {
-  page: string
+  page?: string
 }
 const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
   const theme = useTheme()

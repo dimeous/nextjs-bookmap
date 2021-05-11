@@ -31,7 +31,7 @@ function a11yProperties(index: any) {
 const useStyles = styles
 
 type ElementProperties = {
-  newContent: [index: string] | any
+  newContent?: [index: string] | any
 }
 
 const CryptoSection5Pricing = ({ newContent }: ElementProperties): React.ReactElement => {

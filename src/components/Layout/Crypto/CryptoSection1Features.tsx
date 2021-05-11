@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 type ElementProperties = {
-  listArray: Array<string>
+  listArray?: Array<string>
 }
 
 const CryptoSection1Features = ({ listArray }: ElementProperties): React.ReactElement => {

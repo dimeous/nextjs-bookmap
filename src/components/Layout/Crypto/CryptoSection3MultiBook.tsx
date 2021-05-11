@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 type ElementProperties = {
-  text: string
+  text?: string
 }
 const CryptoSection3MultiBook = ({ text }: ElementProperties): React.ReactElement => {
   const TextFromParameters = text ? text : 'See market liquidity and traded volume'
