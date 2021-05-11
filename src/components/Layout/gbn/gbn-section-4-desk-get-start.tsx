@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Box, Card, CardMedia, CardContent, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import  getText  from './CryptoSection4Content'
+import  getText  from './gbn-section-4-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles(() => ({
 type ElementProperties = {
   page?: string
 }
-const CryptoSection4DesktopGetStart=({ page }: ElementProperties): React.ReactElement => {
+const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const text:any=getText(page)
   return (
@@ -68,7 +68,7 @@ const CryptoSection4DesktopGetStart=({ page }: ElementProperties): React.ReactEl
               className={classes.media}
               component="img"
               alt="1. Get Bookmap Digital+"
-              image="/static/crypto/s5/1.svg"
+              image="/static/gbn/s5/1.svg"
               title="Get Software"
             />
             <CardContent>
@@ -92,7 +92,7 @@ const CryptoSection4DesktopGetStart=({ page }: ElementProperties): React.ReactEl
               className={classes.media}
               component="img"
               alt="2. Get Multibook"
-              image="/static/crypto/s5/2.svg"
+              image="static/gbn/s5/2.svg"
               title="Connect Data"
             />
             <CardContent>
@@ -117,7 +117,7 @@ const CryptoSection4DesktopGetStart=({ page }: ElementProperties): React.ReactEl
               className={classes.media}
               component="img"
               alt="3. Make informed trading decisions"
-              image="/static/crypto/s5/3.svg"
+              image="static/gbn/s5/3.svg"
               title="Educate yourself"
             />
             <CardContent>
@@ -139,4 +139,4 @@ const CryptoSection4DesktopGetStart=({ page }: ElementProperties): React.ReactEl
     </Container>
   )
 }
-export default CryptoSection4DesktopGetStart
+export default GbnSection4DeskGetStart

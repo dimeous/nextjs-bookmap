@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 type ElementProperties = {
   page?: string
 }
-const CryptoSection3MultiBook = ({ page }: ElementProperties): React.ReactElement => {
+const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -99,7 +99,7 @@ const CryptoSection3MultiBook = ({ page }: ElementProperties): React.ReactElemen
             <Box className={classes.picCard}>
               <Box>
                 <Image
-                  src={'/static/crypto/s3/pic.png'}
+                  src={'/static/gbn/s3/pic.png'}
                   alt={'multibook'}
                   width={636}
                   height={350}
@@ -114,4 +114,4 @@ const CryptoSection3MultiBook = ({ page }: ElementProperties): React.ReactElemen
     </div>
   )
 }
-export default CryptoSection3MultiBook
+export default GbnSection3Multibook

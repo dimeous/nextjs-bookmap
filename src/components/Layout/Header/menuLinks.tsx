@@ -16,7 +16,7 @@ export const headersData = [
     href: '/#education',
   },
   {
-    label: 'Bookmap for Crypto',
+    label: 'Bookmap for crypto',
     href: '/crypto/',
     blank: true,
   },
@@ -123,7 +123,7 @@ export const solutions = [
     blank: false,
   },
   {
-    label: 'Bookmap for Crypto',
+    label: 'Bookmap for crypto',
     href: '/crypto/',
     blank: false,
   },

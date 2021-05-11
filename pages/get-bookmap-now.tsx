@@ -3,15 +3,15 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 
-import CryptoSection0 from '../src/components/Layout/Crypto/CryptoSection0'
-import CryptoSection1Features from '../src/components/Layout/Crypto/CryptoSection1Features'
-import CryptoSection2Exchanges from '../src/components/Layout/Crypto/CryptoSection2Exchanges'
-import CryptoSection3MultiBook from '../src/components/Layout/Crypto/CryptoSection3MultiBook'
-import CryptoSection4DesktopGetStart from '../src/components/Layout/Crypto/CryptoSection4DesktopGetStart'
-import CryptoSection4MobileGetStart from '../src/components/Layout/Crypto/CryptoSection4MobileGetStart'
-import CryptoSection5Pricing from '../src/components/Layout/Crypto/CryptoSection5Pricing'
-import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
-import CryptoHeader from '../src/components/Layout/Crypto/Header/CryptoHeader'
+import GbnSection0 from '../src/components/Layout/gbn/gbn-section-0'
+import GbnSection1Features from '../src/components/Layout/gbn/gbn-section-1-features'
+import GbnSection2Exchanges from '../src/components/Layout/gbn/gbn-section-2-exchanges'
+import GbnSection3Multibook from '../src/components/Layout/gbn/gbn-section-3-multibook'
+import GbnSection4DeskGetStart from '../src/components/Layout/gbn/gbn-section-4-desk-get-start'
+import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-get-start'
+import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
+import GbnSection6UserReviews from '../src/components/Layout/gbn/gbn-section-6-user-reviews'
+import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
 import Footer from '../src/components/Layout/Footer/MainFooter'
 import { newContentSection5 } from '../src/components/Layout/GetBookmapNow/gbn-section-5-content'
 const Index: NextPage<{ data: string }> = (props) => {
@@ -68,13 +68,13 @@ const Index: NextPage<{ data: string }> = (props) => {
 
       <CryptoHeader page={PageName}/>
       <main>
-        <CryptoSection0 mobile={mobile} page={PageName}/>
-        <CryptoSection1Features listArray={featureListArray} />
-        <CryptoSection2Exchanges page={PageName}/>
-        <CryptoSection3MultiBook page={PageName} />
-        {mobile ? <CryptoSection4MobileGetStart page={PageName}  /> : <CryptoSection4DesktopGetStart page={PageName} />}
-        <CryptoSection5Pricing newContent={newContentSection5} />
-        <CryptoSection6UserReviews data={props.data} />
+        <GbnSection0 mobile={mobile} page={PageName}/>
+        <GbnSection1Features listArray={featureListArray} />
+        <GbnSection2Exchanges page={PageName}/>
+        <GbnSection3Multibook page={PageName} />
+        {mobile ? <GbnSection4MGetStart page={PageName}  /> : <GbnSection4DeskGetStart page={PageName} />}
+        <GbnSection5Pricing newContent={newContentSection5} />
+        <GbnSection6UserReviews data={props.data} />
       </main>
       <Footer page={PageName} />
     </ThemeProvider>

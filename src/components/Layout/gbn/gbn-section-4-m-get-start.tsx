@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Image from 'next/image'
-import  getText  from './CryptoSection4Content'
+import  getText  from './gbn-section-4-content'
 
 const useStylesText = makeStyles(() => ({
   t1: { fontSize: '1rem', color: ' #0085F9', fontFamily: 'MullerRegular, sans-serif' },
@@ -82,7 +82,7 @@ type ElementProperties = {
   page?: string
 }
 
-const CryptoSection4MobileGetStart=({ page }: ElementProperties): React.ReactElement => {
+const GbnSection4MGetStart=({ page }: ElementProperties): React.ReactElement => {
   const text:any=getText(page)
   const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
@@ -101,7 +101,7 @@ const CryptoSection4MobileGetStart=({ page }: ElementProperties): React.ReactEle
             <ListItem key={index} button className={classes.listitem}>
               <ListItemAvatar>
                 <Image
-                  src={`/static/crypto/s5/${index + 1}.svg`}
+                  src={`static/gbn//s5/${index + 1}.svg`}
                   width={75}
                   height={65}
                   alt={value.lbl}
@@ -115,4 +115,4 @@ const CryptoSection4MobileGetStart=({ page }: ElementProperties): React.ReactEle
     </Container>
   )
 }
-export default CryptoSection4MobileGetStart
+export default GbnSection4MGetStart

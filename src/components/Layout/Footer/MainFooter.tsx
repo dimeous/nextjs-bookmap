@@ -417,12 +417,14 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
         <div className={classes.underFooter}>
           <p>All rights reserved, Bookmap Ltd.</p>
           <p>
-            RISK DISCLOSURE: Futures trading contains substantial risk and is not for every
-            investor. An investor could potentially lose all or more than the initial investment.
-            Risk capital is money that can be lost without jeopardizing one{"'"}s financial security
-            or lifestyle. Only risk capital should be used for trading and only those with
-            sufficient risk capital should consider trading. Past Performance is not necessarily
-            indicative of future results.
+            {page === 'getbookmapnow'?
+                'RISK DISCLOSURE: Digital currencies carry substantial risk and are not for every individual. An individual could potentially lose all or more than the initial outlay. Risk capital is a resource that can be lost without jeopardizing one\'s financial security or lifestyle. Only risk capital should be used for digital currency activity and only those with sufficient risk capital should consider transacting. Past Performance is not necessarily indicative of future results':
+                'RISK DISCLOSURE: Futures trading contains substantial risk and is not for every ' +
+                'investor. An investor could potentially lose all or more than the initial investment. ' +
+                'Risk capital is money that can be lost without jeopardizing one{"\'"}s financial security ' +
+                'or lifestyle. Only risk capital should be used for trading and only those with ' +
+                'sufficient risk capital should consider trading. Past Performance is not necessarily ' +
+                'indicative of future results.'}
             <span>
               <a
                 href="/disclaimer?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"

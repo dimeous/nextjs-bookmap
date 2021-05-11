@@ -48,7 +48,7 @@ type ElementProperties = {
   page?: string
 }
 
-const CryptoSection2Exchanges=({ page }: ElementProperties): React.ReactElement => {
+const GbnSection2Exchanges=({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
 
   return (
@@ -333,4 +333,4 @@ const CryptoSection2Exchanges=({ page }: ElementProperties): React.ReactElement 
   )
 }
 
-export default CryptoSection2Exchanges
+export default GbnSection2Exchanges

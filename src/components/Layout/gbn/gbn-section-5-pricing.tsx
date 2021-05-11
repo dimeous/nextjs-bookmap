@@ -18,8 +18,8 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import React from 'react'
 
-import { defaultText } from './CryptoSection5Content'
-import { styles } from './CryptoSection5PricingStyles'
+import { defaultText } from './gbn-section-5-content'
+import { styles } from './gbn-section-5-pricing-styles'
 
 function a11yProperties(index: any) {
   return {
@@ -34,7 +34,7 @@ type ElementProperties = {
   newContent?: [index: string] | any
 }
 
-const CryptoSection5Pricing = ({ newContent }: ElementProperties): React.ReactElement => {
+const GbnSection5Pricing = ({ newContent }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
   const text = newContent ? newContent : defaultText
@@ -295,4 +295,4 @@ const CryptoSection5Pricing = ({ newContent }: ElementProperties): React.ReactEl
     </div>
   )
 }
-export default CryptoSection5Pricing
+export default GbnSection5Pricing

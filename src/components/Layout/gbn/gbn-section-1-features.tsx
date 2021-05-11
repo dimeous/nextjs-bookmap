@@ -61,7 +61,7 @@ type ElementProperties = {
   listArray?: Array<string>
 }
 
-const CryptoSection1Features = ({ listArray }: ElementProperties): React.ReactElement => {
+const GbnSection1Features = ({ listArray }: ElementProperties): React.ReactElement => {
   const list: Array<string> = listArray
     ? listArray
     : [
@@ -88,7 +88,7 @@ const CryptoSection1Features = ({ listArray }: ElementProperties): React.ReactEl
             <ListItem key={index} button className={classes.listitem}>
               <ListItemAvatar>
                 <Image
-                  src={`/static/crypto/s1/${index + 1}.svg`}
+                  src={`/static/gbn/s1/${index + 1}.svg`}
                   width={75}
                   height={65}
                   alt={value}
@@ -102,4 +102,4 @@ const CryptoSection1Features = ({ listArray }: ElementProperties): React.ReactEl
     </Container>
   )
 }
-export default CryptoSection1Features
+export default GbnSection1Features

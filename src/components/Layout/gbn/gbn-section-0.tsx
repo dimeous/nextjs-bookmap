@@ -48,7 +48,7 @@ type CardProps = {
   page?:string
 }
 
-export default function CryptoSection0({ mobile,page }: CardProps) {
+export default function GbnSection0({ mobile,page }: CardProps) {
   const classes = useStyles()
   return (
     <>
