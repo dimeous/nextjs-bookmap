@@ -27,7 +27,7 @@ const CryptoHeader=({ page }: ElementProperties): React.ReactElement => {
             color="secondary"
             href="https://bookmap.com/members/signup/thAhOgYUg"
             className={classes.button}
-            id={page ==='getbookmapnow' ? 'gbn _header_get_it_now':'crypto_header_get_it_now'}
+            id={ (page ==='getbookmapnow') ? 'gbn _header_get_it_now':'crypto_header_get_it_now'}
           >
             Subscribe for free
           </Button>
