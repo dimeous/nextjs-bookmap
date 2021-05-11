@@ -1,12 +1,13 @@
-import React from 'react'
-import { makeStyles, Box, Container, MenuItem, MenuList } from '@material-ui/core'
-import Image from 'next/image'
-import NextLink from 'next/link'
-import TrustBoxFooter from './trustBoxFooter'
+import { Box, Container, makeStyles, MenuItem, MenuList } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Image from 'next/image'
+import NextLink from 'next/link'
+import React from 'react'
+
+import { community, marketplace, products, resources, solutions } from '../Header/menuLinks'
 import MenuListComposition from './toggleMenu'
-import { resources, products, solutions, community, marketplace } from '../Header/menuLinks'
+import TrustBoxFooter from './trustBoxFooter'
 
 const useStyles = makeStyles(() => ({
   mainFooter: {
@@ -148,7 +149,10 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function MainFooter() {
+type ElementProperties = {
+  page: string
+}
+const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   const classes = useStyles()
@@ -221,14 +225,17 @@ export default function MainFooter() {
                   <li>
                     <NextLink href="https://bookmap.com/symbol-table/">Symbol table</NextLink>
                   </li>
-                  <li>
-                    <NextLink href="https://bookmap.com/pro-trader-webinars">
-                      Pro Trader Webinars
-                    </NextLink>
-                  </li>
+                  {page !== 'getbookmapnow' && (
+                    <li>
+                      <NextLink href="https://bookmap.com/pro-trader-webinars">
+                        Pro Trader Webinars
+                      </NextLink>
+                    </li>
+                  )}
                   <li>
                     <NextLink href="https://bookmap.com/educators/">Partner Educators</NextLink>
                   </li>
+
                   <li>
                     <NextLink href="https://bookmap.com/blog/">Blog</NextLink>
                   </li>
@@ -437,3 +444,5 @@ export default function MainFooter() {
     </footer>
   )
 }
+
+export default MainFooter

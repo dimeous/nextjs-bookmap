@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import Tabs from '@material-ui/core/Tabs'
-import Link from '@material-ui/core/Link'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import Tab from '@material-ui/core/Tab'
+import Tabs from '@material-ui/core/Tabs'
+import Typography from '@material-ui/core/Typography'
 import Image from 'next/image'
+import React, { useEffect } from 'react'
 
-interface TabPanelProps {
+interface TabPanelProperties {
   children?: React.ReactNode
   index: any
   value: any
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
   return (
@@ -35,7 +35,7 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-function a11yProps(index: any) {
+function a11yProperties(index: any) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -112,9 +112,9 @@ export default function MainSection2Features() {
         </Typography>
 
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-          <Tab value="one" label="HEATMAP" wrapped {...a11yProps('one')} />
-          <Tab value="two" label="VOLUME" {...a11yProps('two')} />
-          <Tab value="three" label="INDICATORS" {...a11yProps('three')} />
+          <Tab value="one" label="HEATMAP" wrapped {...a11yProperties('one')} />
+          <Tab value="two" label="VOLUME" {...a11yProperties('two')} />
+          <Tab value="three" label="INDICATORS" {...a11yProperties('three')} />
         </Tabs>
 
         <TabPanel value={value} index="one">

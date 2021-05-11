@@ -45,9 +45,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function CryptoSection3MultiBook() {
+type ElementProperties = {
+  text: string
+}
+const CryptoSection3MultiBook = ({ text }: ElementProperties): React.ReactElement => {
+  const TextFromParameters = text ? text : 'See market liquidity and traded volume'
   const classes = useStyles()
-
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -77,7 +80,7 @@ export default function CryptoSection3MultiBook() {
               </Typography>
               <div>
                 <ul>
-                  <li>See market liquidity and traded volume</li>
+                  <li>{TextFromParameters}</li>
                   <li>View volume delta across multiple instruments / exchanges</li>
                   <li>Analyze Best Bid and Offer</li>
                   <li>Build your own synthetic instrument</li>
@@ -112,3 +115,4 @@ export default function CryptoSection3MultiBook() {
     </div>
   )
 }
+export default CryptoSection3MultiBook

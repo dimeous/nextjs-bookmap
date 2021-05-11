@@ -8,9 +8,9 @@ const tooltipText = (
     </Typography>
   </Fragment>
 )
-export const defaultText: { [index: string]: any } = {
+export const newContentSection5: { [index: string]: any } = {
   h1: 'Pricing and Packages',
-  h2: 'Trade cryptocurrencies and get many features with Bookmap desktop application ',
+  h2: 'Buy and sell digital assets and get many features with the Bookmap desktop application ',
   l1: 'MONTHLY',
   l2: 'YEARLY',
   l4: 'Save 15%',
@@ -18,7 +18,7 @@ export const defaultText: { [index: string]: any } = {
   t2: 'digital plus',
   r1: 'Bookmap desktop application',
   r2: 'Real-time market data ',
-  r3: 'Simulated & Live Trading ',
+  r3: 'Simulated & Live Mode ',
   r4: 'API for custom indicators & automated strategies ',
   r5: (
     <Fragment>
@@ -28,12 +28,12 @@ export const defaultText: { [index: string]: any } = {
 
   r61: (
     <Fragment>
-      <span style={{ color: '#0084f6' }}>1 trading pairs</span> viewable at the same time
+      <span style={{ color: '#0084f6' }}>1 digital currency pair</span> viewable at the same time
     </Fragment>
   ),
   r62: (
     <Fragment>
-      <span style={{ color: '#0084f6' }}>20 trading pairs</span> viewable at the same time
+      <span style={{ color: '#0084f6' }}>20 digital currency pairs</span> viewable at the same time
     </Fragment>
   ),
   r7: 'Backfill data',
@@ -53,5 +53,6 @@ export const defaultText: { [index: string]: any } = {
   b2: 'GET DIGITAL+',
   link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',
   link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171',
-  endText: 'Trading Stocks or Futures? Explore more features and opportunities Bookmap provides ',
+  endText:
+    'Interested in Stocks or Futures? Explore more features and opportunities Bookmap provides: ',
 }

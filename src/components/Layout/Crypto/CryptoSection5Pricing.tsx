@@ -1,26 +1,27 @@
-import React from 'react'
-import { styles } from './CryptoSection5PricingStyles'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
-import Container from '@material-ui/core/Container'
-import HighlightOffIcon from '@material-ui/icons/HighlightOff'
-import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import {
   Button,
-  Grid,
   Card,
-  CardContent,
   CardActions,
+  CardContent,
+  Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
 } from '@material-ui/core'
-import { text } from './CryptoSection5Content'
+import Box from '@material-ui/core/Box'
+import Container from '@material-ui/core/Container'
+import Tab from '@material-ui/core/Tab'
+import Tabs from '@material-ui/core/Tabs'
+import Typography from '@material-ui/core/Typography'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import HighlightOffIcon from '@material-ui/icons/HighlightOff'
+import React from 'react'
 
-function a11yProps(index: any) {
+import { defaultText } from './CryptoSection5Content'
+import { styles } from './CryptoSection5PricingStyles'
+
+function a11yProperties(index: any) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -29,10 +30,14 @@ function a11yProps(index: any) {
 
 const useStyles = styles
 
-export default function CryptoSection5Pricing() {
+type ElementProperties = {
+  newContent: [index: string] | any
+}
+
+const CryptoSection5Pricing = ({ newContent }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
-
+  const text = newContent ? newContent : defaultText
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
@@ -54,8 +59,8 @@ export default function CryptoSection5Pricing() {
             aria-label="wrapped label tabs example"
             className={classes.tabs}
           >
-            <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
-            <Tab value="two" label={text.l2} {...a11yProps('two')} />
+            <Tab value="one" label={text.l1} wrapped {...a11yProperties('one')} />
+            <Tab value="two" label={text.l2} {...a11yProperties('two')} />
           </Tabs>
           <div>
             <span className={classes.tabTwo}>{text.l4} </span>
@@ -275,7 +280,7 @@ export default function CryptoSection5Pricing() {
 
         <div className={classes.cta}>
           <Typography sx={{ pt: 4, pb: 4 }}>
-            Trading Stocks or Futures? Explore more features and opportunities Bookmap provides{' '}
+            {text.endText}
             <a
               href="https://bookmap.com/#pricing"
               target="_blank"
@@ -290,3 +295,4 @@ export default function CryptoSection5Pricing() {
     </div>
   )
 }
+export default CryptoSection5Pricing

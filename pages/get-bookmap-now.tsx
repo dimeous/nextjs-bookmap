@@ -13,7 +13,7 @@ import CryptoSection5Pricing from '../src/components/Layout/Crypto/CryptoSection
 import CryptoSection6UserReviews from '../src/components/Layout/Crypto/CryptoSection6UserReviews'
 import CryptoHeader from '../src/components/Layout/Crypto/Header/CryptoHeader'
 import Footer from '../src/components/Layout/Footer/MainFooter'
-
+import { newContentSection5 } from '../src/components/Layout/GetBookmapNow/gbn-section-5-content'
 const Index: NextPage<{ data: string }> = (props) => {
   const theme2 = useTheme()
   const mobile = useMediaQuery(theme2.breakpoints.down('md'))
@@ -25,6 +25,7 @@ const Index: NextPage<{ data: string }> = (props) => {
     'Use Bookmap in real-time or in replay to debrief your session',
     'Access to many addons, including Multibook',
   ]
+  const textSection3 = 'See market liquidity and execution volume '
   return (
     <ThemeProvider
       theme={(theme: Theme) =>
@@ -68,12 +69,12 @@ const Index: NextPage<{ data: string }> = (props) => {
         <CryptoSection0 mobile={mobile} />
         <CryptoSection1Features listArray={featureListArray} />
         <CryptoSection2Exchanges />
-        <CryptoSection3MultiBook />
+        <CryptoSection3MultiBook text={textSection3} />
         {mobile ? <CryptoSection4MobileGetStart /> : <CryptoSection4DesktopGetStart />}
-        <CryptoSection5Pricing />
+        <CryptoSection5Pricing newContent={newContentSection5} />
         <CryptoSection6UserReviews data={props.data} />
       </main>
-      <Footer />
+      <Footer page={'getbookmapnow'} />
     </ThemeProvider>
   )
 }
