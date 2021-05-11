@@ -18,7 +18,9 @@ yarn-error.log*
 
 # Next.js
 /.next
-/.idea
+
+# IDEA config files
+.idea/
 
 # test
 /coverage
