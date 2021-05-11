@@ -11,7 +11,7 @@ import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-g
 import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
 import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
 import Footer from '../src/components/Layout/Footer/MainFooter'
-import { newContentSection5 } from '../src/components/Layout/GetBookmapNow/gbn-section-5-content'
+import { newContentSection5 } from '../src/components/Layout/gbn/gbn-section-5-content-gbn'
 const Index = () => {
   const theme2 = useTheme()
   const mobile = useMediaQuery(theme2.breakpoints.down('md'))

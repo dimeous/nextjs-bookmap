@@ -67,7 +67,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
             <CardMedia
               className={classes.media}
               component="img"
-              alt="1. Get Bookmap Digital+"
+              alt={"1. "+text.s1.lbl}
               image="/static/gbn/s5/1.svg"
               title="Get Software"
             />
@@ -91,7 +91,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
             <CardMedia
               className={classes.media}
               component="img"
-              alt="2. Get Multibook"
+              alt={"2. " +text.s2.lbl}
               image="static/gbn/s5/2.svg"
               title="Connect Data"
             />
@@ -116,7 +116,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
             <CardMedia
               className={classes.media}
               component="img"
-              alt="3. Make informed trading decisions"
+              alt={"3. "+text.s3.lbl}
               image="static/gbn/s5/3.svg"
               title="Educate yourself"
             />
