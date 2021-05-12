@@ -30,17 +30,18 @@ export default function MyApp(props: AppProps) {
   }, [])
 
   SEO.canonical = 'https://bookmap.com' + useRouter().pathname
-  const domain = useRouter().query
+  const domain = useRouter().query.asPath
 
   return (
     <CacheProvider value={cache}>
       <Head>
         {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-        <title>Bookmap®️ {domain.toString()}| Online Trading Platform 2020</title>
+        <title>Bookmap®️ {useRouter().basePath}| Online Trading Platform 2020</title>
         <link rel="shortcut icon" href="/static/icons/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="facebook-domain-verification" content="gf4vmbbkiyhxvzf22ugivxf7tufnf2" />
-        <meta name="zzz" content={domain.toString()}/>
+        <meta name="zzz" content={useRouter().basePath}/>
+        <script>window.alert(`{"hello "+useRouter().pathname}`)</script>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
