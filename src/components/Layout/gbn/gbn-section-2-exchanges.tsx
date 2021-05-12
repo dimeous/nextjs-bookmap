@@ -1,10 +1,11 @@
-import React from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import Link from '@material-ui/core/Link'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import React from 'react'
+
 import ImagePopover from '../Main/MainSection4Popover'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -48,16 +49,19 @@ type ElementProperties = {
   page?: string
 }
 
-const GbnSection2Exchanges=({ page }: ElementProperties): React.ReactElement => {
+const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink = (page==='getbookmapnow') ?
-      '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+  const addToLink =
+    page === 'getbookmapnow'
+      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
       : ''
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Typography variant={'h2'} component={'h2'}>
-        Connect to over <b>20 {page==='getbookmapnow'? 'Digital Currency Exchanges' :'Crypto'}</b> exchanges and get data for free
+        Connect to over{' '}
+        <b>20 {page === 'getbookmapnow' ? 'Digital Currency Exchanges' : 'Crypto'}</b> exchanges and
+        get data for free
       </Typography>
       <div>
         <Grid container>
@@ -323,12 +327,16 @@ const GbnSection2Exchanges=({ page }: ElementProperties): React.ReactElement => 
 
       <Box className={classes.link}>
         <Link
-          href={"https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"+addToLink}
+          href={
+            'https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity' +
+            addToLink +
+            '#crypto-connectivity'
+          }
           color="secondary"
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See {page==='getbookmapnow'?'':'Crypto'} Connectivity Guide
+          See {page === 'getbookmapnow' ? '' : 'Crypto'} Connectivity Guide
         </Link>
       </Box>
     </Container>
