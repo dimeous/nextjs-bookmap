@@ -36,7 +36,7 @@ export default function MyApp(props: AppProps) {
     <CacheProvider value={cache}>
       <Head>
         {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-        <title>Bookmap®️ | Online Trading Platform 2020</title>
+        <title>Bookmap®️ {domain}| Online Trading Platform 2020</title>
         <link rel="shortcut icon" href="/static/icons/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="facebook-domain-verification" content="gf4vmbbkiyhxvzf22ugivxf7tufnf2" />
