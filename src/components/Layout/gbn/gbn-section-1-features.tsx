@@ -65,7 +65,7 @@ const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement =>
   const list = [
     'View full-depth historical data with the dynamic heatmap',
     'Watch the battle between buyers and sellers in 3D with ' +
-      (page === 'getbookmapnow' ? 'traded' : 'execution') +
+      (page === 'getbookmapnow' ? 'execution' : 'traded') +
       ' volume visualization',
     'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
     'See all market data without aggregation',
