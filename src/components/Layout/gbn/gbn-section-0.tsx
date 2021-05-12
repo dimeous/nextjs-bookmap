@@ -79,7 +79,7 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href="https://bookmap.com/members/signup/gv3uiH6Hi"
+                  href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
                 >
                   Get Multibook
                 </Button>
@@ -109,7 +109,7 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
           <Button
             variant="contained"
             color="secondary"
-            href={`"https://bookmap.com/members/signup/gv3uiH6Hi"+${addToLink}`}
+            href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
             className={classes.button}
             id={'main_top_start_for_free'}
           >

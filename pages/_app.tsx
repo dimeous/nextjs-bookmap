@@ -20,18 +20,21 @@ export const cache = createCache({ key: 'css', prepend: true })
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
 
+  const isPageGetBookMapNow = useRouter().pathname === '/get-bookmap-now'
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
       jssStyles.remove()
     }
-    TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
-    TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
+    if (!isPageGetBookMapNow) {
+      TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
+      TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
+    }
   }, [])
 
   SEO.canonical = 'https://bookmap.com' + useRouter().pathname
-  const isPageGetBookMapNow = useRouter().pathname === '/get-bookmap-now'
+
   if (isPageGetBookMapNow) {
     const newTitle = 'Bookmap®️ | Online Visualization Platform 2021'
     const newDescription =
