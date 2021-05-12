@@ -165,7 +165,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
       <Container>
         <Box className={classes.general}>
           <Box sx={{ width: '72.6%', margin: '0 0 72px' }}>
-            <NextLink href="/">
+            <NextLink href="https://bookmap.com/">
               <Image
                 src="/static/main/bookmap-white.svg"
                 width={200}
@@ -179,18 +179,20 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
           </Box>
           <ul className={classes.generalNav}>
             <li>
-              <NextLink href={'https://bookmap.com/#features' + addToLink}>Features</NextLink>
+              <NextLink href={'https://bookmap.com/' + addToLink + '#features'}>Features</NextLink>
             </li>
             <li>
-              <NextLink href={'https://bookmap.com/#connectivity' + addToLink}>
+              <NextLink href={'https://bookmap.com/' + addToLink + '#connectivity'}>
                 Connectivity
               </NextLink>
             </li>
             <li>
-              <NextLink href={'https://bookmap.com/#pricing' + addToLink}>Pricing</NextLink>
+              <NextLink href={'https://bookmap.com/' + addToLink + '#pricing'}>Pricing</NextLink>
             </li>
             <li>
-              <NextLink href={'https://bookmap.com/#education' + addToLink}>Education</NextLink>
+              <NextLink href={'https://bookmap.com/' + addToLink + '#education'}>
+                Education
+              </NextLink>
             </li>
           </ul>
           {mobile ? (
@@ -305,7 +307,9 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                     <a
                       target="_blank"
                       href={
-                        'https://bookmap.com/wiki/Bookmap_API#Bookmap_Quant_solution' + addToLink
+                        'https://bookmap.com/wiki/Bookmap_API' +
+                        addToLink +
+                        '#Bookmap_Quant_solution'
                       }
                       rel={'noreferrer'}
                     >
@@ -442,8 +446,9 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                 'indicative of future results.'}
             <span>
               <a
-                href="/disclaimer?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"
+                href="https://bookmap.com/disclaimer?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"
                 target="_blank"
+                rel="noreferrer"
               >
                 Full Disclaimer
               </a>
@@ -451,8 +456,9 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
             |
             <span>
               <a
-                href="/privacy-policy/?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"
+                href="https://bookmap.com/privacy-policy/?_ga=2.205521747.1942071470.1524510166-17895590.1515004321"
                 target="_blank"
+                rel="noreferrer"
               >
                 Privacy Policy
               </a>

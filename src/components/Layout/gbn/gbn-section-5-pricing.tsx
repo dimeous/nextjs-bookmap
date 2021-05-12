@@ -16,11 +16,11 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
+import { add } from 'husky'
 import React from 'react'
 
 import { defaultText } from './gbn-section-5-content'
 import { styles } from './gbn-section-5-pricing-styles'
-import {add} from "husky";
 
 function a11yProperties(index: any) {
   return {
@@ -42,9 +42,9 @@ const GbnSection5Pricing = ({ newContent }: ElementProperties): React.ReactEleme
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-  const addToLink = (newContent) ?
-      '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const addToLink = newContent
+    ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+    : ''
 
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
@@ -161,7 +161,7 @@ const GbnSection5Pricing = ({ newContent }: ElementProperties): React.ReactEleme
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={"https://bookmap.com/members/signup/thAhOgYUg"+addToLink}
+                  href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
                 >
                   {text.b1}
                 </Button>
@@ -273,7 +273,7 @@ const GbnSection5Pricing = ({ newContent }: ElementProperties): React.ReactEleme
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={(value == 'one' ? text.link12 : text.link22)+addToLink}
+                  href={(value == 'one' ? text.link12 : text.link22) + addToLink}
                 >
                   {text.b2}
                 </Button>
@@ -286,7 +286,7 @@ const GbnSection5Pricing = ({ newContent }: ElementProperties): React.ReactEleme
           <Typography sx={{ pt: 4, pb: 4 }}>
             {text.endText}
             <a
-              href={"https://bookmap.com/#pricing"+addToLink}
+              href={'https://bookmap.com/' + addToLink + '#pricing'}
               target="_blank"
               rel={'noreferrer'}
               style={{ textTransform: 'none' }}
