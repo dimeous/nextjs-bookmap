@@ -54,14 +54,14 @@ export default function MyApp(props: AppProps) {
     ]
     SEO.twitter.title = newTitle
   }
-  const title = isPageGetBookMapNow
+  const PageTitle = isPageGetBookMapNow
     ? 'Bookmap®️ | Online Visualization Platform 2021'
     : 'Bookmap®️ | Online Trading Platform 2021'
   return (
     <CacheProvider value={cache}>
       <Head>
         {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-        <title>{title}</title>
+        <title>{PageTitle}</title>
         <link rel="shortcut icon" href="/static/icons/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="facebook-domain-verification" content="gf4vmbbkiyhxvzf22ugivxf7tufnf2" />
