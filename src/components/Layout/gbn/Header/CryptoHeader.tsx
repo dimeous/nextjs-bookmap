@@ -20,7 +20,7 @@ const CryptoHeader = ({ page }: ElementProperties): React.ReactElement => {
         <Box className={classes.toolbar}>
           <Link href="/">
             <Box>
-              <Link href={'https://bookmap.com/'}>
+              <Link href={'https://bookmap.com/' + addToLink}>
                 <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18} />
               </Link>
               {page !== 'getbookmapnow' && (
