@@ -30,7 +30,22 @@ export default function MyApp(props: AppProps) {
   }, [])
 
   SEO.canonical = 'https://bookmap.com' + useRouter().pathname
-  const domain = useRouter().query.asPath
+  const isPageGetBookMapNow = (useRouter().pathname ==='/get-bookmap-now')
+  if (isPageGetBookMapNow){
+    SEO.title='Bookmap®️ | Online Visualization Platform 2021'
+    SEO.description="Best online visualization platform ➤ See the volume with amazing clarity ➤ Different packages that best fits your needs ➤ Bookmap®️ - market data visualization platform"
+    SEO.canonical = 'https://get-bookmap-now.com'
+    SEO.openGraph.title = 'Bookmap®️ | Online Visualization Platform 2021'
+    SEO.openGraph.images = [
+      {
+        url: "/static/bookmap_seo.jpg",
+        width: 600,
+        height: 200,
+        alt: "Bookmap®️ | Online Visualization Platform 2021"
+      }
+    ]
+    SEO.twitter.title = 'Bookmap®️ | Online Visualization Platform 2021'
+  }
 
   return (
     <CacheProvider value={cache}>
@@ -40,8 +55,6 @@ export default function MyApp(props: AppProps) {
         <link rel="shortcut icon" href="/static/icons/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="facebook-domain-verification" content="gf4vmbbkiyhxvzf22ugivxf7tufnf2" />
-        <meta name="zzz" content={useRouter().basePath}/>
-        <script>window.alert(`{"hello "+useRouter().pathname}`)</script>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
