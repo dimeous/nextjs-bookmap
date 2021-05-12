@@ -231,7 +231,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                     <NextLink href={'https://bookmap.com/faq/' + addToLink}>FAQ</NextLink>
                   </li>
                   <li>
-                    <NextLink href="https://bookmap.com/symbol-table/">Symbol table</NextLink>
+                    <NextLink href={"https://bookmap.com/symbol-table/" + addToLink}>Symbol table</NextLink>
                   </li>
                   {page !== 'getbookmapnow' && (
                     <li>
@@ -279,7 +279,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                   <li>
                     <a
                       target="_blank"
-                      href="https://www.bookmap.com/knowledgebase/docs/API"
+                      href={'https://www.bookmap.com/knowledgebase/docs/API' + addToLink}
                       rel={'noreferrer'}
                     >
                       Bookmap API
