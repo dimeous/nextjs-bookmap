@@ -1,8 +1,8 @@
-import React from 'react'
-import { Typography, makeStyles, Button } from '@material-ui/core'
+import { Button, makeStyles, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Image from 'next/image'
+import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
       minHeight: '450px',
     },
   },
-  headTradePlatform: {
+  headPlatform: {
     paddingTop: '70px',
     fontSize: '32px',
     [theme.breakpoints.down('lg')]: {
@@ -43,13 +43,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-type CardProps = {
+type CardProperties = {
   mobile: boolean
-  page?:string
+  page?: string
 }
 
-export default function GbnSection0({ mobile,page }: CardProps) {
+export default function GbnSection0({ mobile, page }: CardProperties) {
   const classes = useStyles()
+  const addToLink =
+    page === 'getbookmapnow'
+      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+      : ''
   return (
     <>
       <div className={classes.root}>
@@ -61,12 +65,13 @@ export default function GbnSection0({ mobile,page }: CardProps) {
                 variant="h1"
                 color="primary"
                 gutterBottom
-                className={classes.headTradePlatform}
+                className={classes.headPlatform}
               >
                 Multibook is yours at no additional cost with any paid subscription
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                Choose from 20+ {page==='getbookmapnow' ?   'digital assets':'crypto'} exchanges, see multiple order books in one heatmap.
+                Choose from 20+ {page === 'getbookmapnow' ? 'digital assets' : 'crypto'} exchanges,
+                see multiple order books in one heatmap.
               </Typography>
               {!mobile && (
                 <Button
@@ -104,7 +109,7 @@ export default function GbnSection0({ mobile,page }: CardProps) {
           <Button
             variant="contained"
             color="secondary"
-            href="https://bookmap.com/members/signup/gv3uiH6Hi"
+            href={`"https://bookmap.com/members/signup/gv3uiH6Hi"+${addToLink}`}
             className={classes.button}
             id={'main_top_start_for_free'}
           >

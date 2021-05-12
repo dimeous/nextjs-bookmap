@@ -3,6 +3,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 
+import Footer from '../src/components/Layout/Footer/main-footer'
 import GbnSection0 from '../src/components/Layout/gbn/gbn-section-0'
 import GbnSection1Features from '../src/components/Layout/gbn/gbn-section-1-features'
 import GbnSection2Exchanges from '../src/components/Layout/gbn/gbn-section-2-exchanges'
@@ -12,7 +13,6 @@ import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-g
 import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
 import GbnSection6UserReviews from '../src/components/Layout/gbn/gbn-section-6-user-reviews'
 import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
-import Footer from '../src/components/Layout/Footer/MainFooter'
 
 const Index: NextPage<{ data: string }> = (props) => {
   const theme2 = useTheme()

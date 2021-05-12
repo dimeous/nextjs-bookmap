@@ -1,33 +1,38 @@
-import { AppBar, Box, Button, Typography, Container } from '@material-ui/core'
-
-import React from 'react'
+import { AppBar, Box, Button, Container, Typography } from '@material-ui/core'
 import Link from 'next/link'
+import React from 'react'
+
 import { useStyles } from './CryptoHeaderStyles'
 
 type ElementProperties = {
-    page?: string
+  page?: string
 }
-const CryptoHeader=({ page }: ElementProperties): React.ReactElement => {
+const CryptoHeader = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
 
   const displayDesktop = () => {
+    const addToLink =
+      page === 'getbookmapnow'
+        ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+        : ''
     return (
       <Container fixed sx={{ p: [2, 0, 0, 2] }}>
         <Box className={classes.toolbar}>
-            <Link href="/">
-                <Box>
-                    <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18}/>
-                    { page !== 'getbookmapnow' &&
-                    <Typography className={classes.logoTxt}>CRYPTO</Typography>}
-                </Box>
-            </Link>
+          <Link href="/">
+            <Box>
+              <img src={'/static/header/bookmap-logo.svg'} alt={'Bookmap'} height={18} />
+              {page !== 'getbookmapnow' && (
+                <Typography className={classes.logoTxt}>CRYPTO</Typography>
+              )}
+            </Box>
+          </Link>
 
           <Button
             variant="contained"
             color="secondary"
-            href="https://bookmap.com/members/signup/thAhOgYUg"
+            href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
             className={classes.button}
-            id={ (page ==='getbookmapnow') ? 'gbn _header_get_it_now':'crypto_header_get_it_now'}
+            id={page === 'getbookmapnow' ? 'gbn _header_get_it_now' : 'crypto_header_get_it_now'}
           >
             Subscribe for free
           </Button>
@@ -35,8 +40,6 @@ const CryptoHeader=({ page }: ElementProperties): React.ReactElement => {
       </Container>
     )
   }
-
-
 
   return (
     <header>

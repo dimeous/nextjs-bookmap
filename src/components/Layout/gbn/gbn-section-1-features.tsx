@@ -58,20 +58,22 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 type ElementProperties = {
-  listArray?: Array<string>
+  page?: string
 }
 
-const GbnSection1Features = ({ listArray }: ElementProperties): React.ReactElement => {
-  const list: Array<string> = listArray
-    ? listArray
-    : [
-        'View full-depth historical data with the dynamic heatmap',
-        'Watch the battle between buyers and sellers in 3D with traded volume visualization',
-        'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
-        'See all market data without aggregation',
-        'Use Bookmap in real-time or in replay to debrief your trading session',
-        'Access to many addons, including Multibook',
-      ]
+const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement => {
+  const list = [
+    'View full-depth historical data with the dynamic heatmap',
+    'Watch the battle between buyers and sellers in 3D with ' +
+      (page === 'getbookmapnow' ? 'traded' : 'execution') +
+      ' volume visualization',
+    'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
+    'See all market data without aggregation',
+    'Use Bookmap in real-time or in replay to debrief your ' +
+      (page === 'getbookmapnow' ? '' : 'trading') +
+      ' session',
+    'Access to many addons, including Multibook',
+  ]
 
   const classes = useStyles()
   return (
@@ -87,12 +89,7 @@ const GbnSection1Features = ({ listArray }: ElementProperties): React.ReactEleme
           return (
             <ListItem key={index} button className={classes.listitem}>
               <ListItemAvatar>
-                <Image
-                  src={`/static/gbn/s1/${index + 1}.svg`}
-                  width={75}
-                  height={65}
-                  alt={value}
-                />
+                <Image src={`/static/gbn/s1/${index + 1}.svg`} width={75} height={65} alt={value} />
               </ListItemAvatar>
               <ListItemText id={labelId} primary={value} />
             </ListItem>

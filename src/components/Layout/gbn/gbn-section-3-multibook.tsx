@@ -50,6 +50,9 @@ type ElementProperties = {
 }
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
+  const addToLink = (page==='getbookmapnow') ?
+      '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+      : ''
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -88,7 +91,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
               <Button
                 variant="contained"
                 color="secondary"
-                href="https://bookmap.com/members/signup/gv3uiH6Hi"
+                href={"https://bookmap.com/members/signup/gv3uiH6Hi"+addToLink}
                 sx={{ width: '300px' }}
               >
                 Get MultiBook with Digital+

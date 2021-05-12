@@ -50,7 +50,9 @@ type ElementProperties = {
 
 const GbnSection2Exchanges=({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-
+  const addToLink = (page==='getbookmapnow') ?
+      '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+      : ''
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
@@ -321,7 +323,7 @@ const GbnSection2Exchanges=({ page }: ElementProperties): React.ReactElement => 
 
       <Box className={classes.link}>
         <Link
-          href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
+          href={"https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"+addToLink}
           color="secondary"
           target={'_blank'}
           rel={'noreferrer'}

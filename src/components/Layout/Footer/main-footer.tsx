@@ -154,6 +154,10 @@ type ElementProperties = {
 }
 const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
   const theme = useTheme()
+  const addToLink =
+    page === 'getbookmapnow'
+      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+      : ''
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   const classes = useStyles()
   return (
@@ -175,16 +179,18 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
           </Box>
           <ul className={classes.generalNav}>
             <li>
-              <NextLink href="/#features">Features</NextLink>
+              <NextLink href={'https://bookmap.com/#features' + addToLink}>Features</NextLink>
             </li>
             <li>
-              <NextLink href="/#connectivity">Connectivity</NextLink>
+              <NextLink href={'https://bookmap.com/#connectivity' + addToLink}>
+                Connectivity
+              </NextLink>
             </li>
             <li>
-              <NextLink href="/#pricing">Pricing</NextLink>
+              <NextLink href={'https://bookmap.com/#pricing' + addToLink}>Pricing</NextLink>
             </li>
             <li>
-              <NextLink href="/#education">Education</NextLink>
+              <NextLink href={'https://bookmap.com/#education' + addToLink}>Education</NextLink>
             </li>
           </ul>
           {mobile ? (
@@ -213,14 +219,14 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                   <li>
                     <a
                       target="_blank"
-                      href="https://bookmap.com/knowledgebase/docs/KB-Welcome"
+                      href={'https://bookmap.com/knowledgebase/docs/KB-Welcome' + addToLink}
                       rel={'noreferrer'}
                     >
                       Knowledge base
                     </a>
                   </li>
                   <li>
-                    <NextLink href="https://bookmap.com/faq/">FAQ</NextLink>
+                    <NextLink href={'https://bookmap.com/faq/' + addToLink}>FAQ</NextLink>
                   </li>
                   <li>
                     <NextLink href="https://bookmap.com/symbol-table/">Symbol table</NextLink>
@@ -233,23 +239,25 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                     </li>
                   )}
                   <li>
-                    <NextLink href="https://bookmap.com/educators/">Partner Educators</NextLink>
+                    <NextLink href={'https://bookmap.com/educators/' + addToLink}>
+                      Partner Educators
+                    </NextLink>
                   </li>
 
                   <li>
-                    <NextLink href="https://bookmap.com/blog/">Blog</NextLink>
+                    <NextLink href={'https://bookmap.com/blog/' + addToLink}>Blog</NextLink>
                   </li>
                   <li>
                     <a
                       target="_blank"
-                      href="https://bookmap.com/forum/viewforum.php?f=19"
+                      href={'https://bookmap.com/forum/viewforum.php?f=19' + addToLink}
                       rel={'noreferrer'}
                     >
                       Forum
                     </a>
                   </li>
                   <li>
-                    <a href="https://bookmap.com/support/">Support</a>
+                    <a href={'https://bookmap.com/support/' + addToLink}>Support</a>
                   </li>
                 </ul>
               </li>
@@ -261,11 +269,11 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                       US stocks data
                     </a>
                   </li>
-                  {page !== 'getbookmapnow' &&
-                  <li>
-                    <NextLink href="/crypto/">Bookmap Crypto</NextLink>
-                  </li>
-                  }
+                  {page !== 'getbookmapnow' && (
+                    <li>
+                      <NextLink href="/crypto/">Bookmap Crypto</NextLink>
+                    </li>
+                  )}
                   <li>
                     <a
                       target="_blank"
@@ -281,17 +289,24 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                 <a href="#b2b">BOOKMAP B2B</a>
                 <ul className={classes.subMenu}>
                   <li>
-                    <NextLink href="https://bookmap.com/b2b/">Bookmap®️ B2B</NextLink>
+                    <NextLink href={'https://bookmap.com/b2b/' + addToLink}>Bookmap®️ B2B</NextLink>
                   </li>
                   <li>
-                    <NextLink href="https://web.bookmap.com/?time=2020-12-16--18-14-04&amp;duration=7d">
+                    <NextLink
+                      href={
+                        'https://web.bookmap.com/?time=2020-12-16--18-14-04&amp;duration=7d' +
+                        addToLink
+                      }
+                    >
                       Bookmap Web
                     </NextLink>
                   </li>
                   <li>
                     <a
                       target="_blank"
-                      href="https://bookmap.com/wiki/Bookmap_API#Bookmap_Quant_solution"
+                      href={
+                        'https://bookmap.com/wiki/Bookmap_API#Bookmap_Quant_solution' + addToLink
+                      }
                       rel={'noreferrer'}
                     >
                       Quant solution
@@ -417,9 +432,9 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
         <div className={classes.underFooter}>
           <p>All rights reserved, Bookmap Ltd.</p>
           <p>
-            {page === 'getbookmapnow'?
-                'RISK DISCLOSURE: Digital currencies carry substantial risk and are not for every individual. An individual could potentially lose all or more than the initial outlay. Risk capital is a resource that can be lost without jeopardizing one\'s financial security or lifestyle. Only risk capital should be used for digital currency activity and only those with sufficient risk capital should consider transacting. Past Performance is not necessarily indicative of future results':
-                'RISK DISCLOSURE: Futures trading contains substantial risk and is not for every ' +
+            {page === 'getbookmapnow'
+              ? "RISK DISCLOSURE: Digital currencies carry substantial risk and are not for every individual. An individual could potentially lose all or more than the initial outlay. Risk capital is a resource that can be lost without jeopardizing one's financial security or lifestyle. Only risk capital should be used for digital currency activity and only those with sufficient risk capital should consider transacting. Past Performance is not necessarily indicative of future results"
+              : 'RISK DISCLOSURE: Futures trading contains substantial risk and is not for every ' +
                 'investor. An investor could potentially lose all or more than the initial investment. ' +
                 'Risk capital is money that can be lost without jeopardizing one{"\'"}s financial security ' +
                 'or lifestyle. Only risk capital should be used for trading and only those with ' +
