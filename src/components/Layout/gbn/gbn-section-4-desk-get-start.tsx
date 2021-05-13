@@ -92,7 +92,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
               className={classes.media}
               component="img"
               alt={"2. " +text.s2.lbl}
-              image="static/gbn/s5/2.svg"
+              image="/static/gbn/s5/2.svg"
               title="Connect Data"
             />
             <CardContent>
@@ -117,7 +117,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
               className={classes.media}
               component="img"
               alt={"3. "+text.s3.lbl}
-              image="static/gbn/s5/3.svg"
+              image="/static/gbn/s5/3.svg"
               title="Educate yourself"
             />
             <CardContent>

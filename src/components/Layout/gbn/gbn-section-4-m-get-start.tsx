@@ -101,7 +101,7 @@ const GbnSection4MGetStart=({ page }: ElementProperties): React.ReactElement => 
             <ListItem key={index} button className={classes.listitem}>
               <ListItemAvatar>
                 <Image
-                  src={`static/gbn//s5/${index + 1}.svg`}
+                  src={`/static/gbn/s5/${index + 1}.svg`}
                   width={75}
                   height={65}
                   alt={value.lbl}
