@@ -31,6 +31,9 @@ export default function MyApp(props: AppProps) {
       TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
       TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
     }
+    else{
+      TagManager.initialize({ gtmId: 'GTM-KD8F6RZ' })
+    }
   }, [])
 
   SEO.canonical = 'https://bookmap.com' + useRouter().pathname
