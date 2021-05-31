@@ -586,7 +586,7 @@ export default function TabsWrappedLabelSection4() {
       </div>
       <Box className={classes.link}>
         <Link
-          href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity#crypto-connectivity"
+          href="https://bookmap.com/knowledgebase/docs/KB-IntroductionToBookmap-Connectivity"
           color="secondary"
           target={'_blank'}
           rel={'noreferrer'}

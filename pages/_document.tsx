@@ -1,7 +1,8 @@
-import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/core/styles'
 import createEmotionServer from '@emotion/server/create-instance'
+import { ServerStyleSheets } from '@material-ui/core/styles'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+import React from 'react'
+
 import theme from '../src/theme'
 import { cache } from './_app'
 
@@ -47,6 +48,22 @@ export default class MyDocument extends Document {
               `,
             }}
           />*/}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.addEventListener("load", function(event) {
+             const queryString = window.location.search;
+             const urlParams = new URLSearchParams(queryString);
+             let utm_source = urlParams.get('utm_source'),
+             utm_medium = urlParams.get('utm_medium'),
+             utm_campaign = urlParams.get('utm_campaign'),
+             utm_content = urlParams.get('utm_content');
+             utm_source != null ? localStorage.setItem('utm_source', utm_source) : false;
+             utm_medium != null ? localStorage.setItem('utm_medium', utm_medium) : false;
+             utm_campaign != null ? localStorage.setItem('utm_campaign', utm_campaign) : false;
+             utm_content != null ? localStorage.setItem('utm_content', utm_content) : false;
+          });`,
+            }}
+          />
           <NextScript />
           {/*Zoho chat widget */}
           <script
@@ -65,7 +82,7 @@ export default class MyDocument extends Document {
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
+MyDocument.getInitialProps = async (context) => {
   // Resolution order
   //
   // On the server:
@@ -90,14 +107,14 @@ MyDocument.getInitialProps = async (ctx) => {
 
   // Render app and page and get the context of the page with collected side effects.
   const sheets = new ServerStyleSheets()
-  const originalRenderPage = ctx.renderPage
+  const originalRenderPage = context.renderPage
 
-  ctx.renderPage = () =>
+  context.renderPage = () =>
     originalRenderPage({
       enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     })
 
-  const initialProps = await Document.getInitialProps(ctx)
+  const initialProperties = await Document.getInitialProps(context)
   let css = sheets.toString()
   // It might be undefined, e.g. after an error.
   if (css && process.env.NODE_ENV === 'production') {
@@ -106,13 +123,13 @@ MyDocument.getInitialProps = async (ctx) => {
     css = cleanCSS.minify(css).styles
   }
 
-  const styles = extractCritical(initialProps.html)
+  const styles = extractCritical(initialProperties.html)
 
   return {
-    ...initialProps,
+    ...initialProperties,
     // Styles fragment is rendered after the app and page rendering finish.
     styles: [
-      ...React.Children.toArray(initialProps.styles),
+      ...React.Children.toArray(initialProperties.styles),
       sheets.getStyleElement(),
       <style
         key="emotion-style-tag"

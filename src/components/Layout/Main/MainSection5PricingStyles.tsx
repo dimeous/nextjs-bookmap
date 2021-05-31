@@ -190,6 +190,7 @@ export const styles = makeStyles(() => ({
     color: '#a4a4a4',
     font: '12px/13px MullerRegular,sans-serif',
     marginTop: '23px',
+    textAlign: 'center',
   },
   cta: {
     display: 'flex',

@@ -125,10 +125,12 @@ export default function Header() {
           {bookmapLogo}
           <Box>
             <ul className={classes.headerNav}>
-              {headersData.map((v) => {
+              {headersData.map((v, index) => {
                 return (
                   <li key={v.label}>
-                    <Link href={v.href}>{v.label}</Link>
+                    <a href={v.href} id={'hm' + index}>
+                      {v.label}
+                    </a>
                   </li>
                 )
               })}

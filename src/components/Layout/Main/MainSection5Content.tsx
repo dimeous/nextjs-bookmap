@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/filename-case
 import React, { Fragment } from 'react'
 
 export const text = {

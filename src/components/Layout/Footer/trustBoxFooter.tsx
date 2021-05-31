@@ -1,5 +1,10 @@
 import React from 'react'
-const TrustBoxFooter = () => {
+
+export interface TrustBoxProps {
+  light: boolean
+}
+
+const TrustBoxFooter = ({ light }: TrustBoxProps) => {
   // Create a reference to the <div> element which will represent the TrustBox
   const ref = React.useRef(null)
   React.useEffect(() => {
@@ -23,10 +28,10 @@ const TrustBoxFooter = () => {
       data-businessunit-id="5c76a89be6713b000151de49"
       data-style-height="150px"
       data-style-width="100%"
-      data-theme="dark"
+      data-theme={light ? 'light' : 'dark'}
       data-tags="SelectedReview"
     >
-      <a href="https://www.trustpilot.com/review/bookmap.com" target="_blank" rel="noopener">
+      <a href="https://www.trustpilot.com/review/bookmap.com" target="_blank" rel="noreferrer">
         Trustpilot
       </a>
     </div>

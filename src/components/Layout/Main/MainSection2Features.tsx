@@ -1,21 +1,21 @@
-import React from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import Tabs from '@material-ui/core/Tabs'
-import Link from '@material-ui/core/Link'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import Tab from '@material-ui/core/Tab'
+import Tabs from '@material-ui/core/Tabs'
+import Typography from '@material-ui/core/Typography'
 import Image from 'next/image'
+import React, { useEffect } from 'react'
 
-interface TabPanelProps {
+interface TabPanelProperties {
   children?: React.ReactNode
   index: any
   value: any
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
   return (
@@ -35,7 +35,7 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-function a11yProps(index: any) {
+function a11yProperties(index: any) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -71,11 +71,36 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function MainSection2Features() {
+  const flippingTime = 5000
   const classes = useStyles()
+  const [clicked, setClicked] = React.useState(0)
   const [value, setValue] = React.useState('one')
+  const nextSlide = () => {
+    if (clicked) return
+    if (value == 'one') {
+      setValue('two')
+      return
+    }
+    if (value == 'two') {
+      setValue('three')
+      return
+    }
+    if (value == 'three') {
+      setValue('one')
+      return
+    }
+  }
+
+  useEffect(() => {
+    const interval_id = setInterval(nextSlide, flippingTime)
+    return () => {
+      clearInterval(interval_id)
+    }
+  })
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
+    setClicked(1)
   }
 
   return (
@@ -87,13 +112,13 @@ export default function MainSection2Features() {
         </Typography>
 
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-          <Tab value="one" label="HEATMAP" wrapped {...a11yProps('one')} />
-          <Tab value="two" label="VOLUME" {...a11yProps('two')} />
-          <Tab value="three" label="INDICATORS" {...a11yProps('three')} />
+          <Tab value="one" label="HEATMAP" wrapped {...a11yProperties('one')} />
+          <Tab value="two" label="VOLUME" {...a11yProperties('two')} />
+          <Tab value="three" label="INDICATORS" {...a11yProperties('three')} />
         </Tabs>
 
         <TabPanel value={value} index="one">
-          <Grid container>
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/1_features_block.png"
@@ -121,7 +146,7 @@ export default function MainSection2Features() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index="two">
-          <Grid container>
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/2_features_block.png"
@@ -149,7 +174,7 @@ export default function MainSection2Features() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index="three">
-          <Grid container>
+          <Grid container onClick={() => setClicked(1)}>
             <Grid item md={8} xs={12}>
               <Image
                 src="/static/main/s2/3_features_block.png"

@@ -19,6 +19,9 @@ yarn-error.log*
 # Next.js
 /.next
 
+# IDEA config files
+.idea/
+
 # test
 /coverage
 /package-lock.json
