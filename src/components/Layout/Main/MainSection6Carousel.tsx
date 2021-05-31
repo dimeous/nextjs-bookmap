@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function MainSection6Carousel() {
+const MainSection6Carousel=()=>{
   const items = [
     {
       name: 'Education',
@@ -169,3 +169,5 @@ export default function MainSection6Carousel() {
     </Container>
   )
 }
+
+export default MainSection6Carousel
