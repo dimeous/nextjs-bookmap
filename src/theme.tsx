@@ -88,6 +88,7 @@ theme = {
         },
       },
     },
+
     MuiTab: {
       styleOverrides: {
         wrapper: {
