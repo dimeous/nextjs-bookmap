@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
 import Image from 'next/image'
+import React, { Fragment } from 'react'
 
 export const text = {
   h1: 'Live Advanced Trading Education',

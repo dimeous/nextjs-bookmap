@@ -1,16 +1,10 @@
-import React from 'react'
-import {
-  Typography,
-  makeStyles,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  List,
-  Box,
-} from '@material-ui/core'
+import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
-import  getText  from './gbn-section-4-content'
+import React from 'react'
+
+import getText from './gbn-section-4-content'
 
 const useStylesText = makeStyles(() => ({
   t1: { fontSize: '1rem', color: ' #0085F9', fontFamily: 'MullerRegular, sans-serif' },
@@ -66,12 +60,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function GetTxt(i: number, lbl: string, txt: string) {
+function GetTxt(index: number, lbl: string, txt: string) {
   const classes = useStylesText()
   return (
     <Box sx={{ pl: 1 }}>
       <Typography className={classes.t1} gutterBottom>
-        {i}. {lbl}
+        {index}. {lbl}
       </Typography>
       <Typography className={classes.t2}>{txt}</Typography>
     </Box>
@@ -82,8 +76,8 @@ type ElementProperties = {
   page?: string
 }
 
-const GbnSection4MGetStart=({ page }: ElementProperties): React.ReactElement => {
-  const text:any=getText(page)
+const GbnSection4MGetStart = ({ page }: ElementProperties): React.ReactElement => {
+  const text: any = getText(page)
   const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
 

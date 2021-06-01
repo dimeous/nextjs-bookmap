@@ -9,8 +9,8 @@ import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
 import React from 'react'
 
-import { text } from './MainSection5Content'
-import { styles } from './MainSection5MobilePricingStyles'
+import { text } from './main-section-5-content'
+import { styles } from './main-section-5-mobile-pricing-styles'
 
 interface TabPanelProperties {
   children?: React.ReactNode

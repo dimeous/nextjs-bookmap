@@ -1,23 +1,23 @@
-import React from 'react'
-import { styles } from './MainSection5PricingStyles'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
+import { Button } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import ClearIcon from '@material-ui/icons/Clear'
+import Tab from '@material-ui/core/Tab'
+import Tabs from '@material-ui/core/Tabs'
+import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
-import { Button } from '@material-ui/core'
-import { text } from './MainSection5Content'
-import Link from '@material-ui/core/Link'
+import ClearIcon from '@material-ui/icons/Clear'
+import React from 'react'
 
-interface TabPanelProps {
+import { text } from './main-section-5-content'
+import { styles } from './main-section-5-pricing-styles'
+
+interface TabPanelProperties {
   children?: React.ReactNode
   index: any
   value: any
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
   return (
@@ -37,7 +37,7 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-function a11yProps(index: any) {
+function a11yProperties(index: any) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -71,9 +71,9 @@ export default function TabsWrappedLabelSection5() {
           aria-label="wrapped label tabs example"
           className={classes.tabs}
         >
-          <Tab value="one" label={text.l1} wrapped {...a11yProps('one')} />
-          <Tab value="two" label={text.l2} {...a11yProps('two')} />
-          <Tab value="three" label={text.l3} {...a11yProps('three')} />
+          <Tab value="one" label={text.l1} wrapped {...a11yProperties('one')} />
+          <Tab value="two" label={text.l2} {...a11yProperties('two')} />
+          <Tab value="three" label={text.l3} {...a11yProperties('three')} />
         </Tabs>
         <TabPanel value={value} index="two">
           <span className={classes.tabTwo}>{text.l4} </span>

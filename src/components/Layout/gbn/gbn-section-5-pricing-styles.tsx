@@ -1,7 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles'
-import theme from '../../../theme'
+import { Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 
-export const styles = makeStyles(() => ({
+export const styles = makeStyles((theme: Theme) => ({
   root: {
     color: '#1a1833',
   },

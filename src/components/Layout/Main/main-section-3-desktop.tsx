@@ -1,8 +1,10 @@
-import React from 'react'
-import { makeStyles, Box, Card, CardMedia, CardContent, Button } from '@material-ui/core'
+import { Box, Button, Card, CardContent, CardMedia } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import { text } from './MainSection3Content'
 import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/styles'
+import React from 'react'
+
+import { text } from './main-section-3-content'
 
 const useStyles = makeStyles(() => ({
   root: {

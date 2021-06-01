@@ -1,21 +1,22 @@
-import React from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import Tabs from '@material-ui/core/Tabs'
-import Link from '@material-ui/core/Link'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import ImagePopover from './MainSection4Popover'
+import Link from '@material-ui/core/Link'
+import Tab from '@material-ui/core/Tab'
+import Tabs from '@material-ui/core/Tabs'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/styles'
+import React from 'react'
 
-interface TabPanelProps {
+import ImagePopover from './main-section-4-popover'
+
+interface TabPanelProperties {
   children?: React.ReactNode
   index: any
   value: any
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
   return (
@@ -35,7 +36,7 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-function a11yProps(index: any) {
+function a11yProperties(index: any) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -99,9 +100,9 @@ export default function TabsWrappedLabelSection4() {
           Bookmap is compatible with many data providers / exchanges
         </Typography>
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-          <Tab value="one" label="FUTURES" wrapped {...a11yProps('one')} />
-          <Tab value="two" label="STOCKS" {...a11yProps('two')} />
-          <Tab value="three" label="CRYPTO" {...a11yProps('three')} />
+          <Tab value="one" label="FUTURES" wrapped {...a11yProperties('one')} />
+          <Tab value="two" label="STOCKS" {...a11yProperties('two')} />
+          <Tab value="three" label="CRYPTO" {...a11yProperties('three')} />
         </Tabs>
         {/* 1-st Panel*/}
         <TabPanel value={value} index="one">

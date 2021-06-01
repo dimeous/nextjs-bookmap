@@ -2,10 +2,11 @@ import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
-import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Theme } from '@material-ui/core/styles'
 import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 
@@ -87,7 +88,6 @@ export default function MainSection2Features() {
     }
     if (value == 'three') {
       setValue('one')
-      return
     }
   }
 

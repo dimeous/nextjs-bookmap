@@ -1,8 +1,10 @@
-import React from 'react'
-import { makeStyles, Box, Button } from '@material-ui/core'
+import { Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import { text } from './MainSection6Content'
+import { makeStyles } from '@material-ui/styles'
+import React from 'react'
+
+import { text } from './main-section-6-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -171,9 +173,9 @@ export function Desktop() {
   )
 }
 
-type CardProps = {
+type CardProperties = {
   mobile: boolean
 }
-export default function MainSection6Trading({ mobile }: CardProps) {
+export default function MainSection6Trading({ mobile }: CardProperties) {
   return mobile ? <Mobile /> : <Desktop />
 }

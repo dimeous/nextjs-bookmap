@@ -1,15 +1,16 @@
-import { Box, Container, makeStyles, MenuItem, MenuList } from '@material-ui/core'
+import { Box, Container, MenuItem, MenuList } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import React from 'react'
 
 import { community, marketplace, products, resources, solutions } from '../Header/menuLinks'
-import MenuListComposition from './toggleMenu'
-import TrustBoxFooter from './trustBoxFooter'
+import MenuListComposition from './toggle-menu'
+import TrustBoxFooter from './trust-box-footer'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles({
   mainFooter: {
     background: '#1a1833',
     '& ul': {
@@ -147,7 +148,7 @@ const useStyles = makeStyles(() => ({
       opacity: 1,
     },
   },
-}))
+})
 
 type ElementProperties = {
   page?: string
@@ -231,7 +232,9 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                     <NextLink href={'https://bookmap.com/faq/' + addToLink}>FAQ</NextLink>
                   </li>
                   <li>
-                    <NextLink href={"https://bookmap.com/symbol-table/" + addToLink}>Symbol table</NextLink>
+                    <NextLink href={'https://bookmap.com/symbol-table/' + addToLink}>
+                      Symbol table
+                    </NextLink>
                   </li>
                   {page !== 'getbookmapnow' && (
                     <li>

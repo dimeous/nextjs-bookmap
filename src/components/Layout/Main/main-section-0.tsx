@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import styles from './MainSection0.module.css'
-import { Typography, makeStyles, Button } from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import { Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 
-const useStyles = makeStyles((theme) => ({
+import styles from './main-section-0.module.css'
+
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: '#1e262d',
     paddingTop: '30px',
@@ -66,16 +69,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-type CardProps = {
+type CardProperties = {
   mobile: boolean
 }
 
-export default function MainSection0({ mobile }: CardProps) {
+export default function MainSection0({ mobile }: CardProperties) {
   const [width, setWidth] = useState(0)
-  const elementRef = React.useRef<HTMLDivElement>(null)
+  const elementReference = React.useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const { current } = elementRef
+    const { current } = elementReference
     if (current) setWidth(current.getBoundingClientRect().width)
   }, [])
 
@@ -114,7 +117,7 @@ export default function MainSection0({ mobile }: CardProps) {
               )}
             </Grid>
             <Grid item md={6} xs={12}>
-              <div className={classes.outer} ref={elementRef}>
+              <div className={classes.outer} ref={elementReference}>
                 <Image
                   src="/static/main/bg-cr.png"
                   alt="Bookmap chart"

@@ -1,10 +1,12 @@
-import { Box, Button, makeStyles, Typography } from '@material-ui/core'
+import { Box, Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import { Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     backgroundColor: '#E6ECEF',
@@ -50,8 +52,9 @@ type ElementProperties = {
 }
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink = (page==='getbookmapnow') ?
-      '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
+  const addToLink =
+    page === 'getbookmapnow'
+      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
       : ''
   return (
     <div className={classes.root}>
@@ -78,11 +81,16 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 Binance + Coinbase + Huobi = Multibook
               </Typography>
               <Typography color="inherit" paragraph>
-                Create synthetic instruments and see multiple {page ==='getbookmapnow'?'digital assets across':'crypto'} exchanges in one chart.
+                Create synthetic instruments and see multiple{' '}
+                {page === 'getbookmapnow' ? 'digital assets across' : 'crypto'} exchanges in one
+                chart.
               </Typography>
               <div>
                 <ul>
-                  <li>See market liquidity and {page ==='getbookmapnow' ? 'execution':'traded'} volume</li>
+                  <li>
+                    See market liquidity and {page === 'getbookmapnow' ? 'execution' : 'traded'}{' '}
+                    volume
+                  </li>
                   <li>View volume delta across multiple instruments / exchanges</li>
                   <li>Analyze Best Bid and Offer</li>
                   <li>Build your own synthetic instrument</li>
@@ -91,7 +99,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
               <Button
                 variant="contained"
                 color="secondary"
-                href={"https://bookmap.com/members/signup/gv3uiH6Hi"+addToLink}
+                href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
                 sx={{ width: '300px' }}
               >
                 Get MultiBook with Digital+

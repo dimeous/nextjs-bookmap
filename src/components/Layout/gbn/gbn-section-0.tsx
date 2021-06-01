@@ -1,10 +1,12 @@
-import { Button, makeStyles, Typography } from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import { Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: '#1e262d',
     paddingTop: '30px',

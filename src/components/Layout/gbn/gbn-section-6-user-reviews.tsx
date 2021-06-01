@@ -1,20 +1,15 @@
-import React, { Fragment } from 'react'
-import {
-  Typography,
-  makeStyles,
-  Box,
-  CardContent,
-  Card,
-  Link,
-  CardActions,
-} from '@material-ui/core'
+import 'react-multi-carousel/lib/styles.css'
+
+import { Box, Card, CardActions, CardContent, Link, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
 import StarIcon from '@material-ui/icons/Star'
+import { makeStyles } from '@material-ui/styles'
+import React, { Fragment } from 'react'
+import Carousel from 'react-multi-carousel'
+
 import TrustPreloadPilot from '../../trustPreloadPilot'
-import TrustBoxFooter from '../Footer/trustBoxFooter'
+import TrustBoxFooter from '../Footer/trust-box-footer'
 
 const responsive = {
   desktop: {
@@ -100,33 +95,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const StarsRaiting = function (num: number): JSX.Element {
+const StarsRaiting = function (number: number): JSX.Element {
   const content = []
-  for (let i = 0; i < num; i++) content.push(<StarIcon style={{ color: '#0085F9' }} />)
-  for (let i = num; i < 5; i++) content.push(<StarIcon style={{ color: '#CCD8DD' }} />)
+  for (let index = 0; index < number; index++)
+    content.push(<StarIcon style={{ color: '#0085F9' }} />)
+  for (let index = number; index < 5; index++)
+    content.push(<StarIcon style={{ color: '#CCD8DD' }} />)
   return <>{content}</>
 }
 
-type CardProps = {
+type CardProperties = {
   data: string
 }
 
 const UserReviews = function (html: string) {
   const parser = new DOMParser()
-  const doc = parser.parseFromString(html, 'text/html')
-  const docArticles = doc.querySelectorAll('article > script')
-  const arrReviews = (articles: NodeListOf<Element>) => {
+  const document_ = parser.parseFromString(html, 'text/html')
+  const documentArticles = document_.querySelectorAll('article > script')
+
+  const arrayReviews = (articles: NodeListOf<Element>) => {
     const reviews: any[] = []
-    articles.forEach((v) => {
+    for (const v of articles) {
       const json = JSON.parse(v.innerHTML)
       if (json.stars > 3) reviews.push(json)
-    })
+    }
     return reviews
   }
-  return arrReviews(docArticles)
+  return arrayReviews(documentArticles)
 }
 
-export default function GbnSection6UserReviews({ data }: CardProps) {
+export default function GbnSection6UserReviews({ data }: CardProperties) {
   const usrReviews = process.browser ? UserReviews(data) : null
   const classes = useStyles()
   return (
@@ -156,9 +154,9 @@ export default function GbnSection6UserReviews({ data }: CardProps) {
                     draggable={true}
                     arrows={true}
                   >
-                    {usrReviews.map((item, i) => {
+                    {usrReviews.map((item, index) => {
                       return (
-                        <Card key={i} className={classes.carouselBox}>
+                        <Card key={index} className={classes.carouselBox}>
                           <CardContent className={classes.picCardCont}>
                             {StarsRaiting(item.stars)}
                             <Typography className={classes.picTitle} gutterBottom noWrap>
@@ -178,7 +176,7 @@ export default function GbnSection6UserReviews({ data }: CardProps) {
 
                             <Typography className={classes.picText}>
                               {item.reviewBody.length > 210
-                                ? item.reviewBody.substring(0, 210) + '...'
+                                ? item.reviewBody.slice(0, 210) + '...'
                                 : item.reviewBody}
                             </Typography>
                           </CardContent>

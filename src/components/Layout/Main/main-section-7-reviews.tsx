@@ -1,17 +1,18 @@
-import React from 'react'
-import Typography from '@material-ui/core/Typography'
+import { Grid } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import { Grid, makeStyles } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import React from 'react'
 
-interface TabPanelProps {
+interface TabPanelProperties {
   children?: React.ReactNode
   index: any
   value: any
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
   return (
@@ -173,10 +174,10 @@ export default function TabsWrappedLabelSection7() {
           </TabPanel>
           <TabPanel value={value} index={3}>
             <div className={classes.reviewsText}>
-              &quot;BookMap's visualization of the order flow helps me see in advance where support
-              and resistance areas are located. This is a huge advantage because it helps me pick
-              entries and exits in reversals during the trading day, without watching flickering
-              numbers in a DOM.&quot;
+              &quot;BookMap{"'"}s visualization of the order flow helps me see in advance where
+              support and resistance areas are located. This is a huge advantage because it helps me
+              pick entries and exits in reversals during the trading day, without watching
+              flickering numbers in a DOM.&quot;
             </div>
           </TabPanel>
           <TabPanel value={value} index={4}>

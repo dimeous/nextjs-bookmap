@@ -1,7 +1,9 @@
-import React from 'react'
-import { makeStyles, Box, Card, CardMedia, CardContent, Typography } from '@material-ui/core'
+import { Box, Card, CardContent, CardMedia, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import  getText  from './gbn-section-4-content'
+import { makeStyles } from '@material-ui/styles'
+import React from 'react'
+
+import getText from './gbn-section-4-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -53,9 +55,9 @@ const useStyles = makeStyles(() => ({
 type ElementProperties = {
   page?: string
 }
-const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement => {
+const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const text:any=getText(page)
+  const text: any = getText(page)
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" align="center" sx={{ pb: 4 }}>
@@ -67,7 +69,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
             <CardMedia
               className={classes.media}
               component="img"
-              alt={"1. "+text.s1.lbl}
+              alt={'1. ' + text.s1.lbl}
               image="/static/gbn/s5/1.svg"
               title="Get Software"
             />
@@ -91,7 +93,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
             <CardMedia
               className={classes.media}
               component="img"
-              alt={"2. " +text.s2.lbl}
+              alt={'2. ' + text.s2.lbl}
               image="/static/gbn/s5/2.svg"
               title="Connect Data"
             />
@@ -116,7 +118,7 @@ const GbnSection4DeskGetStart=({ page }: ElementProperties): React.ReactElement 
             <CardMedia
               className={classes.media}
               component="img"
-              alt={"3. "+text.s3.lbl}
+              alt={'3. ' + text.s3.lbl}
               image="/static/gbn/s5/3.svg"
               title="Educate yourself"
             />

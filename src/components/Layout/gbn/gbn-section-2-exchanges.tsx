@@ -2,11 +2,12 @@ import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
-import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Theme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 
-import ImagePopover from '../Main/MainSection4Popover'
+import ImagePopover from '../Main/main-section-4-popover'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {

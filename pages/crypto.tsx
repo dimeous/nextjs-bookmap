@@ -1,4 +1,4 @@
-import { createMuiTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
+import { createTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { GetStaticProps, NextPage } from 'next'
 import React from 'react'
@@ -20,7 +20,7 @@ const Index: NextPage<{ data: string }> = (props) => {
   return (
     <ThemeProvider
       theme={(theme: Theme) =>
-        createMuiTheme({
+        createTheme({
           ...theme,
           typography: {
             h1: {

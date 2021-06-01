@@ -1,12 +1,12 @@
 import React from 'react'
 
-export interface TrustBoxProps {
+export interface TrustBoxProperties {
   light: boolean
 }
 
-const TrustBoxFooter = ({ light }: TrustBoxProps) => {
+const TrustBoxFooter = ({ light }: TrustBoxProperties) => {
   // Create a reference to the <div> element which will represent the TrustBox
-  const ref = React.useRef(null)
+  const reference = React.useRef(null)
   React.useEffect(() => {
     // If window.Trustpilot is available it means that we need to load the TrustBox from our ref.
     // If it's not, it means the script you pasted into <head /> isn't loaded  just yet.
@@ -16,12 +16,12 @@ const TrustBoxFooter = ({ light }: TrustBoxProps) => {
     if (window.Trustpilot) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      window.Trustpilot.loadFromElement(ref.current, true)
+      window.Trustpilot.loadFromElement(reference.current, true)
     }
   }, [])
   return (
     <div
-      ref={ref} // We need a reference to this element to load the TrustBox in the effect.
+      ref={reference} // We need a reference to this element to load the TrustBox in the effect.
       className="trustpilot-widget" // Renamed this to className.
       data-locale="en-US"
       data-template-id="53aa8807dec7e10d38f59f32"

@@ -1,18 +1,19 @@
-import React from 'react'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import Reviews from './MainSection7Reviews'
+import Tab from '@material-ui/core/Tab'
+import Tabs from '@material-ui/core/Tabs'
+import Typography from '@material-ui/core/Typography'
+import React from 'react'
 
-interface TabPanelProps {
+import Reviews from './main-section-7-reviews'
+
+interface TabPanelProperties {
   children?: React.ReactNode
   index: any
   value: any
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
   return (
@@ -32,7 +33,7 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-function a11yProps(index: any) {
+function a11yProperties(index: any) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -52,7 +53,7 @@ export default function TabsWrappedLabelSection7() {
         Some good words about Bookmap®️
       </Typography>
       <Tabs value={value} onChange={handleChange} aria-label="Some good words about Bookmap®">
-        <Tab value="one" label="TESTIMONIALS" wrapped {...a11yProps('one')} />
+        <Tab value="one" label="TESTIMONIALS" wrapped {...a11yProperties('one')} />
       </Tabs>
       <TabPanel value={value} index="one">
         <Reviews />

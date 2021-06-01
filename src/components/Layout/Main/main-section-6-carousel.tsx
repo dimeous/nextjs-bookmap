@@ -1,18 +1,10 @@
-import React from 'react'
-import {
-  makeStyles,
-  Link,
-  Container,
-  Typography,
-  Card,
-  CardContent,
-  CardActions,
-  Box,
-} from '@material-ui/core'
-
-import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+
+import { Box, Card, CardActions, CardContent, Container, Link, Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import React from 'react'
+import Carousel from 'react-multi-carousel'
 
 const responsive = {
   desktop: {
@@ -85,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const MainSection6Carousel=()=>{
+const MainSection6Carousel = () => {
   const items = [
     {
       name: 'Education',
@@ -127,7 +119,7 @@ const MainSection6Carousel=()=>{
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={12000}
+        autoPlaySpeed={12_000}
         keyBoardControl={true}
         minimumTouchDrag={80}
         customTransition="all .5"
@@ -137,17 +129,17 @@ const MainSection6Carousel=()=>{
         draggable={true}
         arrows={true}
       >
-        {items.map((item, i) => {
+        {items.map((item, index) => {
           return (
-            <Card className={classes.card} key={i}>
+            <Card className={classes.card} key={index}>
               <CardContent className={classes.cardContent}>
                 <Box className={classes.cardHead}>
                   <Typography className={classes.title} gutterBottom>
                     {item.name}
                   </Typography>
                   <Image
-                    src={'/static/main/s6/' + ((i % 3) + 1) + '.svg'}
-                    alt={i + ' img'}
+                    src={'/static/main/s6/' + ((index % 3) + 1) + '.svg'}
+                    alt={index + ' img'}
                     width={102}
                     height={24}
                     layout="intrinsic"

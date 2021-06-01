@@ -1,21 +1,22 @@
 import {
   AppBar,
-  Toolbar,
   Box,
-  IconButton,
-  Drawer,
-  MenuItem,
-  Typography,
-  Fade,
-  Container,
   ClickAwayListener,
+  Container,
+  Drawer,
+  Fade,
+  IconButton,
+  MenuItem,
+  Toolbar,
+  Typography,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useStyles } from './MainHeaderStyles'
-import MenuListComposition from './toggleMenu'
-import { headersData, resources, products, solutions, community, marketplace } from './menuLinks'
+import React, { useEffect, useState } from 'react'
+
+import { useStyles } from './main-header-styles'
+import { community, headersData, marketplace, products, resources, solutions } from './menuLinks'
+import MenuListComposition from './toggle-menu'
 
 export default function Header() {
   const classes = useStyles()
@@ -28,7 +29,7 @@ export default function Header() {
   const { mobileView, drawerOpen } = state
   const [checked, setChecked] = React.useState(false)
   const handleChange = () => {
-    setChecked((prev) => !prev)
+    setChecked((previous) => !previous)
   }
   const handleClickAway = () => {
     setChecked(false)
@@ -37,8 +38,8 @@ export default function Header() {
   useEffect(() => {
     const setResponsiveness = () => {
       return window.innerWidth < 990
-        ? setState((prevState) => ({ ...prevState, mobileView: true }))
-        : setState((prevState) => ({ ...prevState, mobileView: false }))
+        ? setState((previousState) => ({ ...previousState, mobileView: true }))
+        : setState((previousState) => ({ ...previousState, mobileView: false }))
     }
 
     setResponsiveness()
@@ -149,8 +150,10 @@ export default function Header() {
   }
 
   const displayMobile = () => {
-    const handleDrawerOpen = () => setState((prevState) => ({ ...prevState, drawerOpen: true }))
-    const handleDrawerClose = () => setState((prevState) => ({ ...prevState, drawerOpen: false }))
+    const handleDrawerOpen = () =>
+      setState((previousState) => ({ ...previousState, drawerOpen: true }))
+    const handleDrawerClose = () =>
+      setState((previousState) => ({ ...previousState, drawerOpen: false }))
 
     return (
       <Toolbar className={classes.toolbar}>

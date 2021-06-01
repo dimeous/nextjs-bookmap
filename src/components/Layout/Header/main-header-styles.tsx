@@ -1,6 +1,6 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles({
   header: {
     paddingRight: '79px',
     color: '#212529',
@@ -161,4 +161,4 @@ export const useStyles = makeStyles(() => ({
       letterSpacing: '1px',
     },
   },
-}))
+})

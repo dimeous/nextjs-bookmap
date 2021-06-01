@@ -1,5 +1,6 @@
-import { Box, Button, makeStyles, Typography } from '@material-ui/core'
+import { Box, Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
+import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
