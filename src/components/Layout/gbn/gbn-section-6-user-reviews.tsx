@@ -3,6 +3,7 @@ import 'react-multi-carousel/lib/styles.css'
 import { Box, Card, CardActions, CardContent, Link, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import { Theme } from '@material-ui/core/styles'
 import StarIcon from '@material-ui/icons/Star'
 import { makeStyles } from '@material-ui/styles'
 import React, { Fragment } from 'react'
@@ -29,7 +30,7 @@ const responsive = {
   },
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     backgroundColor: '#E6ECEF',
@@ -108,24 +109,24 @@ type CardProperties = {
   data: string
 }
 
+const arrayReviews = (articles: NodeListOf<Element>) => {
+  const reviews: any[] = []
+  for (const v of articles) {
+    const json = JSON.parse(v.innerHTML)
+    if (json.stars > 3) reviews.push(json)
+  }
+  return reviews
+}
+
 const UserReviews = function (html: string) {
   const parser = new DOMParser()
   const document_ = parser.parseFromString(html, 'text/html')
   const documentArticles = document_.querySelectorAll('article > script')
-
-  const arrayReviews = (articles: NodeListOf<Element>) => {
-    const reviews: any[] = []
-    for (const v of articles) {
-      const json = JSON.parse(v.innerHTML)
-      if (json.stars > 3) reviews.push(json)
-    }
-    return reviews
-  }
   return arrayReviews(documentArticles)
 }
 
 export default function GbnSection6UserReviews({ data }: CardProperties) {
-  const usrReviews = process.browser ? UserReviews(data) : null
+  const usrReviews = process.browser ? UserReviews(data) : undefined
   const classes = useStyles()
   return (
     <div className={classes.root} suppressHydrationWarning={true}>
