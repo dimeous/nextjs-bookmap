@@ -1,10 +1,13 @@
 import 'react-multi-carousel/lib/styles.css'
 
 import { Box, Card, CardActions, CardContent, Container, Link, Typography } from '@material-ui/core'
+import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
 import Carousel from 'react-multi-carousel'
+
+import { CarouselType } from '../../../../lib/types'
 
 const responsive = {
   desktop: {
@@ -24,7 +27,7 @@ const responsive = {
   },
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     marginBottom: '145px',
@@ -46,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
     height: '193px',
   },
   title: {
-    font: '14px/24px MullerMedium, sans-serif',
+    font: '16px/24px MullerMedium, sans-serif',
+    paddingTop: '12px',
     fontWeight: 700,
   },
   link: {
@@ -54,8 +58,8 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '18px',
   },
   descr: {
-    paddingTop: '16px',
-    fontSize: '1.3rem',
+    paddingTop: '12px',
+    fontSize: '1.14rem',
   },
   carouselContainer: {
     paddingLeft: '60px',
@@ -77,39 +81,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const MainSection6Carousel = () => {
-  const items = [
-    {
-      name: 'Education',
-      description: 'Watch experts trade in real-time with BookmapLIVE',
-      linkLabel: 'Upgrade to Global Plus',
-      link: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=63-63',
-    },
-    {
-      name: 'News',
-      description: 'NEW! Join Bookmap Community chat on Discord',
-      linkLabel: 'Upgrade to Global Plus',
-      link: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=63-63',
-    },
-    {
-      name: 'Features',
-      description: 'Explore Bookmap B2B Solution for Crypto, Stocks, Futures',
-      linkLabel: 'Become a member',
-      link: 'https://bookmap.com/b2b/',
-    },
-    {
-      name: 'Features 2',
-      description: 'Explore Bookmap B2B Solution for Crypto, Stocks, Futures',
-      linkLabel: 'Become a member',
-      link: 'https://bookmap.com/b2b/',
-    },
-    {
-      name: 'Features 3',
-      description: 'Explore Bookmap B2B Solution for Crypto, Stocks, Futures',
-      linkLabel: 'Become a member',
-      link: 'https://bookmap.com/b2b/',
-    },
-  ]
+interface CardType {
+  data: {
+    mainCarousel: CarouselType[]
+  }
+}
+const MainSection6Carousel = ({ data }: CardType) => {
+  const { mainCarousel } = data
   const classes = useStyles()
   return (
     <Container className={classes.root}>
@@ -129,29 +107,29 @@ const MainSection6Carousel = () => {
         draggable={true}
         arrows={true}
       >
-        {items.map((item, index) => {
+        {mainCarousel.map((item: CarouselType, index: number) => {
           return (
             <Card className={classes.card} key={index}>
               <CardContent className={classes.cardContent}>
                 <Box className={classes.cardHead}>
-                  <Typography className={classes.title} gutterBottom>
-                    {item.name}
-                  </Typography>
                   <Image
-                    src={'/static/main/s6/' + ((index % 3) + 1) + '.svg'}
+                    src={'/static/main/s6/' + ((index % 3) + 1) + '.png'}
                     alt={index + ' img'}
-                    width={102}
-                    height={24}
+                    width={287}
+                    height={4}
                     layout="intrinsic"
                   />
                 </Box>
+                <Typography className={classes.title} gutterBottom>
+                  {item.title}
+                </Typography>
                 <Typography variant="body2" component="p" className={classes.descr}>
-                  {item.description}
+                  {item.text}
                 </Typography>
               </CardContent>
               <CardActions className={classes.action}>
                 <Link href={item.link} target={'_blank'} color="secondary" className={classes.link}>
-                  {item.linkLabel}
+                  {item.labellink}
                 </Link>
               </CardActions>
             </Card>

@@ -1,6 +1,7 @@
 import { Grid } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
+import { Theme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
@@ -32,7 +33,7 @@ function TabPanel(props: TabPanelProperties) {
   )
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {},
   reviewsAuthor: {
     display: 'block',

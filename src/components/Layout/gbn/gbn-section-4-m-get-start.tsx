@@ -1,5 +1,6 @@
 import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
+import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
@@ -11,7 +12,7 @@ const useStylesText = makeStyles(() => ({
   t2: { fontSize: '1rem' },
 }))
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     display: 'flex',
