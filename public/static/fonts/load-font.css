@@ -1,21 +1,42 @@
 @font-face {
-    font-family: 'MullerRegular';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./MullerRegular.woff2') format('woff2');
+  font-family: 'MullerRegular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./MullerRegular.woff2') format('woff2');
 }
+
 @font-face {
-    font-family: 'MullerLight';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./MullerLight.woff2') format('woff2');
+  font-family: 'MullerLight';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./MullerLight.woff2') format('woff2');
 }
+
 @font-face {
-    font-family: 'MullerMedium';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./MullerMedium.woff2') format('woff2');
+  font-family: 'MullerMedium';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./MullerMedium.woff2') format('woff2');
+}
+
+.react-multiple-carousel__arrow {
+  border-radius: 3px !important;
+}
+
+.react-multiple-carousel__arrow--right::before {
+  content: url('/static/components/carousel/arrow-right.svg') !important;
+  top: 3px !important;
+}
+
+.react-multiple-carousel__arrow--left::before {
+  content: url('/static/components/carousel/arrow-right.svg') !important;
+  transform: rotate(180deg);
+  top: -1px !important;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: #0184f6 !important;
 }

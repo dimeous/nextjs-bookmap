@@ -1,5 +1,4 @@
 import 'react-multi-carousel/lib/styles.css'
-import './main-section-6.module.css'
 
 import { Box, Card, CardActions, CardContent, Container, Link, Typography } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles'
@@ -105,8 +104,6 @@ const MainSection6Carousel = ({ data }: CardType) => {
         autoPlaySpeed={12_000}
         keyBoardControl={true}
         minimumTouchDrag={80}
-        customTransition="all .5"
-        transitionDuration={1000}
         containerClass={classes.carouselContainer}
         removeArrowOnDeviceType={['tablet', 'mobile']}
         draggable={true}
