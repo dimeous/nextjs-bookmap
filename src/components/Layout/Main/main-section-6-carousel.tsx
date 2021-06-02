@@ -1,4 +1,5 @@
 import 'react-multi-carousel/lib/styles.css'
+import './main-section-6.module.css'
 
 import { Box, Card, CardActions, CardContent, Container, Link, Typography } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles'
@@ -89,6 +90,10 @@ interface CardType {
 const MainSection6Carousel = ({ data }: CardType) => {
   const { mainCarousel } = data
   const classes = useStyles()
+  const styles = {
+    ReactMultipleCarousel__arrow: {},
+    //define other properties here, use camel case(remember we are using Javascript)
+  }
   return (
     <Container className={classes.root}>
       <Carousel
