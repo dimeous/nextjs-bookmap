@@ -11,14 +11,14 @@ export const styles = makeStyles((theme: Theme) => ({
     position: 'absolute',
     textTransform: 'capitalize',
     transition: '.5s ease',
-    marginLeft: '210px',
+    marginLeft: '130px',
     transform: 'translateY(-23px)',
     zIndex: 1,
     [theme.breakpoints.down('md')]: {
-      marginLeft: '29%',
+      marginLeft: '8rem',
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '31%',
+      marginLeft: '8rem',
     },
   },
 

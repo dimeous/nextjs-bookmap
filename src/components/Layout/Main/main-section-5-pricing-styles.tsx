@@ -13,7 +13,7 @@ export const styles = makeStyles(() => ({
     position: 'absolute',
     textTransform: 'capitalize',
     transition: '.5s ease',
-    marginLeft: '210px',
+    marginLeft: '130px',
     transform: 'translateY(-23px)',
     zIndex: 1,
   },

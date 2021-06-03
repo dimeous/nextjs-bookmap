@@ -42,7 +42,7 @@ export const styles = makeStyles(() => ({
     position: 'absolute',
     textTransform: 'capitalize',
     transition: '.5s ease',
-    marginLeft: '27%',
+    marginLeft: '8rem',
     transform: 'translateY(-23px)',
     zIndex: 1,
   },
