@@ -21,6 +21,8 @@ export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
 
   const isPageGetBookMapNow = useRouter().pathname === '/get-bookmap-now'
+  const isPageCrypto = useRouter().pathname === '/crypto'
+
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
@@ -30,13 +32,15 @@ export default function MyApp(props: AppProps) {
     if (!isPageGetBookMapNow) {
       TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
       TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
-    }
-    else{
+    } else {
       TagManager.initialize({ gtmId: 'GTM-KD8F6RZ' })
     }
   }, [])
 
   SEO.canonical = 'https://bookmap.com' + useRouter().pathname
+  let PageTitle = isPageGetBookMapNow
+    ? 'Bookmap®️ | Online Visualization Platform 2021'
+    : 'Bookmap®️ | Online Trading Platform 2021'
 
   if (isPageGetBookMapNow) {
     const newTitle = 'Bookmap®️ | Online Visualization Platform 2021'
@@ -57,9 +61,26 @@ export default function MyApp(props: AppProps) {
     ]
     SEO.twitter.title = newTitle
   }
-  const PageTitle = isPageGetBookMapNow
-    ? 'Bookmap®️ | Online Visualization Platform 2021'
-    : 'Bookmap®️ | Online Trading Platform 2021'
+  if (isPageCrypto) {
+    const newTitle = 'Bookmap ㄧ Analyze & Trade Order Flow On Top Crypto Exchanges'
+    PageTitle = newTitle
+    const newDescription =
+      'See full market liquidity in real-time. View up to 20 trading pairs in parallel. Analyze order book data from multiple crypto exchanges in one chart.  '
+    SEO.title = newTitle
+    SEO.description = newDescription
+    SEO.openGraph.title = newTitle
+    SEO.openGraph.description = newDescription
+    SEO.openGraph.images = [
+      {
+        url: '/static/bookmap_seo.jpg',
+        width: 600,
+        height: 200,
+        alt: newTitle,
+      },
+    ]
+    SEO.twitter.title = newTitle
+  }
+
   return (
     <CacheProvider value={cache}>
       <Head>
