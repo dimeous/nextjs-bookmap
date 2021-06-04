@@ -5,7 +5,7 @@ import { defaultLanguage, languages } from './config'
 
 const locales = Object.assign(
   {},
-  ...Object.keys(languages).map((index) => {
+  ...Object.keys(languages).map((valuestring, index: number) => {
     return {
       [languages[index]]: {
         translations: require('../locales/' + languages[index] + '/translation.json'),
@@ -43,10 +43,19 @@ const detection = {
 
 i18next.use(LanguageDetector).init({
   detection: detection,
+  debug: true,
   fallbackLng: defaultLanguage,
-  resources: locales,
-  ns: ['translations'],
-  defaultNS: 'translations',
+  resources: {
+    en: {
+      translation: {
+        key: 'hello from namespace 1'
+      },
+    },
+    de: {
+      translation: {
+        key: 'hallo von namespace 1'
+      },
+    },
   returnObjects: true,
   debug: false,
   interpolation: {
