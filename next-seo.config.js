@@ -1,27 +1,29 @@
+const title = 'Bookmap®️ Market Data Analysis & Trading Platform | 2021'
+const description =
+  'Best order flow analysis and trading software, offering stock, futures, and crypto traders live education, advanced charting tools, and indicators. Start free.'
 export default {
-    title: "Bookmap®️ | Online Trading Platform 2021",
-    description:
-        "Best online trading platform ➤ See the volume with amazing clarity ➤ Different packages that best fits your trading needs ➤ Bookmap®️ - market data visualization and trading platform",
-    canonical: "https://bookmap.com",
-    noindex: true,
-    openGraph: {
-        url: "https://bookmap.com",
-        title: "Bookmap®️ | Online Trading Platform 2021",
-        description: "Best online trading platform ➤ See the volume with amazing clarity ➤ Different packages that best fits your trading needs ➤ Bookmap®️ - market data visualization and trading platform",
-        images: [
-            {
-                url: "/static/bookmap_seo.jpg",
-                width: 600,
-                height: 200,
-                alt: "Bookmap®️ | Online Trading Platform 2021"
-            }
-        ],
-        site_name: "Bookmap"
-    },
-    twitter: {
-        handle: "@bookmap_pro",
-        site: "@bookmap_pro",
-        title: "Bookmap®️ | Online Trading Platform 2020",
-        cardType: "summary_large_image"
-    }
-};
+  title: title,
+  description: description,
+  canonical: 'https://bookmap.com',
+  noindex: true,
+  openGraph: {
+    url: 'https://bookmap.com',
+    title: title,
+    description: description,
+    images: [
+      {
+        url: '/static/bookmap_seo.jpg',
+        width: 600,
+        height: 200,
+        alt: title,
+      },
+    ],
+    site_name: 'Bookmap',
+  },
+  twitter: {
+    handle: '@bookmap_pro',
+    site: '@bookmap_pro',
+    title: title,
+    cardType: 'summary_large_image',
+  },
+}
