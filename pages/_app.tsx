@@ -17,7 +17,7 @@ import theme from '../src/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
-export default function MyApp(props: AppProps) {
+const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props
 
   const isPageGetBookMapNow = useRouter().pathname === '/get-bookmap-now'
@@ -100,3 +100,5 @@ export default function MyApp(props: AppProps) {
     </CacheProvider>
   )
 }
+
+export default MyApp
