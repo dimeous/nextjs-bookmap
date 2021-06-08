@@ -1,3 +1,18 @@
+console.log('start')
+const fs = require('fs')
+const path = require('path')
+
+fetch('http://jsonplaceholder.typicode.com/posts')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    console.log(data)
+    console.log(path.resolve(__dirname, 'student.json'))
+
+    fs.writeFileSync(path.resolve(__dirname, '/public/static/student.json'), JSON.stringify(data))
+  })
+
 const { i18n } = require('./next-i18next.config')
 const withImages = require('next-images')
 const withFonts = require('next-fonts')
