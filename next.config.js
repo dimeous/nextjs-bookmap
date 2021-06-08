@@ -8,9 +8,9 @@ fetch('http://jsonplaceholder.typicode.com/posts')
   })
   .then((data) => {
     console.log(data)
-    console.log(path.resolve(__dirname, 'student.json'))
+    console.log(path.resolve(__dirname, '/public/static/student.json'))
 
-    fs.writeFileSync(path.resolve(__dirname, '/public/static/student.json'), JSON.stringify(data))
+    // fs.writeFileSync(path.resolve(__dirname, '/public/static/student.json'), JSON.stringify(data))
   })
 
 const { i18n } = require('./next-i18next.config')
