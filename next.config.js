@@ -1,3 +1,4 @@
+const { i18n } = require('./next-i18next.config')
 const withImages = require('next-images')
 const withFonts = require('next-fonts')
 
@@ -25,5 +26,6 @@ module.exports = withImages(
     future: {
       webpack5: true,
     },
+    i18n,
   })
 )
