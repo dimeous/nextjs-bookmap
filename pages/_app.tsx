@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { appWithTranslation } from 'next-i18next'
 import { DefaultSeo } from 'next-seo'
 import React from 'react'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -101,4 +102,4 @@ const MyApp = (props: AppProps) => {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)
