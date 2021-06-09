@@ -25,17 +25,14 @@ fetch(contentUrl)
           page +
           '.json'
 
-        MS0NEWlivetradingSsessionsWithproTraders
-        mS0AtradingPlatformThatDisplaysML
-
         console.log(page + language, content)
         const result = {}
-        const saveData = content.map((v) => {
+        content.map((v) => {
           result[v.key] = v.text
           return result
         })
-        console.log('save', saveData)
-        fs.writeFileSync(__dirname + filename, JSON.stringify(saveData))
+        console.log('save', result)
+        fs.writeFileSync(__dirname + filename, JSON.stringify(result))
       }
     }
   })
