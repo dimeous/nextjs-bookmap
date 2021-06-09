@@ -1,17 +1,45 @@
-console.log('start')
+console.log('start save file акщь strapi to json')
 const fs = require('fs')
 const path = require('path')
+const contentUrl = 'http://165.227.11.171:1337/contents?_locale=all'
+const languages = ['en', 'de', 'es', 'it', 'fr', 'ru']
+const pages = ['main']
 
-fetch('http://jsonplaceholder.typicode.com/posts')
+fetch(contentUrl)
   .then((response) => {
     return response.json()
   })
   .then((data) => {
-    console.log(data)
-    console.log(path.resolve(__dirname, '/public/static/student.json'))
+    console.log('origin', data)
+    for (const language of languages) {
+      for (const page of pages) {
+        const content = data.filter((value) => value.locale === language && value.page === page)
+        const filename =
+          path.sep +
+          'public' +
+          path.sep +
+          'locales' +
+          path.sep +
+          language +
+          path.sep +
+          page +
+          '.json'
 
-    // fs.writeFileSync(path.resolve(__dirname, '/public/static/student.json'), JSON.stringify(data))
+        MS0NEWlivetradingSsessionsWithproTraders
+        mS0AtradingPlatformThatDisplaysML
+
+        console.log(page + language, content)
+        const result = {}
+        const saveData = content.map((v) => {
+          result[v.key] = v.text
+          return result
+        })
+        console.log('save', saveData)
+        fs.writeFileSync(__dirname + filename, JSON.stringify(saveData))
+      }
+    }
   })
+console.log('end save file акщь strapi to json')
 
 const { i18n } = require('./next-i18next.config')
 const withImages = require('next-images')

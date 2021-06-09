@@ -25,7 +25,7 @@ interface CardType {
 }
 import { useTranslation } from 'next-i18next'
 const Index = (mainCarousel: CardType) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('main')
 
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
@@ -34,7 +34,7 @@ const Index = (mainCarousel: CardType) => {
       <MainHeader />
       <main>
         <MainSection0 mobile={mobile} />
-        <h1>{t('title')}</h1>
+        <h1>{t('MS0NEWlivetradingSsessionsWithproTraders')}</h1>
         <MainSection1 />
         <MainSection2Features />
         {mobile ? <MainSection3Mobile /> : <MainSection3Desktop />}
@@ -58,7 +58,7 @@ export async function getStaticProps({ locale }: staticPropertiesParameters) {
   const [mainCarouselData] = await Promise.all([fetchAPI('/main-carousels')])
   const mainCarousel: CarouselType[] = mainCarouselData as unknown as CarouselType[]
   return {
-    props: { mainCarousel, ...(await serverSideTranslations(locale, ['common'])) },
+    props: { mainCarousel, ...(await serverSideTranslations(locale, ['main'])) },
     revalidate: 30,
   }
 }
