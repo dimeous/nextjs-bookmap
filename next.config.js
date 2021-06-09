@@ -1,4 +1,4 @@
-console.log('start save file акщь strapi to json')
+console.log('start save file from strapi to json')
 const fs = require('fs')
 const path = require('path')
 const contentUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/contents?_locale=all'
@@ -10,7 +10,6 @@ fetch(contentUrl)
     return response.json()
   })
   .then((data) => {
-    console.log('origin', data)
     for (const language of languages) {
       for (const page of pages) {
         const content = data.filter((value) => value.locale === language && value.page === page)
@@ -25,18 +24,15 @@ fetch(contentUrl)
           page +
           '.json'
 
-        console.log(page + language, content)
         const result = {}
         content.map((v) => {
           result[v.key] = v.text
           return result
         })
-        console.log('save', result)
         fs.writeFileSync(__dirname + filename, JSON.stringify(result))
       }
     }
   })
-console.log('end save file акщь strapi to json')
 
 const { i18n } = require('./next-i18next.config')
 const withImages = require('next-images')
