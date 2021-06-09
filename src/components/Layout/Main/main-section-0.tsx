@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React, { useEffect, useState } from 'react'
 
 import styles from './main-section-0.module.css'
@@ -73,7 +74,8 @@ type CardProperties = {
   mobile: boolean
 }
 
-export default function MainSection0({ mobile }: CardProperties) {
+const MainSection0 = ({ mobile }: CardProperties) => {
+  const { t } = useTranslation('main')
   const [width, setWidth] = useState(0)
   const elementReference = React.useRef<HTMLDivElement>(null)
 
@@ -96,10 +98,10 @@ export default function MainSection0({ mobile }: CardProperties) {
                 gutterBottom
                 className={classes.headTradePlatform}
               >
-                A trading platform that displays market liquidity
+                {t('MS0AtradingPlatformThatDisplaysML')}
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                NEW: live trading sessions with pro traders
+                {t('MS0NEWlivetradingSsessionsWithproTraders')}
               </Typography>
               <Typography color="primary" paragraph>
                 for Global+ subscribers
@@ -164,3 +166,4 @@ export default function MainSection0({ mobile }: CardProperties) {
     </>
   )
 }
+export default MainSection0

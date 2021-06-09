@@ -23,10 +23,7 @@ import { CarouselType } from '../src/lib/types'
 interface CardType {
   mainCarousel: CarouselType[]
 }
-import { useTranslation } from 'next-i18next'
 const Index = (mainCarousel: CardType) => {
-  const { t } = useTranslation('main')
-
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
@@ -34,7 +31,6 @@ const Index = (mainCarousel: CardType) => {
       <MainHeader />
       <main>
         <MainSection0 mobile={mobile} />
-        <h1>{t('MS0NEWlivetradingSsessionsWithproTraders')}</h1>
         <MainSection1 />
         <MainSection2Features />
         {mobile ? <MainSection3Mobile /> : <MainSection3Desktop />}
