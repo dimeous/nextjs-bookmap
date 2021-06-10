@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
+import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 
@@ -72,6 +73,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function MainSection2Features() {
+  const { t } = useTranslation('main')
   const flippingTime = 5000
   const classes = useStyles()
   const [clicked, setClicked] = React.useState(0)
@@ -108,7 +110,7 @@ export default function MainSection2Features() {
       <div id="features" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Box className={classes.root}>
         <Typography component="h1" variant="h2">
-          Bookmap features
+          {t('MS2BookmapFeatures')}
         </Typography>
 
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
@@ -131,15 +133,13 @@ export default function MainSection2Features() {
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
-                  The heatmap shows the historical limit order book (historical liquidity).
+                  {t('MS2TheHeatmapShowsTheHistoricalLOB')}
                 </Typography>
                 <Typography>
-                  With the help of the heatmap, you can quickly grasp which price levels are trusted
-                  by the market, allowing you to rapidly react to changes in sentiment. Read
-                  liquidity like a map, and locate better trading opportunities.
+                  {t('MS2WithTheHelpOfTheHeatmapYouCanQGWPLATBTM')}
                 </Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
-                  Details about features
+                  {t('MS2DetailsAboutFeatures')}
                 </Link>
               </Container>
             </Grid>
@@ -159,15 +159,13 @@ export default function MainSection2Features() {
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
-                  Watch the traded volume and identify the side in control by using Volume Delta,
-                  Advance Volume Profiles, and Cumulative Volume Delta tools.
+                  {t('MS2WatchTheTraderVolumeAndIdentifyTheSide')}
                 </Typography>
                 <Typography>
-                  See volume dots & volume delta right on the chart, without the need to wait for
-                  the bar to load.
+                  {t('MS2SeeVolumeDotsAndVolumeDeltaRightOnTheChart')}
                 </Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
-                  Details about features
+                  {t('MS2DetailsAboutFeatures')}
                 </Link>
               </Container>
             </Grid>
@@ -187,16 +185,13 @@ export default function MainSection2Features() {
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
                 <Typography>
-                  Based on traders’ requests and Bookmap’s expertise in HFT trading, Bookmap
-                  developers have created a unique set of indicators that add transparency and cover
-                  most of traders’ needs.
+                  {t('MS2BasedOnTradersRequestsAndBookmapsExpertiseInHTFT')}
                 </Typography>
                 <Typography>
-                  Confirm your trades with Imbalance Indicator, Strength Level Indicator, Large Lot
-                  Tracker, Advanced Volume Delta, and more.
+                  {t('MS2ConfirmYourTradesWithImbalanceIndicator')}
                 </Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
-                  Details about features
+                  {t('MS2DetailsAboutFeatures')}
                 </Link>
               </Container>
             </Grid>
