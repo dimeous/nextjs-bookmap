@@ -1,75 +1,71 @@
 // eslint-disable-next-line unicorn/filename-case
 import React, { Fragment } from 'react'
+import { useTranslation } from 'next-i18next'
 
+const { t } = useTranslation('main')
 export const text = {
-  h1: 'Pricing and Packages',
-  h2: 'Data is not included',
-  l1: 'MONTHLY',
-  l2: 'YEARLY',
-  l3: 'LIFETIME',
-  l4: 'Save 20%',
+  h1: t('MS5PricingAndPackages'),
+  h2: t('MS5DataIsNotIncluded'),
+  l1: t('MS5MONTHLY'),
+  l2: t('MS5YEARLY'),
+  l3: t('MS5LIFETIME'),
+  l4: t('MS5Save20Percent'),
   t1: 'digital',
   t2: 'global',
-  KeyFeature: 'KEY FEATURES',
+  KeyFeature: t('MS5KEYFEATURES'),
   Heatmap: (
     <Fragment>
-      Heatmap, Volume dots, CVD
-      <br />
-      &amp; Volume Profile columns
+      {{t('MS5HeatmapVolumeDotsCVD')}}
     </Fragment>
   ),
-  Record: 'Record / Replay, VWAP, POC',
-  LLT: 'LLT, Strength Level, Imbalance',
-  oneclick: 'ONE CLICK TRADING',
-  Futures: 'Futures, Stocks',
-  Futures2: 'Futures & Stocks ',
-  Market: 'MARKETS VISUALIZATION',
+  Record: t('MS5RecordReplayVWAPPOC'),
+  LLT: t('MS5LLTStrengthLevelImbalance'),
+  oneclick: t('MS5ONECLICKTRADING'),
+  Futures: t('MS5FuturesStocks'),
+  Futures2: t('MS5FuturesAndStocks'),
+  Market: t('MS5MARKETSVISUALIZATION'),
   Market2: (
     <Fragment>
-      Crypto currencies <br />
-      &gt; 20 Crypto exchanges (Free data)
+      {{t('MS5CryptoCurrencies20CryptoExchangesFreeData')}}
     </Fragment>
   ),
   dataReq: (
     <Fragment>
-      Data required<sup>*</sup>
+      {{t('MS5DataRequired')}}<sup>*</sup>
     </Fragment>
   ),
   maxTrSymbols: (
     <Fragment>
-      Maximum # of Trading Symbols
-      <br />
-      Viewable at the Same Time
+      {{t('MS5MaximumNumberOfTradingSymbols')}}
     </Fragment>
   ),
 
-  deleyed: 'Delayed',
-  education: 'EDUCATION',
-  education2: 'Bookmap Basics Webinars with Q&As',
-  livetrdss: 'LIVE Trading Sessions with Pro Traders',
-  free: 'FREE',
-  orderFlow: 'Order Flow Analysis Webinars',
-  AdvTradEducation: 'Advanced Trading Educational Course',
-  marketplace: 'MARKETPLACE',
-  addons: 'Addons, Market Data and Educational courses (Sold separately)',
+  delayed: t('MS5Delayed'),
+  education: t('MS5EDUCATION'),
+  education2: t('MS5BookmapИasicsЦebinarsЦithQ&As'),
+  livetrdss: t('MS5LIVETradingSessionsWithProTraders'),
+  free: t('MS5FREE'),
+  orderFlow: t('MS5OrderFlowAnalysisWebinars'),
+  AdvTradEducation: t('MS5AdvancedTradingEducationalCourse'),
+  marketplace: t('MS5MARKETPLACE'),
+  addons: t('MS5AddonsMarketDataAndEducationalCourses'),
   addonsAll: (
     <Fragment>
-      Compatible with <b>ALL</b> addons
+      {{t('MS5CompatibleWithAllAddons')}}
     </Fragment>
   ),
   addonsSome: (
     <Fragment>
-      Compatible with <b>SOME</b> addons
+      {{t('MS5CompatibleWithSomeAddons')}}
     </Fragment>
   ),
   endtext: (
     <Fragment>
       <sup>*</sup>
-      Futures & stocks market data fees from third party providers are not included in the price of
-      the Bookmap software subscription
+      {{t('MS5FuturesStocksMarketDataFeesFromThirdPartyProviders')}}
     </Fragment>
   ),
-  btn: 'GO TO EDUCATION',
+  btn: t('MS5GoToEducation'),
   link1: 'https://bookmap.com/members/signup/thAhOgYUg',
   link12: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=101-101',
   link13: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=102-102',
