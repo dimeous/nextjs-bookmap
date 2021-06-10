@@ -146,7 +146,7 @@ export default function Header() {
             </Box>
           </Link>
           <Box>
-            <LanguageSelector style={{ paddingBottom: '0px' }} />
+            <LanguageSelector />
           </Box>
         </Box>
       </Container>
