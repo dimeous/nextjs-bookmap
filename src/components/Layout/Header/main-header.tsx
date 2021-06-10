@@ -185,6 +185,9 @@ export default function Header() {
             <MenuItem>
               <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
               <span style={{ paddingLeft: '10px' }}>LOG IN</span>
+              <Box sx={{ marginLeft: 'auto' }}>
+                <LanguageSelector />
+              </Box>
             </MenuItem>
             {headersData.map(({ label, href }) => {
               return (
