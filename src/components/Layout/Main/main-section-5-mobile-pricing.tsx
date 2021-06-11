@@ -55,7 +55,8 @@ export default function TabsWrappedLabelSection5() {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-  const { t } = useTranslation()
+
+  const { t } = useTranslation('main')
   return (
     <Container fixed style={{ marginBottom: '145px' }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>

@@ -108,7 +108,7 @@ const useStylesMob = makeStyles(() => ({
   list_h4: {},
 }))
 const Mobile = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('main')
   const classes = useStylesMob()
   return (
     <Container fixed className={classes.root}>
@@ -119,8 +119,10 @@ const Mobile = () => {
 
       <Box className={classes.boxImgs}>
         <Box>
-          {text.i1}
-          <Box className={classes.boxImg2}>{text.i2}</Box>
+          <Image src="/static/main/s6/chart.png" width={300} height={155} />
+          <Box className={classes.boxImg2}>
+            <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
+          </Box>
         </Box>
       </Box>
 
@@ -147,8 +149,10 @@ const Desktop = () => {
       <Box className={classes.eduBlock}>
         <Box sx={{ display: 'flex' }}>
           <div className="introImg">
-            {text.i1}
-            <Box className={classes.nextImage}>{text.i2}</Box>
+            <Image src="/static/main/s6/chart.png" width={300} height={155} />
+            <Box className={classes.nextImage}>
+              <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
+            </Box>
             <div>
               <Button
                 className={classes.button}

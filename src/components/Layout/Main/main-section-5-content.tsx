@@ -1,5 +1,5 @@
 // eslint-disable-next-line unicorn/filename-case
-import { WithTranslation, withTranslation } from 'next-i18next'
+import { WithTranslation } from 'next-i18next'
 import React, { Fragment } from 'react'
 
 export const text = (props: WithTranslation) => {

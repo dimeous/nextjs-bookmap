@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
-import { useTranslation } from 'next-i18next'
+import { useTranslation, withTranslation } from 'next-i18next'
 import React from 'react'
 
 import { text } from './main-section-5-content'
@@ -55,6 +55,7 @@ export default function TabsWrappedLabelSection5() {
     setValue(newValue)
   }
   const { t } = useTranslation('main')
+  const text2 = withTranslation('ns1')(text)
   return (
     <Container fixed style={{ marginBottom: '145px' }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
