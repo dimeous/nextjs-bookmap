@@ -3,6 +3,8 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
+import { useTranslation } from 'next-i18next'
+
 
 import { text } from './main-section-3-content'
 
@@ -63,11 +65,12 @@ const useStyles = makeStyles(() => ({
 }))
 
 export default function MainSection3() {
+  const { t } = useTranslation('main')
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" style={{ marginBottom: 75 + 'px' }}>
-        {text.h1}
+        {t('MS3StartWithBookmapInThreeSimpleSteps')}
       </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
@@ -81,10 +84,11 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>01</span> {text.s1.lbl}
+                <span>01</span> {t('MS3GetSoftware')}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                {text.s1.txt}
+                {t('MS3RegisterToBookmap')} <br />
+                {t('MS3DownloadAndInstallTheApp')}
               </Typography>
             </CardContent>
           </Card>
@@ -101,10 +105,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>02</span> {text.s2.lbl}
+                <span>02</span> {t('MS3ConnectData')}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                {text.s2.txt}
+                {t('MS3ConnectToMarketDataProvider')}
               </Typography>
             </CardContent>
           </Card>
@@ -121,10 +125,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>03</span> {text.s3.lbl}
+                <span>03</span> { t('MS3EducateYourself') }
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                {text.s3.txt}
+                {t('MS3GetFreeEducationIncludingLiveBasicOrAdvaceWebinars')}
               </Typography>
             </CardContent>
           </Card>
@@ -137,7 +141,7 @@ export default function MainSection3() {
         href="https://bookmap.com/members/signup/thAhOgYUg"
         id={'main_middle_start_for_free'}
       >
-        {text.btn}
+        {t('MS3DownloadAndInstallTheApp')}
       </Button>
     </Container>
   )
