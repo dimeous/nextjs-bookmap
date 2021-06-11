@@ -3,7 +3,9 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
-import React from 'react'
+import React, {Fragment} from 'react'
+import { useTranslation } from 'next-i18next'
+
 
 import { text } from './main-section-3-content'
 
@@ -35,18 +37,20 @@ const useStyles = makeStyles(() => ({
 }))
 
 export default function MainSection3() {
+  const { t } = useTranslation('main')
+
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" style={{ width: '90%' }}>
-        {t(text.h1)}
+        {t('MS3StartWithBookmapInThreeSimpleSteps')}
       </Typography>
       <Grid container>
         <Grid item xs={2}>
           <h4>01</h4>
         </Grid>
         <Grid item xs={8}>
-          <h4>{text.s1.lbl}</h4>
+          <h4>{t('MS3GetSoftware')}</h4>
         </Grid>
         <Grid item xs={2}>
           <Image src="/static/main/s3/cloud.svg" width={32} height={24}></Image>
@@ -54,7 +58,8 @@ export default function MainSection3() {
       </Grid>
       <Box className={classes.textBox}>
         <Typography variant="body2" color="textPrimary" component="p" className={classes.text}>
-          {text.s1.txt}
+          {t('MS3RegisterToBookmap')} <br />
+          {t('MS3DownloadAndInstallTheApp')}
         </Typography>
       </Box>
       <Grid container>
@@ -62,7 +67,7 @@ export default function MainSection3() {
           <h4>02</h4>
         </Grid>
         <Grid item xs={8}>
-          <h4>{text.s2.lbl}</h4>
+          <h4>{t('MS3ConnectData')}</h4>
         </Grid>
         <Grid item xs={2}>
           <Image src="/static/main/s3/planet.svg" width={32} height={24}></Image>
@@ -70,7 +75,7 @@ export default function MainSection3() {
       </Grid>
       <Box className={classes.textBox}>
         <Typography variant="body2" color="textPrimary" component="p" className={classes.text}>
-          {text.s2.txt}
+          {t('MS3ConnectToMarketDataProvider')}
         </Typography>
       </Box>
       <Grid container>
@@ -78,7 +83,7 @@ export default function MainSection3() {
           <h4>03</h4>
         </Grid>
         <Grid item xs={8}>
-          <h4>{text.s3.lbl}</h4>
+          <h4>{t('MS3EducateYourself')}</h4>
         </Grid>
         <Grid item xs={2}>
           <Image src="/static/main/s3/note.svg" width={32} height={24}></Image>
@@ -86,7 +91,7 @@ export default function MainSection3() {
       </Grid>
       <Box className={classes.textBox}>
         <Typography variant="body2" color="textPrimary" component="p" className={classes.text}>
-          {text.s3.txt}
+          {t('MS3GetFreeEducationIncludingLiveBasicOrAdvaceWebinars')}
         </Typography>
       </Box>
       <Grid
@@ -102,7 +107,7 @@ export default function MainSection3() {
           href="https://bookmap.com/members/signup/thAhOgYUg"
           id={'main_middle_start_for_free'}
         >
-          {text.btn}
+          {t('MS3DownloadAndInstallTheApp')}
         </Button>
       </Grid>
     </Container>
