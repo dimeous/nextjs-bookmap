@@ -67,7 +67,7 @@ export default function MainSection3() {
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" style={{ marginBottom: 75 + 'px' }}>
-        {text.h1}
+        {_t(text.h1)}
       </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
@@ -81,10 +81,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>01</span> {text.s1.lbl}
+                <span>01</span> {_t(text.s1.lbl)}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                {text.s1.txt}
+                {_t(text.s1.txt)}
               </Typography>
             </CardContent>
           </Card>
@@ -101,10 +101,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>02</span> {text.s2.lbl}
+                <span>02</span> {_t(text.s2.lbl)}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                {text.s2.txt}
+                {_t(text.s2.txt)}
               </Typography>
             </CardContent>
           </Card>
@@ -121,10 +121,10 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>03</span> {text.s3.lbl}
+                <span>03</span> {_t(text.s3.lbl)}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
-                {text.s3.txt}
+                {_t(text.s3.txt)}
               </Typography>
             </CardContent>
           </Card>
@@ -137,7 +137,7 @@ export default function MainSection3() {
         href="https://bookmap.com/members/signup/thAhOgYUg"
         id={'main_middle_start_for_free'}
       >
-        {text.btn}
+        {_t(text.btn)}
       </Button>
     </Container>
   )

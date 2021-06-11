@@ -39,7 +39,7 @@ export default function MainSection3() {
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" style={{ width: '90%' }}>
-        {text.h1}
+        {t(text.h1)}
       </Typography>
       <Grid container>
         <Grid item xs={2}>

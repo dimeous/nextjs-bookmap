@@ -1,26 +1,29 @@
-import { Fragment } from 'react'
 import { useTranslation } from 'next-i18next'
+import { Fragment } from 'react'
 
+const TextFragment = () => {
+  const { t } = useTranslation('main')
+  return (
+    <Fragment>
+      {t('MS3RegisterToBookmap')} <br />
+      {t('MS3DownloadAndInstallTheApp')}
+    </Fragment>
+  )
+}
 
-const { t } = useTranslation('main')
 export const text = {
-  h1: t('MS3StartWithBookmapInThreeSimpleSteps'),
+  h1: 'MS3StartWithBookmapInThreeSimpleSteps',
   s1: {
-    lbl: t('MS3GetSoftware'),
-    txt: (
-      <Fragment>
-        {t('MS3RegisterToBookmap')} <br />
-        {t('MS3DownloadAndInstallTheApp')}
-      </Fragment>
-    ),
+    lbl: 'MS3GetSoftware',
+    txt: <TextFragment />,
   },
   s2: {
-    lbl: t('MS3ConnectData'),
-    txt: t('MS3ConnectToMarketDataProvider'),
+    lbl: 'MS3ConnectData',
+    txt: 'MS3ConnectToMarketDataProvider',
   },
   s3: {
-    lbl: t('MS3EducateYourself'),
-    txt: t('MS3GetFreeEducationIncludingLiveBasicOrAdvaceWebinars'),
+    lbl: 'MS3EducateYourself',
+    txt: 'MS3GetFreeEducationIncludingLiveBasicOrAdvaceWebinars',
   },
-  btn: t('MS3DownloadAndInstallTheApp'),
+  btn: 'MS3DownloadAndInstallTheApp',
 }

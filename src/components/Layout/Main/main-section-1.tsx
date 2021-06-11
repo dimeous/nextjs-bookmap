@@ -88,7 +88,7 @@ export default function MainSection1() {
         <Grid item md={6} xs={12}>
           <Container className={classes.textBlock}>
             <Typography component="h1" variant="h2" color="inherit" gutterBottom>
-            {t('MS1SoWhatIsBookmap')}
+              {t('MS1SoWhatIsBookmap')}
             </Typography>
             <Typography color="inherit" paragraph>
               {t('MS1BookmapTradingPlatformAccuratelyShowsTheEntireMLATAIMT')}

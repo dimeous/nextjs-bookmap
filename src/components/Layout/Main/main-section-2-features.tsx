@@ -7,8 +7,8 @@ import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
-import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React, { useEffect } from 'react'
 
 interface TabPanelProperties {
@@ -132,12 +132,8 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography>
-                  {t('MS2TheHeatmapShowsTheHistoricalLOB')}
-                </Typography>
-                <Typography>
-                  {t('MS2WithTheHelpOfTheHeatmapYouCanQGWPLATBTM')}
-                </Typography>
+                <Typography>{t('MS2TheHeatmapShowsTheHistoricalLOB')}</Typography>
+                <Typography>{t('MS2WithTheHelpOfTheHeatmapYouCanQGWPLATBTM')}</Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
                   {t('MS2DetailsAboutFeatures')}
                 </Link>
@@ -158,12 +154,8 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography>
-                  {t('MS2WatchTheTraderVolumeAndIdentifyTheSide')}
-                </Typography>
-                <Typography>
-                  {t('MS2SeeVolumeDotsAndVolumeDeltaRightOnTheChart')}
-                </Typography>
+                <Typography>{t('MS2WatchTheTraderVolumeAndIdentifyTheSide')}</Typography>
+                <Typography>{t('MS2SeeVolumeDotsAndVolumeDeltaRightOnTheChart')}</Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
                   {t('MS2DetailsAboutFeatures')}
                 </Link>
@@ -184,12 +176,8 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography>
-                  {t('MS2BasedOnTradersRequestsAndBookmapsExpertiseInHTFT')}
-                </Typography>
-                <Typography>
-                  {t('MS2ConfirmYourTradesWithImbalanceIndicator')}
-                </Typography>
+                <Typography>{t('MS2BasedOnTradersRequestsAndBookmapsExpertiseInHTFT')}</Typography>
+                <Typography>{t('MS2ConfirmYourTradesWithImbalanceIndicator')}</Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
                   {t('MS2DetailsAboutFeatures')}
                 </Link>

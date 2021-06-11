@@ -7,6 +7,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { text } from './main-section-5-content'
@@ -54,7 +55,7 @@ export default function TabsWrappedLabelSection5() {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-
+  const { t } = useTranslation()
   return (
     <Container fixed style={{ marginBottom: '145px' }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
@@ -439,7 +440,7 @@ export default function TabsWrappedLabelSection5() {
                 color="secondary"
                 href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
               >
-                SELECT
+                {_t('MS5Select')}
               </Button>
             </div>
           </Grid>
@@ -461,7 +462,7 @@ export default function TabsWrappedLabelSection5() {
                 color="secondary"
                 href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
               >
-                SELECT
+                {t('MS5Select')}
               </Button>
             </div>
           </Grid>
@@ -471,7 +472,7 @@ export default function TabsWrappedLabelSection5() {
       <div className={classes.cta}>
         <p>Can’t decide which plan is right for you?</p>
         <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
-          CLICK HERE
+          {t('MS5ClickHere')}
         </a>
       </div>
     </Container>
