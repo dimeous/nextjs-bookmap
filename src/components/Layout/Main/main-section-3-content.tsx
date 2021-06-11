@@ -1,22 +1,26 @@
 import { Fragment } from 'react'
+import { useTranslation } from 'next-i18next'
+
+
+const { t } = useTranslation('main')
 export const text = {
-  h1: 'Start with Bookmap in 3 simple steps',
+  h1: t('MS3StartWithBookmapInThreeSimpleSteps'),
   s1: {
-    lbl: 'Get Software',
+    lbl: t('MS3GetSoftware'),
     txt: (
       <Fragment>
-        Register to Bookmap <br />
-        Download and install the app
+        {t('MS3RegisterToBookmap')} <br />
+        {t('MS3DownloadAndInstallTheApp')}
       </Fragment>
     ),
   },
   s2: {
-    lbl: 'Connect Data',
-    txt: 'Connect to market data provider (directly or via your broker)',
+    lbl: t('MS3ConnectData'),
+    txt: t('MS3ConnectToMarketDataProvider'),
   },
   s3: {
-    lbl: 'Educate yourself',
-    txt: 'Get free education including live basic or advance webinars',
+    lbl: t('MS3EducateYourself'),
+    txt: t('MS3GetFreeEducationIncludingLiveBasicOrAdvaceWebinars'),
   },
-  btn: 'START FOR FREE',
+  btn: t('MS3DownloadAndInstallTheApp'),
 }

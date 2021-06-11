@@ -104,7 +104,7 @@ const MainSection0 = ({ mobile }: CardProperties) => {
                 {t('MS0NEWlivetradingSsessionsWithproTraders')}
               </Typography>
               <Typography color="primary" paragraph>
-                for Global+ subscribers
+                {t('MS0ForGlobalPlusSubscribers')}
               </Typography>
               {!mobile && (
                 <Button
@@ -114,7 +114,7 @@ const MainSection0 = ({ mobile }: CardProperties) => {
                   color="secondary"
                   href="https://bookmap.com/members/signup/thAhOgYUg"
                 >
-                  START FOR FREE
+                  {t('MS0STARTFORFREE')}
                 </Button>
               )}
             </Grid>
@@ -159,7 +159,7 @@ const MainSection0 = ({ mobile }: CardProperties) => {
             className={classes.button}
             id={'main_top_start_for_free'}
           >
-            START FOR FREE
+            {t('MS0STARTFORFREE')}
           </Button>
         </Grid>
       )}
