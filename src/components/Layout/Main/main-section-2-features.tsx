@@ -37,7 +37,7 @@ const TabPanel = (props: TabPanelProperties) => {
   )
 }
 
-function a11yProperties(index: any) {
+function a11yProperties(index: string) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
