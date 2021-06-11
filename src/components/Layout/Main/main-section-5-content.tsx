@@ -1,61 +1,45 @@
 // eslint-disable-next-line unicorn/filename-case
 import { WithTranslation } from 'next-i18next'
-import React, { Fragment } from 'react'
+import React from 'react'
 
-export const text = (props: WithTranslation) => {
-  const { t } = props
-  return {
-    h1: t('MS5PricingAndPackages'),
-    h2: t('MS5DataIsNotIncluded'),
-    l1: t('MS5MONTHLY'),
-    l2: t('MS5YEARLY'),
-    l3: t('MS5LIFETIME'),
-    l4: t('MS5Save20Percent'),
-    t1: 'digital',
-    t2: 'global',
-    KeyFeature: t('MS5KEYFEATURES'),
-    Heatmap: <Fragment>{t('MS5HeatmapVolumeDotsCVD')}</Fragment>,
-    Record: t('MS5RecordReplayVWAPPOC'),
-    LLT: t('MS5LLTStrengthLevelImbalance'),
-    oneclick: t('MS5ONECLICKTRADING'),
-    Futures: t('MS5FuturesStocks'),
-    Futures2: t('MS5FuturesAndStocks'),
-    Market: t('MS5MARKETSVISUALIZATION'),
-    Market2: <Fragment>{t('MS5CryptoCurrencies20CryptoExchangesFreeData')}</Fragment>,
-    dataReq: (
-      <Fragment>
-        {t('MS5DataRequired')}
-        <sup>*</sup>
-      </Fragment>
-    ),
-    maxTrSymbols: <Fragment>{t('MS5MaximumNumberOfTradingSymbols')}</Fragment>,
-
-    delayed: t('MS5Delayed'),
-    education: t('MS5EDUCATION'),
-    education2: t('MS5BookmapИasicsЦebinarsЦithQ&As'),
-    livetrdss: t('MS5LIVETradingSessionsWithProTraders'),
-    free: t('MS5FREE'),
-    orderFlow: t('MS5OrderFlowAnalysisWebinars'),
-    AdvTradEducation: t('MS5AdvancedTradingEducationalCourse'),
-    marketplace: t('MS5MARKETPLACE'),
-    addons: t('MS5AddonsMarketDataAndEducationalCourses'),
-    addonsAll: <Fragment>{t('MS5CompatibleWithAllAddons')}</Fragment>,
-    addonsSome: <Fragment>{t('MS5CompatibleWithSomeAddons')}</Fragment>,
-    endtext: (
-      <Fragment>
-        <sup>*</sup>
-        {t('MS5FuturesStocksMarketDataFeesFromThirdPartyProviders')}
-      </Fragment>
-    ),
-    btn: t('MS5GoToEducation'),
-    link1: 'https://bookmap.com/members/signup/thAhOgYUg',
-    link12: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=101-101',
-    link13: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=102-102',
-    link22: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104',
-    link23: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105',
-    link32: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=72-72',
-    link33: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=63-63',
-  }
+export const text = {
+  h1: 'MS5PricingAndPackages',
+  h2: 'MS5DataIsNotIncluded',
+  l1: 'MS5MONTHLY',
+  l2: 'MS5YEARLY',
+  l3: 'MS5LIFETIME',
+  l4: 'MS5Save20Percent',
+  t1: 'digital',
+  t2: 'global',
+  KeyFeature: 'MS5KEYFEATURES',
+  Heatmap: 'MS5HeatmapVolumeDotsCVD',
+  Record: 'MS5RecordReplayVWAPPOC',
+  LLT: 'MS5LLTStrengthLevelImbalance',
+  oneclick: 'MS5ONECLICKTRADING',
+  Futures: 'MS5FuturesStocks',
+  Futures2: 'MS5FuturesAndStocks',
+  Market: 'MS5MARKETSVISUALIZATION',
+  Market2: 'MS5CryptoCurrencies20CryptoExchangesFreeData',
+  dataReq: 'MS5DataRequired',
+  maxTrSymbols: 'MS5MaximumNumberOfTradingSymbols',
+  delayed: 'MS5Delayed',
+  education: 'MS5EDUCATION',
+  education2: 'MS5BookmapBasicsWebinarsWithQ&As',
+  livetrdss: 'MS5LIVETradingSessionsWithProTraders',
+  free: 'MS5FREE',
+  orderFlow: 'MS5OrderFlowAnalysisWebinars',
+  AdvTradEducation: 'MS5AdvancedTradingEducationalCourse',
+  marketplace: 'MS5MARKETPLACE',
+  addons: 'MS5AddonsMarketDataAndEducationalCourses',
+  addonsAll: 'MS5CompatibleWithAllAddons',
+  addonsSome: 'MS5CompatibleWithSomeAddons',
+  endtext: 'MS5FuturesStocksMarketDataFeesFromThirdPartyProviders',
+  btn: 'MS5GoToEducation',
+  link1: 'https://bookmap.com/members/signup/thAhOgYUg',
+  link12: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=101-101',
+  link13: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=102-102',
+  link22: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=104-104',
+  link23: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=105-105',
+  link32: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=72-72',
+  link33: 'https://bookmap.com/members/signup/yVqUeUzF?product_id_page-0[]=63-63',
 }
-
-export default text

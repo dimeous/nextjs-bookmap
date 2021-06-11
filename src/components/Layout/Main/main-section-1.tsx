@@ -91,7 +91,13 @@ export default function MainSection1() {
               {t('MS1SoWhatIsBookmap')}
             </Typography>
             <Typography color="inherit" paragraph>
-              {t('MS1BookmapTradingPlatformAccuratelyShowsTheEntireMLATAIMT')}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: t('MS1BookmapTradingPlatformAccuratelyShowsTheEntireMLATAIMT', {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </Typography>
           </Container>
         </Grid>
