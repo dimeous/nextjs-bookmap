@@ -39,7 +39,7 @@ type CardProperties = {
   crypto: boolean
 }
 
-export default function MainSection8UserReviews({ mobile, crypto }: CardProperties) {
+const MainSection8UserReviews = ({ mobile, crypto }: CardProperties) => {
   const onChange = function (isVisible: boolean) {
     if (isVisible) setChecked(true)
   }
@@ -76,3 +76,4 @@ export default function MainSection8UserReviews({ mobile, crypto }: CardProperti
     </Container>
   )
 }
+export default MainSection8UserReviews

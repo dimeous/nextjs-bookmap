@@ -3,11 +3,7 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
-import React, {Fragment} from 'react'
 import { useTranslation } from 'next-i18next'
-
-
-import { text } from './main-section-3-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -36,7 +32,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function MainSection3() {
+const MainSection3Mobile = () => {
   const { t } = useTranslation('main')
 
   const classes = useStyles()
@@ -107,9 +103,10 @@ export default function MainSection3() {
           href="https://bookmap.com/members/signup/thAhOgYUg"
           id={'main_middle_start_for_free'}
         >
-          {t('MS3DownloadAndInstallTheApp')}
+          {t('MS3STARTFORFREE')}
         </Button>
       </Grid>
     </Container>
   )
 }
+export default MainSection3Mobile

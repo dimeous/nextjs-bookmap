@@ -2,11 +2,7 @@ import { Box, Button, Card, CardContent, CardMedia } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
-import React from 'react'
 import { useTranslation } from 'next-i18next'
-
-
-import { text } from './main-section-3-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -64,7 +60,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function MainSection3() {
+const MainSection3Desktop = () => {
   const { t } = useTranslation('main')
   const classes = useStyles()
   return (
@@ -125,7 +121,7 @@ export default function MainSection3() {
             />
             <CardContent>
               <Typography className={classes.stepHeader}>
-                <span>03</span> { t('MS3EducateYourself') }
+                <span>03</span> {t('MS3EducateYourself')}
               </Typography>
               <Typography variant="body2" color="textPrimary" component="p">
                 {t('MS3GetFreeEducationIncludingLiveBasicOrAdvaceWebinars')}
@@ -141,8 +137,10 @@ export default function MainSection3() {
         href="https://bookmap.com/members/signup/thAhOgYUg"
         id={'main_middle_start_for_free'}
       >
-        {t('MS3DownloadAndInstallTheApp')}
+        {t('MS3STARTFORFREE')}
       </Button>
     </Container>
   )
 }
+
+export default MainSection3Desktop

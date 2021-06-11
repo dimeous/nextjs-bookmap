@@ -5,9 +5,8 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import React from 'react'
+import { useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
-
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
@@ -75,9 +74,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function MainSection1() {
+const MainSection1 = () => {
   const { t } = useTranslation('main')
-  const [checked, setChecked] = React.useState(false)
+  const [checked, setChecked] = useState(false)
   const handleClick = () => {
     setChecked(true)
   }
@@ -142,3 +141,4 @@ export default function MainSection1() {
     </Container>
   )
 }
+export default MainSection1

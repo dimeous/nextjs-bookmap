@@ -17,7 +17,7 @@ interface TabPanelProperties {
   value: any
 }
 
-function TabPanel(props: TabPanelProperties) {
+const TabPanel = (props: TabPanelProperties) => {
   const { children, value, index, ...other } = props
 
   return (
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function MainSection2Features() {
+const MainSection2Features = () => {
   const { t } = useTranslation('main')
   const flippingTime = 5000
   const classes = useStyles()
@@ -189,3 +189,4 @@ export default function MainSection2Features() {
     </Container>
   )
 }
+export default MainSection2Features
