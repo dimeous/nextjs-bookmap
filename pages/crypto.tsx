@@ -12,7 +12,7 @@ import GbnSection4DeskGetStart from '../src/components/Layout/gbn/gbn-section-4-
 import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-get-start'
 import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
 import GbnSection6UserReviews from '../src/components/Layout/gbn/gbn-section-6-user-reviews'
-import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
+import CryptoHeader from '../src/components/Layout/gbn/Header/crypto-header'
 
 const Index: NextPage<{ data: string }> = (props) => {
   const theme2 = useTheme()

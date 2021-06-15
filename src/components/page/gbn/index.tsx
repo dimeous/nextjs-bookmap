@@ -1,26 +1,29 @@
-import { createMuiTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
+import { createTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import React from 'react'
 
-import Footer from '../src/components/Layout/Footer/main-footer'
-import GbnSection0 from '../src/components/Layout/gbn/gbn-section-0'
-import GbnSection1Features from '../src/components/Layout/gbn/gbn-section-1-features'
-import GbnSection2Exchanges from '../src/components/Layout/gbn/gbn-section-2-exchanges'
-import GbnSection3Multibook from '../src/components/Layout/gbn/gbn-section-3-multibook'
-import GbnSection4DeskGetStart from '../src/components/Layout/gbn/gbn-section-4-desk-get-start'
-import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-get-start'
-import { newContentSection5 } from '../src/components/Layout/gbn/gbn-section-5-content-gbn'
-import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
-import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
-const Index = () => {
+import Footer from '../../../../src/components/Layout/Footer/main-footer'
+import GbnSection0 from '../../../../src/components/Layout/gbn/gbn-section-0'
+import GbnSection1Features from '../../../../src/components/Layout/gbn/gbn-section-1-features'
+import GbnSection2Exchanges from '../../../../src/components/Layout/gbn/gbn-section-2-exchanges'
+import GbnSection3Multibook from '../../../../src/components/Layout/gbn/gbn-section-3-multibook'
+import GbnSection4DeskGetStart from '../../../../src/components/Layout/gbn/gbn-section-4-desk-get-start'
+import GbnSection4MGetStart from '../../../../src/components/Layout/gbn/gbn-section-4-m-get-start'
+import { newContentSection5 } from '../../../../src/components/Layout/gbn/gbn-section-5-content-gbn'
+import GbnSection5Pricing from '../../../../src/components/Layout/gbn/gbn-section-5-pricing'
+import CryptoHeader from '../../Layout/gbn/Header/crypto-header'
+
+type ElementProperties = {
+  page?: string
+}
+
+const GetBookMapNow = ({ page }: ElementProperties) => {
   const theme2 = useTheme()
   const mobile = useMediaQuery(theme2.breakpoints.down('md'))
-
-  const PageName = 'getbookmapnow'
+  const PageName = page
   return (
     <ThemeProvider
       theme={(theme: Theme) =>
-        createMuiTheme({
+        createTheme({
           ...theme,
           typography: {
             h1: {
@@ -66,11 +69,11 @@ const Index = () => {
         ) : (
           <GbnSection4DeskGetStart page={PageName} />
         )}
-        <GbnSection5Pricing newContent={newContentSection5} />
+        <GbnSection5Pricing newContent={newContentSection5} page={PageName} />
       </main>
       <Footer page={PageName} />
     </ThemeProvider>
   )
 }
 
-export default Index
+export default GetBookMapNow
