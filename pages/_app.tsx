@@ -21,7 +21,7 @@ const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props
   const pathname = useRouter().pathname
 
-  const isPageGetBookMapNow = pathname === '/get-bookmap-now' || pathname === '/overflow'
+  const isPageGetBookMapNow = pathname === '/get-bookmap-now' || pathname === '/orderflow'
   const isPageCrypto = useRouter().pathname === '/crypto'
 
   React.useEffect(() => {
