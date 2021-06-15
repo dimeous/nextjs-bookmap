@@ -19,6 +19,7 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import { add } from 'husky'
 import React from 'react'
 
+import { getUTMUrlDependsOnPage } from '../../../lib'
 import { defaultText } from './gbn-section-5-content'
 import { styles } from './gbn-section-5-pricing-styles'
 
@@ -33,18 +34,17 @@ const useStyles = styles
 
 type ElementProperties = {
   newContent?: [index: string] | any
+  page?: string
 }
 
-const GbnSection5Pricing = ({ newContent }: ElementProperties): React.ReactElement => {
+const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
   const text = newContent ? newContent : defaultText
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-  const addToLink = newContent
-    ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-    : ''
+  const addToLink = getUTMUrlDependsOnPage(page)
 
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
