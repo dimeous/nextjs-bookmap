@@ -5,6 +5,7 @@ import Link from '@material-ui/core/Link'
 import { Theme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
@@ -54,12 +55,23 @@ type ElementProperties = {
 const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const addToLink = getUTMUrlDependsOnPage(page)
+  const { t } = useTranslation('crypto')
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Typography variant={'h2'} component={'h2'}>
-        Connect to over <b>20 {isGetBookMapNow(page) ? 'Digital Currency Exchanges' : 'Crypto'}</b>{' '}
-        exchanges and get data for free
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t(
+              isGetBookMapNow(page)
+                ? 'CS2GBNConnectToOver20DigitalCurrencyExchanges'
+                : 'CS2ConnectToOver20Crypto',
+              {
+                interpolation: { escapeValue: false },
+              }
+            ),
+          }}
+        />
       </Typography>
       <div>
         <Grid container>
@@ -334,7 +346,10 @@ const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement =
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See {isGetBookMapNow(page) ? '' : 'Crypto'} Connectivity Guide
+          See{' '}
+          {isGetBookMapNow(page)
+            ? t('CS2GBNSeeConnectivityGuide')
+            : t('CS2SeeCryptoConnectivityGuide')}
         </Link>
       </Box>
     </Container>

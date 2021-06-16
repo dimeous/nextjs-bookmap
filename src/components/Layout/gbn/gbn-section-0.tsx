@@ -73,8 +73,9 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
                 {t('CS0MultibookIsyoursatNoAdditionalCost')}
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                Choose from 20+ {isGetBookMapNow(page) ? 'digital assets' : 'crypto'} exchanges, see
-                multiple order books in one heatmap.
+                {isGetBookMapNow(page)
+                  ? t('CS0GBNChoosefrom20digitalAssetsExchangesSeeMultipleO')
+                  : t('CS0Choosefrom20cryptoExchangesSeeMultipleOrder')}
               </Typography>
               {!mobile && (
                 <Button
@@ -84,7 +85,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
                   color="secondary"
                   href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
                 >
-                  Get Multibook
+                  {t('CS0GetMultibook')}
                 </Button>
               )}
             </Grid>
@@ -116,7 +117,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
             className={classes.button}
             id={'main_top_start_for_free'}
           >
-            Get Multibook
+            {t('CS0GetMultibook')}
           </Button>
         </Grid>
       )}
