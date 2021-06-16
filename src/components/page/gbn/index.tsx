@@ -58,7 +58,7 @@ const GetBookMapNow = ({ page }: ElementProperties) => {
         })
       }
     >
-      <CryptoHeader page={PageName} />
+      <CryptoHeader page={PageName} mobile={mobile} />
       <main>
         <GbnSection0 mobile={mobile} page={PageName} />
         <GbnSection1Features page={PageName} />

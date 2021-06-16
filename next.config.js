@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const contentUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/contents?_locale=all'
 const languages = ['en', 'de', 'es', 'it', 'fr', 'ru']
-const pages = ['main']
+const pages = ['main', 'crypto']
 
 fetch(contentUrl)
   .then((response) => {

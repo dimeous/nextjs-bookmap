@@ -1,16 +1,19 @@
 import { AppBar, Box, Button, Container, Typography } from '@material-ui/core'
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../../lib'
+import LanguageSelector from '../../Header/language-selector'
 import { useStyles } from './crypto-header-styles'
 
 type ElementProperties = {
   page?: string
+  mobile: boolean
 }
-const CryptoHeader = ({ page }: ElementProperties): React.ReactElement => {
+const CryptoHeader = ({ page, mobile }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-
+  const { t } = useTranslation('crypto')
   const displayDesktop = () => {
     const addToLink = getUTMUrlDependsOnPage(page)
     return (
@@ -26,16 +29,24 @@ const CryptoHeader = ({ page }: ElementProperties): React.ReactElement => {
               )}
             </Box>
           </Link>
-
-          <Button
-            variant="contained"
-            color="secondary"
-            href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
-            className={classes.button}
-            id={isGetBookMapNow(page) ? 'gbn _header_get_it_now' : 'crypto_header_get_it_now'}
-          >
-            Subscribe for free
-          </Button>
+          <Box sx={{ display: 'flex' }}>
+            {!mobile && (
+              <Box sx={{ pr: 1 }}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
+                  className={classes.button}
+                  id={isGetBookMapNow(page) ? 'gbn _header_get_it_now' : 'crypto_header_get_it_now'}
+                >
+                  {t('CHSubscribeforfree')}
+                </Button>
+              </Box>
+            )}
+            <Box>
+              <LanguageSelector />
+            </Box>
+          </Box>
         </Box>
       </Container>
     )

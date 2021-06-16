@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
@@ -54,6 +55,7 @@ type CardProperties = {
 
 const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
   const classes = useStyles()
+  const { t } = useTranslation('crypto')
   const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <>
@@ -68,7 +70,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
                 gutterBottom
                 className={classes.headPlatform}
               >
-                Multibook is yours at no additional cost with any paid subscription
+                {t('CS0MultibookIsyoursatNoAdditionalCost')}
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
                 Choose from 20+ {isGetBookMapNow(page) ? 'digital assets' : 'crypto'} exchanges, see
