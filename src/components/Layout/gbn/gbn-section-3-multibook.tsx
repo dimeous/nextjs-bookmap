@@ -70,7 +70,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 gutterBottom
                 className={classes.title}
               >
-                New Addon, Multibook!
+                {t('CS3NewAddonMultibook')}
               </Typography>
               <Typography
                 component="h5"
@@ -79,21 +79,17 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 gutterBottom
                 sx={{ color: '#124258', fontWeight: 800 }}
               >
-                Binance + Coinbase + Huobi = Multibook
+                {t('CS3BinanceCoinbaseHuobiMultibook')}
               </Typography>
               <Typography color="inherit" paragraph>
-                Create synthetic instruments and see multiple{' '}
-                {isGetBookMapNow(page) ? 'digital assets across' : 'crypto'} exchanges in one chart.
+                {isGetBookMapNow(page)
+                  ? t('CS3GBNCreateSyntheticInstrumentsASeeMultipleDigitalAssets ')
+                  : t('CS3CreateSyntheticInstrumentsASeeMultipleCrypto')}
               </Typography>
               <div>
-                <ul>
-                  <li>
-                    See market liquidity and {isGetBookMapNow(page) ? 'execution' : 'traded'} volume
-                  </li>
-                  <li>View volume delta across multiple instruments / exchanges</li>
-                  <li>Analyze Best Bid and Offer</li>
-                  <li>Build your own synthetic instrument</li>
-                </ul>
+                {isGetBookMapNow(page)
+                  ? t('CS3GBNSeeMarketliquidityAExecutionVolume ')
+                  : t('CS3SeeMarketLiquidityAndTradedVolume')}
               </div>
               <Button
                 variant="contained"
@@ -101,7 +97,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
                 sx={{ width: '300px' }}
               >
-                Get MultiBook with Digital+
+                {t('CS3GetMultiBookwithDigitalPlus')}
               </Button>
             </Container>
           </Grid>
