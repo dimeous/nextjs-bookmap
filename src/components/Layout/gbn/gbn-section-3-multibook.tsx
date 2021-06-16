@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
@@ -54,6 +55,7 @@ type ElementProperties = {
 }
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
+  const { t } = useTranslation('crypto')
   const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <div className={classes.root}>
