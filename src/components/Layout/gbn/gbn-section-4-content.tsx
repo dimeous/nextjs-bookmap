@@ -2,23 +2,20 @@ import { isGetBookMapNow } from '../../../lib'
 
 const text = (page?: string) => {
   return {
-    h1: 'Get started in three simple steps',
+    h1: 'CS4GetStartedInThreeSimpleSteps',
     s1: {
-      lbl: 'Get Bookmap Digital+',
-      txt:
-        'Register, install and connect Bookmap to a compatible ' +
-        (isGetBookMapNow(page) ? 'digital assets' : 'crypto') +
-        ' exchange',
+      lbl: 'CS4GetBookmapDigitalPlus',
+      txt: isGetBookMapNow(page)
+        ? 'CS4GBNRegisterInstallAndConnectBookmapTo'
+        : 'CS4RegisterInstallAndConnectBookmapTo',
     },
     s2: {
-      lbl: 'Get Multibook',
-      txt: 'Explore the benefit of multiple instruments within one chart',
+      lbl: 'CS4GetMultibook',
+      txt: 'CS4ExploreTheBenefitOfMultipleInstruments',
     },
     s3: {
-      lbl: 'Make informed decisions',
-      txt:
-        'Analyze markets in a new way. Clearly see market liquidity and hidden patterns' +
-        (isGetBookMapNow(page) ? '' : ' in trading.'),
+      lbl: 'CS4MakeInformedDecisions',
+      txt: isGetBookMapNow(page) ? 'CS4GBNAnalyzeMarketsInANewWay' : 'CS4AnalyzeMarketsInANewWay',
     },
   }
 }

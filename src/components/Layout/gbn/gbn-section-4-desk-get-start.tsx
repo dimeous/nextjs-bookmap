@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/styles'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import getText from './gbn-section-4-content'
@@ -56,12 +57,14 @@ type ElementProperties = {
   page?: string
 }
 const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElement => {
+  const inlineFlex = 'inline-flex'
   const classes = useStyles()
+  const { t } = useTranslation('crypto')
   const text: any = getText(page)
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" align="center" sx={{ pb: 4 }}>
-        {text.h1}
+        {t(text.h1)}
       </Typography>
       <Box className={classes.cTreeSteps}>
         <Box className={classes.oneStep}>
@@ -69,19 +72,19 @@ const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElemen
             <CardMedia
               className={classes.media}
               component="img"
-              alt={'1. ' + text.s1.lbl}
+              alt={'1. ' + t(text.s1.lbl)}
               image="/static/gbn/s5/1.svg"
               title="Get Software"
             />
             <CardContent>
-              <Box sx={{ display: 'inline-flex' }}>
+              <Box sx={{ display: inlineFlex }}>
                 <Box sx={{ p: 1 }}>
                   <Typography className={classes.stepNumber}>1. </Typography>
                 </Box>
                 <Box sx={{ pl: 2 }}>
-                  <Typography className={classes.stepHeader}>{text.s1.lbl}</Typography>
+                  <Typography className={classes.stepHeader}>{t(text.s1.lbl)}</Typography>
                   <Typography variant="body2" color="textPrimary" component="p">
-                    {text.s1.txt}
+                    {t(text.s1.txt)}
                   </Typography>
                 </Box>
               </Box>
@@ -93,19 +96,19 @@ const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElemen
             <CardMedia
               className={classes.media}
               component="img"
-              alt={'2. ' + text.s2.lbl}
+              alt={'2. ' + t(text.s2.lbl)}
               image="/static/gbn/s5/2.svg"
               title="Connect Data"
             />
             <CardContent>
-              <Box sx={{ display: 'inline-flex' }}>
+              <Box sx={{ display: inlineFlex }}>
                 <Box sx={{ p: 1 }}>
                   <Typography className={classes.stepNumber}>2. </Typography>
                 </Box>
                 <Box sx={{ pl: 2 }}>
-                  <Typography className={classes.stepHeader}>{text.s2.lbl}</Typography>
+                  <Typography className={classes.stepHeader}>{t(text.s2.lbl)}</Typography>
                   <Typography variant="body2" color="textPrimary" component="p">
-                    {text.s2.txt}
+                    {t(text.s2.txt)}
                   </Typography>
                 </Box>
               </Box>
@@ -118,19 +121,19 @@ const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElemen
             <CardMedia
               className={classes.media}
               component="img"
-              alt={'3. ' + text.s3.lbl}
+              alt={'3. ' + t(text.s3.lbl)}
               image="/static/gbn/s5/3.svg"
               title="Educate yourself"
             />
             <CardContent>
-              <Box sx={{ display: 'inline-flex' }}>
+              <Box sx={{ display: inlineFlex }}>
                 <Box sx={{ p: 1 }}>
                   <Typography className={classes.stepNumber}>3. </Typography>
                 </Box>
                 <Box sx={{ pl: 2 }}>
-                  <Typography className={classes.stepHeader}>{text.s3.lbl}</Typography>
+                  <Typography className={classes.stepHeader}>{t(text.s3.lbl)}</Typography>
                   <Typography variant="body2" color="textPrimary" component="p">
-                    {text.s3.txt}
+                    {t(text.s3.txt)}
                   </Typography>
                 </Box>
               </Box>

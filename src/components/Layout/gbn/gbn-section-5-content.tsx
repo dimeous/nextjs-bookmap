@@ -1,57 +1,103 @@
 import { Tooltip, Typography } from '@material-ui/core'
 import ContactSupportIcon from '@material-ui/icons/ContactSupport'
+import { useTranslation } from 'next-i18next'
 import React, { Fragment } from 'react'
-const tooltipText = (
-  <Fragment>
-    <Typography sx={{ p: 2, fontSize: '1rem' }}>
-      Multibook is available for free to all Digital+ monthly or yearly subscribers for one year.
-    </Typography>
-  </Fragment>
-)
-export const defaultText: { [index: string]: any } = {
-  h1: 'Pricing and Packages',
-  h2: 'Trade cryptocurrencies and get many features with Bookmap desktop application ',
-  l1: 'MONTHLY',
-  l2: 'YEARLY',
-  l4: 'Save 15%',
-  t1: 'digital',
-  t2: 'digital plus',
-  r1: 'Bookmap desktop application',
-  r2: 'Real-time market data ',
-  r3: 'Simulated & Live Trading ',
-  r4: 'API for custom indicators & automated strategies ',
-  r5: (
-    <Fragment>
-      <span style={{ color: '#0084f6' }}>{'>'}20</span> Supported exchanges
-    </Fragment>
-  ),
 
-  r61: (
+import { isGetBookMapNow } from '../../../lib'
+const TooltipText = () => {
+  const { t } = useTranslation('crypto')
+  return (
     <Fragment>
-      <span style={{ color: '#0084f6' }}>1 trading pairs</span> viewable at the same time
+      <Typography sx={{ p: 2, fontSize: '1rem' }}>
+        {t('CS5MultibookIsAvailableForFreeToAllDigitalPMonthly')}
+      </Typography>
     </Fragment>
-  ),
-  r62: (
+  )
+}
+const R12 = () => {
+  const { t } = useTranslation('crypto')
+  return (
     <Fragment>
-      <span style={{ color: '#0084f6' }}>20 trading pairs</span> viewable at the same time
-    </Fragment>
-  ),
-  r7: 'Backfill data',
-  r8: 'Record and Replay',
-  r9: 'VWAP',
-  r10: 'Correlation Tracker',
-  r11: 'Advanced Education',
-  r12: (
-    <Fragment>
-      <b>Multibook: Exclusive to Digital+ Subscribers</b>
-      <Tooltip title={tooltipText}>
+      <b>{t('CS5MultibookExclusiveToDigitalPSubscribers')}</b>
+      <Tooltip title={TooltipText}>
         <ContactSupportIcon style={{ position: 'absolute', marginLeft: '0px ' }} />
       </Tooltip>
     </Fragment>
-  ),
-  b1: 'GET DIGITAL',
-  b2: 'GET DIGITAL+',
-  link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',
-  link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171',
-  endText: 'Trading Stocks or Futures? Explore more features and opportunities Bookmap provides ',
+  )
+}
+
+type SpanTextProperties = {
+  text: string
+}
+const SpanText = ({ text }: SpanTextProperties) => {
+  const { t } = useTranslation('crypto')
+  return (
+    <span
+      dangerouslySetInnerHTML={{
+        __html: t(text, {
+          interpolation: { escapeValue: false },
+        }),
+      }}
+    />
+  )
+}
+
+export const defaultText = (page: string | undefined): { [index: string]: any } => {
+  return {
+    h1: 'CS5PricingAndPackages',
+    h2: isGetBookMapNow(page)
+      ? 'CS5GBNBuyASellDigitalAssetsAGetManyFeatures'
+      : 'CS5TradeCryptoAndGetManyFeaturesWBookmapDesktop',
+    l1: 'CS5MONTHLY',
+    l2: 'CS5YEARLY',
+    l4: 'CS5Save15P',
+    t1: 'CS5digital',
+    t2: 'CS5digitalPlus',
+    r1: 'CS5BookmapDesktopApplication',
+    r2: 'CS5RealTimeMarketData',
+    r3: isGetBookMapNow(page) ? 'CS5GBNSimulatedLiveMode' : 'CS5SimulatedLiveTrading',
+    r4: 'CS5APIForCustomIndicatorsAutomatedStrategies',
+
+    r5: (
+      <Fragment>
+        <SpanText text={'CS5B20SupportedExchanges'} />
+      </Fragment>
+    ),
+
+    r61: (
+      <Fragment>
+        <SpanText
+          text={
+            isGetBookMapNow(page)
+              ? 'CS5GBN1DigitalCurrencyPairViewableAtTheSameT'
+              : 'CS51TradingPairsViewableAtTheSameTime'
+          }
+        />
+      </Fragment>
+    ),
+    r62: (
+      <Fragment>
+        <SpanText
+          text={
+            isGetBookMapNow(page)
+              ? 'CS5GBN20DigitalCurrencyPairViewableAtTheSameT'
+              : 'CS520TradingPairsViewableAtTheSameTime'
+          }
+        />
+      </Fragment>
+    ),
+    r7: 'CS5BackfillData',
+    r8: 'CS5RecordAndReplay',
+    r9: 'CS5VWAP',
+    r10: 'CS5CorrelationTracker',
+    r11: 'CS5AdvancedEducation',
+    r12: <R12 />,
+    b1: 'CS5GETDIGITAL',
+    b2: 'CS5GETDIGITALP',
+    link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',
+    link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171',
+    endText: isGetBookMapNow(page)
+      ? 'CS5GBNInterestedInStocksOrFutures'
+      : 'CS5TradingStocksOrFuturesExploreMore',
+  }
 }

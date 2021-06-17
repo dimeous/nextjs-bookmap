@@ -86,11 +86,18 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                   ? t('CS3GBNCreateSyntheticInstrumentsASeeMultipleDigitalAssets ')
                   : t('CS3CreateSyntheticInstrumentsASeeMultipleCrypto')}
               </Typography>
-              <div>
-                {isGetBookMapNow(page)
-                  ? t('CS3GBNSeeMarketliquidityAExecutionVolume ')
-                  : t('CS3SeeMarketLiquidityAndTradedVolume')}
-              </div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    isGetBookMapNow(page)
+                      ? 'CS3GBNSeeMarketliquidityAExecutionVolume'
+                      : 'CS3SeeMarketLiquidityAndTradedVolume',
+                    {
+                      interpolation: { escapeValue: false },
+                    }
+                  ),
+                }}
+              />
               <Button
                 variant="contained"
                 color="secondary"

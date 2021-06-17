@@ -8,7 +8,6 @@ import GbnSection2Exchanges from '../../../../src/components/Layout/gbn/gbn-sect
 import GbnSection3Multibook from '../../../../src/components/Layout/gbn/gbn-section-3-multibook'
 import GbnSection4DeskGetStart from '../../../../src/components/Layout/gbn/gbn-section-4-desk-get-start'
 import GbnSection4MGetStart from '../../../../src/components/Layout/gbn/gbn-section-4-m-get-start'
-import { newContentSection5 } from '../../../../src/components/Layout/gbn/gbn-section-5-content-gbn'
 import GbnSection5Pricing from '../../../../src/components/Layout/gbn/gbn-section-5-pricing'
 import CryptoHeader from '../../Layout/gbn/Header/crypto-header'
 
@@ -69,7 +68,7 @@ const GetBookMapNow = ({ page }: ElementProperties) => {
         ) : (
           <GbnSection4DeskGetStart page={PageName} />
         )}
-        <GbnSection5Pricing newContent={newContentSection5} page={PageName} />
+        <GbnSection5Pricing page={PageName} />
       </main>
       <Footer page={PageName} />
     </ThemeProvider>

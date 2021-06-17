@@ -346,7 +346,6 @@ const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement =
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See{' '}
           {isGetBookMapNow(page)
             ? t('CS2GBNSeeConnectivityGuide')
             : t('CS2SeeCryptoConnectivityGuide')}

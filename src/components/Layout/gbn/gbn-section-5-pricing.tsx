@@ -16,7 +16,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
-import { add } from 'husky'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage } from '../../../lib'
@@ -33,28 +33,27 @@ function a11yProperties(index: any) {
 const useStyles = styles
 
 type ElementProperties = {
-  newContent?: [index: string] | any
   page?: string
 }
 
-const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.ReactElement => {
+const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
-  const text = newContent ? newContent : defaultText
+  const text = defaultText(page)
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
   const addToLink = getUTMUrlDependsOnPage(page)
-
+  const { t } = useTranslation('crypto')
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
       <Container fixed className={classes.container}>
         <div className={classes.root}>
           <Typography component="h2" variant="h2" sx={{ pb: 1, mb: 0 }}>
-            {text.h1}
+            {t(text.h1)}
           </Typography>
           <Typography component="h3" variant="h3">
-            {text.h2}
+            {t(text.h2)}
           </Typography>
 
           <Tabs
@@ -63,11 +62,11 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
             aria-label="wrapped label tabs example"
             className={classes.tabs}
           >
-            <Tab value="one" label={text.l1} wrapped {...a11yProperties('one')} />
-            <Tab value="two" label={text.l2} {...a11yProperties('two')} />
+            <Tab value="one" label={t(text.l1)} wrapped {...a11yProperties('one')} />
+            <Tab value="two" label={t(text.l2)} {...a11yProperties('two')} />
           </Tabs>
           <div>
-            <span className={classes.tabTwo}>{text.l4} </span>
+            <span className={classes.tabTwo}>{t(text.l4)} </span>
           </div>
         </div>
         <Grid container style={{ paddingTop: '24px' }}>
@@ -76,10 +75,10 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
               <CardContent>
                 <Box sx={{ pl: 2 }}>
                   <Typography component="h3" variant="h3" className={classes.cardT1}>
-                    {text.t1}
+                    {t(text.t1)}
                   </Typography>
                   <Typography component="h4" variant="h4" className={classes.cardT2}>
-                    Free
+                    {t('CS5Free')}
                   </Typography>
                 </Box>
                 <List className={classes.list}>
@@ -87,25 +86,25 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r1} />
+                    <ListItemText primary={t(text.r1)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r2} />
+                    <ListItemText primary={t(text.r2)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r3} />
+                    <ListItemText primary={t(text.r3)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r4} />
+                    <ListItemText primary={t(text.r4)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
@@ -123,31 +122,31 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
                     <ListItemIcon>
                       <HighlightOffIcon className={classes.clsIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r7} className={classes.clsText} />
+                    <ListItemText primary={t(text.r7)} className={classes.clsText} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <HighlightOffIcon className={classes.clsIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r8} className={classes.clsText} />
+                    <ListItemText primary={t(text.r8)} className={classes.clsText} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <HighlightOffIcon className={classes.clsIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r9} className={classes.clsText} />
+                    <ListItemText primary={t(text.r9)} className={classes.clsText} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <HighlightOffIcon className={classes.clsIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r10} className={classes.clsText} />
+                    <ListItemText primary={t(text.r10)} className={classes.clsText} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <HighlightOffIcon className={classes.clsIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r11} className={classes.clsText} />
+                    <ListItemText primary={t(text.r11)} className={classes.clsText} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
@@ -163,7 +162,7 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
                   color="secondary"
                   href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
                 >
-                  {text.b1}
+                  {t(text.b1)}
                 </Button>
               </CardActions>
             </Box>
@@ -173,7 +172,7 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
               <CardContent>
                 <Box sx={{ pl: 2 }}>
                   <Typography component="h3" variant="h3" className={classes.cardT1}>
-                    {text.t2}
+                    {t(text.t2)}
                   </Typography>
                   <Box>
                     <Typography
@@ -199,25 +198,25 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r1} />
+                    <ListItemText primary={t(text.r1)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r2} />
+                    <ListItemText primary={t(text.r2)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r3} />
+                    <ListItemText primary={t(text.r3)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r4} />
+                    <ListItemText primary={t(text.r4)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
@@ -235,31 +234,31 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r7} />
+                    <ListItemText primary={t(text.r7)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r8} />
+                    <ListItemText primary={t(text.r8)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r9} />
+                    <ListItemText primary={t(text.r9)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r10} />
+                    <ListItemText primary={t(text.r10)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
                       <CheckCircleIcon className={classes.chIcon} />
                     </ListItemIcon>
-                    <ListItemText primary={text.r11} />
+                    <ListItemText primary={t(text.r11)} />
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
@@ -275,7 +274,7 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
                   color="secondary"
                   href={(value == 'one' ? text.link12 : text.link22) + addToLink}
                 >
-                  {text.b2}
+                  {t(text.b2)}
                 </Button>
               </CardActions>
             </Card>
@@ -284,7 +283,7 @@ const GbnSection5Pricing = ({ newContent, page }: ElementProperties): React.Reac
 
         <div className={classes.cta}>
           <Typography sx={{ pt: 4, pb: 4 }}>
-            {text.endText}
+            {t(text.endText)}
             <a
               href={'https://bookmap.com/' + addToLink + '#pricing'}
               target="_blank"
