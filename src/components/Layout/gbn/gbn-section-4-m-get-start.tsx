@@ -80,7 +80,7 @@ type ElementProperties = {
 
 const GbnSection4MGetStart = ({ page }: ElementProperties): React.ReactElement => {
   const text: any = getText(page)
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
 

@@ -12,7 +12,7 @@ type staticPropertiesParameters = {
 
 export async function getStaticProps({ locale }: staticPropertiesParameters) {
   return {
-    props: { ...(await serverSideTranslations(locale, ['crypto'])) },
+    props: { ...(await serverSideTranslations(locale, ['gbn'])) },
     revalidate: 30,
   }
 }

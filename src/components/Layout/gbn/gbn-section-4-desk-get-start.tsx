@@ -59,7 +59,7 @@ type ElementProperties = {
 const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElement => {
   const inlineFlex = 'inline-flex'
   const classes = useStyles()
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   const text: any = getText(page)
   return (
     <Container fixed className={classes.root}>

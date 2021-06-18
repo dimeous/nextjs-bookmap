@@ -5,7 +5,7 @@ import React, { Fragment } from 'react'
 
 import { isGetBookMapNow } from '../../../lib'
 const TooltipText = () => {
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   return (
     <Fragment>
       <Typography sx={{ p: 2, fontSize: '1rem' }}>
@@ -15,7 +15,7 @@ const TooltipText = () => {
   )
 }
 const R12 = () => {
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   return (
     <Fragment>
       <b>{t('CS5MultibookExclusiveToDigitalPSubscribers')}</b>
@@ -30,7 +30,7 @@ type SpanTextProperties = {
   text: string
 }
 const SpanText = ({ text }: SpanTextProperties) => {
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   return (
     <span
       dangerouslySetInnerHTML={{

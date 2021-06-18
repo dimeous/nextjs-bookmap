@@ -88,7 +88,7 @@ export async function getStaticProps({ locale }: staticPropertiesParameters) {
         console.log('Failed to fetch page trustpilot:', error)
       })
     return {
-      props: { data: data, ...(await serverSideTranslations(locale, ['crypto'])) },
+      props: { data: data, ...(await serverSideTranslations(locale, ['gbn'])) },
     }
   } catch {
     return {

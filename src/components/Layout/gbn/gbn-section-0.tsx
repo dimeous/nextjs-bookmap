@@ -55,7 +55,7 @@ type CardProperties = {
 
 const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
   const classes = useStyles()
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <>

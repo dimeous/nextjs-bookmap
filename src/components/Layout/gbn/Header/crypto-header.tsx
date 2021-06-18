@@ -13,7 +13,7 @@ type ElementProperties = {
 }
 const CryptoHeader = ({ page, mobile }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   const displayDesktop = () => {
     const addToLink = getUTMUrlDependsOnPage(page)
     return (

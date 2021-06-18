@@ -55,7 +55,7 @@ type ElementProperties = {
 }
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const { t } = useTranslation('crypto')
+  const { t } = useTranslation('gbn')
   const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <div className={classes.root}>
