@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
 import ImagePopover from '../Main/main-section-4-popover'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -52,17 +53,13 @@ type ElementProperties = {
 
 const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink =
-    page === 'getbookmapnow'
-      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Typography variant={'h2'} component={'h2'}>
-        Connect to over{' '}
-        <b>20 {page === 'getbookmapnow' ? 'Digital Currency Exchanges' : 'Crypto'}</b> exchanges and
-        get data for free
+        Connect to over <b>20 {isGetBookMapNow(page) ? 'Digital Currency Exchanges' : 'Crypto'}</b>{' '}
+        exchanges and get data for free
       </Typography>
       <div>
         <Grid container>
@@ -337,7 +334,7 @@ const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement =
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See {page === 'getbookmapnow' ? '' : 'Crypto'} Connectivity Guide
+          See {isGetBookMapNow(page) ? '' : 'Crypto'} Connectivity Guide
         </Link>
       </Box>
     </Container>

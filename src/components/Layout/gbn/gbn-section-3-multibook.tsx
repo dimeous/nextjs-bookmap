@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
 
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
+
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
@@ -52,10 +54,7 @@ type ElementProperties = {
 }
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink =
-    page === 'getbookmapnow'
-      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -82,14 +81,12 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
               </Typography>
               <Typography color="inherit" paragraph>
                 Create synthetic instruments and see multiple{' '}
-                {page === 'getbookmapnow' ? 'digital assets across' : 'crypto'} exchanges in one
-                chart.
+                {isGetBookMapNow(page) ? 'digital assets across' : 'crypto'} exchanges in one chart.
               </Typography>
               <div>
                 <ul>
                   <li>
-                    See market liquidity and {page === 'getbookmapnow' ? 'execution' : 'traded'}{' '}
-                    volume
+                    See market liquidity and {isGetBookMapNow(page) ? 'execution' : 'traded'} volume
                   </li>
                   <li>View volume delta across multiple instruments / exchanges</li>
                   <li>Analyze Best Bid and Offer</li>

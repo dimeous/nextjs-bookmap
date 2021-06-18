@@ -1,10 +1,11 @@
-// eslint-disable-next-line unicorn/filename-case
 import { List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
+
+import { isGetBookMapNow } from '../../../lib'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -60,12 +61,12 @@ const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement =>
   const list = [
     'View full-depth historical data with the dynamic heatmap',
     'Watch the battle between buyers and sellers in 3D with ' +
-      (page === 'getbookmapnow' ? 'execution' : 'traded') +
+      (isGetBookMapNow(page) ? 'execution' : 'traded') +
       ' volume visualization',
     'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
     'See all market data without aggregation',
     'Use Bookmap in real-time or in replay to debrief your ' +
-      (page === 'getbookmapnow' ? '' : 'trading') +
+      (isGetBookMapNow(page) ? '' : 'trading') +
       ' session',
     'Access to many addons, including Multibook',
   ]

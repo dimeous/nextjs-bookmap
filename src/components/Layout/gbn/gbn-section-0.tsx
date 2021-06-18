@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
 
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
+
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: '#1e262d',
@@ -50,12 +52,9 @@ type CardProperties = {
   page?: string
 }
 
-export default function GbnSection0({ mobile, page }: CardProperties) {
+const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink =
-    page === 'getbookmapnow'
-      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const addToLink = getUTMUrlDependsOnPage(page)
   return (
     <>
       <div className={classes.root}>
@@ -72,8 +71,8 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
                 Multibook is yours at no additional cost with any paid subscription
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                Choose from 20+ {page === 'getbookmapnow' ? 'digital assets' : 'crypto'} exchanges,
-                see multiple order books in one heatmap.
+                Choose from 20+ {isGetBookMapNow(page) ? 'digital assets' : 'crypto'} exchanges, see
+                multiple order books in one heatmap.
               </Typography>
               {!mobile && (
                 <Button
@@ -122,3 +121,4 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
     </>
   )
 }
+export default GbnSection0
