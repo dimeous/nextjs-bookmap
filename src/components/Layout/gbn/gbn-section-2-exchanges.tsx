@@ -55,7 +55,7 @@ type ElementProperties = {
 const GbnSection2Exchanges = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const addToLink = getUTMUrlDependsOnPage(page)
-  const { t } = useTranslation('gbn')
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   return (
     <Container fixed className={classes.root}>
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>

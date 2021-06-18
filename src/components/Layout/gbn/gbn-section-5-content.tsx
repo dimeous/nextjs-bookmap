@@ -4,8 +4,8 @@ import { useTranslation } from 'next-i18next'
 import React, { Fragment } from 'react'
 
 import { isGetBookMapNow } from '../../../lib'
-const TooltipText = () => {
-  const { t } = useTranslation('gbn')
+const TooltipText = (page: string | undefined) => {
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   return (
     <Fragment>
       <Typography sx={{ p: 2, fontSize: '1rem' }}>
@@ -14,12 +14,17 @@ const TooltipText = () => {
     </Fragment>
   )
 }
-const R12 = () => {
-  const { t } = useTranslation('gbn')
+
+type PageProperties = {
+  page: string | undefined
+}
+
+const R12 = ({ page }: PageProperties) => {
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   return (
     <Fragment>
       <b>{t('CS5MultibookExclusiveToDigitalPSubscribers')}</b>
-      <Tooltip title={TooltipText}>
+      <Tooltip title={TooltipText(page)}>
         <ContactSupportIcon style={{ position: 'absolute', marginLeft: '0px ' }} />
       </Tooltip>
     </Fragment>
@@ -28,9 +33,10 @@ const R12 = () => {
 
 type SpanTextProperties = {
   text: string
+  page: string | undefined
 }
-const SpanText = ({ text }: SpanTextProperties) => {
-  const { t } = useTranslation('gbn')
+const SpanText = ({ text, page }: SpanTextProperties) => {
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   return (
     <span
       dangerouslySetInnerHTML={{
@@ -60,7 +66,7 @@ export const defaultText = (page: string | undefined): { [index: string]: any } 
 
     r5: (
       <Fragment>
-        <SpanText text={'CS5B20SupportedExchanges'} />
+        <SpanText text={'CS5B20SupportedExchanges'} page={page} />
       </Fragment>
     ),
 
@@ -72,6 +78,7 @@ export const defaultText = (page: string | undefined): { [index: string]: any } 
               ? 'CS5GBN1DigitalCurrencyPairViewableAtTheSameT'
               : 'CS51TradingPairsViewableAtTheSameTime'
           }
+          page={page}
         />
       </Fragment>
     ),
@@ -83,6 +90,7 @@ export const defaultText = (page: string | undefined): { [index: string]: any } 
               ? 'CS5GBN20DigitalCurrencyPairViewableAtTheSameT'
               : 'CS520TradingPairsViewableAtTheSameTime'
           }
+          page={page}
         />
       </Fragment>
     ),
@@ -91,7 +99,7 @@ export const defaultText = (page: string | undefined): { [index: string]: any } 
     r9: 'CS5VWAP',
     r10: 'CS5CorrelationTracker',
     r11: 'CS5AdvancedEducation',
-    r12: <R12 />,
+    r12: <R12 page={page} />,
     b1: 'CS5GETDIGITAL',
     b2: 'CS5GETDIGITALP',
     link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',

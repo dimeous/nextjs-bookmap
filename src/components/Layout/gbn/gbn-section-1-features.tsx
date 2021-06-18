@@ -59,7 +59,7 @@ type ElementProperties = {
 }
 
 const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement => {
-  const { t } = useTranslation('gbn')
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   const list = [
     t('CS1ViewFullDepthHistoricalDataWheatmap'),
     isGetBookMapNow(page)

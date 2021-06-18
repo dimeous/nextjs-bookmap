@@ -44,7 +44,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
     setValue(newValue)
   }
   const addToLink = getUTMUrlDependsOnPage(page)
-  const { t } = useTranslation('gbn')
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
       <Container fixed className={classes.container}>
