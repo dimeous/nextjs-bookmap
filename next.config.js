@@ -2,7 +2,7 @@ console.log('start save file from strapi to json')
 const fs = require('fs')
 const path = require('path')
 const contentUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/contents?_locale=all&_limit=10000'
-const languages = ['en', 'de', 'es', 'it', 'fr', 'ru']
+const languages = ['en', 'de', 'es', 'it', 'fr', 'ru', 'pt']
 const pages = ['main', 'gbn', 'crypto']
 
 fetch(contentUrl)
