@@ -331,7 +331,7 @@ export default function TabsWrappedLabelSection5() {
           </div>
         </Box>
         {/* third table list*/}
-        <Box className={classes.digital} style={{ marginRight: 0 }}>
+        <Box className={classes.digital} style={{ marginRight: 0, border: "1px solid #df731b" }}>
           <Box className={classes.priceName}>
             <p>{t(text.t2)} plus</p>
           </Box>
