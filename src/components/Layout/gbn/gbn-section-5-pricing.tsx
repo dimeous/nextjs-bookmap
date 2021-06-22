@@ -188,8 +188,8 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                     <Typography
                       style={{ marginLeft: '10px', fontSize: '20px', display: 'inline-block' }}
                     >
-                      {value == 'one' && 'per month'}
-                      {value == 'two' && 'annual'}
+                      {value == 'one' && t('CS5perMonth')}
+                      {value == 'two' && t('CS5annual')}
                     </Typography>
                   </Box>
                 </Box>
