@@ -44,6 +44,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
     setValue(newValue)
   }
   const addToLink = getUTMUrlDependsOnPage(page)
+  const addToLink2 = getUTMUrlDependsOnPage(page, true)
   const { t } = useTranslation(page ? 'gbn' : 'crypto')
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
@@ -157,11 +158,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 </List>
               </CardContent>
               <CardActions className={classes.cardAction}>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  href={'https://bookmap.com/members/signup/thAhOgYUg?_lang=en' + addToLink}
-                >
+                <Button variant="contained" color="secondary" href={t('CS5textB1') + addToLink2}>
                   {t(text.b1)}
                 </Button>
               </CardActions>
@@ -272,7 +269,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={(value == 'one' ? text.link12 : text.link22) + addToLink}
+                  href={(value == 'one' ? t(text.link12) : t(text.link22)) + addToLink2}
                 >
                   {t(text.b2)}
                 </Button>

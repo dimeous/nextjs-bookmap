@@ -56,7 +56,7 @@ type CardProperties = {
 const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
   const classes = useStyles()
   const { t } = useTranslation(page ? 'gbn' : 'crypto')
-  const addToLink = getUTMUrlDependsOnPage(page)
+  const addToLink = getUTMUrlDependsOnPage(page, true)
   return (
     <>
       <div className={classes.root}>
@@ -83,7 +83,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/gv3uiH6Hi?_lang=pt' + addToLink}
+                  href={t('CS0TopStartForFree') + addToLink}
                 >
                   {t('CS0GetMultibook')}
                 </Button>
@@ -113,7 +113,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
           <Button
             variant="contained"
             color="secondary"
-            href={'https://bookmap.com/members/signup/gv3uiH6Hi?_lang=pt' + addToLink}
+            href={t('CS0TopStartForFree') + addToLink}
             className={classes.button}
             id={'main_top_start_for_free'}
           >

@@ -56,7 +56,7 @@ type ElementProperties = {
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
   const { t } = useTranslation(page ? 'gbn' : 'crypto')
-  const addToLink = getUTMUrlDependsOnPage(page)
+  const addToLink = getUTMUrlDependsOnPage(page, true)
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -101,7 +101,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
               <Button
                 variant="contained"
                 color="secondary"
-                href={'https://bookmap.com/members/signup/gv3uiH6Hi?_lang=pt' + addToLink}
+                href={t('CS3BtnLink') + addToLink}
                 sx={{ width: '300px' }}
               >
                 {t('CS3GetMultiBookwithDigitalPlus')}

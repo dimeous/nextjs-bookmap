@@ -16,6 +16,7 @@ const CryptoHeader = ({ page, mobile }: ElementProperties): React.ReactElement =
   const { t } = useTranslation(page ? 'gbn' : 'crypto')
   const displayDesktop = () => {
     const addToLink = getUTMUrlDependsOnPage(page)
+    const addToLink2 = getUTMUrlDependsOnPage(page, true)
     return (
       <Container fixed sx={{ p: [2, 0, 0, 2] }}>
         <Box className={classes.toolbar}>
@@ -35,7 +36,7 @@ const CryptoHeader = ({ page, mobile }: ElementProperties): React.ReactElement =
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/thAhOgYUg?_lang=pt' + addToLink}
+                  href={t('HBtnLinkSubsForFree') + addToLink2}
                   className={classes.button}
                   id={isGetBookMapNow(page) ? 'gbn _header_get_it_now' : 'crypto_header_get_it_now'}
                 >
