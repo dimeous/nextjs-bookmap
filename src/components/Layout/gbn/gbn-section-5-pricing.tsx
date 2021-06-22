@@ -290,7 +290,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
               rel={'noreferrer'}
               style={{ textTransform: 'none' }}
             >
-              Compare Prices & Packages
+              {t('CS5ComparePricesAPackages')}
             </a>
           </Typography>
         </div>

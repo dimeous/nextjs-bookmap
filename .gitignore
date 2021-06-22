@@ -16,7 +16,7 @@ yarn-error.log*
 
 # Next.js
 /.next
-
+/public/locales
 # IDEA config files
 /.idea
 
@@ -25,3 +25,4 @@ yarn-error.log*
 /package-lock.json
 /yarn.lock
 /out/
+/public/locales/

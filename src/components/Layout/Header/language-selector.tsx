@@ -9,7 +9,7 @@ const convertToUpper = (countryCode: string) => {
   countryCode = countryCode === 'en' ? 'US' : countryCode
   return countryCode.toUpperCase()
 }
-const LanguageSelector = () => {
+const LanguageSelector2 = () => {
   const { i18n } = useTranslation('main')
   return (
     <ReactFlagsSelect
@@ -22,5 +22,8 @@ const LanguageSelector = () => {
       optionsSize={14}
     />
   )
+}
+const LanguageSelector = () => {
+  return <div />
 }
 export default LanguageSelector
