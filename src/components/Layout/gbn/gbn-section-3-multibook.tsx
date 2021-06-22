@@ -70,7 +70,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 gutterBottom
                 className={classes.title}
               >
-                {t('CS3NewAddonMultibook')}
+                {t('CS3NewAddonMultiBook')}
               </Typography>
               <Typography
                 component="h5"
