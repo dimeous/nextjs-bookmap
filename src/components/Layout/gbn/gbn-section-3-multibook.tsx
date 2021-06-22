@@ -101,7 +101,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
               <Button
                 variant="contained"
                 color="secondary"
-                href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
+                href={'https://bookmap.com/members/signup/gv3uiH6Hi?_lang=pt' + addToLink}
                 sx={{ width: '300px' }}
               >
                 {t('CS3GetMultiBookwithDigitalPlus')}
