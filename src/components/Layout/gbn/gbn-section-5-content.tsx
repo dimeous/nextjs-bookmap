@@ -102,8 +102,8 @@ export const defaultText = (page: string | undefined): { [index: string]: any } 
     r12: <R12 page={page} />,
     b1: 'CS5GETDIGITAL',
     b2: 'CS5GETDIGITALP',
-    link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170',
-    link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171',
+    link12: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=170-170&_lang=en',
+    link22: 'https://bookmap.com/members/signup/gv3uiH6Hi?product_id_page-0[]=171-171&_lang=en',
     endText: isGetBookMapNow(page)
       ? 'CS5GBNInterestedInStocksOrFutures'
       : 'CS5TradingStocksOrFuturesExploreMore',

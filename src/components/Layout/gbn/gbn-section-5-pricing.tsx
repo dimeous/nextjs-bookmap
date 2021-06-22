@@ -160,7 +160,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
+                  href={'https://bookmap.com/members/signup/thAhOgYUg?_lang=en' + addToLink}
                 >
                   {t(text.b1)}
                 </Button>

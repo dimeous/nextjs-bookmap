@@ -35,7 +35,7 @@ const CryptoHeader = ({ page, mobile }: ElementProperties): React.ReactElement =
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/thAhOgYUg' + addToLink}
+                  href={'https://bookmap.com/members/signup/thAhOgYUg?_lang=pt' + addToLink}
                   className={classes.button}
                   id={isGetBookMapNow(page) ? 'gbn _header_get_it_now' : 'crypto_header_get_it_now'}
                 >
