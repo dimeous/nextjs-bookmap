@@ -211,9 +211,12 @@ export default function TabsWrappedLabelSection5() {
                 style={{
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
-              >
-                {t(text.addonsSome)}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: t(text.addonsSome, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
           </ul>
           <div className={classes.thePrice}>
@@ -298,9 +301,12 @@ export default function TabsWrappedLabelSection5() {
                 style={{
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
-              >
-                {t(text.addonsAll)}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: t(text.addonsAll, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
           </ul>
           <div className={classes.thePrice}>
@@ -331,8 +337,8 @@ export default function TabsWrappedLabelSection5() {
           </div>
         </Box>
         {/* third table list*/}
-        <Box className={classes.digital} sx={{ marginRight: 0, border: '1px solid #df731b' }}>
-          <Box className={classes.priceName} sx={{ backgroundColor: '#df731b' }}>
+        <Box className={classes.digital} style={{ marginRight: 0, border: '1px solid #df731b' }}>
+          <Box className={classes.priceName} style={{ backgroundColor: '#df731b' }}>
             <p>{t(text.t2)} plus</p>
           </Box>
           <ul className={classes.priceTags}>
@@ -403,9 +409,12 @@ export default function TabsWrappedLabelSection5() {
                 style={{
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
-              >
-                {t(text.addonsAll)}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: t(text.addonsAll, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
           </ul>
           <div className={classes.thePrice}>

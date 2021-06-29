@@ -403,13 +403,33 @@ export default function TabsWrappedLabelSection5() {
         </Grid>
         <Grid container spacing={1} className={classes.allTrading}>
           <Grid container item xs={4} justifyContent={'center'}>
-            <p>{t(text.addonsSome)}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t(text.addonsSome, {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <p className={classes.allTrading}>{t(text.addonsAll)}</p>
+            <p
+              className={classes.allTrading}
+              dangerouslySetInnerHTML={{
+                __html: t(text.addonsAll, {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <p className={classes.allTrading}>{t(text.addonsAll)}</p>
+            <p
+              className={classes.allTrading}
+              dangerouslySetInnerHTML={{
+                __html: t(text.addonsAll, {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
