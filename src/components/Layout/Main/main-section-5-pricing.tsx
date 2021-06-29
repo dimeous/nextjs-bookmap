@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
-import { useTranslation, withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { text } from './main-section-5-content'
@@ -331,8 +331,8 @@ export default function TabsWrappedLabelSection5() {
           </div>
         </Box>
         {/* third table list*/}
-        <Box className={classes.digital} style={{ marginRight: 0, border: '1px solid #df731b' }}>
-          <Box className={classes.priceName} style={{backgroundColor: "#df731b"}}>
+        <Box className={classes.digital} sx={{ marginRight: 0, border: '1px solid #df731b' }}>
+          <Box className={classes.priceName} sx={{ backgroundColor: '#df731b' }}>
             <p>{t(text.t2)} plus</p>
           </Box>
           <ul className={classes.priceTags}>
