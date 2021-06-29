@@ -4,7 +4,10 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
+
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -50,12 +53,10 @@ type CardProperties = {
   page?: string
 }
 
-export default function GbnSection0({ mobile, page }: CardProperties) {
+const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink =
-    page === 'getbookmapnow'
-      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
+  const addToLink = getUTMUrlDependsOnPage(page, true)
   return (
     <>
       <div className={classes.root}>
@@ -69,11 +70,12 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
                 gutterBottom
                 className={classes.headPlatform}
               >
-                Multibook is yours at no additional cost with any paid subscription
+                {t('CS0MultibookIsyoursatNoAdditionalCost')}
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                Choose from 20+ {page === 'getbookmapnow' ? 'digital assets' : 'crypto'} exchanges,
-                see multiple order books in one heatmap.
+                {isGetBookMapNow(page)
+                  ? t('CS0GBNChoosefrom20digitalAssetsExchangesSeeMultipleO')
+                  : t('CS0Choosefrom20cryptoExchangesSeeMultipleOrder')}
               </Typography>
               {!mobile && (
                 <Button
@@ -81,9 +83,9 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
+                  href={t('CS0TopStartForFree') + addToLink}
                 >
-                  Get Multibook
+                  {t('CS0GetMultibook')}
                 </Button>
               )}
             </Grid>
@@ -111,14 +113,15 @@ export default function GbnSection0({ mobile, page }: CardProperties) {
           <Button
             variant="contained"
             color="secondary"
-            href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
+            href={t('CS0TopStartForFree') + addToLink}
             className={classes.button}
             id={'main_top_start_for_free'}
           >
-            Get Multibook
+            {t('CS0GetMultibook')}
           </Button>
         </Grid>
       )}
     </>
   )
 }
+export default GbnSection0

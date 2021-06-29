@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { appWithTranslation } from 'next-i18next'
 import { DefaultSeo } from 'next-seo'
 import React from 'react'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -17,10 +18,11 @@ import theme from '../src/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
-export default function MyApp(props: AppProps) {
+const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props
+  const pathname = useRouter().pathname
 
-  const isPageGetBookMapNow = useRouter().pathname === '/get-bookmap-now'
+  const isPageGetBookMapNow = pathname === '/get-bookmap-now' || pathname === '/orderflow'
   const isPageCrypto = useRouter().pathname === '/crypto'
 
   React.useEffect(() => {
@@ -100,3 +102,5 @@ export default function MyApp(props: AppProps) {
     </CacheProvider>
   )
 }
+
+export default appWithTranslation(MyApp)

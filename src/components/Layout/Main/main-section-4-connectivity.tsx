@@ -7,7 +7,8 @@ import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
-import React from 'react'
+import { useTranslation } from 'next-i18next'
+import { useState } from 'react'
 
 import ImagePopover from './main-section-4-popover'
 
@@ -17,7 +18,7 @@ interface TabPanelProperties {
   value: any
 }
 
-function TabPanel(props: TabPanelProperties) {
+const TabPanel = (props: TabPanelProperties) => {
   const { children, value, index, ...other } = props
 
   return (
@@ -37,7 +38,7 @@ function TabPanel(props: TabPanelProperties) {
   )
 }
 
-function a11yProperties(index: any) {
+const a11yProperties = (index: any) => {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -83,8 +84,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function TabsWrappedLabelSection4() {
+  const { t } = useTranslation('main')
   const classes = useStyles()
-  const [value, setValue] = React.useState('one')
+  const [value, setValue] = useState('one')
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
@@ -95,10 +97,10 @@ export default function TabsWrappedLabelSection4() {
       <div id="connectivity" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div>
         <Typography component="h2" variant="h2">
-          Connectivity
+          {t('MS4Connectivity')}
         </Typography>
         <Typography component="h3" variant="h3">
-          Bookmap is compatible with many data providers / exchanges
+          {t('MS4BookmapIsCompatibleWithManyDataProvidersExchanges')}
         </Typography>
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
           <Tab value="one" label="FUTURES" wrapped {...a11yProperties('one')} />
@@ -593,7 +595,7 @@ export default function TabsWrappedLabelSection4() {
           target={'_blank'}
           rel={'noreferrer'}
         >
-          See Connectivity Guide
+          {t('MS4SeeConnectivityGuide')}
         </Link>
       </Box>
     </Container>

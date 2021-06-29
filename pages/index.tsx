@@ -1,9 +1,8 @@
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
 
-import { fetchAPI } from '../lib/api'
-import { CarouselType } from '../lib/types'
 import Footer from '../src/components/Layout/Footer/main-footer'
 import MainHeader from '../src/components/Layout/Header/main-header'
 import MainSection0 from '../src/components/Layout/Main/main-section-0'
@@ -18,11 +17,12 @@ import MainSection6Carousel from '../src/components/Layout/Main/main-section-6-c
 import MainSection6Trading from '../src/components/Layout/Main/main-section-6-trading'
 import MainSection7Words from '../src/components/Layout/Main/main-section-7-words'
 import MainSection8UserReviews from '../src/components/Layout/Main/main-section-8-users-reviews'
+import { fetchAPI } from '../src/lib/api'
+import { CarouselType } from '../src/lib/types'
 
 interface CardType {
   mainCarousel: CarouselType[]
 }
-
 const Index = (mainCarousel: CardType) => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
@@ -46,11 +46,15 @@ const Index = (mainCarousel: CardType) => {
   )
 }
 
-export async function getStaticProps() {
+type staticPropertiesParameters = {
+  locale: string
+}
+
+export async function getStaticProps({ locale }: staticPropertiesParameters) {
   const [mainCarouselData] = await Promise.all([fetchAPI('/main-carousels')])
   const mainCarousel: CarouselType[] = mainCarouselData as unknown as CarouselType[]
   return {
-    props: { mainCarousel },
+    props: { mainCarousel, ...(await serverSideTranslations(locale, ['main'])) },
     revalidate: 30,
   }
 }

@@ -43,7 +43,7 @@ export const useStyles = makeStyles({
   },
 
   moreButtonCont: {
-    marginRight: '199px',
+    marginRight: '32px' /*'199px'*/,
   },
   moreButtonAcitve: {
     color: '#1a9dff',

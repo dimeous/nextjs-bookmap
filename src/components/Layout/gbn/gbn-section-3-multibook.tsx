@@ -4,7 +4,10 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
+
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -52,10 +55,8 @@ type ElementProperties = {
 }
 const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
   const classes = useStyles()
-  const addToLink =
-    page === 'getbookmapnow'
-      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
+  const addToLink = getUTMUrlDependsOnPage(page, true)
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -69,7 +70,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 gutterBottom
                 className={classes.title}
               >
-                New Addon, Multibook!
+                {t('CS3NewAddonMultiBook')}
               </Typography>
               <Typography
                 component="h5"
@@ -78,31 +79,32 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 gutterBottom
                 sx={{ color: '#124258', fontWeight: 800 }}
               >
-                Binance + Coinbase + Huobi = Multibook
+                {t('CS3BinanceCoinbaseHuobiMultibook')}
               </Typography>
               <Typography color="inherit" paragraph>
-                Create synthetic instruments and see multiple{' '}
-                {page === 'getbookmapnow' ? 'digital assets across' : 'crypto'} exchanges in one
-                chart.
+                {isGetBookMapNow(page)
+                  ? t('CS3GBNCreateSyntheticInstrumentsASeeMultipleDigitalAssets ')
+                  : t('CS3CreateSyntheticInstrumentsASeeMultipleCrypto')}
               </Typography>
-              <div>
-                <ul>
-                  <li>
-                    See market liquidity and {page === 'getbookmapnow' ? 'execution' : 'traded'}{' '}
-                    volume
-                  </li>
-                  <li>View volume delta across multiple instruments / exchanges</li>
-                  <li>Analyze Best Bid and Offer</li>
-                  <li>Build your own synthetic instrument</li>
-                </ul>
-              </div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    isGetBookMapNow(page)
+                      ? 'CS3GBNSeeMarketliquidityAExecutionVolume'
+                      : 'CS3SeeMarketLiquidityAndTradedVolume',
+                    {
+                      interpolation: { escapeValue: false },
+                    }
+                  ),
+                }}
+              />
               <Button
                 variant="contained"
                 color="secondary"
-                href={'https://bookmap.com/members/signup/gv3uiH6Hi' + addToLink}
+                href={t('CS3BtnLink') + addToLink}
                 sx={{ width: '300px' }}
               >
-                Get MultiBook with Digital+
+                {t('CS3GetMultiBookwithDigitalPlus')}
               </Button>
             </Container>
           </Grid>

@@ -2,9 +2,9 @@ import { Box, Button } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
+import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
-
-import { text } from './main-section-6-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -107,46 +107,64 @@ const useStylesMob = makeStyles(() => ({
   },
   list_h4: {},
 }))
-export function Mobile() {
+const Mobile = () => {
+  const { t } = useTranslation('main')
   const classes = useStylesMob()
   return (
     <Container fixed className={classes.root}>
-      <Typography variant="h2">{text.h1}</Typography>
+      <Typography variant="h2">{t('MS6LiveAdvancedTradingEducation')}</Typography>
       <Typography color="textPrimary" component="p">
-        {text.h2}
+        {t('MS6BookmapOffersRobustLiveAdvancedEducation')}
       </Typography>
 
       <Box className={classes.boxImgs}>
         <Box>
-          {text.i1}
-          <Box className={classes.boxImg2}>{text.i2}</Box>
+          <Image src="/static/main/s6/chart.png" width={300} height={155} />
+          <Box className={classes.boxImg2}>
+            <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
+          </Box>
         </Box>
       </Box>
 
       <Box>
         <Typography color="textPrimary" component="p">
-          {text.h2}
+          {t('MS6BookmapOffersRobustLiveAdvancedEducation')}
         </Typography>
-        <h4 className={classes.list_h4}> {text.h3}</h4>
-        {text.s1}
-        <h4 className={classes.list_h4}>{text.h4}</h4>
-        {text.s2}
+        <h4 className={classes.list_h4}> {t('MS6OPENTOALL')}</h4>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: t('MS6EducationalCourseOnline', {
+              interpolation: { escapeValue: false },
+            }),
+          }}
+        />
+        <h4 className={classes.list_h4}>{t('MS6BOOKMAP SUBSCRIBERS(PAID)')}</h4>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: t('MS6EducationalCourse online', {
+              interpolation: { escapeValue: false },
+            }),
+          }}
+        />
       </Box>
     </Container>
   )
 }
 
-export function Desktop() {
+const Desktop = () => {
+  const { t } = useTranslation('main')
   const classes = useStyles()
   return (
     <Container fixed className={classes.root}>
       <div id="education" style={{ position: 'absolute', marginTop: '-140px' }}></div>
-      <Typography variant="h2">{text.h1}</Typography>
+      <Typography variant="h2">{t('MS6LiveAdvancedTradingEducation')}</Typography>
       <Box className={classes.eduBlock}>
         <Box sx={{ display: 'flex' }}>
           <div className="introImg">
-            {text.i1}
-            <Box className={classes.nextImage}>{text.i2}</Box>
+            <Image src="/static/main/s6/chart.png" width={300} height={155} />
+            <Box className={classes.nextImage}>
+              <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
+            </Box>
             <div>
               <Button
                 className={classes.button}
@@ -154,18 +172,30 @@ export function Desktop() {
                 color="secondary"
                 href="https://bookmap.com/education/"
               >
-                {text.btn}
+                {t('MS6GoToEducation')}
               </Button>
             </div>
           </div>
           <div style={{ marginLeft: '40px' }}>
             <p className={classes.introText} style={{ maxWidth: '100%', marginBottom: 0 }}>
-              {text.h2}
+              {t('MS6BookmapOffersRobustLiveAdvancedEducation')}
             </p>
-            <h4 className={classes.list_h4}> {text.h3}</h4>
-            {text.s1}
-            <h4 className={classes.list_h4}>{text.h4}</h4>
-            {text.s2}
+            <h4 className={classes.list_h4}> {t('MS6OPENTOALL')}</h4>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: t('MS6EducationalCourseOnline', {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
+            <h4 className={classes.list_h4}>{t('MS6BOOKMAP SUBSCRIBERS(PAID)')}</h4>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: t('MS6EducationalCourse online', {
+                  interpolation: { escapeValue: false },
+                }),
+              }}
+            />
           </div>
         </Box>
       </Box>

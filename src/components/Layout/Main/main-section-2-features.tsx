@@ -8,6 +8,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React, { useEffect } from 'react'
 
 interface TabPanelProperties {
@@ -16,7 +17,7 @@ interface TabPanelProperties {
   value: any
 }
 
-function TabPanel(props: TabPanelProperties) {
+const TabPanel = (props: TabPanelProperties) => {
   const { children, value, index, ...other } = props
 
   return (
@@ -36,7 +37,7 @@ function TabPanel(props: TabPanelProperties) {
   )
 }
 
-function a11yProperties(index: any) {
+function a11yProperties(index: string) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
@@ -71,7 +72,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function MainSection2Features() {
+const MainSection2Features = () => {
+  const { t } = useTranslation('main')
   const flippingTime = 5000
   const classes = useStyles()
   const [clicked, setClicked] = React.useState(0)
@@ -108,7 +110,7 @@ export default function MainSection2Features() {
       <div id="features" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <Box className={classes.root}>
         <Typography component="h1" variant="h2">
-          Bookmap features
+          {t('MS2BookmapFeatures')}
         </Typography>
 
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
@@ -130,16 +132,10 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography>
-                  The heatmap shows the historical limit order book (historical liquidity).
-                </Typography>
-                <Typography>
-                  With the help of the heatmap, you can quickly grasp which price levels are trusted
-                  by the market, allowing you to rapidly react to changes in sentiment. Read
-                  liquidity like a map, and locate better trading opportunities.
-                </Typography>
+                <Typography>{t('MS2TheHeatmapShowsTheHistoricalLOB')}</Typography>
+                <Typography>{t('MS2WithTheHelpOfTheHeatmapYouCanQGWPLATBTM')}</Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
-                  Details about features
+                  {t('MS2DetailsAboutFeatures')}
                 </Link>
               </Container>
             </Grid>
@@ -158,16 +154,10 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography>
-                  Watch the traded volume and identify the side in control by using Volume Delta,
-                  Advance Volume Profiles, and Cumulative Volume Delta tools.
-                </Typography>
-                <Typography>
-                  See volume dots & volume delta right on the chart, without the need to wait for
-                  the bar to load.
-                </Typography>
+                <Typography>{t('MS2WatchTheTraderVolumeAndIdentifyTheSide')}</Typography>
+                <Typography>{t('MS2SeeVolumeDotsAndVolumeDeltaRightOnTheChart')}</Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
-                  Details about features
+                  {t('MS2DetailsAboutFeatures')}
                 </Link>
               </Container>
             </Grid>
@@ -186,17 +176,10 @@ export default function MainSection2Features() {
             </Grid>
             <Grid item md={4} xs={12}>
               <Container className={classes.textBlock}>
-                <Typography>
-                  Based on traders’ requests and Bookmap’s expertise in HFT trading, Bookmap
-                  developers have created a unique set of indicators that add transparency and cover
-                  most of traders’ needs.
-                </Typography>
-                <Typography>
-                  Confirm your trades with Imbalance Indicator, Strength Level Indicator, Large Lot
-                  Tracker, Advanced Volume Delta, and more.
-                </Typography>
+                <Typography>{t('MS2BasedOnTradersRequestsAndBookmapsExpertiseInHTFT')}</Typography>
+                <Typography>{t('MS2ConfirmYourTradesWithImbalanceIndicator')}</Typography>
                 <Link href="https://bookmap.com/features/" className={classes.link}>
-                  Details about features
+                  {t('MS2DetailsAboutFeatures')}
                 </Link>
               </Container>
             </Grid>
@@ -206,3 +189,4 @@ export default function MainSection2Features() {
     </Container>
   )
 }
+export default MainSection2Features

@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import getText from './gbn-section-4-content'
@@ -79,6 +80,7 @@ type ElementProperties = {
 
 const GbnSection4MGetStart = ({ page }: ElementProperties): React.ReactElement => {
   const text: any = getText(page)
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
 
@@ -99,10 +101,10 @@ const GbnSection4MGetStart = ({ page }: ElementProperties): React.ReactElement =
                   src={`/static/gbn/s5/${index + 1}.svg`}
                   width={75}
                   height={65}
-                  alt={value.lbl}
+                  alt={t(value.lbl)}
                 />
               </ListItemAvatar>
-              <ListItemText id={labelId} primary={GetTxt(index + 1, value.lbl, value.txt)} />
+              <ListItemText id={labelId} primary={GetTxt(index + 1, t(value.lbl), t(value.txt))} />
             </ListItem>
           )
         })}

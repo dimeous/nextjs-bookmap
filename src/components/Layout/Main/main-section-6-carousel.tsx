@@ -7,7 +7,7 @@ import Image from 'next/image'
 import React from 'react'
 import Carousel from 'react-multi-carousel'
 
-import { CarouselType } from '../../../../lib/types'
+import { CarouselType } from '../../../lib/types'
 
 const responsive = {
   desktop: {

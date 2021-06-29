@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container'
 import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import Reviews from './main-section-7-reviews'
@@ -46,14 +47,14 @@ export default function TabsWrappedLabelSection7() {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-
+  const { t } = useTranslation('main')
   return (
     <Container fixed style={{ marginBottom: '24px' }}>
       <Typography component="h2" variant="h2">
-        Some good words about Bookmap®️
+        {t('MS7SomeGoodWordsAboutBookmap')}
       </Typography>
       <Tabs value={value} onChange={handleChange} aria-label="Some good words about Bookmap®">
-        <Tab value="one" label="TESTIMONIALS" wrapped {...a11yProperties('one')} />
+        <Tab value="one" label={t('MS7TESTIMONIALS')} wrapped {...a11yProperties('one')} />
       </Tabs>
       <TabPanel value={value} index="one">
         <Reviews />

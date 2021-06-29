@@ -1,7 +1,7 @@
 import { createTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { GetStaticProps, NextPage } from 'next'
-import React from 'react'
+import { NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import Footer from '../src/components/Layout/Footer/main-footer'
 import GbnSection0 from '../src/components/Layout/gbn/gbn-section-0'
@@ -12,7 +12,7 @@ import GbnSection4DeskGetStart from '../src/components/Layout/gbn/gbn-section-4-
 import GbnSection4MGetStart from '../src/components/Layout/gbn/gbn-section-4-m-get-start'
 import GbnSection5Pricing from '../src/components/Layout/gbn/gbn-section-5-pricing'
 import GbnSection6UserReviews from '../src/components/Layout/gbn/gbn-section-6-user-reviews'
-import CryptoHeader from '../src/components/Layout/gbn/Header/CryptoHeader'
+import CryptoHeader from '../src/components/Layout/gbn/Header/crypto-header'
 
 const Index: NextPage<{ data: string }> = (props) => {
   const theme2 = useTheme()
@@ -55,7 +55,7 @@ const Index: NextPage<{ data: string }> = (props) => {
         })
       }
     >
-      <CryptoHeader />
+      <CryptoHeader mobile={mobile} />
       <main>
         <GbnSection0 mobile={mobile} />
         <GbnSection1Features />
@@ -70,7 +70,11 @@ const Index: NextPage<{ data: string }> = (props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+type staticPropertiesParameters = {
+  locale: string
+}
+
+export async function getStaticProps({ locale }: staticPropertiesParameters) {
   try {
     const result2 = fetch('https://www.trustpilot.com/review/bookmap.com')
     const data = await result2
@@ -84,7 +88,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         console.log('Failed to fetch page trustpilot:', error)
       })
     return {
-      props: { data: data },
+      props: { data: data, ...(await serverSideTranslations(locale, ['crypto'])) },
     }
   } catch {
     return {
@@ -92,4 +96,5 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
   }
 }
+
 export default Index

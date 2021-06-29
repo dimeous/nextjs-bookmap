@@ -7,6 +7,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { text } from './main-section-5-content'
@@ -50,26 +51,25 @@ const useStyles = styles
 export default function TabsWrappedLabelSection5() {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
-
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-
+  const { t } = useTranslation('main')
   return (
     <Container fixed style={{ marginBottom: '145px' }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
-          {text.h1}
+          {t(text.h1)}
         </Typography>
         <Typography component="h3" variant="h3">
-          {text.h2}
+          {t(text.h2)}
         </Typography>
 
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="wrapped label tabs example"
+          aria-label="wrapped label tabs"
           className={classes.tabs}
         >
           <Tab value="one" label={text.l1} wrapped {...a11yProperties('one')} />
@@ -87,17 +87,17 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
             <Box className={classes.priceName}>
-              <p>{text.t1}</p>
+              <p>{t(text.t1)}</p>
             </Box>
           </Grid>
           <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
             <Box className={classes.priceName}>
-              <p>{text.t2}</p>
+              <p>{t(text.t2)}</p>
             </Box>
           </Grid>
           <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
             <Box className={classes.priceName}>
-              <p>{text.t2}+</p>
+              <p>{t(text.t2)}+</p>
             </Box>
           </Grid>
         </Grid>
@@ -105,8 +105,8 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'h4'}>{text.KeyFeature}</Typography>
-              <Typography component={'p'}>{text.Heatmap}</Typography>
+              <Typography component={'h4'}>{t(text.KeyFeature)}</Typography>
+              <Typography component={'p'}>{t(text.Heatmap)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -128,7 +128,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.Record}</Typography>
+              <Typography component={'p'}>{t(text.Record)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -150,7 +150,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.LLT}</Typography>
+              <Typography component={'p'}>{t(text.LLT)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -173,7 +173,7 @@ export default function TabsWrappedLabelSection5() {
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
               <Typography component={'h4'} sx={{ pt: 2 }}>
-                {text.oneclick}
+                {t(text.oneclick)}
               </Typography>
               <Typography component={'p'}>Crypto</Typography>
             </Box>
@@ -220,9 +220,9 @@ export default function TabsWrappedLabelSection5() {
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
               <Typography component={'h4'} sx={{ pt: 2 }}>
-                {text.Market}
+                {t(text.Market)}
               </Typography>
-              <Typography component={'p'}>{text.Market2}</Typography>
+              <Typography component={'p'}>{t(text.Market2)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -244,7 +244,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.Futures2}</Typography>
+              <Typography component={'p'}>{t(text.Futures2)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -258,13 +258,19 @@ export default function TabsWrappedLabelSection5() {
           <Grid container item xs={4} justifyContent={'center'}>
             <div style={{ textAlign: 'center' }}>
               <ClearIcon className={classes.clsIcon} />
-              <span className={classes.delayStyle}>{text.dataReq}</span>
+              <span className={classes.delayStyle}>
+                {t(text.dataReq)}
+                <sup>*</sup>
+              </span>
             </div>
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
             <div style={{ textAlign: 'center' }}>
               <CheckIcon className={classes.chIcon} />
-              <span className={classes.delayStyle}>{text.dataReq}</span>
+              <span className={classes.delayStyle}>
+                {t(text.dataReq)}
+                <sup>*</sup>
+              </span>
             </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
@@ -275,7 +281,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.maxTrSymbols}</Typography>
+              <Typography component={'p'}>{t(text.maxTrSymbols)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -298,9 +304,9 @@ export default function TabsWrappedLabelSection5() {
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
               <Typography component={'h4'} sx={{ pt: 2 }}>
-                {text.education}
+                {t(text.education)}
               </Typography>
-              <Typography component={'p'}>{text.education2}</Typography>
+              <Typography component={'p'}>{t(text.education2)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -322,7 +328,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.livetrdss}</Typography>
+              <Typography component={'p'}>{t(text.livetrdss)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -344,7 +350,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.orderFlow}</Typography>
+              <Typography component={'p'}>{t(text.orderFlow)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -366,7 +372,7 @@ export default function TabsWrappedLabelSection5() {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.AdvTradEducation}</Typography>
+              <Typography component={'p'}>{t(text.AdvTradEducation)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -389,21 +395,21 @@ export default function TabsWrappedLabelSection5() {
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
               <Typography component={'h4'} sx={{ pt: 2 }}>
-                {text.marketplace}
+                {t(text.marketplace)}
               </Typography>
-              <Typography component={'p'}>{text.addons}</Typography>
+              <Typography component={'p'}>{t(text.addons)}</Typography>
             </Box>
           </Grid>
         </Grid>
         <Grid container spacing={1} className={classes.allTrading}>
           <Grid container item xs={4} justifyContent={'center'}>
-            <p>{text.addonsSome}</p>
+            <p>{t(text.addonsSome)}</p>
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <p className={classes.allTrading}>{text.addonsAll}</p>
+            <p className={classes.allTrading}>{t(text.addonsAll)}</p>
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
-            <p className={classes.allTrading}>{text.addonsAll}</p>
+            <p className={classes.allTrading}>{t(text.addonsAll)}</p>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
             <Box className={classes.borederBotom}></Box>
@@ -439,7 +445,7 @@ export default function TabsWrappedLabelSection5() {
                 color="secondary"
                 href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
               >
-                SELECT
+                {t('MS5Select')}
               </Button>
             </div>
           </Grid>
@@ -461,17 +467,20 @@ export default function TabsWrappedLabelSection5() {
                 color="secondary"
                 href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
               >
-                SELECT
+                {t('MS5Select')}
               </Button>
             </div>
           </Grid>
         </Grid>
       </div>
-      <p className={classes.lifetimeMessage}>{text.endtext}</p>
+      <p className={classes.lifetimeMessage}>
+        <sup>*</sup>
+        {t(text.endtext)}
+      </p>
       <div className={classes.cta}>
         <p>Can’t decide which plan is right for you?</p>
         <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
-          CLICK HERE
+          {t('MS5ClickHere')}
         </a>
       </div>
     </Container>

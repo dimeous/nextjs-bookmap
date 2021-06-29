@@ -1,10 +1,12 @@
-// eslint-disable-next-line unicorn/filename-case
 import { List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
+
+import { isGetBookMapNow } from '../../../lib'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -57,17 +59,18 @@ type ElementProperties = {
 }
 
 const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement => {
+  const { t } = useTranslation(page ? 'gbn' : 'crypto')
   const list = [
-    'View full-depth historical data with the dynamic heatmap',
-    'Watch the battle between buyers and sellers in 3D with ' +
-      (page === 'getbookmapnow' ? 'execution' : 'traded') +
-      ' volume visualization',
-    'Connect to multiple exchanges, get data for free and view up to 20 pairs at the same time',
-    'See all market data without aggregation',
-    'Use Bookmap in real-time or in replay to debrief your ' +
-      (page === 'getbookmapnow' ? '' : 'trading') +
-      ' session',
-    'Access to many addons, including Multibook',
+    t('CS1ViewFullDepthHistoricalDataWheatmap'),
+    isGetBookMapNow(page)
+      ? 'CS1GBNWatchTheBattleBetweenBuyers'
+      : t('CS1WatchTheBattleBetweenBuyers'),
+    t('CS1ConnectToMultipleExchangesGetData'),
+    t('CS1SeeAllMarketDataWithoutAggregation'),
+    isGetBookMapNow(page)
+      ? t('CS1GBNUseBookmapInRealTimeOrInReplay')
+      : t('CS1UseBookmapInRealTimeOrInReplay'),
+    t('CS1AccessToManyAddonsIncludingMultibook'),
   ]
 
   const classes = useStyles()
@@ -75,7 +78,7 @@ const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement =>
     <Container fixed>
       <Container className={classes.textBlock}>
         <Typography component="h2" variant="h2" color="inherit" gutterBottom>
-          Key features
+          {t('CS1KeyFeatures')}
         </Typography>
       </Container>
       <List dense className={classes.root}>

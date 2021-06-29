@@ -6,6 +6,7 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 import React from 'react'
 
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
 import { community, marketplace, products, resources, solutions } from '../Header/menuLinks'
 import MenuListComposition from './toggle-menu'
 import TrustBoxFooter from './trust-box-footer'
@@ -155,10 +156,7 @@ type ElementProperties = {
 }
 const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
   const theme = useTheme()
-  const addToLink =
-    page === 'getbookmapnow'
-      ? '?utm_medium=ppc&utm_source=google&utm_campaign=Multibook_new_landing&utm_content=New_landing'
-      : ''
+  const addToLink = getUTMUrlDependsOnPage(page)
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   const classes = useStyles()
   return (
@@ -236,7 +234,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                       Symbol table
                     </NextLink>
                   </li>
-                  {page !== 'getbookmapnow' && (
+                  {!isGetBookMapNow(page) && (
                     <li>
                       <NextLink href="https://bookmap.com/pro-trader-webinars">
                         Pro Trader Webinars
@@ -274,7 +272,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
                       US stocks data
                     </a>
                   </li>
-                  {page !== 'getbookmapnow' && (
+                  {!isGetBookMapNow(page) && (
                     <li>
                       <NextLink href="/crypto/">Bookmap Crypto</NextLink>
                     </li>
@@ -439,7 +437,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
         <div className={classes.underFooter}>
           <p>All rights reserved, Bookmap Ltd.</p>
           <p>
-            {page === 'getbookmapnow'
+            {isGetBookMapNow(page)
               ? "RISK DISCLOSURE: Digital currencies carry substantial risk and are not for every individual. An individual could potentially lose all or more than the initial outlay. Risk capital is a resource that can be lost without jeopardizing one's financial security or lifestyle. Only risk capital should be used for digital currency activity and only those with sufficient risk capital should consider transacting. Past Performance is not necessarily indicative of future results"
               : 'RISK DISCLOSURE: Futures trading contains substantial risk and is not for every ' +
                 'investor. An investor could potentially lose all or more than the initial investment. ' +

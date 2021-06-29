@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/styles'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
@@ -38,17 +39,18 @@ type CardProperties = {
   crypto: boolean
 }
 
-export default function MainSection8UserReviews({ mobile, crypto }: CardProperties) {
+const MainSection8UserReviews = ({ mobile, crypto }: CardProperties) => {
   const onChange = function (isVisible: boolean) {
     if (isVisible) setChecked(true)
   }
   const [checked, setChecked] = React.useState(false)
   const classes = useStyles()
+  const { t } = useTranslation('main')
   return (
     <Container fixed className={classes.root}>
       <VisibilitySensor onChange={onChange}>
         <Typography align={'center'} variant={'h3'} className={classes.title}>
-          User Reviews
+          {t('MS8UserReviews')}
         </Typography>
       </VisibilitySensor>
 
@@ -68,9 +70,10 @@ export default function MainSection8UserReviews({ mobile, crypto }: CardProperti
           href="https://bookmap.com/members/signup/thAhOgYUg"
           id={crypto ? 'crypto_middle_get_it_now' : 'main_end_start_for_free'}
         >
-          GET FREE BOOKMAP
+          {t('MS8GETFREEBOOKMAP')}
         </Button>
       </Box>
     </Container>
   )
 }
+export default MainSection8UserReviews

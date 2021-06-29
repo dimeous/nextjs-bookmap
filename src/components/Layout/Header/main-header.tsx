@@ -14,6 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
+import LanguageSelector from './language-selector'
 import { useStyles } from './main-header-styles'
 import { community, headersData, marketplace, products, resources, solutions } from './menuLinks'
 import MenuListComposition from './toggle-menu'
@@ -144,17 +145,19 @@ export default function Header() {
               <span> LOG IN</span>
             </Box>
           </Link>
+          <Box>
+            <LanguageSelector />
+          </Box>
         </Box>
       </Container>
     )
   }
+  const handleDrawerOpen = () =>
+    setState((previousState) => ({ ...previousState, drawerOpen: true }))
+  const handleDrawerClose = () =>
+    setState((previousState) => ({ ...previousState, drawerOpen: false }))
 
   const displayMobile = () => {
-    const handleDrawerOpen = () =>
-      setState((previousState) => ({ ...previousState, drawerOpen: true }))
-    const handleDrawerClose = () =>
-      setState((previousState) => ({ ...previousState, drawerOpen: false }))
-
     return (
       <Toolbar className={classes.toolbar}>
         <Box sx={{ display: 'flex', flex: '0 1 auto' }}>{bookmapLogo}</Box>
@@ -182,6 +185,9 @@ export default function Header() {
             <MenuItem>
               <img src={'/static/header/my_account.svg'} alt={'LOG IN'} />
               <span style={{ paddingLeft: '10px' }}>LOG IN</span>
+              <Box sx={{ marginLeft: 'auto' }}>
+                <LanguageSelector />
+              </Box>
             </MenuItem>
             {headersData.map(({ label, href }) => {
               return (

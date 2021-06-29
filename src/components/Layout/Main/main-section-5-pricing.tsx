@@ -6,6 +6,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
+import { useTranslation, withTranslation } from 'next-i18next'
 import React from 'react'
 
 import { text } from './main-section-5-content'
@@ -53,16 +54,16 @@ export default function TabsWrappedLabelSection5() {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-
+  const { t } = useTranslation('main')
   return (
     <Container fixed style={{ marginBottom: '145px' }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
-          {text.h1}
+          {t(text.h1)}
         </Typography>
         <Typography component="h3" variant="h3">
-          {text.h2}
+          {t(text.h2)}
         </Typography>
 
         <Tabs
@@ -71,70 +72,79 @@ export default function TabsWrappedLabelSection5() {
           aria-label="wrapped label tabs example"
           className={classes.tabs}
         >
-          <Tab value="one" label={text.l1} wrapped {...a11yProperties('one')} />
-          <Tab value="two" label={text.l2} {...a11yProperties('two')} />
-          <Tab value="three" label={text.l3} {...a11yProperties('three')} />
+          <Tab value="one" label={t(text.l1)} wrapped {...a11yProperties('one')} />
+          <Tab value="two" label={t(text.l2)} {...a11yProperties('two')} />
+          <Tab value="three" label={t(text.l3)} {...a11yProperties('three')} />
         </Tabs>
         <TabPanel value={value} index="two">
-          <span className={classes.tabTwo}>{text.l4} </span>
+          <span className={classes.tabTwo}>{t(text.l4)} </span>
         </TabPanel>
       </div>
       <Box className={classes.cPrices}>
         <Box className={classes.naming}>
           <ul className={classes.namingList}>
             <li className={classes.roww}>
-              <h4>{text.KeyFeature}</h4>
-              <p>{text.Heatmap}</p>
+              <h4>{t(text.KeyFeature)}</h4>
+              <p>{t(text.Heatmap)}</p>
             </li>
             <li>
-              <p>{text.Record}</p>
+              <p>{t(text.Record)}</p>
             </li>
             <li>
-              <p>{text.LLT}</p>
+              <p>{t(text.LLT)}</p>
             </li>
             <li className={classes.roww}>
-              <h4>{text.oneclick}</h4>
+              <h4>{t(text.oneclick)}</h4>
               <p>Crypto</p>
             </li>
             <li>
-              <p>{text.Futures}</p>
+              <p>{t(text.Futures)}</p>
             </li>
             <li className={classes.rowvw}>
-              <h4>{text.Market}</h4>
-              <p>
-                Crypto currencies <br />
-                &gt; 20 Crypto exchange (Free data)
-              </p>
+              <h4>{t(text.Market)}</h4>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('MS5CryptoCurrenciesCryptoexchange(Freedata)', {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
             <li>
-              <p>{text.Futures2}</p>
+              <p>{t(text.Futures2)}</p>
             </li>
             <li>
-              <p>{text.maxTrSymbols}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t(text.maxTrSymbols, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
             <li className={classes.rowvw}>
-              <h4>{text.education}</h4>
-              <p>{text.education2}</p>
+              <h4>{t(text.education)}</h4>
+              <p>{t(text.education2)}</p>
             </li>
             <li>
-              <p>{text.livetrdss}</p>
+              <p>{t(text.livetrdss)}</p>
             </li>
             <li>
-              <p>{text.orderFlow}</p>
+              <p>{t(text.orderFlow)}</p>
             </li>
             <li>
-              <p>{text.AdvTradEducation}</p>
+              <p>{t(text.AdvTradEducation)}</p>
             </li>
             <li className={classes.rowvw}>
-              <h4>{text.marketplace}</h4>
-              <p>{text.addons}</p>
+              <h4>{t(text.marketplace)}</h4>
+              <p>{t(text.addons)}</p>
             </li>
           </ul>
         </Box>
         {/* first table list*/}
         <Box className={classes.digital}>
           <Box className={classes.priceName}>
-            <p>{text.t1}</p>
+            <p>{t(text.t1)}</p>
           </Box>
           <ul className={classes.priceTags}>
             <li className={classes.roww}>
@@ -202,7 +212,7 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                {text.addonsSome}
+                {t(text.addonsSome)}
               </p>
             </li>
           </ul>
@@ -211,14 +221,14 @@ export default function TabsWrappedLabelSection5() {
               <span className={classes.priceNumber}>Free</span>
             </div>
             <Button variant="contained" color="secondary" href={text.link1}>
-              Select digital
+              {t('MS5SelectDigital')}
             </Button>
           </div>
         </Box>
         {/* Second table list*/}
         <Box className={classes.digital}>
           <Box className={classes.priceName}>
-            <p>{text.t2}</p>
+            <p>{t(text.t2)}</p>
           </Box>
           <ul className={classes.priceTags}>
             <li className={classes.roww}>
@@ -255,7 +265,10 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <CheckIcon className={classes.chIcon} />
               </div>
-              <span className={classes.delayStyle}>{text.dataReq}</span>
+              <span className={classes.delayStyle}>
+                {t(text.dataReq)}
+                <sup>*</sup>
+              </span>
             </li>
             <li>
               <p>20</p>
@@ -286,7 +299,7 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                {text.addonsAll}
+                {t(text.addonsAll)}
               </p>
             </li>
           </ul>
@@ -313,14 +326,14 @@ export default function TabsWrappedLabelSection5() {
               color="secondary"
               href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
             >
-              SELECT GLOBAL
+              {t('MS5SelectGlobal')}
             </Button>
           </div>
         </Box>
         {/* third table list*/}
         <Box className={classes.digital} style={{ marginRight: 0, border: '1px solid #df731b' }}>
           <Box className={classes.priceName} style={{backgroundColor: "#df731b"}}>
-            <p>{text.t2} plus</p>
+            <p>{t(text.t2)} plus</p>
           </Box>
           <ul className={classes.priceTags}>
             <li className={classes.roww}>
@@ -357,7 +370,10 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <CheckIcon className={classes.chIcon} />
               </div>
-              <span className={classes.delayStyle}>{text.dataReq}</span>
+              <span className={classes.delayStyle}>
+                {t(text.dataReq)}
+                <sup>*</sup>
+              </span>
             </li>
             <li>
               <p>20</p>
@@ -388,7 +404,7 @@ export default function TabsWrappedLabelSection5() {
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
               >
-                {text.addonsAll}
+                {t(text.addonsAll)}
               </p>
             </li>
           </ul>
@@ -415,17 +431,20 @@ export default function TabsWrappedLabelSection5() {
               color="secondary"
               href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
             >
-              SELECT GLOBAL PLUS
+              {t('MS5SelectGlobalPlus')}
             </Button>
           </div>
         </Box>
       </Box>
       <Box sx={{ marginLeft: '300px' }}>
-        <p className={classes.lifetimeMessage}>{text.endtext}</p>
+        <p className={classes.lifetimeMessage}>
+          <sup>*</sup>
+          {t(text.endtext)}
+        </p>
         <div className={classes.cta}>
           <p>Can’t decide which plan is right for you?</p>
           <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
-            CLICK HERE
+            {t('MS5ClickHere')}
           </a>
         </div>
       </Box>

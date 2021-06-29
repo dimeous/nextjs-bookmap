@@ -4,9 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
-import React from 'react'
+import { useTranslation } from 'next-i18next'
+import { useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
-
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
@@ -74,8 +74,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function MainSection1() {
-  const [checked, setChecked] = React.useState(false)
+const MainSection1 = () => {
+  const { t } = useTranslation('main')
+  const [checked, setChecked] = useState(false)
   const handleClick = () => {
     setChecked(true)
   }
@@ -86,12 +87,16 @@ export default function MainSection1() {
         <Grid item md={6} xs={12}>
           <Container className={classes.textBlock}>
             <Typography component="h1" variant="h2" color="inherit" gutterBottom>
-              So, what is Bookmap?
+              {t('MS1SoWhatIsBookmap')}
             </Typography>
             <Typography color="inherit" paragraph>
-              Bookmap<span>®</span>️ trading platform accurately shows the entire market liquidity
-              and trading activities. Identify market trends & hidden price patterns with high
-              precision.
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: t('MS1BookmapTradingPlatformAccuratelyShowsTheEntireMLATAIMT', {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </Typography>
           </Container>
         </Grid>
@@ -136,3 +141,4 @@ export default function MainSection1() {
     </Container>
   )
 }
+export default MainSection1
