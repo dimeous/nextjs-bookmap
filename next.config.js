@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const contentUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/contents?_locale=all&_limit=10000'
 const languages = ['en', 'de', 'es', 'it', 'fr', 'ru', 'pt']
-const pages = ['main', 'gbn', 'crypto']
+const pages = ['main', 'gbn', 'crypto', 'tradovate']
 
 fetch(contentUrl)
   .then((response) => {
@@ -45,6 +45,7 @@ module.exports = withImages(
         ...config.resolve.alias,
         // your aliases
       }
+      
 
       // config.node = {
       //   fs: "empty",
@@ -63,5 +64,10 @@ module.exports = withImages(
       webpack5: true,
     },
     i18n,
+    eslint: {
+      // Warning: Dangerously allow production builds to successfully complete even if
+      // your project has ESLint errors.
+      ignoreDuringBuilds: true,
+    },
   })
 )

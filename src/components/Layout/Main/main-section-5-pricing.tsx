@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Typography from '@material-ui/core/Typography'
 import CheckIcon from '@material-ui/icons/Check'
 import ClearIcon from '@material-ui/icons/Clear'
-import { useTranslation, withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { text } from './main-section-5-content'
@@ -211,9 +211,12 @@ export default function TabsWrappedLabelSection5() {
                 style={{
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
-              >
-                {t(text.addonsSome)}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: t(text.addonsSome, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
           </ul>
           <div className={classes.thePrice}>
@@ -298,9 +301,12 @@ export default function TabsWrappedLabelSection5() {
                 style={{
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
-              >
-                {t(text.addonsAll)}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: t(text.addonsAll, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
           </ul>
           <div className={classes.thePrice}>
@@ -403,9 +409,12 @@ export default function TabsWrappedLabelSection5() {
                 style={{
                   font: '14px/16px MullerRegular,sans-serif',
                 }}
-              >
-                {t(text.addonsAll)}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: t(text.addonsAll, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
           </ul>
           <div className={classes.thePrice}>
