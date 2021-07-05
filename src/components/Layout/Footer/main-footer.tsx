@@ -156,6 +156,7 @@ type ElementProperties = {
 }
 const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
   const theme = useTheme()
+
   const addToLink = getUTMUrlDependsOnPage(page)
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   const classes = useStyles()
@@ -174,7 +175,7 @@ const MainFooter = ({ page }: ElementProperties): React.ReactElement => {
             </NextLink>
           </Box>
           <Box sx={{ float: 'right', width: '22%', height: '126px' }}>
-            <TrustBoxFooter light={false} />
+            {!isGetBookMapNow(page) && <TrustBoxFooter light={false} />}
           </Box>
           <ul className={classes.generalNav}>
             <li>
