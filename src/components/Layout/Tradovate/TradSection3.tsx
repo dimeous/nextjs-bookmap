@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'center',
-    alignItems: "center",
+    alignItems: 'center',
     '& ul>li': {
       fontFamily: 'MullerMedium, sans-serif',
     },
@@ -42,11 +42,11 @@ const useStyles = makeStyles((theme: Theme) => ({
       height: 'auto',
     },
   },
-  text:{
-      color: "#124258",
-      fontSize: "20px",
-      lineHeight: "32px"
-  }
+  text: {
+    color: '#124258',
+    fontSize: '20px',
+    lineHeight: '32px',
+  },
 }))
 
 type ElementProperties = {
@@ -76,36 +76,41 @@ const TradSection3 = ({ page }: ElementProperties): React.ReactElement => {
                 gutterBottom
                 className={classes.title}
               >
-                designed for retail traders. 
+                designed for retail traders.
               </Typography>
             </Container>
           </Grid>
         </Grid>
-        <Grid container mt={5} >
-            <Grid item md={5} xs={12} mr={10}>
-                <Box className={classes.picCard}>
-                <Box>
-                    <Image
-                    src={'/static/tradovate/FairX is a new futures.png'}
-                    alt={'multibook'}
-                    width={636}
-                    height={350}
-                    layout="intrinsic"
-                    />
-                </Box>
-                </Box>
-            </Grid>
+        <Grid container mt={5}>
+          <Grid item md={5} xs={12} mr={10}>
+            <Box className={classes.picCard}>
+              <Box>
+                <Image
+                  src={'/static/tradovate/FairX is a new futures.png'}
+                  alt={'multibook'}
+                  width={636}
+                  height={350}
+                  layout="intrinsic"
+                />
+              </Box>
+            </Box>
+          </Grid>
           <Grid item md={5} xs={12} ml={10}>
             <Typography variant="body1" className={classes.text}>
-                Products are at a smaller scale including:
+              Products are at a smaller scale including:
             </Typography>
-            <Typography variant="body1" className={classes.text} style={{fontSize: "18px"}} pt={2}>
-                <ul style={{paddingLeft: "18px"}}>
-                    <li>Nano Bloomberg US Large Cap Index Futures (B5)</li>
-                    <li>Micro Bloomberg US Large Cap Index Futures (LB5)</li>
-                    <li>Nano SuperTech Index Futures (TEC)</li>
-                    <li>Micro SuperTech Index Futures (LTEC)</li>
-                </ul>
+            <Typography
+              variant="body1"
+              className={classes.text}
+              style={{ fontSize: '18px' }}
+              pt={2}
+            >
+              <ul style={{ paddingLeft: '18px' }}>
+                <li>Nano Bloomberg US Large Cap Index Futures (B5)</li>
+                <li>Micro Bloomberg US Large Cap Index Futures (LB5)</li>
+                <li>Nano SuperTech Index Futures (TEC)</li>
+                <li>Micro SuperTech Index Futures (LTEC)</li>
+              </ul>
             </Typography>
           </Grid>
         </Grid>

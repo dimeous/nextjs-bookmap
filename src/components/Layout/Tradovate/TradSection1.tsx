@@ -4,12 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
-import { useTranslation } from 'next-i18next'
-import React, {useState, useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from './TradSection1.module.css'
-
-import { getUTMUrlDependsOnPage} from '../../../lib'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -74,15 +71,14 @@ type CardProperties = {
 }
 
 const TradSection1 = ({ page }: CardProperties): React.ReactElement => {
-  const classes = useStyles();
-  const { t } = useTranslation(page ? 'gbn' : 'crypto');
-  const addToLink = getUTMUrlDependsOnPage(page, true);
-  const [width, setWidth] = useState(0);
-  const elementReference = React.useRef<HTMLDivElement>(null);
+  const classes = useStyles()
+
+  const [width, setWidth] = useState(0)
+  const elementReference = React.useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const { current } = elementReference;
-    if (current) setWidth(current.getBoundingClientRect().width);
+    const { current } = elementReference
+    if (current) setWidth(current.getBoundingClientRect().width)
   }, [])
 
   return (
@@ -91,16 +87,12 @@ const TradSection1 = ({ page }: CardProperties): React.ReactElement => {
         <Container className={classes.root} maxWidth="lg">
           <Grid container spacing={2}>
             <Grid item md={6} xs={12}>
-              <Typography
-                component="h1"
-                variant="h1"
-                gutterBottom
-                className={classes.headPlatform}
-              >
-                No Commissions or fees for trading FairX futures with Bookmap 
+              <Typography component="h1" variant="h1" gutterBottom className={classes.headPlatform}>
+                No Commissions or fees for trading FairX futures with Bookmap
               </Typography>
               <Typography variant="body1" className={classes.secondTitle}>
-                Want to trade smaller futures contracts with no commissions or fees? Well then, you’ve come to the right place.
+                Want to trade smaller futures contracts with no commissions or fees? Well then,
+                you’ve come to the right place.
               </Typography>
               {
                 <Button
@@ -108,7 +100,7 @@ const TradSection1 = ({ page }: CardProperties): React.ReactElement => {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href={"https://bookmap.com/members/signup/C0ogLHLr" + addToLink}
+                  href={'https://bookmap.com/members/signup/C0ogLHLr'}
                 >
                   Get Bookmap for FairX
                 </Button>

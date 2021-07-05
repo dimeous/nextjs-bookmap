@@ -1,12 +1,12 @@
-import { Box, Typography, Avatar } from '@material-ui/core'
+import { Avatar, Box, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
-import TradSteps from './TradSection4-steps'
 
+import TradSteps from './TradSection4-steps'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'center',
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
     '& ul>li': {
       fontFamily: 'MullerMedium, sans-serif',
     },
@@ -33,9 +33,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   title: {
     fontFamily: 'MullerMedium, sans-serif',
     color: '#124258',
-    fontSize: "16px",
-    lineHeight: "28px",
-    marginTop: "30px"
+    fontSize: '16px',
+    lineHeight: '28px',
+    marginTop: '30px',
   },
   picCard: {
     width: '100%',
@@ -47,17 +47,17 @@ const useStyles = makeStyles((theme: Theme) => ({
       height: 'auto',
     },
   },
-  text:{
-      color: "#124258",
-      fontSize: "20px",
-      lineHeight: "32px"
+  text: {
+    color: '#124258',
+    fontSize: '20px',
+    lineHeight: '32px',
   },
   icon: {
-    height: "28px",
-    width: "40%",
-    borderRadius: "5px",
-    fontSize: "16px"
-  }
+    height: '28px',
+    width: '40%',
+    borderRadius: '5px',
+    fontSize: '16px',
+  },
 }))
 
 type ElementProperties = {
@@ -70,80 +70,82 @@ const TradSection4 = ({ page }: ElementProperties): React.ReactElement => {
     <div className={classes.root}>
       <Container fixed className={classes.container}>
         <Grid container spacing={10}>
-            <Grid item md={6} xs={12}>
-                <Container className={classes.textBlock}>
-                    <Typography
-                        component="h2"
-                        variant="h2"
-                        color="inherit"
-                        gutterBottom
-                        sx={{ color: '#124258', fontWeight: 800 }}
-                    >
-                        Why trade with Bookmap?
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        color="inherit"
-                        gutterBottom
-                        className={classes.title}
-                    >
-                        To get full market transparency with the best high performance heatmap visualization platform.
-                        Bookmap®️ trading platform accurately shows the entire market liquidity and trading activities. Identify market trends &apm; hidden price patterns with high precision. 
-                    </Typography>
-                </Container>
-            </Grid>
-            <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12}>
+            <Container className={classes.textBlock}>
+              <Typography
+                component="h2"
+                variant="h2"
+                color="inherit"
+                gutterBottom
+                sx={{ color: '#124258', fontWeight: 800 }}
+              >
+                Why trade with Bookmap?
+              </Typography>
+              <Typography variant="body1" color="inherit" gutterBottom className={classes.title}>
+                To get full market transparency with the best high performance heatmap visualization
+                platform. Bookmap®️ trading platform accurately shows the entire market liquidity
+                and trading activities. Identify market trends &apm; hidden price patterns with high
+                precision.
+              </Typography>
+            </Container>
+          </Grid>
+          <Grid item md={6} xs={12}>
             <Box>
-                    <Image
-                    src={'/static/tradovate/Why trade with bookmap.png'}
-                    alt={'why trade with bookmap'}
-                    width={636}
-                    height={350}
-                    layout="intrinsic"
-                    />
-                </Box>
-            </Grid>
+              <Image
+                src={'/static/tradovate/Why trade with bookmap.png'}
+                alt={'why trade with bookmap'}
+                width={636}
+                height={350}
+                layout="intrinsic"
+              />
+            </Box>
+          </Grid>
         </Grid>
 
         <Grid container spacing={10} mt={4}>
-            <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12}>
             <Box>
-                    <Image
-                    src={'/static/tradovate/WhyTradvate.png'}
-                    alt={'why trade with bookmap'}
-                    width={636}
-                    height={350}
-                    layout="intrinsic"
-                    />
-                </Box>
-            </Grid>
-            <Grid item md={6} xs={12}>
-                <Container className={classes.textBlock}>
-                    <Typography
-                        component="h2"
-                        variant="h2"
-                        color="inherit"
-                        gutterBottom
-                        sx={{ color: '#124258', fontWeight: 800 }}
-                    >
-                        Why Tradovate &amp; FairX?
-                    </Typography>
-                    <Typography
-                        variant="h5"
-                        color="inherit"
-                        gutterBottom
-                        className={classes.title}
-                    >
-                        Get high quality brokerage service with ZERO fees 
-                    </Typography>
-                    <Avatar variant="square" style={{backgroundColor: "rgba(238, 106, 0, 0.1)", color: "#EE6A00"}} className={classes.icon}>
-                        Account minimum is $0
-                    </Avatar>
-                </Container>
-            </Grid>
+              <Image
+                src={'/static/tradovate/WhyTradvate.png'}
+                alt={'why trade with bookmap'}
+                width={636}
+                height={350}
+                layout="intrinsic"
+              />
+            </Box>
+          </Grid>
+          <Grid item md={6} xs={12}>
+            <Container className={classes.textBlock}>
+              <Typography
+                component="h2"
+                variant="h2"
+                color="inherit"
+                gutterBottom
+                sx={{ color: '#124258', fontWeight: 800 }}
+              >
+                Why Tradovate &amp; FairX?
+              </Typography>
+              <Typography variant="h5" color="inherit" gutterBottom className={classes.title}>
+                Get high quality brokerage service with ZERO fees
+              </Typography>
+              <Avatar
+                variant="square"
+                style={{ backgroundColor: 'rgba(238, 106, 0, 0.1)', color: '#EE6A00' }}
+                className={classes.icon}
+              >
+                Account minimum is $0
+              </Avatar>
+            </Container>
+          </Grid>
         </Grid>
 
-        <Typography my={10} variant="h2" style={{textAlign: "center", color: "#124258", fontWeight: 700}}>Get started in three simple steps</Typography>
+        <Typography
+          my={10}
+          variant="h2"
+          style={{ textAlign: 'center', color: '#124258', fontWeight: 700 }}
+        >
+          Get started in three simple steps
+        </Typography>
         <TradSteps />
       </Container>
     </div>
