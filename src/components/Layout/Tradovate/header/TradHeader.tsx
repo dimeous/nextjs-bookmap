@@ -1,6 +1,5 @@
 import { AppBar, Box, Button, Container, Typography } from '@material-ui/core'
 import Link from 'next/link'
-import { useTranslation } from 'next-i18next'
 
 import { getUTMUrlDependsOnPage } from '../../../../lib'
 import LanguageSelector from '../../Header/language-selector'
