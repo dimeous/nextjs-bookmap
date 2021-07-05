@@ -11,9 +11,7 @@ export const getUTMUrlDependsOnPage = (page: string | undefined, and = false): s
       'utm_medium=ppc&utm_source=google&utm_campaign=GIFs_new_landing&utm_content=GIFs_New_landing'
     )
   if (page === 'general')
-    return (
-      prefix + 'utm_medium=ppc&utm_source=google&utm_campaign=Crypto_search&utm_content=New_landing'
-    )
+    return prefix + 'utm_medium=ppc&utm_source=google&utm_campaign=C_search&utm_content=New_landing'
   return ''
 }
 
