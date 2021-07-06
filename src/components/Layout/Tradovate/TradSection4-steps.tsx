@@ -56,7 +56,7 @@ const TradSteps = () => {
             className={classes.button}
             variant="contained"
             color="secondary"
-            href={'https://bookmap.com/members/signup/C0ogLHLr?_lang=en'}
+            href={'https://bookmap.com/members/signup/C0ogLHLr?_lang=en&utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'}
           >
             Get Bookmap for FairX
           </Button>

@@ -110,11 +110,11 @@ const TradSection6 = ({ page }: ElementProperties): React.ReactElement => {
                     <ul className={classes.desc}>
                       <li>
                         For access to all futures and stocks you have to upgrade Bookmap package to{' '}
-                        <a href="https://bookmap.com/packages-comparison"> Global / Global+</a>
+                        <a href="https://bookmap.com/packages-comparison?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing"> Global / Global+</a>
                       </li>
                       <li>
                         For access to all crypto instruments only, you have to upgrade to{' '}
-                        <a href="https://bookmap.com/crypto/">Digital+</a>
+                        <a href="https://bookmap.com/crypto/?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing">Digital+</a>
                       </li>
                       <li>
                         In addition, you have to subscribe to market data, either through Tradovate

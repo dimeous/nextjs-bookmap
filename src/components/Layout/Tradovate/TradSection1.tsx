@@ -100,7 +100,7 @@ const TradSection1 = ({ page }: CardProperties): React.ReactElement => {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/C0ogLHLr'}
+                  href={'https://bookmap.com/members/signup/C0ogLHLr?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'}
                 >
                   Get Bookmap for FairX
                 </Button>
