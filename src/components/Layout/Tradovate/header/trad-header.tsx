@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { getUTMUrlDependsOnPage } from '../../../../lib'
 import LanguageSelector from '../../Header/language-selector'
-import { useStyles } from './TradHeaderStyles'
+import { useStyles } from './trad-header-styles'
 
 type ElementProperties = {
   page?: string

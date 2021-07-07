@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React, { useEffect } from 'react'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -47,7 +48,7 @@ function a11yProperties(index: string) {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
     backgroundColor: theme.palette.background.paper,
   },
   link: {

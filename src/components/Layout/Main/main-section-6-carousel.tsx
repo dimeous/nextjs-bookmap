@@ -8,6 +8,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel'
 
 import { CarouselType } from '../../../lib/types'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const responsive = {
   desktop: {
@@ -29,8 +30,7 @@ const responsive = {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
     [theme.breakpoints.down('md')]: {
       marginBottom: '30px',
     },

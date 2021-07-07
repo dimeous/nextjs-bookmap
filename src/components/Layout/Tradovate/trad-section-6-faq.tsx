@@ -83,7 +83,7 @@ const TradSection6 = ({ page }: ElementProperties): React.ReactElement => {
         </Typography>
         {FAQs.map((faq) => {
           return (
-            <Box>
+            <Box key={faq.id}>
               {faq.id == 5 ? (
                 <Box key={faq.id}>
                   <Divider />

@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/styles'
 import React, { Fragment } from 'react'
 import Carousel from 'react-multi-carousel'
 
+import { ThemeColors } from '../../../theme/theme-styles'
 import TrustPreloadPilot from '../../trustPreloadPilot'
 import TrustBoxFooter from '../Footer/trust-box-footer'
 
@@ -99,7 +100,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const StarsRaiting = function (number: number): JSX.Element {
   const content = []
   for (let index = 0; index < number; index++)
-    content.push(<StarIcon style={{ color: '#0085F9' }} />)
+    content.push(<StarIcon style={{ color: ThemeColors.MainBlue }} />)
   for (let index = number; index < 5; index++)
     content.push(<StarIcon style={{ color: '#CCD8DD' }} />)
   return <>{content}</>
@@ -163,7 +164,7 @@ export default function GbnSection6UserReviews({ data }: CardProperties) {
                             <Typography className={classes.picTitle} gutterBottom noWrap>
                               by{' '}
                               <a
-                                style={{ color: '#0085F9' }}
+                                style={{ color: ThemeColors.MainBlue }}
                                 href={item.socialShareUrl}
                                 target={'_blank'}
                                 rel={'noreferrer'}

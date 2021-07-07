@@ -13,14 +13,16 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 
+import {ThemeColors, ThemeElements} from '../../../theme/theme-styles'
+
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
+    ...ThemeElements.rootBlockProps,
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
     flexDirection: 'column',
-    marginBottom: '145px',
+
 
     [theme.breakpoints.down('md')]: {
       marginTop: '16px',
@@ -162,7 +164,7 @@ const TradSection2 = ({ page }: ElementProperties): React.ReactElement => {
               <ListItemAvatar>
                 <Avatar
                   variant="square"
-                  style={{ backgroundColor: '#0085F9' }}
+                  style={{ backgroundColor: ThemeColors.MainBlue }}
                   className={classes.icon}
                 >
                   <span style={{ fontSize: '13px', marginTop: '5px' }}>$</span>0

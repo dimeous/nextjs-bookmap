@@ -1,15 +1,15 @@
 import { createTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
 
-import TradHeader from '../src/components/Layout/Tradovate/header/TradHeader'
-import TradSection1 from '../src/components/Layout/Tradovate/TradSection1'
-import TradSection2 from '../src/components/Layout/Tradovate/TradSection2'
-import TradSection3 from '../src/components/Layout/Tradovate/TradSection3'
-import TradSection4 from '../src/components/Layout/Tradovate/TradSection4'
-import TradSection5 from '../src/components/Layout/Tradovate/TradSection5'
-import TradSection6 from '../src/components/Layout/Tradovate/TradSection6FAQ'
+import TradHeader from '../src/components/Layout/Tradovate/header/trad-header'
+import TradSection1 from '../src/components/Layout/Tradovate/trad-section-1'
+import TradSection2 from '../src/components/Layout/Tradovate/trad-section-2'
+import TradSection3 from '../src/components/Layout/Tradovate/trad-section-3'
+import TradSection4 from '../src/components/Layout/Tradovate/trad-section-4'
+import TradSection5 from '../src/components/Layout/Tradovate/trad-section-5'
+import TradSection6 from '../src/components/Layout/Tradovate/trad-section-6-faq'
 
 const index = () => {
-    return (
+  return (
     <ThemeProvider
       theme={(theme: Theme) =>
         createTheme({
@@ -46,19 +46,18 @@ const index = () => {
           },
         })
       }
-    
     >
-        <TradHeader />
-            <main>
-                <TradSection1 />
-                <TradSection2 />
-                <TradSection3 />
-                <TradSection4 />
-                <TradSection5 />
-                <TradSection6 />
-            </main>
-        </ThemeProvider>
-    )
+      <TradHeader />
+      <main>
+        <TradSection1 />
+        <TradSection2 />
+        <TradSection3 />
+        <TradSection4 />
+        <TradSection5 />
+        <TradSection6 />
+      </main>
+    </ThemeProvider>
+  )
 }
 
-export default index;
+export default index

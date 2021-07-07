@@ -12,6 +12,7 @@ import React from 'react'
 
 import { text } from './main-section-5-content'
 import { styles } from './main-section-5-mobile-pricing-styles'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -56,7 +57,7 @@ export default function TabsWrappedLabelSection5() {
   }
   const { t } = useTranslation('main')
   return (
-    <Container fixed style={{ marginBottom: '145px' }}>
+    <Container fixed style={{ ...ThemeElements.rootBlockProps }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">

@@ -11,6 +11,7 @@ import { useTranslation } from 'next-i18next'
 import { useState } from 'react'
 
 import ImagePopover from './main-section-4-popover'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -47,7 +48,7 @@ const a11yProperties = (index: any) => {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
     backgroundColor: theme.palette.background.paper,
   },
   link: {

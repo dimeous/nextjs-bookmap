@@ -7,15 +7,15 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { isGetBookMapNow } from '../../../lib'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
+    ...ThemeElements.rootBlockProps,
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
     flexDirection: 'column',
-    marginBottom: '145px',
     height: '300px',
 
     [theme.breakpoints.down('md')]: {

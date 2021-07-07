@@ -6,12 +6,13 @@ import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
 import TrustPreloadPilot from '../../trustPreloadPilot'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
+
     paddingTop: '50px',
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
   },
   title: {
     fontWeight: 500,
