@@ -6,21 +6,21 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
+import {ThemeColors, ThemeElements} from '../../../theme/theme-styles'
 import getText from './gbn-section-4-content'
 
 const useStylesText = makeStyles(() => ({
-  t1: { fontSize: '1rem', color: ' #0085F9', fontFamily: 'MullerRegular, sans-serif' },
+  t1: { fontSize: '1rem', color: ThemeColors.MainBlue, fontFamily: 'MullerRegular, sans-serif' },
   t2: { fontSize: '1rem' },
 }))
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
+    ...ThemeElements.rootBlockProps,
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
     flexDirection: 'column',
-    marginBottom: '145px',
     height: '300px',
     [theme.breakpoints.down('md')]: {
       marginTop: '16px',

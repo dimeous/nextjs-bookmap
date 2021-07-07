@@ -1,5 +1,7 @@
 import { makeStyles } from '@material-ui/styles'
 
+import { ThemeColors } from '../../../theme/theme-styles'
+
 export const useStyles = makeStyles({
   header: {
     paddingRight: '79px',
@@ -18,7 +20,7 @@ export const useStyles = makeStyles({
       textDecoration: 'none',
       transition: '.2s ease',
       '&:hover': {
-        color: '#0085f9',
+        color: ThemeColors.MainBlue,
       },
     },
     '@media (max-width: 900px)': {
@@ -137,7 +139,7 @@ export const useStyles = makeStyles({
         transition: '.2s ease',
         cursor: 'pointer',
         '&:hover': {
-          color: '#0085f9',
+          color: ThemeColors.MainBlue,
         },
       },
     },

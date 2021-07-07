@@ -14,7 +14,7 @@ import TagManager from 'react-gtm-module'
 
 import SEO from '../next-seo.config'
 import PolicyWidget from '../src/components/policyWidget'
-import theme from '../src/theme'
+import theme from '../src/theme/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
 

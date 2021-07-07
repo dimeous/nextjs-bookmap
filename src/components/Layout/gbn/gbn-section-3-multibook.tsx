@@ -8,12 +8,12 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
+    ...ThemeElements.rootBlockProps,
     backgroundColor: '#E6ECEF',
-    marginBottom: '145px',
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },

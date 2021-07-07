@@ -6,13 +6,14 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
-import styles from './TradSection1.module.css'
+import styles from './trad-section-1.module.css'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: '#1e262d',
     paddingTop: '0px',
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
     [theme.breakpoints.down('md')]: {
       marginBottom: '24px',
       paddingTop: 0,

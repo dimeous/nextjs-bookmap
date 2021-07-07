@@ -5,11 +5,11 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import getText from './gbn-section-4-content'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
   },
   cTreeSteps: {
     display: 'flex',

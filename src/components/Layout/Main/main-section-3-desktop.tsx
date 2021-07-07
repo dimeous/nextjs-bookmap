@@ -3,11 +3,11 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import { useTranslation } from 'next-i18next'
+import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
-    marginBottom: '145px',
+  ...ThemeElements.rootBlockProps,
   },
   cTreeSteps: {
     display: 'flex',

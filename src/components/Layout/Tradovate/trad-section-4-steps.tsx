@@ -2,6 +2,8 @@ import { Box, Button, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 
+import { ThemeColors } from '../../../theme/theme-styles'
+
 const useStyles = makeStyles({
   col: {
     width: '100%',
@@ -21,7 +23,7 @@ const useStyles = makeStyles({
     height: '80px',
     borderRadius: '50px',
     backgroundColor: '#EAF5FF',
-    color: '#0085F9',
+    color: ThemeColors.MainBlue,
     fontSize: '40px',
   },
   text: {

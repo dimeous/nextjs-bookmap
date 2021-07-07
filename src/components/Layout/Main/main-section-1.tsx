@@ -7,10 +7,10 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import { useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
+import {ThemeElements} from "../../../theme/theme-styles";
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
-    marginBottom: '145px',
+    ...ThemeElements.rootBlockProps,
     [theme.breakpoints.down('md')]: {
       marginTop: '110px',
       marginBottom: '120px',

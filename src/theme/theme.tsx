@@ -1,17 +1,19 @@
 import { red } from '@material-ui/core/colors'
 import { createTheme } from '@material-ui/core/styles'
 
+import { ThemeColors } from './theme-styles'
+
 // Create a theme instance.
 
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#0085f9',
+      main: ThemeColors.MainBlue,
       light: '#0185f9',
     },
     secondary: {
-      main: '#0085f9',
-      light: '#0085f9',
+      main: ThemeColors.MainBlue,
+      light: ThemeColors.MainBlue,
       dark: '#1e262d',
     },
     error: {
@@ -67,7 +69,7 @@ theme = {
     MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: '#0085f9',
+          backgroundColor: ThemeColors.MainBlue,
           borderRadius: '5px',
           marginBottom: '10px',
           transition: '.5s ease',
