@@ -86,8 +86,8 @@ const TradSection3 = ({ page }: ElementProperties): React.ReactElement => {
             <Box className={classes.picCard}>
               <Box>
                 <Image
-                  src={'/static/tradovate/FairX is a new futures.png'}
-                  alt={'multibook'}
+                  src={'/static/tradovate/fairx-new-futures.png'}
+                  alt={'FairX is a new futures'}
                   width={636}
                   height={350}
                   layout="intrinsic"
