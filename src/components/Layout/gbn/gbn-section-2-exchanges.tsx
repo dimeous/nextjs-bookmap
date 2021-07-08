@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
-import ImagePopover from '../Main/main-section-4-popover'
+import ImagePopover from '../../common/image-popover'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {

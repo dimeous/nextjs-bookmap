@@ -4,7 +4,7 @@ import Popover from '@material-ui/core/Popover'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
-import {ThemeColors} from "../../../theme/theme-styles";
+import {ThemeColors} from "../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   txt: {

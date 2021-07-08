@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/styles'
 import { useTranslation } from 'next-i18next'
 import { useState } from 'react'
 
-import ImagePopover from './main-section-4-popover'
+import ImagePopover from '../../common/image-popover'
 import {ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
