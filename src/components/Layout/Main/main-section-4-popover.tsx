@@ -4,10 +4,11 @@ import Popover from '@material-ui/core/Popover'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   txt: {
-    color: '#0185f9',
+    color: ThemeColors.TextBlue,
     font: '12px/13px MullerMedium,sans-serif',
     textTransform: 'uppercase',
     marginLeft: '8px',
@@ -29,10 +30,10 @@ const useStyles = makeStyles(() => ({
   button: {
     width: '90%',
     height: '75px',
-    backgroundColor: '#fff',
+    backgroundColor: ThemeColors.MainWhite,
   },
   button2: {
-    backgroundColor: '#fff',
+    backgroundColor: ThemeColors.MainWhite,
     margin: 0,
     '&:hover': {
       backgroundColor: '#d1dbdb',

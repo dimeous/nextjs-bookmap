@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -78,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   reviewsText: {
-    color: '#000',
+    color: ThemeColors.TextBlack,
     font: '14px/16px MullerLight,sans-serif',
   },
 }))

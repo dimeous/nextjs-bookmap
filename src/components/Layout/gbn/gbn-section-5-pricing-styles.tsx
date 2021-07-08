@@ -1,12 +1,13 @@
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 export const styles = makeStyles((theme: Theme) => ({
   root: {
     color: '#1a1833',
   },
   tabTwo: {
-    color: '#0185f9',
+    color: ThemeColors.TextBlue,
     font: '14px/14px MullerMedium,sans-serif',
     position: 'absolute',
     textTransform: 'capitalize',
@@ -63,11 +64,11 @@ export const styles = makeStyles((theme: Theme) => ({
     marginBottom: '33px',
   },
   checkIcon: {
-    color: '#0084f6',
+    color: ThemeColors.IconBlue,
     fontSize: '16px',
   },
   chIcon: {
-    color: '#0084f6',
+    color: ThemeColors.IconBlue,
     fontSize: '16px',
   },
   clsIcon: {
@@ -95,7 +96,7 @@ export const styles = makeStyles((theme: Theme) => ({
       },
     },
     '& a': {
-      color: '#0185f9',
+      color: ThemeColors.TextBlue,
       fontFamily: 'MullerRegular,sans-serif',
       lineHeight: 1,
       textDecoration: 'none',

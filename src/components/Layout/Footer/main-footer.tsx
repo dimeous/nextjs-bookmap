@@ -10,6 +10,7 @@ import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
 import { community, marketplace, products, resources, solutions } from '../Header/menuLinks'
 import MenuListComposition from './toggle-menu'
 import TrustBoxFooter from './trust-box-footer'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles({
   mainFooter: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
       margin: 0,
     },
     '& a': {
-      color: '#fff',
+      color: ThemeColors.MainWhite,
       font: '14px/15px MullerMedium,sans-serif',
       letterSpacing: '1px',
       opacity: 1,
@@ -43,7 +44,7 @@ const useStyles = makeStyles({
     flexFlow: 'row wrap',
     marginBottom: '90px',
     padding: '72px 0',
-    color: '#fff',
+    color: ThemeColors.MainWhite,
   },
   generalNav: {
     display: 'flex',
@@ -64,7 +65,7 @@ const useStyles = makeStyles({
     marginRight: '50px',
     paddingLeft: '40px',
     '&:before': {
-      backgroundColor: '#fff',
+      backgroundColor: ThemeColors.MainWhite,
       content: '""',
       position: 'absolute',
       width: '1px',

@@ -9,7 +9,7 @@ let theme = createTheme({
   palette: {
     primary: {
       main: ThemeColors.MainBlue,
-      light: '#0185f9',
+      light: ThemeColors.TextBlue,
     },
     secondary: {
       main: ThemeColors.MainBlue,
@@ -20,7 +20,7 @@ let theme = createTheme({
       main: red.A400,
     },
     background: {
-      default: '#fff',
+      default: ThemeColors.MainWhite,
     },
   },
   typography: {
