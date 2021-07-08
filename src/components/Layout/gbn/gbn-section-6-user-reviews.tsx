@@ -34,7 +34,7 @@ const responsive = {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: '#E6ECEF',
+    backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },

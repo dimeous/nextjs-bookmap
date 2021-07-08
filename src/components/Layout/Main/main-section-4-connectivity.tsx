@@ -11,7 +11,7 @@ import { useTranslation } from 'next-i18next'
 import { useState } from 'react'
 
 import ImagePopover from '../../common/image-popover'
-import {ThemeElements} from "../../../theme/theme-styles";
+import {ThemeClasses, ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -51,37 +51,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     ...ThemeElements.rootBlockProps,
     backgroundColor: theme.palette.background.paper,
   },
-  link: {
-    width: '100%',
-    textAlign: 'right',
-    marginTop: '20px',
-    paddingRight: '8%',
-  },
-  imageItem: {
-    height: '85px',
-    maxWidth: '210px',
-    margin: '25px 40px 0 0',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-    /*
-    borderRadius: '5px',
-    border: '1px solid #e5e5e5',
-    '&:hover': {
-      borderColor: 'transparent',
-      boxShadow: '0 0 6px rgba(81, 112, 136, .35)',
-    },
-   */
-    '@media (max-width: 991px)': {
-      margin: '10px 10px',
-    },
-  },
-  image: {
-    display: 'block',
-    padding: 0,
-    maxHeight: '56px',
-  },
+  link: ThemeClasses.connectivityClasses.link,
+  imageItem: ThemeClasses.connectivityClasses.imageItem,
 }))
 
 export default function TabsWrappedLabelSection4() {
