@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   picCard: {
     width: '100%',
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   text: {
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '20px',
     lineHeight: '32px',
   },
@@ -66,7 +66,7 @@ const TradSection3 = ({ page }: ElementProperties): React.ReactElement => {
                 variant="h2"
                 color="inherit"
                 gutterBottom
-                sx={{ color: '#124258', fontWeight: 800 }}
+                sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
               >
                 FairX is a new future’s exchange
               </Typography>

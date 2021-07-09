@@ -76,7 +76,7 @@ export const styles = makeStyles((theme: Theme) => ({
     fontSize: '16px',
   },
   lifetimeMessage: {
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontFamily: 'MullerRegular,sans-serif',
     fontWeight: 400,
     marginTop: '32px',

@@ -6,6 +6,7 @@ export const ThemeColors = {
   IconBlue: '#0084f6',
   MainWhite: '#fff',
   BGGrey: '#E6ECEF',
+  DarkBlue: '#124258',
 
 }
 
@@ -13,6 +14,10 @@ export const ThemeElements = {
   rootBlockProps:{
     marginBottom: '145px',
   }
+}
+
+export const ThemeFontStyles = {
+  picTitle1624Light: '16px/24px MullerLight, sans-serif',
 }
 
 export const ThemeClasses = {

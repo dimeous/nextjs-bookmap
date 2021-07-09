@@ -7,7 +7,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import TradSteps from './trad-section-4-steps'
-import {ThemeElements} from "../../../theme/theme-styles";
+import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '16px',
     lineHeight: '28px',
     marginTop: '30px',
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   text: {
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '20px',
     lineHeight: '32px',
   },
@@ -77,7 +77,7 @@ const TradSection4 = ({ page }: ElementProperties): React.ReactElement => {
                 variant="h2"
                 color="inherit"
                 gutterBottom
-                sx={{ color: '#124258', fontWeight: 800 }}
+                sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
               >
                 Why trade with Bookmap?
               </Typography>
@@ -121,7 +121,7 @@ const TradSection4 = ({ page }: ElementProperties): React.ReactElement => {
                 variant="h2"
                 color="inherit"
                 gutterBottom
-                sx={{ color: '#124258', fontWeight: 800 }}
+                sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
               >
                 Why Tradovate &amp; FairX?
               </Typography>
@@ -142,7 +142,7 @@ const TradSection4 = ({ page }: ElementProperties): React.ReactElement => {
         <Typography
           my={10}
           variant="h2"
-          style={{ textAlign: 'center', color: '#124258', fontWeight: 700 }}
+          style={{ textAlign: 'center', color: ThemeColors.DarkBlue, fontWeight: 700 }}
         >
           Get started in three simple steps
         </Typography>

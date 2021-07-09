@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   picCard: {
     width: '100%',
@@ -77,7 +77,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 variant="h5"
                 color="inherit"
                 gutterBottom
-                sx={{ color: '#124258', fontWeight: 800 }}
+                sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
               >
                 {t('CS3BinanceCoinbaseHuobiMultibook')}
               </Typography>

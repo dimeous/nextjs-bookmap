@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     fontSize: '40px',
   },
   text: {
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '16px',
     lineHeight: '28px',
     fontWeight: 500,

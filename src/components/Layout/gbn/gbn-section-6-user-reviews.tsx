@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   carouselBox: {
     marginLeft: '16%',
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   picTitle2: {
     textAlign: 'left',
     font: '18px/24px MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   picText: {
     textAlign: 'left',

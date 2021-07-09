@@ -9,7 +9,7 @@ import {ThemeColors} from "../../../theme/theme-styles";
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: '#124258',
+    backgroundColor: ThemeColors.DarkBlue,
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },
