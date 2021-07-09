@@ -4,14 +4,14 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import {ThemeElements} from "../../../theme/theme-styles";
+import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
       ...ThemeElements.rootBlockProps,
     '& h4': {
       font: '18px/30px MullerRegular,sans-serif',
-      color: '#0184f7',
+      color: ThemeColors.SecondBlue,
       margin: 0,
     },
   },
@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
     marginTop: '24px',
   },
   textBox: {
-    borderLeft: 'solid 3px #0184f7',
+    borderLeft: 'solid 3px '+ThemeColors.SecondBlue,
     paddingLeft: '16px',
     margin: '10px 0px 10px 0px',
     maxWidth: '75%',

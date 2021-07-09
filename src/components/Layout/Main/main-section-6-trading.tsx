@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
-import {ThemeElements} from "../../../theme/theme-styles";
+import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
       listStyle: 'none',
       paddingLeft: 0,
       '& li': {
-        color: '#000',
+        color: ThemeColors.TextBlack,
         font: '18px MullerLight,sans-serif',
         lineHeight: '28px',
         paddingLeft: '26px',
@@ -76,7 +76,7 @@ const useStylesMob = makeStyles(() => ({
       listStyle: 'none',
       paddingLeft: 0,
       '& li': {
-        color: '#000',
+        color: ThemeColors.TextBlack,
         font: '16px MullerLight,sans-serif',
         lineHeight: '24px',
         paddingLeft: '26px',

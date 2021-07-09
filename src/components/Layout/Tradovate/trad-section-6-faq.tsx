@@ -3,11 +3,12 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: '#124258',
+    backgroundColor: ThemeColors.DarkBlue,
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },
@@ -16,14 +17,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingBottom: '100px',
   },
   bold: {
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '20px',
     lineHeight: '28px',
     fontWeight: 500,
   },
   desc: {
     margin: '0px',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '16px',
     lineHeight: '28px',
   },
@@ -75,7 +76,7 @@ const TradSection6 = ({ page }: ElementProperties): React.ReactElement => {
         <Typography
           my={10}
           variant="h2"
-          style={{ textAlign: 'center', color: '#124258', fontWeight: 700 }}
+          style={{ textAlign: 'center', color: ThemeColors.DarkBlue, fontWeight: 700 }}
         >
           Still not sure or have questions? Just visit our{' '}
           <p style={{ margin: '0px' }}>FAQ section</p>
@@ -142,7 +143,7 @@ const TradSection6 = ({ page }: ElementProperties): React.ReactElement => {
           </Typography>
           <Box>
             <Image
-              src={'/static/tradovate/FairX Features Contracts.png'}
+              src={'/static/tradovate/fairx-future-contacts.png'}
               alt={'FairX Features Contracts'}
               width={516}
               height={260}

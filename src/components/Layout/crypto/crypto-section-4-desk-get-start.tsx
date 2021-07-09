@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { ThemeElements } from '../../../theme/theme-styles'
-import getText from './gbn-section-4-content'
+import getText from './crypto-section-4-content'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -53,14 +53,11 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-type ElementProperties = {
-  page?: string
-}
-const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElement => {
+const CryptoSection4DeskGetStart = (): React.ReactElement => {
   const inlineFlex = 'inline-flex'
   const classes = useStyles()
-  const { t } = useTranslation('gbn')
-  const text: any = getText(page)
+  const { t } = useTranslation('crypto')
+  const text: any = getText()
   return (
     <Container fixed className={classes.root}>
       <Typography variant="h2" align="center" sx={{ pb: 4 }}>
@@ -144,4 +141,4 @@ const GbnSection4DeskGetStart = ({ page }: ElementProperties): React.ReactElemen
     </Container>
   )
 }
-export default GbnSection4DeskGetStart
+export default CryptoSection4DeskGetStart

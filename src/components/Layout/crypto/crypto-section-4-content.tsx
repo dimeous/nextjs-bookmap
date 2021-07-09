@@ -1,9 +1,9 @@
-const text = (page?: string) => {
+const text = () => {
   return {
     h1: 'CS4GetStartedInThreeSimpleSteps',
     s1: {
       lbl: 'CS4GetBookmapDigitalPlus',
-      txt: 'CS4GBNRegisterInstallAndConnectBookmapTo',
+      txt: 'CS4RegisterInstallAndConnectBookmapTo',
     },
     s2: {
       lbl: 'CS4GetMultibook',
@@ -11,7 +11,7 @@ const text = (page?: string) => {
     },
     s3: {
       lbl: 'CS4MakeInformedDecisions',
-      txt: 'CS4GBNAnalyzeMarketsInANewWay',
+      txt: 'CS4AnalyzeMarketsInANewWay',
     },
   }
 }

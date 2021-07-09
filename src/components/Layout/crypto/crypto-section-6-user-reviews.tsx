@@ -34,7 +34,7 @@ const responsive = {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: '#E6ECEF',
+    backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   carouselBox: {
     marginLeft: '16%',
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   picTitle2: {
     textAlign: 'left',
     font: '18px/24px MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   picText: {
     textAlign: 'left',
@@ -126,7 +126,7 @@ const UserReviews = function (html: string) {
   return arrayReviews(documentArticles)
 }
 
-export default function GbnSection6UserReviews({ data }: CardProperties) {
+export default function CryptoSection6UserReviews({ data }: CardProperties) {
   const usrReviews = process.browser ? UserReviews(data) : undefined
   const classes = useStyles()
   return (

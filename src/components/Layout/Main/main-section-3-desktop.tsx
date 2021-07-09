@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import { useTranslation } from 'next-i18next'
-import {ThemeElements} from "../../../theme/theme-styles";
+import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
   stepSeparator: {
     alignSelf: 'center',
 
-    backgroundColor: '#0184f7',
+    backgroundColor: ThemeColors.SecondBlue,
     height: '3px',
     marginRight: '65px',
     marginTop: '-20px',
@@ -53,7 +53,7 @@ const useStyles = makeStyles(() => ({
     margin: '18px 00 20px',
     width: '100%',
     font: '20px/20px MullerMedium,sans-serif',
-    color: '#0184f7',
+    color: ThemeColors.SecondBlue,
     '& span': {
       marginRight: '10%',
     },

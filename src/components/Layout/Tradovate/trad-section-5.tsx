@@ -4,11 +4,12 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: '#124258',
+    backgroundColor: ThemeColors.DarkBlue,
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },
@@ -29,13 +30,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#fff',
+    color: ThemeColors.MainWhite,
     fontSize: "25px",
     lineHeight: "32px",
     fontWeight: 500
   },
   text:{
-      color: "#fff",
+      color: ThemeColors.MainWhite,
       fontSize: "16px",
       lineHeight: "25px"
   }

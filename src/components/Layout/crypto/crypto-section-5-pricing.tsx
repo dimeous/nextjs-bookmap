@@ -19,9 +19,8 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { getUTMUrlDependsOnPage } from '../../../lib'
-import { defaultText } from './gbn-section-5-content'
-import { styles } from './gbn-section-5-pricing-styles'
+import { defaultText } from './crypto-section-5-content'
+import { styles } from './crypto-section-5-pricing-styles'
 
 function a11yProperties(index: any) {
   return {
@@ -32,20 +31,15 @@ function a11yProperties(index: any) {
 
 const useStyles = styles
 
-type ElementProperties = {
-  page?: string
-}
-
-const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => {
+const CryptoSection5Pricing = (): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
-  const text = defaultText(page)
+  const text = defaultText()
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
-  const addToLink = getUTMUrlDependsOnPage(page)
-  const addToLink2 = getUTMUrlDependsOnPage(page, true)
-  const { t } = useTranslation('gbn')
+
+  const { t } = useTranslation('crypto')
   return (
     <div style={{ backgroundColor: '#F6F8FA' }}>
       <Container fixed className={classes.container}>
@@ -158,7 +152,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 </List>
               </CardContent>
               <CardActions className={classes.cardAction}>
-                <Button variant="contained" color="secondary" href={t('CS5textB1') + addToLink2}>
+                <Button variant="contained" color="secondary" href={t('CS5textB1')}>
                   {t(text.b1)}
                 </Button>
               </CardActions>
@@ -269,7 +263,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 <Button
                   variant="contained"
                   color="secondary"
-                  href={(value == 'one' ? t(text.link12) : t(text.link22)) + addToLink2}
+                  href={value == 'one' ? t(text.link12) : t(text.link22)}
                 >
                   {t(text.b2)}
                 </Button>
@@ -282,7 +276,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
           <Typography sx={{ pt: 4, pb: 4 }}>
             {t(text.endText)}
             <a
-              href={'https://bookmap.com/' + addToLink + '#pricing'}
+              href={'https://bookmap.com/#pricing'}
               target="_blank"
               rel={'noreferrer'}
               style={{ textTransform: 'none' }}
@@ -295,4 +289,4 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
     </div>
   )
 }
-export default GbnSection5Pricing
+export default CryptoSection5Pricing

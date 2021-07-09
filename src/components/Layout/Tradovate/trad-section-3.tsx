@@ -5,11 +5,12 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: '#E6ECEF',
+    backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
       marginBottom: '16px',
     },
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     fontFamily: 'MullerMedium, sans-serif',
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
   },
   picCard: {
     width: '100%',
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   text: {
-    color: '#124258',
+    color: ThemeColors.DarkBlue,
     fontSize: '20px',
     lineHeight: '32px',
   },
@@ -65,7 +66,7 @@ const TradSection3 = ({ page }: ElementProperties): React.ReactElement => {
                 variant="h2"
                 color="inherit"
                 gutterBottom
-                sx={{ color: '#124258', fontWeight: 800 }}
+                sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
               >
                 FairX is a new future’s exchange
               </Typography>

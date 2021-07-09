@@ -94,7 +94,7 @@ export const useStyles = makeStyles({
     },
   },
   subMenuWrap: {
-    backgroundColor: '#fff',
+    backgroundColor: ThemeColors.MainWhite,
     boxShadow: 'inset 0 10px 5px 0 hsla(0,0%,69.8%,.3),0 2px 5px 0 hsla(0,0%,69.8%,.3)',
     left: 0,
     overflow: 'hidden',

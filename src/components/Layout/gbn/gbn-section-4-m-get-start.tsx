@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import {ThemeColors, ThemeElements} from '../../../theme/theme-styles'
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 import getText from './gbn-section-4-content'
 
 const useStylesText = makeStyles(() => ({
@@ -80,7 +80,7 @@ type ElementProperties = {
 
 const GbnSection4MGetStart = ({ page }: ElementProperties): React.ReactElement => {
   const text: any = getText(page)
-  const { t } = useTranslation(page ? 'gbn' : 'crypto')
+  const { t } = useTranslation('gbn')
   const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
 

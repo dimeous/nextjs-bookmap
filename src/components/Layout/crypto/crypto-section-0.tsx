@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { getUTMUrlDependsOnPage } from '../../../lib'
+import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
 import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -51,13 +51,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 type CardProperties = {
   mobile: boolean
-  page?: string
 }
 
-const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
+const CryptoSection0 = ({ mobile }: CardProperties): React.ReactElement => {
   const classes = useStyles()
-  const { t } = useTranslation('gbn')
-  const addToLink = getUTMUrlDependsOnPage(page, true)
+  const { t } = useTranslation('crypto')
   return (
     <>
       <div className={classes.root}>
@@ -74,7 +72,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
                 {t('CS0MultibookIsyoursatNoAdditionalCost')}
               </Typography>
               <Typography component="h4" variant="h4" className={classes.secondTitle}>
-                {t('CS0GBNChoosefrom20digitalAssetsExchangesSeeMultipleO')}
+                {t('CS0Choosefrom20cryptoExchangesSeeMultipleOrder')}
               </Typography>
               {!mobile && (
                 <Button
@@ -82,7 +80,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
                   className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href={t('CS0TopStartForFree') + addToLink}
+                  href={t('CS0TopStartForFree')}
                 >
                   {t('CS0GetMultibook')}
                 </Button>
@@ -112,7 +110,7 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
           <Button
             variant="contained"
             color="secondary"
-            href={t('CS0TopStartForFree') + addToLink}
+            href={t('CS0TopStartForFree')}
             className={classes.button}
             id={'main_top_start_for_free'}
           >
@@ -123,4 +121,4 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
     </>
   )
 }
-export default GbnSection0
+export default CryptoSection0

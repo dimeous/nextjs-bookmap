@@ -8,6 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { makeStyles, withStyles } from '@material-ui/styles'
 import Link from 'next/link'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles({
   root: {
@@ -54,7 +55,7 @@ export default function MenuListComposition({ name, links }: CardProperties) {
   const StyledAccordion = withStyles({
     root: {
       background: '#1a1833',
-      color: '#fff',
+      color: ThemeColors.MainWhite,
       borderBottom: '1px solid grey',
     },
     label: {
