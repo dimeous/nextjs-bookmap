@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   headTradePlatform: {
     paddingTop: '70px',
+    color: 'white',
     [theme.breakpoints.down('lg')]: {
       paddingTop: '27px',
       font: '32px/40px MullerLight,sans-sanserif',
