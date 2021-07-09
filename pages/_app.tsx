@@ -21,12 +21,16 @@ export const cache = createCache({ key: 'css', prepend: true })
 const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props
   const pathname = useRouter().pathname
+  const basePath = useRouter().basePath
+  var isPageFairX = false
 
   const isPageGetBookMapNow =
     pathname === '/get-bookmap-now' || pathname === '/orderflow' || pathname === '/general'
-  const isPageFairX =
-    pathname === '/tradovate'|| window.location.hostname === 'bookmap-for-fairx'
   const isPageCrypto = useRouter().pathname === '/crypto'
+
+  if(process.browser){
+     isPageFairX = pathname === '/tradovate' || basePath === 'bookmap-for-fairx'
+  }
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -37,7 +41,7 @@ const MyApp = (props: AppProps) => {
     if (!isPageGetBookMapNow && !isPageFairX) {
       TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
       TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
-    } else {
+    }else{
       TagManager.initialize({ gtmId: 'GTM-KD8F6RZ' })
     }
   }, [])
