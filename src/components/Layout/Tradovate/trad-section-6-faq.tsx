@@ -144,7 +144,7 @@ const TradSection6 = ({ page }: ElementProperties): React.ReactElement => {
           </Typography>
           <Box>
             <Image
-              src={'/static/tradovate/FairX Features Contracts.png'}
+              src={'/static/tradovate/fairx-future-contacts.png'}
               alt={'FairX Features Contracts'}
               width={516}
               height={260}

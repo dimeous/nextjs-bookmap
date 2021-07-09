@@ -92,7 +92,7 @@ const TradSection4 = ({ page }: ElementProperties): React.ReactElement => {
           <Grid item md={6} xs={12}>
             <Box>
               <Image
-                src={'/static/tradovate/Why trade with bookmap.png'}
+                src={'/static/tradovate/why-trade-w-bookmap.png'}
                 alt={'why trade with bookmap'}
                 width={636}
                 height={350}
@@ -106,7 +106,7 @@ const TradSection4 = ({ page }: ElementProperties): React.ReactElement => {
           <Grid item md={6} xs={12}>
             <Box>
               <Image
-                src={'/static/tradovate/WhyTradvate.png'}
+                src={'/static/tradovate/why-tradvate.png'}
                 alt={'why trade with bookmap'}
                 width={636}
                 height={350}
