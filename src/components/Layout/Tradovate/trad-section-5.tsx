@@ -4,14 +4,15 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
-import {ThemeColors} from "../../../theme/theme-styles";
+
+import { ThemeColors } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     backgroundColor: ThemeColors.DarkBlue,
     [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
+      ...rootMobileBlockProps,
     },
   },
   container: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'flex-start',
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
     '& ul>li': {
       fontFamily: 'MullerMedium, sans-serif',
     },
@@ -31,15 +32,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   title: {
     fontFamily: 'MullerMedium, sans-serif',
     color: ThemeColors.MainWhite,
-    fontSize: "25px",
-    lineHeight: "32px",
-    fontWeight: 500
+    fontSize: '25px',
+    lineHeight: '32px',
+    fontWeight: 500,
   },
-  text:{
-      color: ThemeColors.MainWhite,
-      fontSize: "16px",
-      lineHeight: "25px"
-  }
+  text: {
+    color: ThemeColors.MainWhite,
+    fontSize: '16px',
+    lineHeight: '25px',
+  },
 }))
 
 type ElementProperties = {
@@ -69,7 +70,8 @@ const TradSection5 = ({ page }: ElementProperties): React.ReactElement => {
                 gutterBottom
                 className={classes.text}
               >
-                Micro &amp; New Nano Contracts Available Smaller contract size and margins as low as $10.
+                Micro &amp; New Nano Contracts Available Smaller contract size and margins as low as
+                $10.
               </Typography>
             </Container>
           </Grid>
@@ -91,7 +93,7 @@ const TradSection5 = ({ page }: ElementProperties): React.ReactElement => {
                 gutterBottom
                 className={classes.text}
               >
-                Contracts terminate trading at 4 pm ET on the 3rd Thursday of the contract month. 
+                Contracts terminate trading at 4 pm ET on the 3rd Thursday of the contract month.
               </Typography>
             </Container>
           </Grid>
@@ -104,7 +106,7 @@ const TradSection5 = ({ page }: ElementProperties): React.ReactElement => {
                 gutterBottom
                 className={classes.title}
               >
-                23-5 Access to <p style={{margin: "0px"}}>Trading</p>
+                23-5 Access to <p style={{ margin: '0px' }}>Trading</p>
               </Typography>
               <Typography
                 component="h5"
@@ -113,7 +115,8 @@ const TradSection5 = ({ page }: ElementProperties): React.ReactElement => {
                 gutterBottom
                 className={classes.text}
               >
-                Markets are open from <p style={{margin: "0px"}}> Sunday - Friday, 6 pm - 5 pm ET </p> 
+                Markets are open from{' '}
+                <p style={{ margin: '0px' }}> Sunday - Friday, 6 pm - 5 pm ET </p>
               </Typography>
             </Container>
           </Grid>

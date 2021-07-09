@@ -5,14 +5,15 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
-import {ThemeColors} from "../../../theme/theme-styles";
+
+import { ThemeColors } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
+      ...rootMobileBlockProps,
     },
   },
   container: {

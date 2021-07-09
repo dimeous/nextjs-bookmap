@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '300px',
     [theme.breakpoints.down('md')]: {
       marginTop: '16px',
-      marginBottom: '16px',
+      ...rootMobileBlockProps,
       height: 'auto',
     },
   },

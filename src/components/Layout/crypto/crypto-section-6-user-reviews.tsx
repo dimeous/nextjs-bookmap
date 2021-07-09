@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
+      ...rootMobileBlockProps,
     },
   },
   container: {

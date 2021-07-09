@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   button: {
     width: '230px',
     [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
+      ...rootMobileBlockProps,
     },
   },
 }))
