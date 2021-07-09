@@ -10,10 +10,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     imageItem: ThemeClasses.connectivityClasses.imageItem
 }))
 
-const CryptoConnectivity=()=>{
+const CryptoConnectivity = () => {
     const classes = useStyles()
     return (
-        <div>
         <Grid container>
             {/* First line*/}
             <Grid md={3} xs={6} item>
@@ -273,7 +272,7 @@ const CryptoConnectivity=()=>{
                 </Box>
             </Grid>
         </Grid>
-    </div>);
+    );
 }
 
 export default CryptoConnectivity;
