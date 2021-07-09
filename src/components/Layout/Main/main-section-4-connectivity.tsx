@@ -51,8 +51,13 @@ const useStyles = makeStyles((theme: Theme) => ({
         ...ThemeElements.rootBlockProps,
         backgroundColor: theme.palette.background.paper,
     },
-    link: ThemeClasses.connectivityClasses.link,
-    imageItem: ThemeClasses.connectivityClasses.imageItem,
+    link: {
+        width: '100%',
+        textAlign: 'right',
+        marginTop: '20px',
+        paddingRight: '8%',
+    },
+    imageItem: ThemeClasses.connectivityClasses.imageItem
 }))
 
 export default function TabsWrappedLabelSection4() {

@@ -5,6 +5,7 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
+import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {

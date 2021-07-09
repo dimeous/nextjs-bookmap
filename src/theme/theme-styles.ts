@@ -17,12 +17,6 @@ export const ThemeElements = {
 
 export const ThemeClasses = {
   connectivityClasses: {
-    link: {
-      width: '100%',
-      textAlign: 'right',
-      marginTop: '20px',
-      paddingRight: '8%',
-    },
     imageItem: {
       height: '85px',
       maxWidth: '210px',
