@@ -53,18 +53,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-type ElementProperties = {
-  page?: string
-}
-
-const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement => {
-  const { t } = useTranslation('gbn')
+const CryptoSection1Features = (): React.ReactElement => {
+  const { t } = useTranslation('crypto')
   const list = [
     t('CS1ViewFullDepthHistoricalDataWheatmap'),
-    t('CS1GBNWatchTheBattleBetweenBuyers'),
+    t('CS1WatchTheBattleBetweenBuyers'),
     t('CS1ConnectToMultipleExchangesGetData'),
     t('CS1SeeAllMarketDataWithoutAggregation'),
-    t('CS1GBNUseBookmapInRealTimeOrInReplay'),
+    t('CS1UseBookmapInRealTimeOrInReplay'),
     t('CS1AccessToManyAddonsIncludingMultibook'),
   ]
 
@@ -92,4 +88,4 @@ const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement =>
     </Container>
   )
 }
-export default GbnSection1Features
+export default CryptoSection1Features

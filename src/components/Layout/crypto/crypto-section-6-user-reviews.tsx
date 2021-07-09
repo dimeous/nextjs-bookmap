@@ -126,7 +126,7 @@ const UserReviews = function (html: string) {
   return arrayReviews(documentArticles)
 }
 
-export default function GbnSection6UserReviews({ data }: CardProperties) {
+export default function CryptoSection6UserReviews({ data }: CardProperties) {
   const usrReviews = process.browser ? UserReviews(data) : undefined
   const classes = useStyles()
   return (

@@ -7,7 +7,6 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { getUTMUrlDependsOnPage } from '../../../lib'
 import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -50,13 +49,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-type ElementProperties = {
-  page?: string
-}
-const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement => {
+const CryptoSection3Multibook = (): React.ReactElement => {
   const classes = useStyles()
-  const { t } = useTranslation('gbn')
-  const addToLink = getUTMUrlDependsOnPage(page, true)
+  const { t } = useTranslation('crypto')
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
@@ -82,11 +77,11 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                 {t('CS3BinanceCoinbaseHuobiMultibook')}
               </Typography>
               <Typography color="inherit" paragraph>
-                {t('CS3GBNCreateSyntheticInstrumentsASeeMultipleDigitalAssets ')}
+                {t('CS3CreateSyntheticInstrumentsASeeMultipleCrypto')}
               </Typography>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: t('CS3GBNSeeMarketliquidityAExecutionVolume', {
+                  __html: t('CS3SeeMarketLiquidityAndTradedVolume', {
                     interpolation: { escapeValue: false },
                   }),
                 }}
@@ -94,7 +89,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
               <Button
                 variant="contained"
                 color="secondary"
-                href={t('CS3BtnLink') + addToLink}
+                href={t('CS3BtnLink')}
                 sx={{ width: '300px' }}
               >
                 {t('CS3GetMultiBookwithDigitalPlus')}
@@ -120,4 +115,4 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
     </div>
   )
 }
-export default GbnSection3Multibook
+export default CryptoSection3Multibook

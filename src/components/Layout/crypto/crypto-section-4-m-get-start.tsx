@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core'
+import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
@@ -6,7 +6,13 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { ThemeElements } from '../../../theme/theme-styles'
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
+import getText from './crypto-section-4-content'
+
+const useStylesText = makeStyles(() => ({
+  t1: { fontSize: '1rem', color: ThemeColors.MainBlue, fontFamily: 'MullerRegular, sans-serif' },
+  t2: { fontSize: '1rem' },
+}))
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -16,11 +22,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexWrap: 'wrap',
     flexDirection: 'column',
     height: '300px',
-
     [theme.breakpoints.down('md')]: {
       marginTop: '16px',
-      marginBottom: '120px',
+      marginBottom: '16px',
       height: 'auto',
+    },
+  },
+  head2: {
+    marginBottom: 75 + 'px',
+    color: '#0184f7',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '0px',
     },
   },
   textBlock: {
@@ -44,36 +56,35 @@ const useStyles = makeStyles((theme: Theme) => ({
     '&:hover': {
       background: 'none',
     },
-    '& span': {
-      fontSize: '1.1428rem',
-    },
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },
   },
 }))
 
-type ElementProperties = {
-  page?: string
+function GetTxt(index: number, lbl: string, txt: string) {
+  const classes = useStylesText()
+  return (
+    <Box sx={{ pl: 1 }}>
+      <Typography className={classes.t1} gutterBottom>
+        {index}. {lbl}
+      </Typography>
+      <Typography className={classes.t2}>{txt}</Typography>
+    </Box>
+  )
 }
 
-const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement => {
-  const { t } = useTranslation('gbn')
-  const list = [
-    t('CS1ViewFullDepthHistoricalDataWheatmap'),
-    t('CS1GBNWatchTheBattleBetweenBuyers'),
-    t('CS1ConnectToMultipleExchangesGetData'),
-    t('CS1SeeAllMarketDataWithoutAggregation'),
-    t('CS1GBNUseBookmapInRealTimeOrInReplay'),
-    t('CS1AccessToManyAddonsIncludingMultibook'),
-  ]
-
+const CryptoSection4MGetStart = (): React.ReactElement => {
+  const text: any = getText()
+  const { t } = useTranslation('crypto')
+  const list = [text.s1, text.s2, text.s3]
   const classes = useStyles()
+
   return (
     <Container fixed>
       <Container className={classes.textBlock}>
         <Typography component="h2" variant="h2" color="inherit" gutterBottom>
-          {t('CS1KeyFeatures')}
+          {text.h1}
         </Typography>
       </Container>
       <List dense className={classes.root}>
@@ -82,9 +93,14 @@ const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement =>
           return (
             <ListItem key={index} button className={classes.listitem}>
               <ListItemAvatar>
-                <Image src={`/static/gbn/s1/${index + 1}.svg`} width={75} height={65} alt={value} />
+                <Image
+                  src={`/static/gbn/s5/${index + 1}.svg`}
+                  width={75}
+                  height={65}
+                  alt={t(value.lbl)}
+                />
               </ListItemAvatar>
-              <ListItemText id={labelId} primary={value} />
+              <ListItemText id={labelId} primary={GetTxt(index + 1, t(value.lbl), t(value.txt))} />
             </ListItem>
           )
         })}
@@ -92,4 +108,4 @@ const GbnSection1Features = ({ page }: ElementProperties): React.ReactElement =>
     </Container>
   )
 }
-export default GbnSection1Features
+export default CryptoSection4MGetStart
