@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography } from '@material-ui/core'
+import { Container, Grid } from '@material-ui/core'
 import React from 'react'
 
 interface TwoColumnsProperties {
