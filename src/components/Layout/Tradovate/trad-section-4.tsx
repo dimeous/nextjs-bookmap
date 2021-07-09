@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     ...ThemeElements.rootBlockProps,
     [theme.breakpoints.down('md')]: {
-      ...rootMobileBlockProps,
+      ...ThemeElements.rootMobileBlockProps,
     },
   },
   container: {

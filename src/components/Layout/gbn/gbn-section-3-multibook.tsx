@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     ...ThemeElements.rootBlockProps,
     backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
-      ...rootMobileBlockProps,
+      ...ThemeElements.rootMobileBlockProps,
     },
   },
   container: {
