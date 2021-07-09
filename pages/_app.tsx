@@ -24,7 +24,11 @@ const MyApp = (props: AppProps) => {
 
   const isPageGetBookMapNow =
     pathname === '/get-bookmap-now' || pathname === '/orderflow' || pathname === '/general'
+  const isPageFairX =
+    pathname === '/tradovate'|| window.location.hostname === 'bookmap-for-fairx'
   const isPageCrypto = useRouter().pathname === '/crypto'
+
+  console.log(useRouter())
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -32,7 +36,7 @@ const MyApp = (props: AppProps) => {
     if (jssStyles) {
       jssStyles.remove()
     }
-    if (!isPageGetBookMapNow) {
+    if (!isPageGetBookMapNow && !isPageFairX) {
       TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
       TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
     } else {
