@@ -6,14 +6,14 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
 
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 import TradSteps from './trad-section-4-steps'
-import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     ...ThemeElements.rootBlockProps,
     [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
+      ...ThemeElements.rootMobileBlockProps,
     },
   },
   container: {

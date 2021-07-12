@@ -7,13 +7,15 @@ export const ThemeColors = {
   MainWhite: '#fff',
   BGGrey: '#E6ECEF',
   DarkBlue: '#124258',
-
 }
 
 export const ThemeElements = {
-  rootBlockProps:{
+  rootBlockProps: {
     marginBottom: '145px',
-  }
+  },
+  rootMobileBlockProps: {
+    marginBottom: '16px',
+  },
 }
 
 export const ThemeFontStyles = {

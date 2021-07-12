@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/styles'
 import React, { Fragment } from 'react'
 import Carousel from 'react-multi-carousel'
 
-import { ThemeColors } from '../../../theme/theme-styles'
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 import TrustPreloadPilot from '../../trustPreloadPilot'
 import TrustBoxFooter from '../Footer/trust-box-footer'
 
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
+      ...ThemeElements.rootMobileBlockProps,
     },
   },
   container: {
