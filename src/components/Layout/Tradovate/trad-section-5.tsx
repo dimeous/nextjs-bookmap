@@ -9,7 +9,6 @@ import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: '100%',
     backgroundColor: ThemeColors.DarkBlue,
     [theme.breakpoints.down('md')]: {
       ...ThemeElements.rootMobileBlockProps,

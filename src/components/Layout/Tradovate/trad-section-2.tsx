@@ -13,7 +13,7 @@ import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 
-import {ThemeColors, ThemeElements} from '../../../theme/theme-styles'
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'center',
     flexWrap: 'wrap',
     flexDirection: 'column',
-
 
     [theme.breakpoints.down('md')]: {
       marginTop: '16px',
