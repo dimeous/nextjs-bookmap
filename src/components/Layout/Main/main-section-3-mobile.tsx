@@ -4,11 +4,12 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
+
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles(() => ({
   root: {
-      ...ThemeElements.rootBlockProps,
+    ...ThemeElements.rootBlockProps,
     '& h4': {
       font: '18px/30px MullerRegular,sans-serif',
       color: ThemeColors.SecondBlue,
@@ -16,11 +17,10 @@ const useStyles = makeStyles(() => ({
     },
   },
   button: {
-    width: '230px',
     marginTop: '24px',
   },
   textBox: {
-    borderLeft: 'solid 3px '+ThemeColors.SecondBlue,
+    borderLeft: 'solid 3px ' + ThemeColors.SecondBlue,
     paddingLeft: '16px',
     margin: '10px 0px 10px 0px',
     maxWidth: '75%',
@@ -49,7 +49,7 @@ const MainSection3Mobile = () => {
           <h4>{t('MS3GetSoftware')}</h4>
         </Grid>
         <Grid item xs={2}>
-          <Image src="/static/main/s3/cloud.svg" width={32} height={24}/>
+          <Image src="/static/main/s3/cloud.svg" width={32} height={24} />
         </Grid>
       </Grid>
       <Box className={classes.textBox}>
@@ -66,7 +66,7 @@ const MainSection3Mobile = () => {
           <h4>{t('MS3ConnectData')}</h4>
         </Grid>
         <Grid item xs={2}>
-          <Image src="/static/main/s3/planet.svg" width={32} height={24}/>
+          <Image src="/static/main/s3/planet.svg" width={32} height={24} />
         </Grid>
       </Grid>
       <Box className={classes.textBox}>
@@ -82,7 +82,7 @@ const MainSection3Mobile = () => {
           <h4>{t('MS3EducateYourself')}</h4>
         </Grid>
         <Grid item xs={2}>
-          <Image src="/static/main/s3/note.svg" width={32} height={24}/>
+          <Image src="/static/main/s3/note.svg" width={32} height={24} />
         </Grid>
       </Grid>
       <Box className={classes.textBox}>

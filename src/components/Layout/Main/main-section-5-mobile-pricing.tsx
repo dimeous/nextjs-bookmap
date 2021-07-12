@@ -10,9 +10,9 @@ import ClearIcon from '@material-ui/icons/Clear'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
+import { ThemeElements } from '../../../theme/theme-styles'
 import { text } from './main-section-5-content'
 import { styles } from './main-section-5-mobile-pricing-styles'
-import {ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -49,13 +49,14 @@ function a11yProperties(index: any) {
 
 const useStyles = styles
 
-export default function TabsWrappedLabelSection5() {
+export default function TabsWrappedLabelSec5() {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue)
   }
   const { t } = useTranslation('main')
+
   return (
     <Container fixed style={{ ...ThemeElements.rootBlockProps }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
@@ -86,17 +87,17 @@ export default function TabsWrappedLabelSection5() {
         style={{ border: '1px solid #bdc4d0', borderRadius: '8px', overflow: 'hidden' }}
       >
         <Grid container spacing={1}>
-          <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
+          <Grid container item xs={4} className={classes.gridPadding}>
             <Box className={classes.priceName}>
               <p>{t(text.t1)}</p>
             </Box>
           </Grid>
-          <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
+          <Grid container item xs={4} className={classes.gridPadding}>
             <Box className={classes.priceName}>
               <p>{t(text.t2)}</p>
             </Box>
           </Grid>
-          <Grid container item xs={4} style={{ padding: '4px 1px 4px 1px' }}>
+          <Grid container item xs={4} className={classes.gridPadding}>
             <Box className={classes.priceName}>
               <p>{t(text.t2)}+</p>
             </Box>
@@ -443,7 +444,12 @@ export default function TabsWrappedLabelSection5() {
               <div className={classes.priceBlock}>
                 <span className={classes.priceFree}>FREE</span>
               </div>
-              <Button variant="contained" color="secondary" href={text.link1}>
+              <Button
+                variant="contained"
+                color="secondary"
+                href={text.link1}
+                className={classes.button}
+              >
                 Select
               </Button>
             </div>
@@ -464,6 +470,7 @@ export default function TabsWrappedLabelSection5() {
               <Button
                 variant="contained"
                 color="secondary"
+                className={classes.button}
                 href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
               >
                 {t('MS5Select')}
@@ -486,6 +493,7 @@ export default function TabsWrappedLabelSection5() {
               <Button
                 variant="contained"
                 color="secondary"
+                className={classes.button}
                 href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
               >
                 {t('MS5Select')}

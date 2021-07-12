@@ -81,61 +81,72 @@ const TradSection6 = ({ page }: ElementProperties): React.ReactElement => {
           Still not sure or have questions? Just visit our{' '}
           <p style={{ margin: '0px' }}>FAQ section</p>
         </Typography>
-        {FAQs.map((faq) => {
-          return (
-            <Box>
-              {faq.id == 4 ? (
-                <Box key={faq.id}>
-                  <Divider />
-                  <Typography my={3} variant="body1" className={classes.bold}>
-                    {faq.header}
-                    <p className={classes.desc}>
-                      {faq.desc}{' '}
-                      <p style={{ marginTop: '0px' }}>
-                        <a href="http://info.tradovate.com/bookmap?utm_campaign=fairx&utm_source=bookmap&utm_medium=referral&utm_content=offer">Click here</a> to register{' '}
-                      </p>{' '}
-                      <p>
-                        {' '}
-                        <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>NOTE</span> - It
-                        is recommended that you use the same email address in Tradovate and in
-                        Bookmap
+        <Box>
+          {FAQs.map((faq) => {
+            return (
+              <Box key={faq.id}>
+                {faq.id == 4 ? (
+                  <>
+                    <Divider />
+                    <Typography my={3} variant="body1" className={classes.bold}>
+                      {faq.header}
+                      <p className={classes.desc}>
+                        {faq.desc}{' '}
+                        <p style={{ marginTop: '0px' }}>
+                          <a href="http://info.tradovate.com/bookmap?utm_campaign=fairx&utm_source=bookmap&utm_medium=referral&utm_content=offer">
+                            Click here
+                          </a>{' '}
+                          to register{' '}
+                        </p>{' '}
+                        <p>
+                          {' '}
+                          <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>NOTE</span> - It
+                          is recommended that you use the same email address in Tradovate and in
+                          Bookmap
+                        </p>
                       </p>
-                    </p>
-                  </Typography>
-                </Box>
-              ) : (faq.id == 6 ? (
-                <Box key={faq.id}>
-                  <Divider />
-                  <Typography my={3} variant="body1" className={classes.bold}>
-                    {faq.header}
-                    <ul className={classes.desc}>
-                      <li>
-                        For access to all futures and stocks you have to upgrade Bookmap package to{' '}
-                        <a href="https://bookmap.com/packages-comparison?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing"> Global / Global+</a>
-                      </li>
-                      <li>
-                        For access to all crypto instruments only, you have to upgrade to{' '}
-                        <a href="https://bookmap.com/crypto/?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing">Digital+</a>
-                      </li>
-                      <li>
-                        In addition, you have to subscribe to market data, either through Tradovate
-                        or through Bookmap
-                      </li>
-                    </ul>
-                  </Typography>
-                </Box>
-              ) : (
-                <Box key={faq.id}>
-                  <Divider />
-                  <Typography my={3} variant="body1" className={classes.bold}>
-                    {faq.header}
-                    <p className={classes.desc}>{faq.desc}</p>
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-          )
-        })}
+                    </Typography>
+                  </>
+                ) : (faq.id == 6 ? (
+                  <>
+                    <Divider />
+                    <Typography my={3} variant="body1" className={classes.bold}>
+                      {faq.header}
+                      <ul className={classes.desc}>
+                        <li>
+                          For access to all futures and stocks you have to upgrade Bookmap package
+                          to{' '}
+                          <a href="https://bookmap.com/packages-comparison?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing">
+                            {' '}
+                            Global / Global+
+                          </a>
+                        </li>
+                        <li>
+                          For access to all crypto instruments only, you have to upgrade to{' '}
+                          <a href="https://bookmap.com/crypto/?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing">
+                            Digital+
+                          </a>
+                        </li>
+                        <li>
+                          In addition, you have to subscribe to market data, either through
+                          Tradovate or through Bookmap
+                        </li>
+                      </ul>
+                    </Typography>
+                  </>
+                ) : (
+                  <>
+                    <Divider />
+                    <Typography my={3} variant="body1" className={classes.bold}>
+                      {faq.header}
+                      <p className={classes.desc}>{faq.desc}</p>
+                    </Typography>
+                  </>
+                ))}
+              </Box>
+            )
+          })}
+        </Box>
         <Box>
           <Divider />
           <Typography my={3} variant="body1" className={classes.bold}>

@@ -76,9 +76,13 @@ theme = {
           fontFamily: 'MullerRegular',
           fontSize: '14px',
           height: '43px',
+          width: '230px',
           letterSpacing: '0.77px',
           '&:hover': {
             backgroundColor: '#0e67d0',
+          },
+          [theme.breakpoints.down('md')]: {
+            marginBottom: '16px',
           },
         },
       },

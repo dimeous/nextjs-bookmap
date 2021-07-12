@@ -6,8 +6,8 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
+import { ThemeElements } from '../../../theme/theme-styles'
 import styles from './trad-section-1.module.css'
-import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -40,12 +40,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingBottom: '32px',
     color: 'white',
   },
-  button: {
-    width: '230px',
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
-    },
-  },
+
   outer: {
     position: 'relative',
     width: '100%',
@@ -92,16 +87,17 @@ const TradSection1 = ({ page }: CardProperties): React.ReactElement => {
                 No Commissions or fees for trading FairX futures with Bookmap
               </Typography>
               <Typography variant="body1" className={classes.secondTitle}>
-              Want to get access to smaller futures contracts with no commissions or fees? Well then,
-               you’ve come to the right place.
+                Want to get access to smaller futures contracts with no commissions or fees? Well
+                then, you’ve come to the right place.
               </Typography>
               {
                 <Button
                   id={'main_top_start_for_free'}
-                  className={classes.button}
                   variant="contained"
                   color="secondary"
-                  href={'https://bookmap.com/members/signup/C0ogLHLr?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'}
+                  href={
+                    'https://bookmap.com/members/signup/C0ogLHLr?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'
+                  }
                 >
                   Get Bookmap for FairX
                 </Button>

@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { ThemeElements } from '../../../theme/theme-styles'
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 import getText from './gbn-section-4-content'
 
 const useStyles = makeStyles(() => ({
@@ -33,7 +33,6 @@ const useStyles = makeStyles(() => ({
     boxShadow: 'none',
   },
   button: {
-    width: '230px',
     marginTop: '35px',
   },
   stepHeader: {
@@ -41,13 +40,13 @@ const useStyles = makeStyles(() => ({
     margin: '18px 00 20px',
     width: '100%',
     font: '20px/20px MullerMedium,sans-serif',
-    color: '#0184f7',
+    color: ThemeColors.SecondBlue,
     '& span': {
       marginRight: '10%',
     },
   },
   stepNumber: {
-    color: '#0184f7',
+    color: ThemeColors.SecondBlue,
     font: '40px/40px MullerMedium,sans-serif',
     paddingTop: '23px',
   },

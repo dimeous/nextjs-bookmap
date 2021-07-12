@@ -13,7 +13,7 @@ import React from 'react'
 import TagManager from 'react-gtm-module'
 
 import SEO from '../next-seo.config'
-import PolicyWidget from '../src/components/policyWidget'
+import PolicyWidget from '../src/components/policy-widget'
 import theme from '../src/theme/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
@@ -22,14 +22,14 @@ const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props
   const pathname = useRouter().pathname
   const basePath = useRouter().basePath
-  var isPageFairX = false
+  let isPageFairX = false
 
   const isPageGetBookMapNow =
     pathname === '/get-bookmap-now' || pathname === '/orderflow' || pathname === '/general'
   const isPageCrypto = useRouter().pathname === '/crypto'
 
-  if(process.browser){
-     isPageFairX = pathname === '/tradovate' || basePath === 'bookmap-for-fairx'
+  if (process.browser) {
+    isPageFairX = pathname === '/tradovate' || basePath === 'bookmap-for-fairx'
   }
 
   React.useEffect(() => {
@@ -41,7 +41,7 @@ const MyApp = (props: AppProps) => {
     if (!isPageGetBookMapNow && !isPageFairX) {
       TagManager.initialize({ gtmId: 'GTM-NJGLPSJ' })
       TagManager.initialize({ gtmId: 'GTM-PL3JMVJ' })
-    }else{
+    } else {
       TagManager.initialize({ gtmId: 'GTM-KD8F6RZ' })
     }
   }, [])

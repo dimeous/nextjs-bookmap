@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   head2: {
     marginBottom: 75 + 'px',
-    color: '#0184f7',
+    color: ThemeColors.SecondBlue,
     [theme.breakpoints.down('md')]: {
       marginBottom: '0px',
     },

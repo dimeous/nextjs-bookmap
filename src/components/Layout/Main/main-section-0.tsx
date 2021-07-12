@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React, { useEffect, useState } from 'react'
 
-import {ThemeColors, ThemeElements} from '../../../theme/theme-styles'
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 import styles from './main-section-0.module.css'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -64,12 +64,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   backImage: {
     height: '100%',
   },
-  button: {
-    width: '230px',
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
-    },
-  },
+  button: {},
 }))
 
 type CardProperties = {

@@ -5,7 +5,8 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
-import {ThemeColors, ThemeElements} from "../../../theme/theme-styles";
+
+import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -55,7 +56,6 @@ const useStyles = makeStyles(() => ({
     color: '#3B4858',
   },
   button: {
-    width: '230px',
     marginTop: '82px',
   },
   nextImage: {

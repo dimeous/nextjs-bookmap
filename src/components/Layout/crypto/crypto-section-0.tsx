@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontFamily: 'MullerMedium',
   },
   button: {
-    width: '230px',
     [theme.breakpoints.down('md')]: {
       ...ThemeElements.rootMobileBlockProps,
     },

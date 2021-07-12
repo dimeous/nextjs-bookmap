@@ -41,12 +41,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: ThemeColors.MainBlue,
     fontFamily: 'MullerMedium',
   },
-  button: {
-    width: '230px',
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '16px',
-    },
-  },
 }))
 
 type CardProperties = {
@@ -79,7 +73,6 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
               {!mobile && (
                 <Button
                   id={'main_top_start_for_free'}
-                  className={classes.button}
                   variant="contained"
                   color="secondary"
                   href={t('CS0TopStartForFree') + addToLink}
@@ -113,7 +106,6 @@ const GbnSection0 = ({ mobile, page }: CardProperties): React.ReactElement => {
             variant="contained"
             color="secondary"
             href={t('CS0TopStartForFree') + addToLink}
-            className={classes.button}
             id={'main_top_start_for_free'}
           >
             {t('CS0GetMultibook')}

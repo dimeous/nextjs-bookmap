@@ -1,5 +1,7 @@
+import { buttonClasses } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
-import {ThemeColors} from "../../../theme/theme-styles";
+
+import { ThemeColors } from '../../../theme/theme-styles'
 
 export const styles = makeStyles(() => ({
   root: {
@@ -146,5 +148,12 @@ export const styles = makeStyles(() => ({
       textTransform: 'uppercase',
       transition: '.5s ease',
     },
+  },
+  button: {
+    width: '90%',
+    ml: 1,
+  },
+  gridPadding: {
+    padding: '4px 1px 4px 1px',
   },
 }))
