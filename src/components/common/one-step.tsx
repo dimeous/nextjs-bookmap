@@ -4,12 +4,6 @@ import { makeStyles } from '@material-ui/styles'
 
 import { ThemeColors } from '../../theme/theme-styles'
 
-interface OneStepProperty {
-  number: string
-  title: string
-  text: JSX.Element
-  imgUrl: string
-}
 const useStyles = makeStyles(() => ({
   stepNumber: {
     color: ThemeColors.SecondBlue,
@@ -31,6 +25,10 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     width: 'calc(33.33333% - 90px)',
   },
+  oneStep1: {
+    display: 'flex',
+    width: 'calc(38.33333% - 90px)',
+  },
   media: {
     width: 'auto',
     heght: '50px',
@@ -41,10 +39,19 @@ const useStyles = makeStyles(() => ({
     boxShadow: 'none',
   },
 }))
-const OneStep = ({ number, title, text, imgUrl }: OneStepProperty) => {
+
+interface OneStepProperty {
+  number: string
+  title: string
+  text: JSX.Element
+  imgUrl: string
+  type?: number
+}
+
+const OneStep = ({ number, title, text, imgUrl, type }: OneStepProperty) => {
   const classes = useStyles()
   return (
-    <Box className={classes.oneStep}>
+    <Box className={type == 1 ? classes.oneStep1 : classes.oneStep}>
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
@@ -54,12 +61,28 @@ const OneStep = ({ number, title, text, imgUrl }: OneStepProperty) => {
           title={title}
         />
         <CardContent>
-          <Typography className={classes.stepHeader}>
-            <span>{number}</span> {title}
-          </Typography>
-          <Typography variant="body2" color="textPrimary" component="p">
-            {text}
-          </Typography>
+          {type == 1 ? (
+            <Box sx={{ display: 'inlineFlex' }}>
+              <Box sx={{ p: 1 }}>
+                <Typography className={classes.stepNumber}>{number} </Typography>
+              </Box>
+              <Box sx={{ pl: 2 }}>
+                <Typography className={classes.stepHeader}>{title}</Typography>
+                <Typography variant="body2" color="textPrimary" component="p">
+                  {text}
+                </Typography>
+              </Box>
+            </Box>
+          ) : (
+            <>
+              <Typography className={classes.stepHeader}>
+                <span>{number}</span> {title}
+              </Typography>
+              <Typography variant="body2" color="textPrimary" component="p">
+                {text}
+              </Typography>
+            </>
+          )}
         </CardContent>
       </Card>
     </Box>

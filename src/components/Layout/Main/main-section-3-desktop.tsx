@@ -37,33 +37,6 @@ const useStyles = makeStyles(() => ({
   button: {
     marginTop: '35px',
   },
-  /*
-    card: {
-    border: 'none',
-    boxShadow: 'none',
-  },
-
-  stepHeader: {
-    display: 'flex',
-    margin: '18px 00 20px',
-    width: '100%',
-    font: '20px/20px MullerMedium,sans-serif',
-    color: ThemeColors.SecondBlue,
-    '& span': {
-      marginRight: '10%',
-    },
-  },
-  media: {
-    width: 'auto',
-    heght: '50px',
-    marginLeft: '33%',
-  },
-  oneStep: {
-    display: 'flex',
-    alignItems: 'center',
-    width: 'calc(33.33333% - 90px)',
-  },
-  */
 }))
 
 const MainSection3Desktop = () => {

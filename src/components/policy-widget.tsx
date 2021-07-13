@@ -52,7 +52,7 @@ const PolicyWidget = () => {
           style={{
             marginRight: '8px',
             width: '8px',
-            height: '8px',
+            height: '48px',
             cursor: 'pointer',
           }}
           onClick={handleChange}
@@ -61,7 +61,9 @@ const PolicyWidget = () => {
         </Box>
       </div>
     </div>
-  ) : null
+  ) : (
+    <></>
+  )
 }
 
 export default PolicyWidget
