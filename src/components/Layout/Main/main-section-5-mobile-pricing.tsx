@@ -49,7 +49,7 @@ function a11yProperties(index: any) {
 
 const useStyles = styles
 
-export default function TabsWrappedLabelSec5() {
+const TabsWrappedLabelSec5 = () => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
@@ -59,7 +59,7 @@ export default function TabsWrappedLabelSec5() {
 
   return (
     <Container fixed style={{ ...ThemeElements.rootBlockProps }}>
-      <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
+      <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }} />
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
           {t(text.h1)}
@@ -74,12 +74,12 @@ export default function TabsWrappedLabelSec5() {
           aria-label="wrapped label tabs"
           className={classes.tabs}
         >
-          <Tab value="one" label={text.l1} wrapped {...a11yProperties('one')} />
-          <Tab value="two" label={text.l2} {...a11yProperties('two')} />
-          <Tab value="three" label={text.l3} {...a11yProperties('three')} />
+          <Tab value="one" label={t(text.l1)} wrapped {...a11yProperties('one')} />
+          <Tab value="two" label={t(text.l2)} {...a11yProperties('two')} />
+          <Tab value="three" label={t(text.l3)} {...a11yProperties('three')} />
         </Tabs>
         <TabPanel value={value} index="two">
-          <span className={classes.tabTwo}>{text.l4} </span>
+          <span className={classes.tabTwo}>{t(text.l4)} </span>
         </TabPanel>
       </div>
       <div
@@ -108,7 +108,14 @@ export default function TabsWrappedLabelSec5() {
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
               <Typography component={'h4'}>{t(text.KeyFeature)}</Typography>
-              <Typography component={'p'}>{t(text.Heatmap)}</Typography>
+              <Typography
+                component={'p'}
+                dangerouslySetInnerHTML={{
+                  __html: t(text.Heatmap, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </Box>
           </Grid>
         </Grid>
@@ -123,7 +130,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Record / Replay, VWAP, POC */}
@@ -145,7 +152,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* LLT, Strength Level, Imbalance*/}
@@ -167,7 +174,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* ONE CLICK TRADING */}
@@ -192,14 +199,14 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Feature stocks*/}
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{text.Futures}</Typography>
+              <Typography component={'p'}>{t(text.Futures)}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -214,7 +221,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* MARKETS VISUALIZATION */}
@@ -224,7 +231,14 @@ export default function TabsWrappedLabelSec5() {
               <Typography component={'h4'} sx={{ pt: 2 }}>
                 {t(text.Market)}
               </Typography>
-              <Typography component={'p'}>{t(text.Market2)}</Typography>
+              <Typography
+                component={'p'}
+                dangerouslySetInnerHTML={{
+                  __html: t(text.Market2, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </Box>
           </Grid>
         </Grid>
@@ -239,7 +253,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Feature & stocks*/}
@@ -276,14 +290,21 @@ export default function TabsWrappedLabelSec5() {
             </div>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/*  Maximum # of Trading Symbols */}
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'p'}>{t(text.maxTrSymbols)}</Typography>
+              <Typography
+                component={'p'}
+                dangerouslySetInnerHTML={{
+                  __html: t(text.maxTrSymbols, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </Box>
           </Grid>
         </Grid>
@@ -298,7 +319,7 @@ export default function TabsWrappedLabelSec5() {
             <Typography component={'p'}>20</Typography>
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Education */}
@@ -323,7 +344,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Education */}
@@ -345,7 +366,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Order Flow Analysis Webinars */}
@@ -367,7 +388,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Advanced Trading Educational Course */}
@@ -389,7 +410,7 @@ export default function TabsWrappedLabelSec5() {
             <CheckIcon className={classes.chIcon} />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* MARKETPLACE */}
@@ -434,7 +455,7 @@ export default function TabsWrappedLabelSec5() {
             />
           </Grid>
           <Grid container item xs={12} justifyContent={'center'}>
-            <Box className={classes.borederBotom}></Box>
+            <Box className={classes.borederBotom} />
           </Grid>
         </Grid>
         {/* Pricing*/}
@@ -515,3 +536,4 @@ export default function TabsWrappedLabelSec5() {
     </Container>
   )
 }
+export default TabsWrappedLabelSec5
