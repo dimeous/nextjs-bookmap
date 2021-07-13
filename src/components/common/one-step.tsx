@@ -62,7 +62,7 @@ const OneStep = ({ number, title, text, imgUrl, type }: OneStepProperty) => {
         />
         <CardContent>
           {type == 1 ? (
-            <Box sx={{ display: 'inlineFlex' }}>
+            <Box sx={{ display: 'inline-flex' }}>
               <Box sx={{ p: 1 }}>
                 <Typography className={classes.stepNumber}>{number} </Typography>
               </Box>
