@@ -465,12 +465,7 @@ const TabsWrappedLabelSec5 = () => {
               <div className={classes.priceBlock}>
                 <span className={classes.priceFree}>FREE</span>
               </div>
-              <Button
-                variant="contained"
-                color="secondary"
-                href={text.link1}
-                className={classes.button}
-              >
+              <Button href={text.link1} className={classes.button}>
                 Select
               </Button>
             </div>
@@ -489,8 +484,6 @@ const TabsWrappedLabelSec5 = () => {
               </div>
 
               <Button
-                variant="contained"
-                color="secondary"
                 className={classes.button}
                 href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
               >
@@ -512,8 +505,6 @@ const TabsWrappedLabelSec5 = () => {
               </div>
 
               <Button
-                variant="contained"
-                color="secondary"
                 className={classes.button}
                 href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
               >

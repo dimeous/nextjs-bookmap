@@ -86,12 +86,7 @@ const CryptoSection3Multibook = (): React.ReactElement => {
                   }),
                 }}
               />
-              <Button
-                variant="contained"
-                color="secondary"
-                href={t('CS3BtnLink')}
-                sx={{ width: '300px' }}
-              >
+              <Button href={t('CS3BtnLink')} sx={{ width: '300px' }}>
                 {t('CS3GetMultiBookwithDigitalPlus')}
               </Button>
             </Container>

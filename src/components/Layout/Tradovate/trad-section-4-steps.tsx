@@ -50,15 +50,15 @@ const TradSteps = () => {
         </div>
         <Box mt={4}>
           <Typography className={classes.text} variant="body1">
-            Click the button below and sign up for Bookmap. Download the software and activate your unique license.
-            (You won’t be able to connect to FairX just yet).
+            Click the button below and sign up for Bookmap. Download the software and activate your
+            unique license. (You won’t be able to connect to FairX just yet).
           </Typography>
           <Button
             id={'main_top_start_for_free'}
             className={classes.button}
-            variant="contained"
-            color="secondary"
-            href={'https://bookmap.com/members/signup/C0ogLHLr?_lang=en&utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'}
+            href={
+              'https://bookmap.com/members/signup/C0ogLHLr?_lang=en&utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'
+            }
           >
             Get Bookmap for FairX
           </Button>
@@ -79,8 +79,6 @@ const TradSteps = () => {
             <Button
               id={'main_top_start_for_free'}
               className={classes.button}
-              variant="contained"
-              color="secondary"
               href={
                 'http://info.tradovate.com/bookmap?utm_campaign=fairx&utm_source=bookmap&utm_medium=referral&utm_content=offer'
               }

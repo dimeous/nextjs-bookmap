@@ -166,12 +166,7 @@ const Desktop = () => {
               <Image src="/static/main/s6/absoption.jpg" width={300} height={160} />
             </Box>
             <div>
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="secondary"
-                href="https://bookmap.com/education/"
-              >
+              <Button className={classes.button} href="https://bookmap.com/education/">
                 {t('MS6GoToEducation')}
               </Button>
             </div>

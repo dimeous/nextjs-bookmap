@@ -28,8 +28,6 @@ const CryptoHeader = ({ mobile }: ElementProperties): React.ReactElement => {
             {!mobile && (
               <Box sx={{ pr: 1 }}>
                 <Button
-                  variant="contained"
-                  color="secondary"
                   href={t('HBtnLinkSubsForFree')}
                   className={classes.button}
                   id={'crypto_header_get_it_now'}

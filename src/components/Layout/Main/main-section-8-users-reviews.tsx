@@ -5,12 +5,11 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
+import { ThemeElements } from '../../../theme/theme-styles'
 import TrustPreloadPilot from '../../trustPreloadPilot'
-import {ThemeElements} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles(() => ({
   root: {
-
     paddingTop: '50px',
     ...ThemeElements.rootBlockProps,
   },
@@ -66,8 +65,6 @@ const MainSection8UserReviews = ({ mobile, crypto }: CardProperties) => {
         }}
       >
         <Button
-          variant="contained"
-          color="secondary"
           href="https://bookmap.com/members/signup/thAhOgYUg"
           id={crypto ? 'crypto_middle_get_it_now' : 'main_end_start_for_free'}
         >

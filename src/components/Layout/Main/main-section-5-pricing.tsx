@@ -9,9 +9,9 @@ import ClearIcon from '@material-ui/icons/Clear'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
+import { ThemeElements } from '../../../theme/theme-styles'
 import { text } from './main-section-5-content'
 import { styles } from './main-section-5-pricing-styles'
-import {ThemeElements} from "../../../theme/theme-styles";
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -57,7 +57,7 @@ export default function TabsWrappedLabelSection5() {
   }
   const { t } = useTranslation('main')
   return (
-    <Container fixed style={{ ...ThemeElements.rootBlockProps, }}>
+    <Container fixed style={{ ...ThemeElements.rootBlockProps }}>
       <div id="pricing" style={{ position: 'absolute', marginTop: '-140px' }}></div>
       <div className={classes.root}>
         <Typography component="h2" variant="h2">
@@ -224,9 +224,7 @@ export default function TabsWrappedLabelSection5() {
             <div className={classes.priceBlock}>
               <span className={classes.priceNumber}>Free</span>
             </div>
-            <Button variant="contained" color="secondary" href={text.link1}>
-              {t('MS5SelectDigital')}
-            </Button>
+            <Button href={text.link1}>{t('MS5SelectDigital')}</Button>
           </div>
         </Box>
         {/* Second table list*/}
@@ -329,8 +327,6 @@ export default function TabsWrappedLabelSection5() {
               <Typography className={classes.priceSave}>Save $120 a year</Typography>
             )}
             <Button
-              variant="contained"
-              color="secondary"
               href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
             >
               {t('MS5SelectGlobal')}
@@ -339,7 +335,7 @@ export default function TabsWrappedLabelSection5() {
         </Box>
         {/* third table list*/}
         <Box className={classes.digital} style={{ marginRight: 0, border: '1px solid #df731b' }}>
-          <Box className={classes.priceName} style={{backgroundColor: "#df731b"}}>
+          <Box className={classes.priceName} style={{ backgroundColor: '#df731b' }}>
             <p>{t(text.t2)} plus</p>
           </Box>
           <ul className={classes.priceTags}>
@@ -437,8 +433,6 @@ export default function TabsWrappedLabelSection5() {
               <Typography className={classes.priceSave}>Save $240 a year</Typography>
             )}
             <Button
-              variant="contained"
-              color="secondary"
               href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
             >
               {t('MS5SelectGlobalPlus')}

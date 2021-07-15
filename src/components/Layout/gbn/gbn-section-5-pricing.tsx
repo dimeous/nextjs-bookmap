@@ -158,9 +158,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 </List>
               </CardContent>
               <CardActions className={classes.cardAction}>
-                <Button variant="contained" color="secondary" href={t('CS5textB1') + addToLink2}>
-                  {t(text.b1)}
-                </Button>
+                <Button href={t('CS5textB1') + addToLink2}>{t(text.b1)}</Button>
               </CardActions>
             </Box>
           </Grid>
@@ -266,11 +264,7 @@ const GbnSection5Pricing = ({ page }: ElementProperties): React.ReactElement => 
                 </List>
               </CardContent>
               <CardActions className={classes.cardAction}>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  href={(value == 'one' ? t(text.link12) : t(text.link22)) + addToLink2}
-                >
+                <Button href={(value == 'one' ? t(text.link12) : t(text.link22)) + addToLink2}>
                   {t(text.b2)}
                 </Button>
               </CardActions>

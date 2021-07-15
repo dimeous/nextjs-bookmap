@@ -77,8 +77,6 @@ const MainSection3Desktop = () => {
       </Box>
       <Button
         className={classes.button}
-        variant="contained"
-        color="secondary"
         href="https://bookmap.com/members/signup/thAhOgYUg"
         id={'main_middle_start_for_free'}
       >

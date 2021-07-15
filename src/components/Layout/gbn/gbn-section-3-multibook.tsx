@@ -91,12 +91,7 @@ const GbnSection3Multibook = ({ page }: ElementProperties): React.ReactElement =
                   }),
                 }}
               />
-              <Button
-                variant="contained"
-                color="secondary"
-                href={t('CS3BtnLink') + addToLink}
-                sx={{ width: '300px' }}
-              >
+              <Button href={t('CS3BtnLink') + addToLink} sx={{ width: '300px' }}>
                 {t('CS3GetMultiBookwithDigitalPlus')}
               </Button>
             </Container>
