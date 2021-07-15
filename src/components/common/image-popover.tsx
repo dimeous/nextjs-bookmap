@@ -4,7 +4,8 @@ import Popover from '@material-ui/core/Popover'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import React from 'react'
-import {ThemeColors} from "../../theme/theme-styles";
+
+import { ThemeColors } from '../../theme/theme-styles'
 
 const useStyles = makeStyles(() => ({
   txt: {
@@ -44,14 +45,14 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function ImagePopover(property: {
+const ImagePopover = (property: {
   src: string
   alt: string
   width: number
   height: number
   label: string
   link: string
-}) {
+}) => {
   const classes = useStyles()
   const [anchorElement, setAnchorElement] = React.useState<HTMLButtonElement | null>(null)
 
@@ -105,3 +106,5 @@ export default function ImagePopover(property: {
     </Box>
   )
 }
+
+export default ImagePopover

@@ -1,4 +1,6 @@
 import { createTheme, Theme, ThemeProvider, useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import React from 'react'
 
 import TradHeader from '../src/components/Layout/Tradovate/header/trad-header'
 import TradSection1 from '../src/components/Layout/Tradovate/trad-section-1'
@@ -8,7 +10,9 @@ import TradSection4 from '../src/components/Layout/Tradovate/trad-section-4'
 import TradSection5 from '../src/components/Layout/Tradovate/trad-section-5'
 import TradSection6 from '../src/components/Layout/Tradovate/trad-section-6-faq'
 
-const index = () => {
+const Index = (): React.ReactElement => {
+  const theme = useTheme()
+  const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <ThemeProvider
       theme={(theme: Theme) =>
@@ -47,9 +51,9 @@ const index = () => {
         })
       }
     >
-      <TradHeader />
+      <TradHeader mobile={mobile} />
       <main>
-        <TradSection1 />
+        <TradSection1 mobile={mobile} />
         <TradSection2 />
         <TradSection3 />
         <TradSection4 />
@@ -60,4 +64,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

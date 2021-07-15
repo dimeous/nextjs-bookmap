@@ -70,6 +70,7 @@ theme = {
       styleOverrides: {
         root: {
           backgroundColor: ThemeColors.MainBlue,
+          color: ThemeColors.MainWhite,
           borderRadius: '5px',
           marginBottom: '10px',
           transition: '.5s ease',
@@ -77,6 +78,7 @@ theme = {
           fontSize: '14px',
           height: '43px',
           width: '230px',
+
           letterSpacing: '0.77px',
           '&:hover': {
             backgroundColor: '#0e67d0',

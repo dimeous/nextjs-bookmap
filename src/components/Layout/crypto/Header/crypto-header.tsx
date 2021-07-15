@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../../lib'
 import LanguageSelector from '../../Header/language-selector'
 import { useStyles } from './crypto-header-styles'
 

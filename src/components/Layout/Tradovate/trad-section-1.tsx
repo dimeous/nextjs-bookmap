@@ -1,136 +1,34 @@
-import { Button, Typography } from '@material-ui/core'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import { Theme } from '@material-ui/core/styles'
-import { makeStyles } from '@material-ui/styles'
-import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
-import { ThemeElements } from '../../../theme/theme-styles'
-import styles from './trad-section-1.module.css'
-
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    backgroundColor: '#1e262d',
-    paddingTop: '0px',
-    ...ThemeElements.rootBlockProps,
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '24px',
-      paddingTop: 0,
-    },
-    [theme.breakpoints.up('md')]: {
-      minHeight: '450px',
-    },
-  },
-  headPlatform: {
-    paddingTop: '70px',
-    fontSize: '38px',
-    color: 'white',
-    [theme.breakpoints.down('lg')]: {
-      paddingTop: '27px',
-      font: '32px/40px MullerLight,sans-sanserif',
-      letterSpacing: '1.41px',
-    },
-  },
-  secondTitle: {
-    fontSize: '18px',
-    display: 'block',
-    lineHeight: '26px',
-    paddingTop: '10px',
-    paddingBottom: '32px',
-    color: 'white',
-  },
-
-  outer: {
-    position: 'relative',
-    width: '100%',
-  },
-
-  inner: {
-    position: 'absolute',
-    zIndex: 1,
-    height: '100%',
-    width: '100%',
-    top: 0,
-  },
-  bImage: {
-    height: '100%',
-    display: 'grid',
-  },
-  backImage: {
-    height: '100%',
-  },
-}))
+import FirstSectionBookmap from '../../common/first-section'
 
 type CardProperties = {
-  page?: string
+  mobile?: boolean
 }
 
-const TradSection1 = ({ page }: CardProperties): React.ReactElement => {
-  const classes = useStyles()
-
-  const [width, setWidth] = useState(0)
-  const elementReference = React.useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const { current } = elementReference
-    if (current) setWidth(current.getBoundingClientRect().width)
-  }, [])
-
-  return (
-    <>
-      <div className={classes.root}>
-        <Container className={classes.root} maxWidth="lg">
-          <Grid container spacing={2}>
-            <Grid item md={6} xs={12}>
-              <Typography component="h1" variant="h1" gutterBottom className={classes.headPlatform}>
-                No Commissions or fees for trading FairX futures with Bookmap
-              </Typography>
-              <Typography variant="body1" className={classes.secondTitle}>
-                Want to get access to smaller futures contracts with no commissions or fees? Well
-                then, you’ve come to the right place.
-              </Typography>
-              {
-                <Button
-                  id={'main_top_start_for_free'}
-                  variant="contained"
-                  color="secondary"
-                  href={
-                    'https://bookmap.com/members/signup/C0ogLHLr?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing'
-                  }
-                >
-                  Get Bookmap for FairX
-                </Button>
-              }
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <div className={classes.outer} ref={elementReference}>
-                <Image
-                  src="/static/main/bg-cr.png"
-                  alt="Bookmap chart"
-                  layout="responsive"
-                  height={1300}
-                  width={1875}
-                  className={classes.backImage}
-                />
-                <div className={classes.inner}>
-                  <div className={styles.slideranimated}>
-                    <div className={classes.bImage} style={{ width: width }}>
-                      <Image
-                        src="/static/main/overlay-sec1.png"
-                        alt="Bookmap chart"
-                        height={1300}
-                        width={1875}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Grid>
-          </Grid>
-        </Container>
-      </div>
-    </>
-  )
+const TradSection1 = ({ mobile }: CardProperties): React.ReactElement => {
+  const option = {
+    texts: [
+      {
+        text: 'No Commissions or fees for trading FairX futures with Bookmap',
+        sx: { color: 'white', fontSize: '38px' },
+      },
+      {
+        text: undefined,
+        sx: undefined,
+      },
+      {
+        text: 'Want to get access to smaller futures contracts with no commissions or fees? Well then, you’ve come to the right place.',
+        sx: { color: 'white', fontSize: '18px', paddingBottom: '30px' },
+      },
+    ],
+    button: {
+      text: 'Get Bookmap for FairX',
+      id: 'main_top_start_for_free',
+      link: 'https://bookmap.com/members/signup/C0ogLHLr?utm_medium=ppc&utm_source=google&utm_campaign=Tradovate_Search&utm_content=New_landing',
+    },
+    rootSx: { paddingTop: '5px!important' },
+  }
+  return <FirstSectionBookmap mobile={mobile} option={option} type={0} />
 }
 export default TradSection1

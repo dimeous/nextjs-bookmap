@@ -7,7 +7,8 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import { useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
-import {ThemeElements} from "../../../theme/theme-styles";
+
+import { ThemeElements } from '../../../theme/theme-styles'
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     ...ThemeElements.rootBlockProps,
