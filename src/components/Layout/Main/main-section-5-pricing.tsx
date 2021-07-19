@@ -48,7 +48,7 @@ function a11yProperties(index: any) {
 
 const useStyles = styles
 
-export default function TabsWrappedLabelSection5() {
+const TabsSection5 = () => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
 
@@ -86,7 +86,13 @@ export default function TabsWrappedLabelSection5() {
           <ul className={classes.namingList}>
             <li className={classes.roww}>
               <h4>{t(text.KeyFeature)}</h4>
-              <p>{t(text.Heatmap)}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t(text.Heatmap, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
             <li>
               <p>{t(text.Record)}</p>
@@ -455,3 +461,4 @@ export default function TabsWrappedLabelSection5() {
     </Container>
   )
 }
+export default TabsSection5
