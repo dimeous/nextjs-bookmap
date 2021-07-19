@@ -8,6 +8,7 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
+import TwoColumnsTextPicture from '../../common/two-columns/text-picture'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -52,45 +53,48 @@ const useStyles = makeStyles((theme: Theme) => ({
 const CryptoSection3Multibook = (): React.ReactElement => {
   const classes = useStyles()
   const { t } = useTranslation('crypto')
+  const text = (
+    <Container className={classes.textBlock}>
+      <Typography
+        component="h2"
+        variant="h2"
+        color="inherit"
+        gutterBottom
+        className={classes.title}
+      >
+        {t('CS3NewAddonMultiBook')}
+      </Typography>
+      <Typography
+        component="h5"
+        variant="h5"
+        color="inherit"
+        gutterBottom
+        sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
+      >
+        {t('CS3BinanceCoinbaseHuobiMultibook')}
+      </Typography>
+      <Typography color="inherit" paragraph>
+        {t('CS3CreateSyntheticInstrumentsASeeMultipleCrypto')}
+      </Typography>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: t('CS3SeeMarketLiquidityAndTradedVolume', {
+            interpolation: { escapeValue: false },
+          }),
+        }}
+      />
+      <Button href={t('CS3BtnLink')} sx={{ width: '300px' }}>
+        {t('CS3GetMultiBookwithDigitalPlus')}
+      </Button>
+    </Container>
+  )
+  return
+
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>
         <Grid container>
-          <Grid item md={6} xs={12}>
-            <Container className={classes.textBlock}>
-              <Typography
-                component="h2"
-                variant="h2"
-                color="inherit"
-                gutterBottom
-                className={classes.title}
-              >
-                {t('CS3NewAddonMultiBook')}
-              </Typography>
-              <Typography
-                component="h5"
-                variant="h5"
-                color="inherit"
-                gutterBottom
-                sx={{ color: ThemeColors.DarkBlue, fontWeight: 800 }}
-              >
-                {t('CS3BinanceCoinbaseHuobiMultibook')}
-              </Typography>
-              <Typography color="inherit" paragraph>
-                {t('CS3CreateSyntheticInstrumentsASeeMultipleCrypto')}
-              </Typography>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: t('CS3SeeMarketLiquidityAndTradedVolume', {
-                    interpolation: { escapeValue: false },
-                  }),
-                }}
-              />
-              <Button href={t('CS3BtnLink')} sx={{ width: '300px' }}>
-                {t('CS3GetMultiBookwithDigitalPlus')}
-              </Button>
-            </Container>
-          </Grid>
+          <Grid item md={6} xs={12}></Grid>
           <Grid item md={6} xs={12}>
             <Box className={classes.picCard}>
               <Box>
@@ -100,7 +104,6 @@ const CryptoSection3Multibook = (): React.ReactElement => {
                   width={636}
                   height={350}
                   layout="intrinsic"
-                  className={classes.pic}
                 />
               </Box>
             </Box>
