@@ -1,27 +1,13 @@
-import { Box, Button, Typography } from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
-import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
+import { ThemeColors } from '../../../theme/theme-styles'
 import TwoColumnsTextPicture from '../../common/two-columns/text-picture'
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    ...ThemeElements.rootBlockProps,
-    backgroundColor: ThemeColors.BGGrey,
-    [theme.breakpoints.down('md')]: {
-      ...ThemeElements.rootMobileBlockProps,
-    },
-  },
-  container: {
-    paddingTop: '75px',
-    paddingBottom: '75px',
-  },
+const useStyles = makeStyles(() => ({
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
@@ -81,28 +67,15 @@ const CryptoSection3Multibook = (): React.ReactElement => {
     height: 350,
     alt: 'multibook',
   }
-  return <TwoColumnsTextPicture text={text} picture={picture} />
-  return (
-    <div className={classes.root}>
-      <Container fixed className={classes.container}>
-        <Grid container>
-          <Grid item md={6} xs={12}></Grid>
-          <Grid item md={6} xs={12}>
-            <Box className={classes.picCard}>
-              <Box>
-                <Image
-                  src={'/static/gbn/s3/pic.png'}
-                  alt={'multibook'}
-                  width={636}
-                  height={350}
-                  layout="intrinsic"
-                />
-              </Box>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
-  )
+  const options = {
+    rootSx: {
+      backgroundColor: ThemeColors.BGGrey,
+    },
+    containerSx: {
+      paddingTop: '75px',
+      paddingBottom: '75px',
+    },
+  }
+  return <TwoColumnsTextPicture text={text} picture={picture} options={options} />
 }
 export default CryptoSection3Multibook

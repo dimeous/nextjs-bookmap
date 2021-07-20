@@ -1,6 +1,7 @@
 import { Box } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
+import { SxProps } from '@material-ui/system/styleFunctionSx/styleFunctionSx'
 import Image from 'next/image'
 import React from 'react'
 
@@ -16,6 +17,10 @@ interface PictureProperties {
 interface ComponentProperties {
   text: React.ReactElement
   picture: PictureProperties
+  options?: {
+    rootSx?: SxProps
+    containerSx?: SxProps
+  }
   reverse?: boolean
 }
 const useStyles = makeStyles((theme: Theme) => ({
@@ -51,9 +56,9 @@ const Element2 = (picture: PictureProperties): React.ReactElement => {
 const TwoColumnsTextPicture = (props: ComponentProperties): React.ReactElement => {
   const element1 = props.text
   return props.reverse ? (
-    <TwoColumns element1={Element2(props.picture)} element2={element1} />
+    <TwoColumns element1={Element2(props.picture)} element2={element1} options={props.options} />
   ) : (
-    <TwoColumns element1={element1} element2={Element2(props.picture)} />
+    <TwoColumns element1={element1} element2={Element2(props.picture)} options={props.options} />
   )
 }
 
