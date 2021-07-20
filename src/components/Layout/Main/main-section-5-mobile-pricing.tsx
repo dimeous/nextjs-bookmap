@@ -525,7 +525,7 @@ const TabsWrappedLabelSec5 = () => {
         {t(text.endtext)}
       </p>
       <div className={classes.cta}>
-        <p>{t('MS5CantDecideWhichPlan')}</p>
+        <p>{t('MS5CantDecideWhichPlanIsRightForYou')}</p>
         <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
           {t('MS5ClickHere')}
         </a>
