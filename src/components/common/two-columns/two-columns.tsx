@@ -18,7 +18,6 @@ interface TwoColumnsProperties {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     ...ThemeElements.rootBlockProps,
-    backgroundColor: ThemeColors.BGGrey,
     [theme.breakpoints.down('md')]: {
       ...ThemeElements.rootMobileBlockProps,
     },
