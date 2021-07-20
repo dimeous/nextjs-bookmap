@@ -1,10 +1,9 @@
-import { AppBar, Box, Button, Container, Typography } from '@material-ui/core'
+import { AppBar, Box, Button, Container } from '@material-ui/core'
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage } from '../../../../lib'
-import LanguageSelector from '../../Header/language-selector'
 import { useStyles } from './crypto-header-styles'
 
 type ElementProperties = {
@@ -39,9 +38,7 @@ const CryptoHeader = ({ page, mobile }: ElementProperties): React.ReactElement =
                 </Button>
               </Box>
             )}
-            <Box>
-              <LanguageSelector />
-            </Box>
+            <Box>{/*} <LanguageSelector />*/}</Box>
           </Box>
         </Box>
       </Container>

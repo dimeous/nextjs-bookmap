@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
 
-import LanguageSelector from '../../Header/language-selector'
 import { useStyles } from './crypto-header-styles'
 
 type ElementProperties = {
@@ -36,9 +35,7 @@ const CryptoHeader = ({ mobile }: ElementProperties): React.ReactElement => {
                 </Button>
               </Box>
             )}
-            <Box>
-              <LanguageSelector />
-            </Box>
+            <Box>{/*<LanguageSelector />*/}</Box>
           </Box>
         </Box>
       </Container>
