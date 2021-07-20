@@ -19,6 +19,8 @@ interface TabPanelProperties {
   value: any
 }
 
+const font14MullerRegular = '14px/16px MullerRegular,sans-serif'
+
 function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
@@ -48,7 +50,7 @@ function a11yProperties(index: any) {
 
 const useStyles = styles
 
-export default function TabsWrappedLabelSection5() {
+const TabsSection5 = () => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
 
@@ -86,7 +88,13 @@ export default function TabsWrappedLabelSection5() {
           <ul className={classes.namingList}>
             <li className={classes.roww}>
               <h4>{t(text.KeyFeature)}</h4>
-              <p>{t(text.Heatmap)}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t(text.Heatmap, {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              />
             </li>
             <li>
               <p>{t(text.Record)}</p>
@@ -96,7 +104,7 @@ export default function TabsWrappedLabelSection5() {
             </li>
             <li className={classes.roww}>
               <h4>{t(text.oneclick)}</h4>
-              <p>Crypto</p>
+              <p>{t('MS5Crypto')}</p>
             </li>
             <li>
               <p>{t(text.Futures)}</p>
@@ -182,7 +190,7 @@ export default function TabsWrappedLabelSection5() {
               <div>
                 <ClearIcon className={classes.clsIcon} />
               </div>
-              <span className={classes.delayStyle}>Delayed</span>
+              <span className={classes.delayStyle}>{t(text.delayed)}</span>
             </li>
             <li>
               <p>1</p>
@@ -210,7 +218,7 @@ export default function TabsWrappedLabelSection5() {
             <li className={classes.rowvw}>
               <p
                 style={{
-                  font: '14px/16px MullerRegular,sans-serif',
+                  font: font14MullerRegular,
                 }}
                 dangerouslySetInnerHTML={{
                   __html: t(text.addonsSome, {
@@ -222,7 +230,7 @@ export default function TabsWrappedLabelSection5() {
           </ul>
           <div className={classes.thePrice}>
             <div className={classes.priceBlock}>
-              <span className={classes.priceNumber}>Free</span>
+              <span className={classes.priceNumber}>{t('MS5Free')}</span>
             </div>
             <Button href={text.link1}>{t('MS5SelectDigital')}</Button>
           </div>
@@ -298,7 +306,7 @@ export default function TabsWrappedLabelSection5() {
             <li className={classes.rowvw}>
               <p
                 style={{
-                  font: '14px/16px MullerRegular,sans-serif',
+                  font: font14MullerRegular,
                 }}
                 dangerouslySetInnerHTML={{
                   __html: t(text.addonsAll, {
@@ -319,12 +327,13 @@ export default function TabsWrappedLabelSection5() {
 
               {value != 'three' && (
                 <p className={classes.pricePeriod}>
-                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                  <span className={classes.periodSpace}>&nbsp;</span>
+                  {t('MS5PerMonth')}
                 </p>
               )}
             </div>
             {value == 'two' && (
-              <Typography className={classes.priceSave}>Save $120 a year</Typography>
+              <Typography className={classes.priceSave}>{t('MS5Save120AYear')}</Typography>
             )}
             <Button
               href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
@@ -404,7 +413,7 @@ export default function TabsWrappedLabelSection5() {
             <li className={classes.rowvw}>
               <p
                 style={{
-                  font: '14px/16px MullerRegular,sans-serif',
+                  font: font14MullerRegular,
                 }}
                 dangerouslySetInnerHTML={{
                   __html: t(text.addonsAll, {
@@ -424,13 +433,14 @@ export default function TabsWrappedLabelSection5() {
               </span>
               {value != 'three' && (
                 <p className={classes.pricePeriod}>
-                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                  <span className={classes.periodSpace}>&nbsp;</span>
+                  {t('MS5PerMonth')}
                 </p>
               )}
             </div>
 
             {value == 'two' && (
-              <Typography className={classes.priceSave}>Save $240 a year</Typography>
+              <Typography className={classes.priceSave}>{t('MS5Save240aYear')}</Typography>
             )}
             <Button
               href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
@@ -446,7 +456,7 @@ export default function TabsWrappedLabelSection5() {
           {t(text.endtext)}
         </p>
         <div className={classes.cta}>
-          <p>Can’t decide which plan is right for you?</p>
+          <p>{t('MS5CantDecideWhichPlan')}</p>
           <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
             {t('MS5ClickHere')}
           </a>
@@ -455,3 +465,4 @@ export default function TabsWrappedLabelSection5() {
     </Container>
   )
 }
+export default TabsSection5

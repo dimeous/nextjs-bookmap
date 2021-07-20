@@ -10,7 +10,8 @@ import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import React, { useEffect } from 'react'
-import {ThemeElements} from "../../../theme/theme-styles";
+
+import { ThemeElements } from '../../../theme/theme-styles'
 
 interface TabPanelProperties {
   children?: React.ReactNode
@@ -62,7 +63,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   textBlock: {
     display: 'flex',
     flexDirection: 'column',
-    /*justifyContent: 'flex-end',*/
     height: '100%',
     '& p': {
       marginBottom: '35px',
@@ -115,9 +115,9 @@ const MainSection2Features = () => {
         </Typography>
 
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-          <Tab value="one" label="HEATMAP" wrapped {...a11yProperties('one')} />
-          <Tab value="two" label="VOLUME" {...a11yProperties('two')} />
-          <Tab value="three" label="INDICATORS" {...a11yProperties('three')} />
+          <Tab value="one" label={t('MS2HEATMAP')} wrapped {...a11yProperties('one')} />
+          <Tab value="two" label={t('MS2VOLUME')} {...a11yProperties('two')} />
+          <Tab value="three" label={t('MS2INDICATORS')} {...a11yProperties('three')} />
         </Tabs>
 
         <TabPanel value={value} index="one">
