@@ -35,19 +35,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontFamily: 'MullerMedium, sans-serif',
     color: ThemeColors.DarkBlue,
   },
-  picCard: {
-    width: '100%',
-    marginTop: 'auto',
-    marginBottom: 'auto',
-    height: '340px',
-    [theme.breakpoints.down('md')]: {
-      marginTop: '32px',
-      height: 'auto',
-    },
-  },
-  pic: {
-    borderRadius: '10px',
-  },
 }))
 
 const CryptoSection3Multibook = (): React.ReactElement => {
@@ -88,8 +75,13 @@ const CryptoSection3Multibook = (): React.ReactElement => {
       </Button>
     </Container>
   )
-  return
-
+  const picture = {
+    src: '/static/gbn/s3/pic.png',
+    width: 636,
+    height: 350,
+    alt: 'multibook',
+  }
+  return <TwoColumnsTextPicture text={text} picture={picture} />
   return (
     <div className={classes.root}>
       <Container fixed className={classes.container}>

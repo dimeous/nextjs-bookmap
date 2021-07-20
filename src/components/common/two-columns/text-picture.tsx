@@ -6,9 +6,16 @@ import React from 'react'
 
 import TwoColumns from './two-columns'
 
+interface PictureProperties {
+  src: string
+  width: number
+  height: number
+  alt: string
+  styles?: StyleSheetList
+}
 interface ComponentProperties {
   text: React.ReactElement
-  picture: React.ReactElement
+  picture: PictureProperties
   reverse?: boolean
 }
 const useStyles = makeStyles((theme: Theme) => ({
@@ -22,17 +29,20 @@ const useStyles = makeStyles((theme: Theme) => ({
       height: 'auto',
     },
   },
-  pic: {
-    borderRadius: '10px',
-  },
 }))
 
-const Element2 = (picture: React.ReactElement): React.ReactElement => {
+const Element2 = (picture: PictureProperties): React.ReactElement => {
   const classes = useStyles()
   return (
     <Box className={classes.picCard}>
       <Box>
-        <picture />
+        <Image
+          src={picture.src}
+          alt={picture.alt}
+          width={picture.width}
+          height={picture.height}
+          layout="intrinsic"
+        />
       </Box>
     </Box>
   )
