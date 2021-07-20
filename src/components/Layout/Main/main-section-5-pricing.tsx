@@ -19,6 +19,8 @@ interface TabPanelProperties {
   value: any
 }
 
+const font14MullerRegular = '14px/16px MullerRegular,sans-serif'
+
 function TabPanel(props: TabPanelProperties) {
   const { children, value, index, ...other } = props
 
@@ -102,7 +104,7 @@ const TabsSection5 = () => {
             </li>
             <li className={classes.roww}>
               <h4>{t(text.oneclick)}</h4>
-              <p>Crypto</p>
+              <p>{t('MS5Crypto')}</p>
             </li>
             <li>
               <p>{t(text.Futures)}</p>
@@ -188,7 +190,7 @@ const TabsSection5 = () => {
               <div>
                 <ClearIcon className={classes.clsIcon} />
               </div>
-              <span className={classes.delayStyle}>Delayed</span>
+              <span className={classes.delayStyle}>{t(text.delayed)}</span>
             </li>
             <li>
               <p>1</p>
@@ -216,7 +218,7 @@ const TabsSection5 = () => {
             <li className={classes.rowvw}>
               <p
                 style={{
-                  font: '14px/16px MullerRegular,sans-serif',
+                  font: font14MullerRegular,
                 }}
                 dangerouslySetInnerHTML={{
                   __html: t(text.addonsSome, {
@@ -228,7 +230,7 @@ const TabsSection5 = () => {
           </ul>
           <div className={classes.thePrice}>
             <div className={classes.priceBlock}>
-              <span className={classes.priceNumber}>Free</span>
+              <span className={classes.priceNumber}>{t('MS5Free')}</span>
             </div>
             <Button href={text.link1}>{t('MS5SelectDigital')}</Button>
           </div>
@@ -304,7 +306,7 @@ const TabsSection5 = () => {
             <li className={classes.rowvw}>
               <p
                 style={{
-                  font: '14px/16px MullerRegular,sans-serif',
+                  font: font14MullerRegular,
                 }}
                 dangerouslySetInnerHTML={{
                   __html: t(text.addonsAll, {
@@ -325,12 +327,13 @@ const TabsSection5 = () => {
 
               {value != 'three' && (
                 <p className={classes.pricePeriod}>
-                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                  <span className={classes.periodSpace}>&nbsp;</span>
+                  {t('MS5PerMonth')}
                 </p>
               )}
             </div>
             {value == 'two' && (
-              <Typography className={classes.priceSave}>Save $120 a year</Typography>
+              <Typography className={classes.priceSave}>{t('MS5Save120AYear')}</Typography>
             )}
             <Button
               href={value == 'one' ? text.link12 : value == 'two' ? text.link22 : text.link32}
@@ -410,7 +413,7 @@ const TabsSection5 = () => {
             <li className={classes.rowvw}>
               <p
                 style={{
-                  font: '14px/16px MullerRegular,sans-serif',
+                  font: font14MullerRegular,
                 }}
                 dangerouslySetInnerHTML={{
                   __html: t(text.addonsAll, {
@@ -430,13 +433,14 @@ const TabsSection5 = () => {
               </span>
               {value != 'three' && (
                 <p className={classes.pricePeriod}>
-                  <span className={classes.periodSpace}>&nbsp;</span>per month
+                  <span className={classes.periodSpace}>&nbsp;</span>
+                  {t('MS5PerMonth')}
                 </p>
               )}
             </div>
 
             {value == 'two' && (
-              <Typography className={classes.priceSave}>Save $240 a year</Typography>
+              <Typography className={classes.priceSave}>{t('MS5Save240aYear')}</Typography>
             )}
             <Button
               href={value == 'one' ? text.link13 : value == 'two' ? text.link23 : text.link33}
@@ -452,7 +456,7 @@ const TabsSection5 = () => {
           {t(text.endtext)}
         </p>
         <div className={classes.cta}>
-          <p>Can’t decide which plan is right for you?</p>
+          <p>{t('MS5CantDecideWhichPlan')}</p>
           <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
             {t('MS5ClickHere')}
           </a>

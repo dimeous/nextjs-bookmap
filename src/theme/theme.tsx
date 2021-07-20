@@ -77,7 +77,7 @@ theme = {
           fontFamily: 'MullerRegular',
           fontSize: '14px',
           height: '43px',
-          width: '230px',
+          minWidth: '230px',
 
           letterSpacing: '0.77px',
           '&:hover': {

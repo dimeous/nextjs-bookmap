@@ -81,9 +81,9 @@ export default function TabsWrappedLabelSection4() {
           {t('MS4BookmapIsCompatibleWithManyDataProvidersExchanges')}
         </Typography>
         <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
-          <Tab value="one" label="FUTURES" wrapped {...a11yProperties('one')} />
-          <Tab value="two" label="STOCKS" {...a11yProperties('two')} />
-          <Tab value="three" label="CRYPTO" {...a11yProperties('three')} />
+          <Tab value="one" label={t('MS4FUTURES')} wrapped {...a11yProperties('one')} />
+          <Tab value="two" label={t('MS4STOCKS')} {...a11yProperties('two')} />
+          <Tab value="three" label={t('MS4CRYPTO')} {...a11yProperties('three')} />
         </Tabs>
         {/* 1-st Panel*/}
         <TabPanel value={value} index="one">

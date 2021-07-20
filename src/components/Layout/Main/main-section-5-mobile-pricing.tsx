@@ -184,7 +184,7 @@ const TabsWrappedLabelSec5 = () => {
               <Typography component={'h4'} sx={{ pt: 2 }}>
                 {t(text.oneclick)}
               </Typography>
-              <Typography component={'p'}>Crypto</Typography>
+              <Typography component={'p'}>{t('MS5Crypto')}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -268,7 +268,7 @@ const TabsWrappedLabelSec5 = () => {
           <Grid container item xs={4} justifyContent={'center'}>
             <div style={{ textAlign: 'center' }}>
               <ClearIcon className={classes.clsIcon} />
-              <span className={classes.delayStyle}>Delayed</span>
+              <span className={classes.delayStyle}>{t(text.delayed)}</span>
             </div>
           </Grid>
           <Grid container item xs={4} justifyContent={'center'}>
@@ -479,8 +479,10 @@ const TabsWrappedLabelSec5 = () => {
                   {value == 'two' && 39}
                   {value == 'three' && 990}
                 </span>
-                {value != 'three' && <span className={classes.priceCurrency}>/mo</span>}
-                {value == 'two' && <span className={classes.priceSave}>Save $120/y</span>}
+                {value != 'three' && (
+                  <span className={classes.priceCurrency}>{t('MS5PerMonthMob')}</span>
+                )}
+                {value == 'two' && <span className={classes.priceSave}>{t('MS5Save120YMob')}</span>}
               </div>
 
               <Button
@@ -500,8 +502,12 @@ const TabsWrappedLabelSec5 = () => {
                   {value == 'two' && 79}
                   {value == 'three' && 1990}
                 </span>
-                {value != 'three' && <span className={classes.priceCurrency}>/mo</span>}
-                {value == 'two' && <span className={classes.priceSave}>Save $240/y</span>}
+                {value != 'three' && (
+                  <span className={classes.priceCurrency}>{t('MS5PerMonthMob')}</span>
+                )}
+                {value == 'two' && (
+                  <span className={classes.priceSave}>{t('MS5Save240aYMob')}</span>
+                )}
               </div>
 
               <Button
@@ -519,7 +525,7 @@ const TabsWrappedLabelSec5 = () => {
         {t(text.endtext)}
       </p>
       <div className={classes.cta}>
-        <p>Can’t decide which plan is right for you?</p>
+        <p>{t('MS5CantDecideWhichPlan')}</p>
         <a href="https://bookmap.com/packages-comparison" target="_blank" rel={'noreferrer'}>
           {t('MS5ClickHere')}
         </a>
