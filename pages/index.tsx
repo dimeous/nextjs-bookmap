@@ -1,8 +1,10 @@
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { DefaultSeo } from 'next-seo'
 import React from 'react'
 
+import SEO from '../next-seo.config'
 import Footer from '../src/components/Layout/Footer/main-footer'
 import MainHeader from '../src/components/Layout/Header/main-header'
 import MainSection0 from '../src/components/Layout/Main/main-section-0'
@@ -23,11 +25,12 @@ import { CarouselType } from '../src/lib/types'
 interface CardType {
   mainCarousel: CarouselType[]
 }
-const Index = (mainCarousel: CardType) => {
+const Index = (mainCarousel: CardType): React.ReactElement => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <>
+      <DefaultSeo {...SEO} />
       <MainHeader />
       <main>
         <MainSection0 mobile={mobile} />
