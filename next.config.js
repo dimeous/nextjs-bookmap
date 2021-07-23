@@ -4,7 +4,7 @@ const path = require('path')
 const contentUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL + '/contents?_locale=all&_limit=10000'
 const languages = ['en', 'de', 'es', 'it', 'fr', 'ru', 'pt']
 const pages = ['main', 'gbn', 'crypto', 'tradovate']
-
+/*
 fetch(contentUrl)
   .then((response) => {
     return response.json()
@@ -33,7 +33,7 @@ fetch(contentUrl)
       }
     }
   })
-
+*/
 const { i18n } = require('./next-i18next.config')
 const withImages = require('next-images')
 const withFonts = require('next-fonts')
@@ -45,7 +45,6 @@ module.exports = withImages(
         ...config.resolve.alias,
         // your aliases
       }
-      
 
       // config.node = {
       //   fs: "empty",
