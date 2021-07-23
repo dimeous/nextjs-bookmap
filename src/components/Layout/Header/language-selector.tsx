@@ -1,17 +1,18 @@
-import { i18n, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 import ReactFlagsSelect from 'react-flags-select'
 
-const onSelectFlag = (countryCode: string) => {
-  countryCode = countryCode === 'US' ? 'en' : countryCode
-  i18n?.changeLanguage(countryCode.toLowerCase())
-}
 const convertToUpper = (countryCode: string) => {
   countryCode = countryCode === 'en' ? 'US' : countryCode
   return countryCode.toUpperCase()
 }
 const LanguageSelector = (): React.ReactElement => {
   const { i18n } = useTranslation('main')
+  const onSelectFlag = (countryCode: string) => {
+    countryCode = countryCode === 'US' ? 'en' : countryCode
+    i18n.changeLanguage(countryCode.toLowerCase())
+  }
+
   return (
     <ReactFlagsSelect
       countries={['US', 'DE', 'ES', 'FR', 'IT', 'RU']}
