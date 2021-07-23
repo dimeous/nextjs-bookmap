@@ -7,10 +7,10 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { getUTMUrlDependsOnPage, isGetBookMapNow } from '../../../lib'
-import { community, marketplace, products, resources, solutions } from '../Header/menuLinks'
+import { ThemeColors } from '../../../theme/theme-styles'
+import { community, marketplace, products, resources, solutions } from '../Header/menu-links'
 import MenuListComposition from './toggle-menu'
 import TrustBoxFooter from './trust-box-footer'
-import {ThemeColors} from "../../../theme/theme-styles";
 
 const useStyles = makeStyles({
   mainFooter: {

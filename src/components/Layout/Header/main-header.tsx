@@ -16,7 +16,7 @@ import React, { useEffect, useState } from 'react'
 
 import LanguageSelector from './language-selector'
 import { useStyles } from './main-header-styles'
-import { community, headersData, marketplace, products, resources, solutions } from './menuLinks'
+import { community, headersData, marketplace, products, resources, solutions } from './menu-links'
 import MenuListComposition from './toggle-menu'
 
 export default function Header() {
