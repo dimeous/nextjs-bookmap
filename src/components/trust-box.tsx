@@ -1,7 +1,7 @@
 import React from 'react'
-const TrustBox = () => {
+const TrustBox = (): React.ReactElement => {
   // Create a reference to the <div> element which will represent the TrustBox
-  const ref = React.useRef(null)
+  const reference = React.useRef(null)
   React.useEffect(() => {
     // If window.Trustpilot is available it means that we need to load the TrustBox from our ref.
     // If it's not, it means the script you pasted into <head /> isn't loaded  just yet.
@@ -11,24 +11,27 @@ const TrustBox = () => {
     if (window.Trustpilot) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      window.Trustpilot.loadFromElement(ref.current, true)
+      window.Trustpilot.loadFromElement(reference.current, true)
     }
   }, [])
   return (
     <div
-      ref={ref} // We need a reference to this element to load the TrustBox in the effect.
-      className="trustpilot-widget" // Renamed this to className.
+      ref={reference}
+      className="trustpilot-widget"
       data-locale="en-US"
-      data-template-id="539ad60defb9600b94d7df2c"
+      data-template-id="53aa8912dec7e10d38f59f36"
       data-businessunit-id="5c76a89be6713b000151de49"
-      data-style-height="500px"
+      data-style-height="142px"
       data-style-width="100%"
       data-theme="light"
-      data-tags="SelectedReview"
+      data-stars="4,5"
       data-review-languages="en"
     >
-      {/* eslint-disable-next-line react/jsx-no-target-blank */}
-      <a href="https://www.trustpilot.com/review/bookmap.com" target="_blank" rel="noopener">
+      <a
+        href="https://www.trustpilot.com/review/bookmap.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Trustpilot
       </a>
     </div>

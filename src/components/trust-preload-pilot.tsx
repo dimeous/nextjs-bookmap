@@ -1,5 +1,6 @@
 import { Component } from 'react'
-import TrustBox from './trustBox'
+
+import TrustBox from './trust-box'
 // Clock has no properties, but the current state is of type ClockState
 // The generic parameters in the Component typing allow to pass props
 // and state. Since we don't have props, we pass an empty object.
@@ -20,18 +21,17 @@ export class TrustPreloadPilot extends Component<RederState> {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     aScript.async = 'true'
-    document.head.appendChild(aScript)
-    aScript.onload = function () {
-      const trustbox = document.getElementById('trustbox')
+    document.head.append(aScript)
+    aScript.addEventListener('load', function () {
+      const trustbox = document.querySelector('#trustbox')
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       window.Trustpilot.loadFromElement(trustbox)
-    }
+    })
   }
 
   render() {
-    if (this.props.render) return <TrustBox />
-    else return <></>
+    return this.props.render ? <TrustBox /> : <></>
   }
 }
 export default TrustPreloadPilot

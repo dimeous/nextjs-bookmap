@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const MainSection3Mobile = () => {
+const MainSection3Mobile = (): React.ReactElement => {
   const { t } = useTranslation('main')
 
   const classes = useStyles()
@@ -91,6 +91,7 @@ const MainSection3Mobile = () => {
         </Typography>
       </Box>
       <Grid
+        item
         xs={12}
         style={{
           textAlign: 'center',

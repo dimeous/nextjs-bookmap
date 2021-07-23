@@ -6,11 +6,11 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import StarIcon from '@material-ui/icons/Star'
 import { makeStyles } from '@material-ui/styles'
-import React, { Fragment } from 'react'
+import React from 'react'
 import Carousel from 'react-multi-carousel'
 
 import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
-import TrustPreloadPilot from '../../trustPreloadPilot'
+import TrustPreloadPilot from '../../trust-preload-pilot'
 import TrustBoxFooter from '../Footer/trust-box-footer'
 
 const responsive = {

@@ -6,7 +6,7 @@ import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 
 import { ThemeElements } from '../../../theme/theme-styles'
-import TrustPreloadPilot from '../../trustPreloadPilot'
+import TrustPreloadPilot from '../../trust-preload-pilot'
 
 const useStyles = makeStyles(() => ({
   root: {

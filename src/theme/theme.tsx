@@ -97,7 +97,6 @@ theme = {
         },
       },
     },
-
     MuiTab: {
       styleOverrides: {
         wrapper: {
