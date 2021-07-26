@@ -1,26 +1,33 @@
-export const headersData = [
-  {
-    label: 'Features',
-    href: '/#features',
-  },
-  {
-    label: 'Connectivity',
-    href: '/#connectivity',
-  },
-  {
-    label: 'Pricing',
-    href: '/#pricing',
-  },
-  {
-    label: 'Education',
-    href: '/#education',
-  },
-  {
-    label: 'Bookmap for crypto',
-    href: '/crypto/',
-    blank: true,
-  },
-]
+interface headersDataType {
+  label: string
+  href: string
+  blank?: boolean
+}
+export const headersData = (lg: boolean): headersDataType[] => {
+  return [
+    {
+      label: 'Features',
+      href: '/#features',
+    },
+    {
+      label: 'Connectivity',
+      href: '/#connectivity',
+    },
+    {
+      label: 'Pricing',
+      href: '/#pricing',
+    },
+    {
+      label: 'Education',
+      href: '/#education',
+    },
+    {
+      label: lg ? 'Crypto' : 'Bookmap for crypto',
+      href: '/crypto/',
+      blank: true,
+    },
+  ]
+}
 
 export const resources = [
   {
@@ -113,8 +120,7 @@ export const community = [
 export const solutions = [
   {
     label: 'Bookmap Web',
-    href:
-      'https://web.bookmap.com/?time=2021-01-13--17-39-04&amp;duration=1d&amp;prices=32092-35899.5',
+    href: 'https://web.bookmap.com/?time=2021-01-13--17-39-04&amp;duration=1d&amp;prices=32092-35899.5',
     blank: false,
   },
   {

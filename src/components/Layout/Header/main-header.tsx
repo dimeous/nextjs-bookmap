@@ -10,6 +10,8 @@ import {
   Toolbar,
   Typography,
 } from '@material-ui/core'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -19,7 +21,7 @@ import { useStyles } from './main-header-styles'
 import { community, headersData, marketplace, products, resources, solutions } from './menu-links'
 import MenuListComposition from './toggle-menu'
 
-export default function Header() {
+const Header = (): React.ReactElement => {
   const classes = useStyles()
 
   const [state, setState] = useState({
@@ -120,14 +122,16 @@ export default function Header() {
       </div>
     )
   }
-  const displayDesktop = () => {
+  const DisplayDesktop = () => {
+    const theme = useTheme()
+    const lg = useMediaQuery(theme.breakpoints.down('lg'))
     return (
       <Container>
         <Box className={classes.toolbar}>
           {bookmapLogo}
           <Box>
             <ul className={classes.headerNav}>
-              {headersData.map((v, index) => {
+              {headersData(lg).map((v, index) => {
                 return (
                   <li key={v.label}>
                     <a href={v.href} id={'hm' + index}>
@@ -189,11 +193,11 @@ export default function Header() {
                 <LanguageSelector />
               </Box>
             </MenuItem>
-            {headersData.map(({ label, href }) => {
+            {headersData(false).map((value) => {
               return (
-                <Link href={href} key={label}>
+                <Link href={value.href} key={value.label}>
                   <MenuItem style={{ textTransform: 'uppercase' }} onClick={handleDrawerClose}>
-                    {label}
+                    {value.label}
                   </MenuItem>
                 </Link>
               )
@@ -232,8 +236,10 @@ export default function Header() {
         position={mobileView ? 'static' : 'fixed'}
         color={'default'}
       >
-        {mobileView ? displayMobile() : displayDesktop()}
+        {mobileView ? displayMobile() : DisplayDesktop()}
       </AppBar>
     </header>
   )
 }
+
+export default Header
