@@ -10,8 +10,6 @@ import {
   Toolbar,
   Typography,
 } from '@material-ui/core'
-import { useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -26,10 +24,11 @@ const Header = (): React.ReactElement => {
 
   const [state, setState] = useState({
     mobileView: false,
+    lgView: false,
     drawerOpen: false,
   })
 
-  const { mobileView, drawerOpen } = state
+  const { mobileView, lgView, drawerOpen } = state
   const [checked, setChecked] = React.useState(false)
   const handleChange = () => {
     setChecked((previous) => !previous)
@@ -40,9 +39,12 @@ const Header = (): React.ReactElement => {
 
   useEffect(() => {
     const setResponsiveness = () => {
-      return window.innerWidth < 990
-        ? setState((previousState) => ({ ...previousState, mobileView: true }))
-        : setState((previousState) => ({ ...previousState, mobileView: false }))
+      const width = window.innerWidth
+      if (width < 990)
+        return setState((previousState) => ({ ...previousState, mobileView: true, lgView: false }))
+      return width < 1400
+        ? setState((previousState) => ({ ...previousState, mobileView: false, lgView: true }))
+        : setState((previousState) => ({ ...previousState, mobileView: false, lgView: false }))
     }
 
     setResponsiveness()
@@ -122,16 +124,15 @@ const Header = (): React.ReactElement => {
       </div>
     )
   }
-  const DisplayDesktop = () => {
-    const theme = useTheme()
-    const lg = useMediaQuery(theme.breakpoints.down('lg'))
+
+  const displayDesktop = (lgView: boolean) => {
     return (
       <Container>
         <Box className={classes.toolbar}>
           {bookmapLogo}
           <Box>
             <ul className={classes.headerNav}>
-              {headersData(lg).map((v, index) => {
+              {headersData(lgView).map((v, index) => {
                 return (
                   <li key={v.label}>
                     <a href={v.href} id={'hm' + index}>
@@ -236,7 +237,7 @@ const Header = (): React.ReactElement => {
         position={mobileView ? 'static' : 'fixed'}
         color={'default'}
       >
-        {mobileView ? displayMobile() : DisplayDesktop()}
+        {mobileView ? displayMobile() : displayDesktop(lgView)}
       </AppBar>
     </header>
   )
