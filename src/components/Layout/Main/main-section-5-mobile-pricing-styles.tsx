@@ -150,8 +150,9 @@ export const styles = makeStyles(() => ({
     },
   },
   button: {
-    width: '90%',
-    ml: 1,
+    minWidth: 'auto',
+    marginBottom: '0px',
+    marginTop: '16px',
   },
   gridPadding: {
     padding: '4px 1px 4px 1px',

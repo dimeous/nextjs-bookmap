@@ -49,7 +49,7 @@ function a11yProperties(index: any) {
 
 const useStyles = styles
 
-const TabsWrappedLabelSec5 = () => {
+const TabsWrappedLabelSec5 = (): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState('two')
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
@@ -466,7 +466,7 @@ const TabsWrappedLabelSec5 = () => {
                 <span className={classes.priceFree}>FREE</span>
               </div>
               <Button href={text.link1} className={classes.button}>
-                Select
+                {t('MS5Select')}
               </Button>
             </div>
           </Grid>
