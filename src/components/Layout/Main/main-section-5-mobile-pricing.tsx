@@ -181,9 +181,6 @@ const TabsWrappedLabelSec5 = (): React.ReactElement => {
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={1}>
             <Box sx={{ p: 2 }}>
-              <Typography component={'h4'} sx={{ pt: 2 }}>
-                {t(text.oneclick)}
-              </Typography>
               <Typography component={'p'}>{t('MS5Crypto')}</Typography>
             </Box>
           </Grid>

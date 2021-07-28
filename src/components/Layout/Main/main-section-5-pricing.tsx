@@ -103,7 +103,6 @@ const TabsSection5 = () => {
               <p>{t(text.LLT)}</p>
             </li>
             <li className={classes.roww}>
-              <h4>{t(text.oneclick)}</h4>
               <p>{t('MS5Crypto')}</p>
             </li>
             <li>

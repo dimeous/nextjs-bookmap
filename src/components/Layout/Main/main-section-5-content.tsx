@@ -15,7 +15,6 @@ export const text = {
   Heatmap: 'MS5HeatmapVolumeDotsCVD',
   Record: 'MS5RecordReplayVWAPPOC',
   LLT: 'MS5LLTStrengthLevelImbalance',
-  oneclick: 'MS5ONECLICKTRADING',
   Futures: 'MS5FuturesStocks',
   Futures2: 'MS5FuturesAndStocks',
   Market: 'MS5MARKETSVISUALIZATION',
