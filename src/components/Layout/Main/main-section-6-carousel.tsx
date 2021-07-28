@@ -8,7 +8,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel'
 
 import { CarouselType } from '../../../lib/types'
-import {ThemeElements} from "../../../theme/theme-styles";
+import { ThemeElements } from '../../../theme/theme-styles'
 
 const responsive = {
   desktop: {
@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   descr: {
     paddingTop: '12px',
     fontSize: '1.14rem',
+    minHeight: '90px',
   },
   carouselContainer: {
     paddingLeft: '60px',
@@ -86,13 +87,10 @@ interface CardType {
     mainCarousel: CarouselType[]
   }
 }
-const MainSection6Carousel = ({ data }: CardType) => {
+const MainSection6Carousel = ({ data }: CardType): React.ReactElement => {
   const { mainCarousel } = data
   const classes = useStyles()
-  const styles = {
-    ReactMultipleCarousel__arrow: {},
-    //define other properties here, use camel case(remember we are using Javascript)
-  }
+
   return (
     <Container className={classes.root}>
       <Carousel
@@ -125,7 +123,7 @@ const MainSection6Carousel = ({ data }: CardType) => {
                 <Typography className={classes.title} gutterBottom>
                   {item.title}
                 </Typography>
-                <Typography variant="body2" component="p" className={classes.descr}>
+                <Typography variant="body2" component="div" className={classes.descr}>
                   {item.text}
                 </Typography>
               </CardContent>
