@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { ThemeColors } from '../../../theme/theme-styles'
 import FirstSectionBookmap from '../../common/first-section'
 type CardProperties = {
   mobile: boolean
@@ -10,7 +11,7 @@ const WebS0 = ({ mobile }: CardProperties): React.ReactElement => {
     texts: [
       {
         text: 'Bookmap WEB for your website',
-        sx: { fontSize: '32px' },
+        sx: { fontSize: '48px', color: ThemeColors.MainWhite },
       },
       {
         text: 'Bookmap Web is a great way to share real time order flow directly from your site',
@@ -23,7 +24,7 @@ const WebS0 = ({ mobile }: CardProperties): React.ReactElement => {
       id: 'web_top_get_your widget',
       link: '#get-your-widget',
     },
-    image: { src: '/static/web/s0/web-s0.png', width: 800, height: 510, alt: 'Bookmap WEB' },
+    image: { src: '/static/web/s0/web-s0.png', width: 400, height: 260, alt: 'Bookmap WEB' },
   }
   return <FirstSectionBookmap mobile={mobile} option={option} type={1} />
 }
