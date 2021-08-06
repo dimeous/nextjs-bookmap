@@ -6,6 +6,7 @@ import React from 'react'
 import SEO from '../next-seo.config'
 import BookmapBlankHeader from '../src/components/common/header/bookmap-blank-header'
 import Footer from '../src/components/Layout/Footer/main-footer'
+import WebS0 from '../src/components/Layout/web/web-s0'
 
 const Index = (): React.ReactElement => {
   const theme = useTheme()
@@ -14,7 +15,9 @@ const Index = (): React.ReactElement => {
     <>
       <DefaultSeo {...SEO} />
       <BookmapBlankHeader mobile={mobile} />
-      <main></main>
+      <main>
+        <WebS0 mobile={mobile} />
+      </main>
       <Footer />
     </>
   )
