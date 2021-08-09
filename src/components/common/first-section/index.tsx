@@ -84,6 +84,7 @@ interface ComponentProperties {
       alt: string
     }
     rootSx?: SxProps
+    imageBoxSx?: SxProps
   }
   type: number
 }
@@ -163,7 +164,7 @@ const FirstSectionBookmap = ({ mobile, option, type }: ComponentProperties): Rea
                   </div>
                 </div>
               ) : (
-                <div style={{ paddingTop: '16px' }}>
+                <Box sx={option?.imageBoxSx ? { ...option?.imageBoxSx } : { paddingTop: '16px' }}>
                   {option?.image?.src && (
                     <Image
                       src={option?.image?.src}
@@ -173,7 +174,7 @@ const FirstSectionBookmap = ({ mobile, option, type }: ComponentProperties): Rea
                       width={option?.image?.width}
                     />
                   )}
-                </div>
+                </Box>
               )}
             </Grid>
           </Grid>

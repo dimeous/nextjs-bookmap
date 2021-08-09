@@ -5,6 +5,7 @@ import { SxProps } from '@material-ui/system/styleFunctionSx/styleFunctionSx'
 import Image from 'next/image'
 import React from 'react'
 
+import ImageInBox from '../image-in-box'
 import TwoColumns from './two-columns'
 
 interface PictureProperties {
@@ -13,6 +14,7 @@ interface PictureProperties {
   height: number
   alt: string
   styles?: StyleSheetList
+  inbox?: boolean
 }
 interface ComponentProperties {
   text: React.ReactElement
@@ -38,16 +40,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const Element2 = (picture: PictureProperties): React.ReactElement => {
   const classes = useStyles()
-  return (
+  return picture.inbox ? (
+    <ImageInBox src={picture.src} width={picture.width} height={picture.height} alt={picture.alt} />
+  ) : (
     <Box className={classes.picCard}>
       <Box>
-        <Image
-          src={picture.src}
-          alt={picture.alt}
-          width={picture.width}
-          height={picture.height}
-          layout="intrinsic"
-        />
+        <Image src={picture.src} alt={picture.alt} width={picture.width} height={picture.height} />
       </Box>
     </Box>
   )

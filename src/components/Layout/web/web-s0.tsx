@@ -11,11 +11,21 @@ const WebS0 = ({ mobile }: CardProperties): React.ReactElement => {
     texts: [
       {
         text: 'Bookmap WEB for your website',
-        sx: { fontSize: '48px', color: ThemeColors.MainWhite },
+        sx: {
+          fontSize: '48px',
+          color: ThemeColors.MainWhite,
+          fontWeight: 500,
+          maxWidth: mobile ? 'auto' : '402px',
+        },
       },
       {
         text: 'Bookmap Web is a great way to share real time order flow directly from your site',
-        sx: { fontSize: '20px', paddingBottom: '32px' },
+        sx: {
+          fontSize: '20px',
+          paddingBottom: mobile ? '32px' : '120px',
+          color: '#fff!important',
+          maxWidth: mobile ? 'auto' : '402px',
+        },
       },
     ],
 
@@ -24,7 +34,8 @@ const WebS0 = ({ mobile }: CardProperties): React.ReactElement => {
       id: 'web_top_get_your widget',
       link: '#get-your-widget',
     },
-    image: { src: '/static/web/s0/web-s0.png', width: 400, height: 260, alt: 'Bookmap WEB' },
+    image: { src: '/static/web/s0/web-s0.png', width: 500, height: 318, alt: 'Bookmap WEB' },
+    imageBoxSx: mobile ? { paddingBottom: '32px' } : { paddingTop: '60px', paddingBottom: '100px' },
   }
   return <FirstSectionBookmap mobile={mobile} option={option} type={1} />
 }

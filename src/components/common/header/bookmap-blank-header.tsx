@@ -12,8 +12,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingLeft: '10px',
     [theme.breakpoints.up('md')]: {
-      paddingLeft: '32px',
+      paddingLeft: '10px',
     },
   },
 }))
@@ -26,7 +27,7 @@ const BookmapBlankHeader = ({ mobile }: ElementProperties): React.ReactElement =
   const displayDesktop = () => {
     return (
       <Container fixed sx={{ p: [2, 0, 0, 2] }}>
-        <Box className={classes.toolbar}>
+        <Box className={classes.toolbar} sx={{ paddingTop: '10px' }}>
           <Link href="/">
             <Box>
               <Link href={'https://bookmap.com/'}>

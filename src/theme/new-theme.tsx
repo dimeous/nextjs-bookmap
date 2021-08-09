@@ -1,4 +1,3 @@
-import { red } from '@material-ui/core/colors'
 import { createTheme } from '@material-ui/core/styles'
 
 import { ThemeColors } from './theme-styles'
@@ -16,13 +15,11 @@ let theme = createTheme({
       light: ThemeColors.MainBlue,
       dark: '#1e262d',
     },
-    error: {
-      main: red.A400,
-    },
     background: {
       default: ThemeColors.MainWhite,
     },
   },
+
   typography: {
     h1: {
       fontSize: '48px',
@@ -30,14 +27,19 @@ let theme = createTheme({
     },
     h2: {
       fontSize: 32,
-      lineHeight: 38 + 'px',
-      marginBottom: 22 + 'px',
+      lineHeight: 48 + 'px',
+      marginBottom: 16 + 'px',
+      fontWeight: 700,
     },
     h3: {
       font: '18px/30px MullerMedium,sans-serif',
       marginBottom: 41 + 'px',
     },
-    fontSize: 16,
+    allVariants: {
+      color: ThemeColors.DarkBlue,
+      lineHeight: '32px',
+    },
+    fontSize: 18,
     fontWeightLight: 400,
     fontFamily: [
       'MullerRegular',
@@ -57,15 +59,6 @@ let theme = createTheme({
 theme = {
   ...theme,
   components: {
-    MuiTypography: {
-      styleOverrides: {
-        h2: {
-          [theme.breakpoints.down('md')]: {
-            lineHeight: '48px',
-          },
-        },
-      },
-    },
     MuiButton: {
       styleOverrides: {
         root: {
