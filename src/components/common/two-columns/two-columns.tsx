@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles'
 import { SxProps } from '@material-ui/system/styleFunctionSx/styleFunctionSx'
 import React from 'react'
 
-import {  ThemeElements } from '../../../theme/theme-styles'
+import { ThemeElements } from '../../../theme/theme-styles'
 
 interface TwoColumnsProperties {
   element1: React.ReactElement
