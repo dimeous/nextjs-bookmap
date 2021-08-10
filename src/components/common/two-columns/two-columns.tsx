@@ -1,10 +1,10 @@
-import { Box, Container, Grid } from '@material-ui/core'
+import { Box, Container, Grid, Typography } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import { SxProps } from '@material-ui/system/styleFunctionSx/styleFunctionSx'
 import React from 'react'
 
-import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
+import {  ThemeElements } from '../../../theme/theme-styles'
 
 interface TwoColumnsProperties {
   element1: React.ReactElement
@@ -12,6 +12,7 @@ interface TwoColumnsProperties {
   options?: {
     rootSx?: SxProps
     containerSx?: SxProps
+    headText?: string
   }
 }
 
@@ -28,6 +29,11 @@ const TwoColumns = (props: TwoColumnsProperties): React.ReactElement => {
   return (
     <Box sx={props?.options?.rootSx} className={classes.root}>
       <Container maxWidth="lg" sx={props?.options?.containerSx}>
+        {props?.options?.headText && (
+          <Typography variant={'h2'} component={'h2'} align={'center'} sx={{ pb: 4 }}>
+            {props?.options?.headText}
+          </Typography>
+        )}
         <Grid container>
           <Grid item md={6} xs={12}>
             {props.element1}

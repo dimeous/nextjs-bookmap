@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
   },
   image: {
     borderRadius: '5px',
-    margin: '14px 14px 14px 14px',
+    margin: '14px 14px 9px 14px',
   },
 }))
 interface ImageInBoxProperties {

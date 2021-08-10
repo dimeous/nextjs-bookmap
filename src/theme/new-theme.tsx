@@ -35,6 +35,9 @@ let theme = createTheme({
       font: '18px/30px MullerMedium,sans-serif',
       marginBottom: 41 + 'px',
     },
+    body1: {
+      fontSize: 18,
+    },
     allVariants: {
       color: ThemeColors.DarkBlue,
       lineHeight: '32px',
