@@ -1,3 +1,4 @@
+import { loadOptions } from '@babel/core'
 import { Box, Button, Typography } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -9,6 +10,7 @@ import React, { useEffect, useState } from 'react'
 
 import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 import styles from './first-section.module.css'
+
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -85,7 +87,7 @@ interface ComponentProperties {
     }
     rootSx?: SxProps
   }
-  type: number
+  type: number,
 }
 
 const FirstSectionBookmap = ({ mobile, option, type }: ComponentProperties): React.ReactElement => {
@@ -105,9 +107,9 @@ const FirstSectionBookmap = ({ mobile, option, type }: ComponentProperties): Rea
           <Grid container>
             <Grid item md={6} xs={12}>
               <Typography
-                component="h1"
+                component="h2"
                 variant="h1"
-                color="primary"
+                color="Primary"
                 gutterBottom
                 className={classes.headTradePlatform}
                 sx={option.texts[0].sx}
