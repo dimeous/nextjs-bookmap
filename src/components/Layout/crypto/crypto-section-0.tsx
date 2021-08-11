@@ -11,8 +11,8 @@ const CryptoSection0 = ({ mobile }: CardProperties): React.ReactElement => {
   const option = {
     texts: [
       {
-        text: t('CS0MultibookIsyoursatNoAdditionalCost'),
-        sx: { fontSize: '32px' },
+        text: t('CS0SeeMarketLiquidityAndTradedVolume'),
+        sx: { fontSize: '32px', color:'#E6ECEF' },
       },
       {
         text: t('CS0Choosefrom20cryptoExchangesSeeMultipleOrder'),
