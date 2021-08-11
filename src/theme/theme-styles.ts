@@ -6,6 +6,7 @@ export const ThemeColors = {
   IconBlue: '#0084f6',
   MainWhite: '#fff',
   BGGrey: '#E6ECEF',
+  BGNutralGray: '#F6F8FA',
   DarkBlue: '#124258',
 }
 
