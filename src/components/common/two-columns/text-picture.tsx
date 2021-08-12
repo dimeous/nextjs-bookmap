@@ -13,7 +13,7 @@ interface PictureProperties {
   width: number
   height: number
   alt: string
-  styles?: StyleSheetList
+  sxBoxImage?: SxProps
   inbox?: boolean
 }
 interface ComponentProperties {
@@ -43,7 +43,7 @@ const Element2 = (picture: PictureProperties): React.ReactElement => {
   return picture.inbox ? (
     <ImageInBox src={picture.src} width={picture.width} height={picture.height} alt={picture.alt} />
   ) : (
-    <Box className={classes.picCard}>
+    <Box className={classes.picCard} sx={{ ...picture.sxBoxImage }}>
       <Box>
         <Image src={picture.src} alt={picture.alt} width={picture.width} height={picture.height} />
       </Box>

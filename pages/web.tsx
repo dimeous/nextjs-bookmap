@@ -10,6 +10,7 @@ import WebS0 from '../src/components/Layout/web/web-s0'
 import WebS1 from '../src/components/Layout/web/web-s1'
 import WebS2 from '../src/components/Layout/web/web-s2'
 import WebS3 from '../src/components/Layout/web/web-s3'
+import WebS4 from '../src/components/Layout/web/web-s4'
 import newTheme from '../src/theme/new-theme'
 
 const Index = (): React.ReactElement => {
@@ -25,6 +26,7 @@ const Index = (): React.ReactElement => {
           <WebS1 />
           <WebS2 />
           <WebS3 />
+          <WebS4 />
         </main>
       </ThemeProvider>
       <Footer />

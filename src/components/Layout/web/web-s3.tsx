@@ -6,6 +6,7 @@ import {
   DialogContent,
   DialogTitle,
   Divider,
+  Tooltip,
 } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
@@ -13,7 +14,7 @@ import Grid from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/styles'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { ThemeColors, ThemeElements } from '../../../theme/theme-styles'
 
@@ -41,13 +42,29 @@ const TabPanel = (props: TabPanelProperties) => {
     </div>
   )
 }
-
+const scale = 'scale(0.25, 0.25)'
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     ...ThemeElements.rootBlockProps,
     backgroundColor: theme.palette.background.paper,
   },
+  /*
+  iframe: {
+    [theme.breakpoints.down('md')]: {
+      MozTransform: scale,
+      WebkitTransform: scale,
+      OTransform: scale,
+      MsTransform: scale,
+      transform: scale,
+      MozTransformOrigin: 'top left',
+      WebkitTransformOrigin: 'top left',
+      OTransformOrigin: 'top left',
+      MsTransformOrigin: 'top left',
+      TransformOrigin: 'top left',
+    },
+  },
+  */
   buttonBox: {
     width: '310px',
     height: '132px',
@@ -121,6 +138,15 @@ const WidgetBox = (props: { widgetScript: string; headText: string }) => {
     setOpen(false)
   }
 
+  const [showTooltip, setShowTooltip] = useState(false)
+  const handleShare = (text: string) => {
+    navigator.clipboard.writeText(text)
+    setShowTooltip(true)
+  }
+  const handleOnTooltipClose = () => {
+    setShowTooltip(false)
+  }
+
   const codeText =
     '<!-- Bookmap Web (embedded) -->\n' + widgetScript + '<!-- end Bookmap Web (embedded) -->'
   return (
@@ -143,12 +169,34 @@ const WidgetBox = (props: { widgetScript: string; headText: string }) => {
           <DialogTitle>
             <Box className={classes.cardTittle}>
               <Typography>Copy the embaded code and apply to your website or blog</Typography>
-              <Button className={classes.copyButton}>COPY</Button>
+              <Tooltip
+                title={
+                  <div>
+                    code
+                    <br />
+                    copied to clipboard
+                  </div>
+                }
+                open={showTooltip}
+                leaveDelay={1500}
+                onClose={handleOnTooltipClose}
+              >
+                <Button
+                  className={classes.copyButton}
+                  onClick={() => {
+                    handleShare(codeText)
+                  }}
+                >
+                  COPY
+                </Button>
+              </Tooltip>
             </Box>
           </DialogTitle>
           <DialogContent dividers>
             <Typography gutterBottom className={classes.codeText}>
-              {codeText}
+              {'<!-- Bookmap Web (embedded) -->'} <br />
+              {widgetScript} <br />
+              {'<!-- end Bookmap Web (embedded) -->'}
             </Typography>
           </DialogContent>
           <DialogActions>
@@ -187,40 +235,35 @@ const ButtonBox = (props: { text1: string; text2: string; selected: boolean }) =
 }
 
 const widgetList = (width: number, height: number) => {
+  const general = width == 375 ? '375x90' : (width == 400 ? 'small' : 'general')
+  const light = width == 375 ? '375x90' : (width == 400 ? 'small' : 'light')
   return [
     {
       headText: 'BTC/USD at Bitmex',
       script:
         '<iframe\n' +
-        'src="https://embed.bookmap.com/v/general/index.php?duration=10m&whi=0.97&top=0.7"\n' +
+        `src="https://embed.bookmap.com/v/${general}/index.php?duration=10m&whi=0.97&top=0.7"\n` +
         `style="display: block; width: ${width}px; height: ${height}px;">\n` +
         '</iframe>',
     },
     {
       headText: 'Light mode BTC/USD at Bitmex',
       script: `<iframe 
-              src="https://embed.bookmap.com/v/light/index.php?duration=4m&whi=0.97&top=0.7"
+              src="https://embed.bookmap.com/v/${light}/index.php?duration=4m&whi=0.97&top=0.7"
               style="display: block; width: ${width}px; height: ${height}px;">
               </iframe>`,
     },
     {
       headText: 'ETH/USD at Bitmex',
       script: `<iframe
-               src="https://embed.bookmap.com/v/general/index.php?duration=5m&provider=bitmex&symbol=ETHUSD&whi=0.97&top=0.7"
+               src="https://embed.bookmap.com/v/${general}/index.php?duration=5m&provider=bitmex&symbol=ETHUSD&whi=0.97&top=0.7"
                style="display: block; width: ${width}px; height: ${height}px;">
                </iframe>`,
-    },
-    {
-      headText: 'Light mode ETH/USD at Bitmex',
-      script: `<iframe
-                src="https://embed.bookmap.com/v/light/index.php?duration=4m&provider=bitmex&symbol=ETHUSD&whi=0.97&top=0.7"
-                style="display: block; width: ${width}px; height: ${height}px;">
-                </iframe>`,
     },
   ]
 }
 
-const WebS3 = () => {
+const WebS3 = (): React.ReactElement => {
   const classes = useStyles()
   const [value, setValue] = React.useState<number>(1)
 
@@ -228,7 +271,7 @@ const WebS3 = () => {
     <Container fixed>
       <Box className={classes.root}>
         <Grid container>
-          <Grid item xs={4} className={classes.gridItem}>
+          <Grid item xs={12} lg={4} className={classes.gridItem}>
             <ButtonBase
               onClick={() => {
                 setValue(1)
@@ -237,7 +280,7 @@ const WebS3 = () => {
               <ButtonBox text1={'Large'} text2={'(900px X 400px)'} selected={value == 1} />
             </ButtonBase>
           </Grid>
-          <Grid item xs={4} alignContent={'center'} className={classes.gridItem}>
+          <Grid item xs={12} lg={4} alignContent={'center'} className={classes.gridItem}>
             <ButtonBase
               onClick={() => {
                 setValue(2)
@@ -246,7 +289,7 @@ const WebS3 = () => {
               <ButtonBox text1={'Medium'} text2={'(400px X 300px)'} selected={value == 2} />
             </ButtonBase>
           </Grid>
-          <Grid item xs={4} className={classes.gridItem}>
+          <Grid item xs={12} lg={4} className={classes.gridItem}>
             <ButtonBase
               onClick={() => {
                 setValue(3)
