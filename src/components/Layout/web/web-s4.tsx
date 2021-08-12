@@ -22,7 +22,7 @@ const WebS4 = (): React.ReactElement => {
   const classes = useStyles()
   const text = (
     <Container className={classes.textBlock}>
-      <Typography component="h2" variant="h2" sx={{ pb: 2 }} className={classes.title}>
+      <Typography component="h2" variant="h2" sx={{ pb: 2 }}>
         Bookmap Referral Program
       </Typography>
       <Typography paragraph>
