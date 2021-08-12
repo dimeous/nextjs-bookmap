@@ -102,6 +102,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '22px',
     fontWeight: 500,
   },
+  codeText: {
+    fontSize: '12px',
+    lineHeight: '12px',
+  },
 }))
 
 const WidgetBox = (props: { widgetScript: string; headText: string }) => {
@@ -137,17 +141,13 @@ const WidgetBox = (props: { widgetScript: string; headText: string }) => {
         </div>
         <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
           <DialogTitle>
-            <div style={{ width: '100%' }}>
-              <Box sx={{ width: '70%' }} component="div" display="inline">
-                <Typography>Copy the embaded code and apply to your website or blog</Typography>
-              </Box>
-              <Box sx={{ width: '20%' }} component="div" display="inline">
-                <Button className={classes.copyButton}>COPY</Button>
-              </Box>
-            </div>
+            <Box className={classes.cardTittle}>
+              <Typography>Copy the embaded code and apply to your website or blog</Typography>
+              <Button className={classes.copyButton}>COPY</Button>
+            </Box>
           </DialogTitle>
           <DialogContent dividers>
-            <Typography gutterBottom className={classes.dialogText}>
+            <Typography gutterBottom className={classes.codeText}>
               {codeText}
             </Typography>
           </DialogContent>
